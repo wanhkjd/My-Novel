@@ -1,0 +1,6063 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 23,
+  "filesSkipped": [
+    "src/test/resources/templates/controller.java.vm",
+    "src/test/resources/templates/entity.java.vm"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 23,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 22,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/message/AbstractSysNoticeSender.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "sendMessage",
+          "startLine": 17,
+          "endLine": 24,
+          "params": [
+            "toUserId",
+            "messageTitle",
+            "messageContent"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AbstractSysNoticeSender",
+          "startLine": 14,
+          "endLine": 26,
+          "methods": [
+            "sendMessage"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AbstractSysNoticeSender",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sendMessage",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 20
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "log.info",
+          "lineNumber": 22
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "messageDateTime.format",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/message/MessageSender.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "MessageSender",
+          "startLine": 11,
+          "endLine": 21,
+          "methods": [
+            "sendMessage"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MessageSender",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/message/RegisterMailSender.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "RegisterMailSender",
+          "startLine": 22,
+          "endLine": 24,
+          "params": [
+            "mailProperties",
+            "mailSender"
+          ]
+        },
+        {
+          "name": "getTitleTemplate",
+          "startLine": 26,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "getContentTemplate",
+          "startLine": 31,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "resolveContent",
+          "startLine": 51,
+          "endLine": 58,
+          "params": [
+            "content"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RegisterMailSender",
+          "startLine": 18,
+          "endLine": 60,
+          "methods": [
+            "RegisterMailSender",
+            "getTitleTemplate",
+            "getContentTemplate",
+            "resolveContent"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RegisterMailSender",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "RegisterMailSender",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "resolveContent",
+          "callee": "super.resolveContent",
+          "lineNumber": 56
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "Stream.of(args, new Object[]{websiteLink, websiteEmail}).flatMap(Arrays::stream).toArray",
+          "lineNumber": 57
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "Stream.of(args, new Object[]{websiteLink, websiteEmail}).flatMap",
+          "lineNumber": 57
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "Stream.of",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/message/SeckillSystemNoticeSender.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "getTitleTemplate",
+          "startLine": 15,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "getContentTemplate",
+          "startLine": 20,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SeckillSystemNoticeSender",
+          "startLine": 12,
+          "endLine": 25,
+          "methods": [
+            "getTitleTemplate",
+            "getContentTemplate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SeckillSystemNoticeSender",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/mq/AmqpMsgManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "sendBookChangeMsg",
+          "startLine": 29,
+          "endLine": 33,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "sendAmqpMessage",
+          "startLine": 35,
+          "endLine": 49,
+          "params": [
+            "amqpTemplate",
+            "exchange",
+            "routingKey",
+            "message"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AmqpMsgManager",
+          "startLine": 17,
+          "endLine": 51,
+          "methods": [
+            "sendBookChangeMsg",
+            "sendAmqpMessage"
+          ],
+          "properties": [
+            "amqpTemplate",
+            "amqpEnabled"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sendBookChangeMsg",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "AmqpMsgManager",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sendBookChangeMsg",
+          "callee": "sendAmqpMessage",
+          "lineNumber": 31
+        },
+        {
+          "caller": "sendAmqpMessage",
+          "callee": "TransactionSynchronizationManager.isActualTransactionActive",
+          "lineNumber": 38
+        },
+        {
+          "caller": "sendAmqpMessage",
+          "callee": "TransactionSynchronizationManager.registerSynchronization",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sendAmqpMessage",
+          "callee": "new TransactionSynchronization",
+          "lineNumber": 40
+        },
+        {
+          "caller": "afterCommit",
+          "callee": "amqpTemplate.convertAndSend",
+          "lineNumber": 43
+        },
+        {
+          "caller": "sendAmqpMessage",
+          "callee": "amqpTemplate.convertAndSend",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/redis/VerifyCodeManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "genImgVerifyCode",
+          "startLine": 29,
+          "endLine": 35,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "imgVerifyCodeOk",
+          "startLine": 40,
+          "endLine": 43,
+          "params": [
+            "sessionId",
+            "verifyCode"
+          ]
+        },
+        {
+          "name": "removeImgVerifyCode",
+          "startLine": 48,
+          "endLine": 50,
+          "params": [
+            "sessionId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "VerifyCodeManager",
+          "startLine": 19,
+          "endLine": 52,
+          "methods": [
+            "genImgVerifyCode",
+            "imgVerifyCodeOk",
+            "removeImgVerifyCode"
+          ],
+          "properties": [
+            "stringRedisTemplate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "genImgVerifyCode",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "imgVerifyCodeOk",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "removeImgVerifyCode",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "VerifyCodeManager",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "genImgVerifyCode",
+          "callee": "ImgVerifyCodeUtils.getRandomVerifyCode",
+          "lineNumber": 30
+        },
+        {
+          "caller": "genImgVerifyCode",
+          "callee": "ImgVerifyCodeUtils.genVerifyCodeImg",
+          "lineNumber": 31
+        },
+        {
+          "caller": "genImgVerifyCode",
+          "callee": "stringRedisTemplate.opsForValue().set",
+          "lineNumber": 32
+        },
+        {
+          "caller": "genImgVerifyCode",
+          "callee": "stringRedisTemplate.opsForValue",
+          "lineNumber": 32
+        },
+        {
+          "caller": "genImgVerifyCode",
+          "callee": "Duration.ofMinutes",
+          "lineNumber": 33
+        },
+        {
+          "caller": "imgVerifyCodeOk",
+          "callee": "Objects.equals",
+          "lineNumber": 41
+        },
+        {
+          "caller": "imgVerifyCodeOk",
+          "callee": "stringRedisTemplate.opsForValue().get",
+          "lineNumber": 41
+        },
+        {
+          "caller": "imgVerifyCodeOk",
+          "callee": "stringRedisTemplate.opsForValue",
+          "lineNumber": 41
+        },
+        {
+          "caller": "removeImgVerifyCode",
+          "callee": "stringRedisTemplate.delete",
+          "lineNumber": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/AuthorService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "AuthorService",
+          "startLine": 12,
+          "endLine": 29,
+          "methods": [
+            "register",
+            "getStatus"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorService",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/BookService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 217,
+      "nonEmptyLines": 190,
+      "classes": [
+        {
+          "name": "BookService",
+          "startLine": 21,
+          "endLine": 217,
+          "methods": [
+            "listVisitRankBooks",
+            "listNewestRankBooks",
+            "listUpdateRankBooks",
+            "getBookById",
+            "getBookContentAbout",
+            "getLastChapterAbout",
+            "listRecBooks",
+            "addVisitCount",
+            "getPreChapterId",
+            "getNextChapterId",
+            "listChapters",
+            "listCategory",
+            "saveComment",
+            "listNewestComments",
+            "deleteComment",
+            "updateComment",
+            "saveBook",
+            "saveBookChapter",
+            "listAuthorBooks",
+            "listBookChapters",
+            "listComments",
+            "deleteBookChapter",
+            "getBookChapter",
+            "updateBookChapter"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookService",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/HomeService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "HomeService",
+          "startLine": 15,
+          "endLine": 30,
+          "methods": [
+            "listHomeBooks",
+            "listHomeFriendLinks"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HomeService",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/NewsService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "NewsService",
+          "startLine": 14,
+          "endLine": 30,
+          "methods": [
+            "listLatestNews",
+            "getNews"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewsService",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/ResourceService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "ResourceService",
+          "startLine": 15,
+          "endLine": 31,
+          "methods": [
+            "getImgVerifyCode",
+            "uploadImage"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResourceService",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/SearchService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "SearchService",
+          "startLine": 14,
+          "endLine": 24,
+          "methods": [
+            "searchBooks"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SearchService",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/UserService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 67,
+      "classes": [
+        {
+          "name": "UserService",
+          "startLine": 17,
+          "endLine": 76,
+          "methods": [
+            "register",
+            "login",
+            "saveFeedback",
+            "updateUserInfo",
+            "deleteFeedback",
+            "getBookshelfStatus",
+            "getUserInfo"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserService",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/AuthorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "register",
+          "startLine": 32,
+          "endLine": 55,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "getStatus",
+          "startLine": 57,
+          "endLine": 61,
+          "params": [
+            "userId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorServiceImpl",
+          "startLine": 23,
+          "endLine": 63,
+          "methods": [
+            "register",
+            "getStatus"
+          ],
+          "properties": [
+            "authorInfoCacheManager",
+            "authorInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "register",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "getStatus",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorServiceImpl",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register",
+          "callee": "authorInfoCacheManager.getAuthor",
+          "lineNumber": 35
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getUserId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "register",
+          "callee": "Objects.nonNull",
+          "lineNumber": 36
+        },
+        {
+          "caller": "register",
+          "callee": "RestResp.ok",
+          "lineNumber": 38
+        },
+        {
+          "caller": "register",
+          "callee": "new AuthorInfo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setUserId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getUserId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setChatAccount",
+          "lineNumber": 43
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getChatAccount",
+          "lineNumber": 43
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setEmail",
+          "lineNumber": 44
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getEmail",
+          "lineNumber": 44
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setInviteCode",
+          "lineNumber": 45
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setTelPhone",
+          "lineNumber": 46
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getTelPhone",
+          "lineNumber": 46
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setPenName",
+          "lineNumber": 47
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getPenName",
+          "lineNumber": 47
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setWorkDirection",
+          "lineNumber": 48
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getWorkDirection",
+          "lineNumber": 48
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setCreateTime",
+          "lineNumber": 49
+        },
+        {
+          "caller": "register",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 49
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfo.setUpdateTime",
+          "lineNumber": 50
+        },
+        {
+          "caller": "register",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 50
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfoMapper.insert",
+          "lineNumber": 51
+        },
+        {
+          "caller": "register",
+          "callee": "authorInfoCacheManager.evictAuthorCache",
+          "lineNumber": 53
+        },
+        {
+          "caller": "register",
+          "callee": "RestResp.ok",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getStatus",
+          "callee": "authorInfoCacheManager.getAuthor",
+          "lineNumber": 59
+        },
+        {
+          "caller": "getStatus",
+          "callee": "Objects.isNull",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getStatus",
+          "callee": "RestResp.ok",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getStatus",
+          "callee": "RestResp.ok",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getStatus",
+          "callee": "author.getStatus",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/BookServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 595,
+      "nonEmptyLines": 532,
+      "functions": [
+        {
+          "name": "listVisitRankBooks",
+          "startLine": 79,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "listNewestRankBooks",
+          "startLine": 84,
+          "endLine": 87,
+          "params": []
+        },
+        {
+          "name": "listUpdateRankBooks",
+          "startLine": 89,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "getBookById",
+          "startLine": 94,
+          "endLine": 97,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getLastChapterAbout",
+          "startLine": 99,
+          "endLine": 122,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "listRecBooks",
+          "startLine": 124,
+          "endLine": 163,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "addVisitCount",
+          "startLine": 165,
+          "endLine": 169,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getPreChapterId",
+          "startLine": 171,
+          "endLine": 189,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "getNextChapterId",
+          "startLine": 191,
+          "endLine": 209,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "listChapters",
+          "startLine": 211,
+          "endLine": 222,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "listCategory",
+          "startLine": 224,
+          "endLine": 227,
+          "params": [
+            "workDirection"
+          ]
+        },
+        {
+          "name": "saveComment",
+          "startLine": 229,
+          "endLine": 254,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "listNewestComments",
+          "startLine": 256,
+          "endLine": 291,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "deleteComment",
+          "startLine": 293,
+          "endLine": 300,
+          "params": [
+            "userId",
+            "commentId"
+          ]
+        },
+        {
+          "name": "updateComment",
+          "startLine": 302,
+          "endLine": 311,
+          "params": [
+            "userId",
+            "id",
+            "content"
+          ]
+        },
+        {
+          "name": "saveBook",
+          "startLine": 313,
+          "endLine": 340,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "saveBookChapter",
+          "startLine": 342,
+          "endLine": 395,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "listAuthorBooks",
+          "startLine": 397,
+          "endLine": 416,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "listBookChapters",
+          "startLine": 418,
+          "endLine": 434,
+          "params": [
+            "bookId",
+            "dto"
+          ]
+        },
+        {
+          "name": "listComments",
+          "startLine": 436,
+          "endLine": 468,
+          "params": [
+            "userId",
+            "pageReqDto"
+          ]
+        },
+        {
+          "name": "deleteBookChapter",
+          "startLine": 470,
+          "endLine": 517,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "getBookChapter",
+          "startLine": 519,
+          "endLine": 529,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "updateBookChapter",
+          "startLine": 531,
+          "endLine": 574,
+          "params": [
+            "chapterId",
+            "dto"
+          ]
+        },
+        {
+          "name": "getBookContentAbout",
+          "startLine": 576,
+          "endLine": 594,
+          "params": [
+            "chapterId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookServiceImpl",
+          "startLine": 48,
+          "endLine": 595,
+          "methods": [
+            "listVisitRankBooks",
+            "listNewestRankBooks",
+            "listUpdateRankBooks",
+            "getBookById",
+            "getLastChapterAbout",
+            "listRecBooks",
+            "addVisitCount",
+            "getPreChapterId",
+            "getNextChapterId",
+            "listChapters",
+            "listCategory",
+            "saveComment",
+            "listNewestComments",
+            "deleteComment",
+            "updateComment",
+            "saveBook",
+            "saveBookChapter",
+            "listAuthorBooks",
+            "listBookChapters",
+            "listComments",
+            "deleteBookChapter",
+            "getBookChapter",
+            "updateBookChapter",
+            "getBookContentAbout"
+          ],
+          "properties": [
+            "bookCategoryCacheManager",
+            "bookRankCacheManager",
+            "bookInfoCacheManager",
+            "bookChapterCacheManager",
+            "bookContentCacheManager",
+            "authorInfoCacheManager",
+            "bookInfoMapper",
+            "bookChapterMapper",
+            "bookContentMapper",
+            "bookCommentMapper",
+            "userDaoManager",
+            "amqpMsgManager",
+            "REC_BOOK_COUNT"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listVisitRankBooks",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "listNewestRankBooks",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "listUpdateRankBooks",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "getBookById",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "getLastChapterAbout",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "listRecBooks",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "addVisitCount",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "getPreChapterId",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "getNextChapterId",
+          "line": 191,
+          "isDefault": false
+        },
+        {
+          "name": "listChapters",
+          "line": 211,
+          "isDefault": false
+        },
+        {
+          "name": "listCategory",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "saveComment",
+          "line": 229,
+          "isDefault": false
+        },
+        {
+          "name": "listNewestComments",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "deleteComment",
+          "line": 293,
+          "isDefault": false
+        },
+        {
+          "name": "updateComment",
+          "line": 302,
+          "isDefault": false
+        },
+        {
+          "name": "saveBook",
+          "line": 313,
+          "isDefault": false
+        },
+        {
+          "name": "saveBookChapter",
+          "line": 342,
+          "isDefault": false
+        },
+        {
+          "name": "listAuthorBooks",
+          "line": 397,
+          "isDefault": false
+        },
+        {
+          "name": "listBookChapters",
+          "line": 418,
+          "isDefault": false
+        },
+        {
+          "name": "listComments",
+          "line": 436,
+          "isDefault": false
+        },
+        {
+          "name": "deleteBookChapter",
+          "line": 470,
+          "isDefault": false
+        },
+        {
+          "name": "getBookChapter",
+          "line": 519,
+          "isDefault": false
+        },
+        {
+          "name": "updateBookChapter",
+          "line": 531,
+          "isDefault": false
+        },
+        {
+          "name": "getBookContentAbout",
+          "line": 576,
+          "isDefault": false
+        },
+        {
+          "name": "BookServiceImpl",
+          "line": 48,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listVisitRankBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 81
+        },
+        {
+          "caller": "listVisitRankBooks",
+          "callee": "bookRankCacheManager.listVisitRankBooks",
+          "lineNumber": 81
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 86
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "bookRankCacheManager.listNewestRankBooks",
+          "lineNumber": 86
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 91
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "bookRankCacheManager.listUpdateRankBooks",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getBookById",
+          "callee": "RestResp.ok",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getBookById",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 102
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookInfo.getLastChapterId",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookContentCacheManager.getBookContent",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookInfo.getLastChapterId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 112
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "chapterQueryWrapper.eq",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookChapterMapper.selectCount",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "RestResp.ok",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "BookChapterAboutRespDto.builder()\r\n            .chapterInfo(bookChapter)\r\n            .chapterTotal(chapterTotal)\r\n            .contentSummary(content.substring(0, 30)).build",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "BookChapterAboutRespDto.builder()\r\n            .chapterInfo(bookChapter)\r\n            .chapterTotal(chapterTotal).contentSummary",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "BookChapterAboutRespDto.builder()\r\n            .chapterInfo(bookChapter).chapterTotal",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "BookChapterAboutRespDto.builder().chapterInfo",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "BookChapterAboutRespDto.builder",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "content.substring",
+          "lineNumber": 120
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "bookInfoCacheManager.getBookInfo(bookId).getCategoryId",
+          "lineNumber": 127
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 127
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "bookInfoCacheManager.getLastUpdateIdList",
+          "lineNumber": 128
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 131
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 132
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "Collections.emptyList",
+          "lineNumber": 132
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "lastUpdateIdList.stream()\r\n                .filter(id -> !Objects.equals(id, bookId)).toList",
+          "lineNumber": 136
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "lastUpdateIdList.stream().filter",
+          "lineNumber": 136
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "lastUpdateIdList.stream",
+          "lineNumber": 136
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "Objects.equals",
+          "lineNumber": 137
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "candidateIdList.isEmpty",
+          "lineNumber": 140
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 141
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "Collections.emptyList",
+          "lineNumber": 141
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "Math.min",
+          "lineNumber": 145
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "candidateIdList.size",
+          "lineNumber": 145
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "new ArrayList<>",
+          "lineNumber": 147
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "new HashSet<>",
+          "lineNumber": 148
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "SecureRandom.getInstanceStrong",
+          "lineNumber": 149
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "respDtoList.size",
+          "lineNumber": 152
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "recIdIndexSet.size",
+          "lineNumber": 152
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "candidateIdList.size",
+          "lineNumber": 152
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "rand.nextInt",
+          "lineNumber": 153
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "candidateIdList.size",
+          "lineNumber": 153
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "recIdIndexSet.contains",
+          "lineNumber": 154
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "recIdIndexSet.add",
+          "lineNumber": 155
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "candidateIdList.get",
+          "lineNumber": 156
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 157
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "respDtoList.add",
+          "lineNumber": 158
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 162
+        },
+        {
+          "caller": "addVisitCount",
+          "callee": "bookInfoMapper.addVisitCount",
+          "lineNumber": 167
+        },
+        {
+          "caller": "addVisitCount",
+          "callee": "RestResp.ok",
+          "lineNumber": 168
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 174
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "chapter.getBookId",
+          "lineNumber": 175
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "chapter.getChapterNum",
+          "lineNumber": 176
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 179
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId)\r\n            .lt(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM, chapterNum)\r\n            .orderByDesc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM).last",
+          "lineNumber": 180
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId)\r\n            .lt(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM, chapterNum).orderByDesc",
+          "lineNumber": 180
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId).lt",
+          "lineNumber": 180
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 180
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 183
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "RestResp.ok",
+          "lineNumber": 184
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "Optional.ofNullable(bookChapterMapper.selectOne(queryWrapper))\r\n                .map(BookChapter::getId).orElse",
+          "lineNumber": 185
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "Optional.ofNullable(bookChapterMapper.selectOne(queryWrapper)).map",
+          "lineNumber": 185
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 185
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "bookChapterMapper.selectOne",
+          "lineNumber": 185
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 194
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "chapter.getBookId",
+          "lineNumber": 195
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "chapter.getChapterNum",
+          "lineNumber": 196
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 199
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId)\r\n            .gt(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM, chapterNum)\r\n            .orderByAsc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM).last",
+          "lineNumber": 200
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId)\r\n            .gt(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM, chapterNum).orderByAsc",
+          "lineNumber": 200
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId).gt",
+          "lineNumber": 200
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 200
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 203
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "RestResp.ok",
+          "lineNumber": 204
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "Optional.ofNullable(bookChapterMapper.selectOne(queryWrapper))\r\n                .map(BookChapter::getId).orElse",
+          "lineNumber": 205
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "Optional.ofNullable(bookChapterMapper.selectOne(queryWrapper)).map",
+          "lineNumber": 205
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 205
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "bookChapterMapper.selectOne",
+          "lineNumber": 205
+        },
+        {
+          "caller": "listChapters",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 213
+        },
+        {
+          "caller": "listChapters",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId).orderByAsc",
+          "lineNumber": 214
+        },
+        {
+          "caller": "listChapters",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 214
+        },
+        {
+          "caller": "listChapters",
+          "callee": "RestResp.ok",
+          "lineNumber": 216
+        },
+        {
+          "caller": "listChapters",
+          "callee": "bookChapterMapper.selectList(queryWrapper).stream()\r\n            .map(v -> BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName())\r\n                .isVip(v.getIsVip())\r\n                .build()).toList",
+          "lineNumber": 216
+        },
+        {
+          "caller": "listChapters",
+          "callee": "bookChapterMapper.selectList(queryWrapper).stream().map",
+          "lineNumber": 216
+        },
+        {
+          "caller": "listChapters",
+          "callee": "bookChapterMapper.selectList(queryWrapper).stream",
+          "lineNumber": 216
+        },
+        {
+          "caller": "listChapters",
+          "callee": "bookChapterMapper.selectList",
+          "lineNumber": 216
+        },
+        {
+          "caller": "listChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName())\r\n                .isVip(v.getIsVip()).build",
+          "lineNumber": 217
+        },
+        {
+          "caller": "listChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName()).isVip",
+          "lineNumber": 217
+        },
+        {
+          "caller": "listChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId()).chapterName",
+          "lineNumber": 217
+        },
+        {
+          "caller": "listChapters",
+          "callee": "BookChapterRespDto.builder().id",
+          "lineNumber": 217
+        },
+        {
+          "caller": "listChapters",
+          "callee": "BookChapterRespDto.builder",
+          "lineNumber": 217
+        },
+        {
+          "caller": "listChapters",
+          "callee": "v.getId",
+          "lineNumber": 218
+        },
+        {
+          "caller": "listChapters",
+          "callee": "v.getChapterName",
+          "lineNumber": 219
+        },
+        {
+          "caller": "listChapters",
+          "callee": "v.getIsVip",
+          "lineNumber": 220
+        },
+        {
+          "caller": "listCategory",
+          "callee": "RestResp.ok",
+          "lineNumber": 226
+        },
+        {
+          "caller": "listCategory",
+          "callee": "bookCategoryCacheManager.listCategory",
+          "lineNumber": 226
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookInfoMapper.selectById",
+          "lineNumber": 234
+        },
+        {
+          "caller": "saveComment",
+          "callee": "dto.getBookId",
+          "lineNumber": 234
+        },
+        {
+          "caller": "saveComment",
+          "callee": "RestResp.fail",
+          "lineNumber": 236
+        },
+        {
+          "caller": "saveComment",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 239
+        },
+        {
+          "caller": "saveComment",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID, dto.getUserId()).eq",
+          "lineNumber": 240
+        },
+        {
+          "caller": "saveComment",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 240
+        },
+        {
+          "caller": "saveComment",
+          "callee": "dto.getUserId",
+          "lineNumber": 240
+        },
+        {
+          "caller": "saveComment",
+          "callee": "dto.getBookId",
+          "lineNumber": 241
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookCommentMapper.selectCount",
+          "lineNumber": 242
+        },
+        {
+          "caller": "saveComment",
+          "callee": "RestResp.fail",
+          "lineNumber": 244
+        },
+        {
+          "caller": "saveComment",
+          "callee": "new BookComment",
+          "lineNumber": 246
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookComment.setBookId",
+          "lineNumber": 247
+        },
+        {
+          "caller": "saveComment",
+          "callee": "dto.getBookId",
+          "lineNumber": 247
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookComment.setUserId",
+          "lineNumber": 248
+        },
+        {
+          "caller": "saveComment",
+          "callee": "dto.getUserId",
+          "lineNumber": 248
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookComment.setCommentContent",
+          "lineNumber": 249
+        },
+        {
+          "caller": "saveComment",
+          "callee": "dto.getCommentContent",
+          "lineNumber": 249
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookComment.setCreateTime",
+          "lineNumber": 250
+        },
+        {
+          "caller": "saveComment",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 250
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookComment.setUpdateTime",
+          "lineNumber": 251
+        },
+        {
+          "caller": "saveComment",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 251
+        },
+        {
+          "caller": "saveComment",
+          "callee": "bookCommentMapper.insert",
+          "lineNumber": 252
+        },
+        {
+          "caller": "saveComment",
+          "callee": "RestResp.ok",
+          "lineNumber": 253
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 259
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "commentCountQueryWrapper.eq",
+          "lineNumber": 260
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookCommentMapper.selectCount",
+          "lineNumber": 261
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.builder()\r\n            .commentTotal(commentTotal).build",
+          "lineNumber": 262
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.builder().commentTotal",
+          "lineNumber": 262
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.builder",
+          "lineNumber": 262
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 267
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "commentQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID, bookId)\r\n                .orderByDesc(DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName()).last",
+          "lineNumber": 268
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "commentQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID, bookId).orderByDesc",
+          "lineNumber": 268
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "commentQueryWrapper.eq",
+          "lineNumber": 268
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName",
+          "lineNumber": 269
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_5.getSql",
+          "lineNumber": 270
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookCommentMapper.selectList",
+          "lineNumber": 271
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookComments.stream().map(BookComment::getUserId).toList",
+          "lineNumber": 274
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookComments.stream().map",
+          "lineNumber": 274
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookComments.stream",
+          "lineNumber": 274
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userDaoManager.listUsers",
+          "lineNumber": 275
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userInfos.stream().collect",
+          "lineNumber": 276
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userInfos.stream",
+          "lineNumber": 276
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "Collectors.toMap",
+          "lineNumber": 277
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "Function.identity",
+          "lineNumber": 277
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookComments.stream()\r\n                .map(v -> BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId())\r\n                    .commentUserId(v.getUserId())\r\n                    .commentUser(userInfoMap.get(v.getUserId()).getUsername())\r\n                    .commentUserPhoto(userInfoMap.get(v.getUserId()).getUserPhoto())\r\n                    .commentContent(v.getCommentContent())\r\n                    .commentTime(v.getCreateTime()).build()).toList",
+          "lineNumber": 278
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookComments.stream().map",
+          "lineNumber": 278
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookComments.stream",
+          "lineNumber": 278
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId())\r\n                    .commentUserId(v.getUserId())\r\n                    .commentUser(userInfoMap.get(v.getUserId()).getUsername())\r\n                    .commentUserPhoto(userInfoMap.get(v.getUserId()).getUserPhoto())\r\n                    .commentContent(v.getCommentContent())\r\n                    .commentTime(v.getCreateTime()).build",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId())\r\n                    .commentUserId(v.getUserId())\r\n                    .commentUser(userInfoMap.get(v.getUserId()).getUsername())\r\n                    .commentUserPhoto(userInfoMap.get(v.getUserId()).getUserPhoto())\r\n                    .commentContent(v.getCommentContent()).commentTime",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId())\r\n                    .commentUserId(v.getUserId())\r\n                    .commentUser(userInfoMap.get(v.getUserId()).getUsername())\r\n                    .commentUserPhoto(userInfoMap.get(v.getUserId()).getUserPhoto()).commentContent",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId())\r\n                    .commentUserId(v.getUserId())\r\n                    .commentUser(userInfoMap.get(v.getUserId()).getUsername()).commentUserPhoto",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId())\r\n                    .commentUserId(v.getUserId()).commentUser",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder()\r\n                    .id(v.getId()).commentUserId",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder().id",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "BookCommentRespDto.CommentInfo.builder",
+          "lineNumber": 279
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "v.getId",
+          "lineNumber": 280
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "v.getUserId",
+          "lineNumber": 281
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userInfoMap.get(v.getUserId()).getUsername",
+          "lineNumber": 282
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userInfoMap.get",
+          "lineNumber": 282
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "v.getUserId",
+          "lineNumber": 282
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userInfoMap.get(v.getUserId()).getUserPhoto",
+          "lineNumber": 283
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "userInfoMap.get",
+          "lineNumber": 283
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "v.getUserId",
+          "lineNumber": 283
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "v.getCommentContent",
+          "lineNumber": 284
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "v.getCreateTime",
+          "lineNumber": 285
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookCommentRespDto.setComments",
+          "lineNumber": 286
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookCommentRespDto.setComments",
+          "lineNumber": 288
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "Collections.emptyList",
+          "lineNumber": 288
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "RestResp.ok",
+          "lineNumber": 290
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 295
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "queryWrapper.eq(DatabaseConsts.CommonColumnEnum.ID.getName(), commentId).eq",
+          "lineNumber": 296
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 296
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 296
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "bookCommentMapper.delete",
+          "lineNumber": 298
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "RestResp.ok",
+          "lineNumber": 299
+        },
+        {
+          "caller": "updateComment",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 304
+        },
+        {
+          "caller": "updateComment",
+          "callee": "queryWrapper.eq(DatabaseConsts.CommonColumnEnum.ID.getName(), id).eq",
+          "lineNumber": 305
+        },
+        {
+          "caller": "updateComment",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 305
+        },
+        {
+          "caller": "updateComment",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 305
+        },
+        {
+          "caller": "updateComment",
+          "callee": "new BookComment",
+          "lineNumber": 307
+        },
+        {
+          "caller": "updateComment",
+          "callee": "bookComment.setCommentContent",
+          "lineNumber": 308
+        },
+        {
+          "caller": "updateComment",
+          "callee": "bookCommentMapper.update",
+          "lineNumber": 309
+        },
+        {
+          "caller": "updateComment",
+          "callee": "RestResp.ok",
+          "lineNumber": 310
+        },
+        {
+          "caller": "saveBook",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 316
+        },
+        {
+          "caller": "saveBook",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 317
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getBookName",
+          "lineNumber": 317
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfoMapper.selectCount",
+          "lineNumber": 318
+        },
+        {
+          "caller": "saveBook",
+          "callee": "RestResp.fail",
+          "lineNumber": 319
+        },
+        {
+          "caller": "saveBook",
+          "callee": "new BookInfo",
+          "lineNumber": 321
+        },
+        {
+          "caller": "saveBook",
+          "callee": "authorInfoCacheManager.getAuthor",
+          "lineNumber": 323
+        },
+        {
+          "caller": "saveBook",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 323
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setAuthorId",
+          "lineNumber": 324
+        },
+        {
+          "caller": "saveBook",
+          "callee": "author.getId",
+          "lineNumber": 324
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setAuthorName",
+          "lineNumber": 325
+        },
+        {
+          "caller": "saveBook",
+          "callee": "author.getPenName",
+          "lineNumber": 325
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setWorkDirection",
+          "lineNumber": 327
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getWorkDirection",
+          "lineNumber": 327
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setCategoryId",
+          "lineNumber": 328
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getCategoryId",
+          "lineNumber": 328
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setCategoryName",
+          "lineNumber": 329
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getCategoryName",
+          "lineNumber": 329
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setBookName",
+          "lineNumber": 330
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getBookName",
+          "lineNumber": 330
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setPicUrl",
+          "lineNumber": 331
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getPicUrl",
+          "lineNumber": 331
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setBookDesc",
+          "lineNumber": 332
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getBookDesc",
+          "lineNumber": 332
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setIsVip",
+          "lineNumber": 333
+        },
+        {
+          "caller": "saveBook",
+          "callee": "dto.getIsVip",
+          "lineNumber": 333
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setScore",
+          "lineNumber": 334
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setCreateTime",
+          "lineNumber": 335
+        },
+        {
+          "caller": "saveBook",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 335
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfo.setUpdateTime",
+          "lineNumber": 336
+        },
+        {
+          "caller": "saveBook",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 336
+        },
+        {
+          "caller": "saveBook",
+          "callee": "bookInfoMapper.insert",
+          "lineNumber": 338
+        },
+        {
+          "caller": "saveBook",
+          "callee": "RestResp.ok",
+          "lineNumber": 339
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookInfoMapper.selectById",
+          "lineNumber": 346
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getBookId",
+          "lineNumber": 346
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "Objects.equals",
+          "lineNumber": 347
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookInfo.getAuthorId",
+          "lineNumber": 347
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "UserHolder.getAuthorId",
+          "lineNumber": 347
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "RestResp.fail",
+          "lineNumber": 348
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 353
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "chapterQueryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, dto.getBookId())\r\n            .orderByDesc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM).last",
+          "lineNumber": 354
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "chapterQueryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, dto.getBookId()).orderByDesc",
+          "lineNumber": 354
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "chapterQueryWrapper.eq",
+          "lineNumber": 354
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getBookId",
+          "lineNumber": 354
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 356
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookChapterMapper.selectOne",
+          "lineNumber": 357
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "Objects.nonNull",
+          "lineNumber": 358
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookChapter.getChapterNum",
+          "lineNumber": 359
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "new BookChapter",
+          "lineNumber": 362
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setBookId",
+          "lineNumber": 363
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getBookId",
+          "lineNumber": 363
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setChapterName",
+          "lineNumber": 364
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getChapterName",
+          "lineNumber": 364
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setChapterNum",
+          "lineNumber": 365
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setWordCount",
+          "lineNumber": 366
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getChapterContent().length",
+          "lineNumber": 366
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getChapterContent",
+          "lineNumber": 366
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setIsVip",
+          "lineNumber": 367
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getIsVip",
+          "lineNumber": 367
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setCreateTime",
+          "lineNumber": 368
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 368
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setUpdateTime",
+          "lineNumber": 369
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 369
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookChapterMapper.insert",
+          "lineNumber": 370
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "new BookContent",
+          "lineNumber": 373
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookContent.setContent",
+          "lineNumber": 374
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getChapterContent",
+          "lineNumber": 374
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookContent.setChapterId",
+          "lineNumber": 375
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.getId",
+          "lineNumber": 375
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookContent.setCreateTime",
+          "lineNumber": 376
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 376
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookContent.setUpdateTime",
+          "lineNumber": 377
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 377
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookContentMapper.insert",
+          "lineNumber": 378
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "new BookInfo",
+          "lineNumber": 382
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookInfo.setId",
+          "lineNumber": 383
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getBookId",
+          "lineNumber": 383
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookInfo.setLastChapterId",
+          "lineNumber": 384
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.getId",
+          "lineNumber": 384
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookInfo.setLastChapterName",
+          "lineNumber": 385
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.getChapterName",
+          "lineNumber": 385
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookInfo.setLastChapterUpdateTime",
+          "lineNumber": 386
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 386
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookInfo.setWordCount",
+          "lineNumber": 387
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookInfo.getWordCount",
+          "lineNumber": 387
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.getWordCount",
+          "lineNumber": 387
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "newBookChapter.setUpdateTime",
+          "lineNumber": 388
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 388
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookInfoMapper.updateById",
+          "lineNumber": 389
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "bookInfoCacheManager.evictBookInfoCache",
+          "lineNumber": 391
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getBookId",
+          "lineNumber": 391
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "amqpMsgManager.sendBookChangeMsg",
+          "lineNumber": 393
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "dto.getBookId",
+          "lineNumber": 393
+        },
+        {
+          "caller": "saveBookChapter",
+          "callee": "RestResp.ok",
+          "lineNumber": 394
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "new Page<>",
+          "lineNumber": 399
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "page.setCurrent",
+          "lineNumber": 400
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "dto.getPageNum",
+          "lineNumber": 400
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "page.setSize",
+          "lineNumber": 401
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "dto.getPageSize",
+          "lineNumber": 401
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 402
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookTable.AUTHOR_ID, UserHolder.getAuthorId()).orderByDesc",
+          "lineNumber": 403
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 403
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "UserHolder.getAuthorId",
+          "lineNumber": 403
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName",
+          "lineNumber": 404
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "bookInfoMapper.selectPage",
+          "lineNumber": 405
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 406
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "PageRespDto.of",
+          "lineNumber": 406
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "dto.getPageNum",
+          "lineNumber": 406
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "dto.getPageSize",
+          "lineNumber": 406
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "page.getTotal",
+          "lineNumber": 406
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "bookInfoPage.getRecords().stream().map(v -> BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName())\r\n                .picUrl(v.getPicUrl())\r\n                .categoryName(v.getCategoryName())\r\n                .wordCount(v.getWordCount())\r\n                .visitCount(v.getVisitCount())\r\n                .updateTime(v.getUpdateTime())\r\n                .build()).toList",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "bookInfoPage.getRecords().stream().map",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "bookInfoPage.getRecords().stream",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "bookInfoPage.getRecords",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName())\r\n                .picUrl(v.getPicUrl())\r\n                .categoryName(v.getCategoryName())\r\n                .wordCount(v.getWordCount())\r\n                .visitCount(v.getVisitCount())\r\n                .updateTime(v.getUpdateTime()).build",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName())\r\n                .picUrl(v.getPicUrl())\r\n                .categoryName(v.getCategoryName())\r\n                .wordCount(v.getWordCount())\r\n                .visitCount(v.getVisitCount()).updateTime",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName())\r\n                .picUrl(v.getPicUrl())\r\n                .categoryName(v.getCategoryName())\r\n                .wordCount(v.getWordCount()).visitCount",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName())\r\n                .picUrl(v.getPicUrl())\r\n                .categoryName(v.getCategoryName()).wordCount",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName())\r\n                .picUrl(v.getPicUrl()).categoryName",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId())\r\n                .bookName(v.getBookName()).picUrl",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(v.getId()).bookName",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder().id",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "BookInfoRespDto.builder",
+          "lineNumber": 407
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getId",
+          "lineNumber": 408
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getBookName",
+          "lineNumber": 409
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getPicUrl",
+          "lineNumber": 410
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getCategoryName",
+          "lineNumber": 411
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getWordCount",
+          "lineNumber": 412
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getVisitCount",
+          "lineNumber": 413
+        },
+        {
+          "caller": "listAuthorBooks",
+          "callee": "v.getUpdateTime",
+          "lineNumber": 414
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "new Page<>",
+          "lineNumber": 420
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "page.setCurrent",
+          "lineNumber": 421
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "dto.getPageNum",
+          "lineNumber": 421
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "page.setSize",
+          "lineNumber": 422
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "dto.getPageSize",
+          "lineNumber": 422
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 423
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, bookId).orderByDesc",
+          "lineNumber": 424
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 424
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "bookChapterMapper.selectPage",
+          "lineNumber": 426
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "RestResp.ok",
+          "lineNumber": 427
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "PageRespDto.of",
+          "lineNumber": 427
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "dto.getPageNum",
+          "lineNumber": 427
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "dto.getPageSize",
+          "lineNumber": 427
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "page.getTotal",
+          "lineNumber": 427
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "bookChapterPage.getRecords().stream().map(v -> BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName())\r\n                .chapterUpdateTime(v.getUpdateTime())\r\n                .isVip(v.getIsVip())\r\n                .build()).toList",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "bookChapterPage.getRecords().stream().map",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "bookChapterPage.getRecords().stream",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "bookChapterPage.getRecords",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName())\r\n                .chapterUpdateTime(v.getUpdateTime())\r\n                .isVip(v.getIsVip()).build",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName())\r\n                .chapterUpdateTime(v.getUpdateTime()).isVip",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId())\r\n                .chapterName(v.getChapterName()).chapterUpdateTime",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "BookChapterRespDto.builder()\r\n                .id(v.getId()).chapterName",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "BookChapterRespDto.builder().id",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "BookChapterRespDto.builder",
+          "lineNumber": 428
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "v.getId",
+          "lineNumber": 429
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "v.getChapterName",
+          "lineNumber": 430
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "v.getUpdateTime",
+          "lineNumber": 431
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "v.getIsVip",
+          "lineNumber": 432
+        },
+        {
+          "caller": "listComments",
+          "callee": "new Page<>",
+          "lineNumber": 438
+        },
+        {
+          "caller": "listComments",
+          "callee": "page.setCurrent",
+          "lineNumber": 439
+        },
+        {
+          "caller": "listComments",
+          "callee": "pageReqDto.getPageNum",
+          "lineNumber": 439
+        },
+        {
+          "caller": "listComments",
+          "callee": "page.setSize",
+          "lineNumber": 440
+        },
+        {
+          "caller": "listComments",
+          "callee": "pageReqDto.getPageSize",
+          "lineNumber": 440
+        },
+        {
+          "caller": "listComments",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 441
+        },
+        {
+          "caller": "listComments",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID, userId).orderByDesc",
+          "lineNumber": 442
+        },
+        {
+          "caller": "listComments",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 442
+        },
+        {
+          "caller": "listComments",
+          "callee": "DatabaseConsts.CommonColumnEnum.UPDATE_TIME.getName",
+          "lineNumber": 443
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookCommentMapper.selectPage",
+          "lineNumber": 444
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookCommentPage.getRecords",
+          "lineNumber": 445
+        },
+        {
+          "caller": "listComments",
+          "callee": "Collections.emptyList",
+          "lineNumber": 447
+        },
+        {
+          "caller": "listComments",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 448
+        },
+        {
+          "caller": "listComments",
+          "callee": "comments.stream().map(BookComment::getBookId).toList",
+          "lineNumber": 449
+        },
+        {
+          "caller": "listComments",
+          "callee": "comments.stream().map",
+          "lineNumber": 449
+        },
+        {
+          "caller": "listComments",
+          "callee": "comments.stream",
+          "lineNumber": 449
+        },
+        {
+          "caller": "listComments",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 450
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfoQueryWrapper.in",
+          "lineNumber": 451
+        },
+        {
+          "caller": "listComments",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 451
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfoMapper.selectList(bookInfoQueryWrapper).stream().collect",
+          "lineNumber": 452
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfoMapper.selectList(bookInfoQueryWrapper).stream",
+          "lineNumber": 452
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfoMapper.selectList",
+          "lineNumber": 452
+        },
+        {
+          "caller": "listComments",
+          "callee": "Collectors.toMap",
+          "lineNumber": 453
+        },
+        {
+          "caller": "listComments",
+          "callee": "Function.identity",
+          "lineNumber": 453
+        },
+        {
+          "caller": "listComments",
+          "callee": "comments.stream().map(v -> {\r\n                BookInfo bookInfo = bookInfoMap.get(v.getBookId());\r\n                return UserCommentRespDto.builder()\r\n                    .commentContent(v.getCommentContent())\r\n                    .commentBook(bookInfo != null ? bookInfo.getBookName() : null)\r\n                    .commentBookPic(bookInfo != null ? bookInfo.getPicUrl() : null)\r\n                    .commentTime(v.getCreateTime())\r\n                    .build();\r\n            }).toList",
+          "lineNumber": 455
+        },
+        {
+          "caller": "listComments",
+          "callee": "comments.stream().map",
+          "lineNumber": 455
+        },
+        {
+          "caller": "listComments",
+          "callee": "comments.stream",
+          "lineNumber": 455
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfoMap.get",
+          "lineNumber": 456
+        },
+        {
+          "caller": "listComments",
+          "callee": "v.getBookId",
+          "lineNumber": 456
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserCommentRespDto.builder()\r\n                    .commentContent(v.getCommentContent())\r\n                    .commentBook(bookInfo != null ? bookInfo.getBookName() : null)\r\n                    .commentBookPic(bookInfo != null ? bookInfo.getPicUrl() : null)\r\n                    .commentTime(v.getCreateTime()).build",
+          "lineNumber": 457
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserCommentRespDto.builder()\r\n                    .commentContent(v.getCommentContent())\r\n                    .commentBook(bookInfo != null ? bookInfo.getBookName() : null)\r\n                    .commentBookPic(bookInfo != null ? bookInfo.getPicUrl() : null).commentTime",
+          "lineNumber": 457
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserCommentRespDto.builder()\r\n                    .commentContent(v.getCommentContent())\r\n                    .commentBook(bookInfo != null ? bookInfo.getBookName() : null).commentBookPic",
+          "lineNumber": 457
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserCommentRespDto.builder()\r\n                    .commentContent(v.getCommentContent()).commentBook",
+          "lineNumber": 457
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserCommentRespDto.builder().commentContent",
+          "lineNumber": 457
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserCommentRespDto.builder",
+          "lineNumber": 457
+        },
+        {
+          "caller": "listComments",
+          "callee": "v.getCommentContent",
+          "lineNumber": 458
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfo.getBookName",
+          "lineNumber": 459
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookInfo.getPicUrl",
+          "lineNumber": 460
+        },
+        {
+          "caller": "listComments",
+          "callee": "v.getCreateTime",
+          "lineNumber": 461
+        },
+        {
+          "caller": "listComments",
+          "callee": "RestResp.ok",
+          "lineNumber": 466
+        },
+        {
+          "caller": "listComments",
+          "callee": "PageRespDto.of",
+          "lineNumber": 466
+        },
+        {
+          "caller": "listComments",
+          "callee": "pageReqDto.getPageNum",
+          "lineNumber": 466
+        },
+        {
+          "caller": "listComments",
+          "callee": "pageReqDto.getPageSize",
+          "lineNumber": 466
+        },
+        {
+          "caller": "listComments",
+          "callee": "page.getTotal",
+          "lineNumber": 467
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 474
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 476
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 476
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterMapper.deleteById",
+          "lineNumber": 478
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 480
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookContentQueryWrapper.eq",
+          "lineNumber": 481
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookContentMapper.delete",
+          "lineNumber": 482
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "new BookInfo",
+          "lineNumber": 484
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "newBookInfo.setId",
+          "lineNumber": 485
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 485
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "newBookInfo.setUpdateTime",
+          "lineNumber": 486
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 486
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "newBookInfo.setWordCount",
+          "lineNumber": 487
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookInfo.getWordCount",
+          "lineNumber": 487
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "chapter.getChapterWordCount",
+          "lineNumber": 487
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "Objects.equals",
+          "lineNumber": 488
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookInfo.getLastChapterId",
+          "lineNumber": 488
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 490
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterQueryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, chapter.getBookId())\r\n                .orderByDesc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM).last",
+          "lineNumber": 491
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterQueryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, chapter.getBookId()).orderByDesc",
+          "lineNumber": 491
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterQueryWrapper.eq",
+          "lineNumber": 491
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 491
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 493
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterMapper.selectOne",
+          "lineNumber": 494
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "Objects.nonNull",
+          "lineNumber": 498
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapter.getId",
+          "lineNumber": 499
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapter.getChapterName",
+          "lineNumber": 500
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapter.getUpdateTime",
+          "lineNumber": 501
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "newBookInfo.setLastChapterId",
+          "lineNumber": 503
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "newBookInfo.setLastChapterName",
+          "lineNumber": 504
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "newBookInfo.setLastChapterUpdateTime",
+          "lineNumber": 505
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookInfoMapper.updateById",
+          "lineNumber": 507
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookChapterCacheManager.evictBookChapterCache",
+          "lineNumber": 509
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookContentCacheManager.evictBookContentCache",
+          "lineNumber": 511
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookInfoCacheManager.evictBookInfoCache",
+          "lineNumber": 513
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 513
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "amqpMsgManager.sendBookChangeMsg",
+          "lineNumber": 515
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 515
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "RestResp.ok",
+          "lineNumber": 516
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 521
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "bookContentCacheManager.getBookContent",
+          "lineNumber": 522
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "RestResp.ok",
+          "lineNumber": 523
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "ChapterContentRespDto.builder()\r\n                .chapterName(chapter.getChapterName())\r\n                .chapterContent(bookContent)\r\n                .isVip(chapter.getIsVip()).build",
+          "lineNumber": 524
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "ChapterContentRespDto.builder()\r\n                .chapterName(chapter.getChapterName())\r\n                .chapterContent(bookContent).isVip",
+          "lineNumber": 524
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "ChapterContentRespDto.builder()\r\n                .chapterName(chapter.getChapterName()).chapterContent",
+          "lineNumber": 524
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "ChapterContentRespDto.builder().chapterName",
+          "lineNumber": 524
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "ChapterContentRespDto.builder",
+          "lineNumber": 524
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "chapter.getChapterName",
+          "lineNumber": 525
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "chapter.getIsVip",
+          "lineNumber": 527
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 535
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 537
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 537
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "new BookChapter",
+          "lineNumber": 539
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newChapter.setId",
+          "lineNumber": 540
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newChapter.setChapterName",
+          "lineNumber": 541
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterName",
+          "lineNumber": 541
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newChapter.setWordCount",
+          "lineNumber": 542
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterContent().length",
+          "lineNumber": 542
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterContent",
+          "lineNumber": 542
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newChapter.setIsVip",
+          "lineNumber": 543
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getIsVip",
+          "lineNumber": 543
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newChapter.setUpdateTime",
+          "lineNumber": 544
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 544
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookChapterMapper.updateById",
+          "lineNumber": 545
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "new BookContent",
+          "lineNumber": 547
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newContent.setContent",
+          "lineNumber": 548
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterContent",
+          "lineNumber": 548
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newContent.setUpdateTime",
+          "lineNumber": 549
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 549
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 550
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookContentQueryWrapper.eq",
+          "lineNumber": 551
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookContentMapper.update",
+          "lineNumber": 552
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "new BookInfo",
+          "lineNumber": 554
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newBookInfo.setId",
+          "lineNumber": 555
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 555
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newBookInfo.setUpdateTime",
+          "lineNumber": 556
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 556
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newBookInfo.setWordCount",
+          "lineNumber": 557
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookInfo.getWordCount",
+          "lineNumber": 558
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "chapter.getChapterWordCount",
+          "lineNumber": 558
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterContent().length",
+          "lineNumber": 558
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterContent",
+          "lineNumber": 558
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "Objects.equals",
+          "lineNumber": 559
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookInfo.getLastChapterId",
+          "lineNumber": 559
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newBookInfo.setLastChapterName",
+          "lineNumber": 561
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "dto.getChapterName",
+          "lineNumber": 561
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "newBookInfo.setLastChapterUpdateTime",
+          "lineNumber": 562
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 562
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookInfoMapper.updateById",
+          "lineNumber": 564
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookChapterCacheManager.evictBookChapterCache",
+          "lineNumber": 566
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookContentCacheManager.evictBookContentCache",
+          "lineNumber": 568
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookInfoCacheManager.evictBookInfoCache",
+          "lineNumber": 570
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 570
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "amqpMsgManager.sendBookChangeMsg",
+          "lineNumber": 572
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "chapter.getBookId",
+          "lineNumber": 572
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "RestResp.ok",
+          "lineNumber": 573
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "log.debug",
+          "lineNumber": 578
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 578
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "bookChapterCacheManager.getChapter",
+          "lineNumber": 580
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "bookContentCacheManager.getBookContent",
+          "lineNumber": 583
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "bookInfoCacheManager.getBookInfo",
+          "lineNumber": 586
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "bookChapter.getBookId",
+          "lineNumber": 586
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "RestResp.ok",
+          "lineNumber": 589
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "BookContentAboutRespDto.builder()\r\n            .bookInfo(bookInfo)\r\n            .chapterInfo(bookChapter)\r\n            .bookContent(content).build",
+          "lineNumber": 589
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "BookContentAboutRespDto.builder()\r\n            .bookInfo(bookInfo)\r\n            .chapterInfo(bookChapter).bookContent",
+          "lineNumber": 589
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "BookContentAboutRespDto.builder()\r\n            .bookInfo(bookInfo).chapterInfo",
+          "lineNumber": 589
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "BookContentAboutRespDto.builder().bookInfo",
+          "lineNumber": 589
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "BookContentAboutRespDto.builder",
+          "lineNumber": 589
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 25,
+        "functionCount": 24,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/DbSearchServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "searchBooks",
+          "startLine": 32,
+          "endLine": 50,
+          "params": [
+            "condition"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DbSearchServiceImpl",
+          "startLine": 24,
+          "endLine": 52,
+          "methods": [
+            "searchBooks"
+          ],
+          "properties": [
+            "bookInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "searchBooks",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "DbSearchServiceImpl",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "searchBooks",
+          "callee": "new Page<>",
+          "lineNumber": 34
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "page.setCurrent",
+          "lineNumber": 35
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageNum",
+          "lineNumber": 35
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "page.setSize",
+          "lineNumber": 36
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageSize",
+          "lineNumber": 36
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "bookInfoMapper.searchBooks",
+          "lineNumber": 37
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 38
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "PageRespDto.of",
+          "lineNumber": 39
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageNum",
+          "lineNumber": 39
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageSize",
+          "lineNumber": 39
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "page.getTotal",
+          "lineNumber": 39
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "bookInfos.stream().map(v -> BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId())\r\n                    .categoryName(v.getCategoryName())\r\n                    .authorId(v.getAuthorId())\r\n                    .authorName(v.getAuthorName())\r\n                    .wordCount(v.getWordCount())\r\n                    .lastChapterName(v.getLastChapterName())\r\n                    .build()).toList",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "bookInfos.stream().map",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "bookInfos.stream",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId())\r\n                    .categoryName(v.getCategoryName())\r\n                    .authorId(v.getAuthorId())\r\n                    .authorName(v.getAuthorName())\r\n                    .wordCount(v.getWordCount())\r\n                    .lastChapterName(v.getLastChapterName()).build",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId())\r\n                    .categoryName(v.getCategoryName())\r\n                    .authorId(v.getAuthorId())\r\n                    .authorName(v.getAuthorName())\r\n                    .wordCount(v.getWordCount()).lastChapterName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId())\r\n                    .categoryName(v.getCategoryName())\r\n                    .authorId(v.getAuthorId())\r\n                    .authorName(v.getAuthorName()).wordCount",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId())\r\n                    .categoryName(v.getCategoryName())\r\n                    .authorId(v.getAuthorId()).authorName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId())\r\n                    .categoryName(v.getCategoryName()).authorId",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName())\r\n                    .categoryId(v.getCategoryId()).categoryName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId())\r\n                    .bookName(v.getBookName()).categoryId",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                    .id(v.getId()).bookName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder().id",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder",
+          "lineNumber": 40
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getId",
+          "lineNumber": 41
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getBookName",
+          "lineNumber": 42
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getCategoryId",
+          "lineNumber": 43
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getCategoryName",
+          "lineNumber": 44
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getAuthorId",
+          "lineNumber": 45
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getAuthorName",
+          "lineNumber": 46
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getWordCount",
+          "lineNumber": 47
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "v.getLastChapterName",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/EsSearchServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 178,
+      "nonEmptyLines": 154,
+      "functions": [
+        {
+          "name": "searchBooks",
+          "startLine": 46,
+          "endLine": 107,
+          "params": [
+            "condition"
+          ]
+        },
+        {
+          "name": "buildSearchCondition",
+          "startLine": 112,
+          "endLine": 177,
+          "params": [
+            "condition",
+            "searchBuilder"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EsSearchServiceImpl",
+          "startLine": 38,
+          "endLine": 178,
+          "methods": [
+            "searchBooks",
+            "buildSearchCondition"
+          ],
+          "properties": [
+            "esClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "searchBooks",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "EsSearchServiceImpl",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "searchBooks",
+          "callee": "esClient.search",
+          "lineNumber": 50
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "s.index",
+          "lineNumber": 52
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "buildSearchCondition",
+          "lineNumber": 54
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "StringUtils.isBlank",
+          "lineNumber": 56
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getSort",
+          "lineNumber": 56
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "searchBuilder.sort",
+          "lineNumber": 57
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "o.field",
+          "lineNumber": 57
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "f\r\n                        .field(StringUtils.underlineToCamel(condition.getSort().split(\" \")[0])).order",
+          "lineNumber": 57
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "f.field",
+          "lineNumber": 57
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "StringUtils.underlineToCamel",
+          "lineNumber": 58
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getSort().split",
+          "lineNumber": 58
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getSort",
+          "lineNumber": 58
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "searchBuilder.from((condition.getPageNum() - 1) * condition.getPageSize()).size",
+          "lineNumber": 63
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "searchBuilder.from",
+          "lineNumber": 63
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageNum",
+          "lineNumber": 63
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageSize",
+          "lineNumber": 63
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageSize",
+          "lineNumber": 64
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "searchBuilder.highlight",
+          "lineNumber": 66
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "h.fields(EsConsts.BookIndex.FIELD_BOOK_NAME,\r\n                        t -> t.preTags(\"<em style='color:red'>\").postTags(\"</em>\")).fields",
+          "lineNumber": 66
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "h.fields",
+          "lineNumber": 66
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "t.preTags(\"<em style='color:red'>\").postTags",
+          "lineNumber": 67
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "t.preTags",
+          "lineNumber": 67
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "t.preTags(\"<em style='color:red'>\").postTags",
+          "lineNumber": 69
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "t.preTags",
+          "lineNumber": 69
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "response.hits().total",
+          "lineNumber": 76
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "response.hits",
+          "lineNumber": 76
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "new ArrayList<>",
+          "lineNumber": 78
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "response.hits().hits",
+          "lineNumber": 79
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "response.hits",
+          "lineNumber": 79
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.source",
+          "lineNumber": 82
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight().get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.setBookName",
+          "lineNumber": 85
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight().get(EsConsts.BookIndex.FIELD_BOOK_NAME).get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight().get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight",
+          "lineNumber": 85
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 87
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight().get",
+          "lineNumber": 88
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight",
+          "lineNumber": 88
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.setAuthorName",
+          "lineNumber": 89
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight().get(EsConsts.BookIndex.FIELD_AUTHOR_NAME).get",
+          "lineNumber": 90
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight().get",
+          "lineNumber": 90
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "hit.highlight",
+          "lineNumber": 90
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "list.add",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName())\r\n                .categoryId(book.getCategoryId())\r\n                .categoryName(book.getCategoryName())\r\n                .authorId(book.getAuthorId())\r\n                .authorName(book.getAuthorName())\r\n                .wordCount(book.getWordCount())\r\n                .lastChapterName(book.getLastChapterName()).build",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName())\r\n                .categoryId(book.getCategoryId())\r\n                .categoryName(book.getCategoryName())\r\n                .authorId(book.getAuthorId())\r\n                .authorName(book.getAuthorName())\r\n                .wordCount(book.getWordCount()).lastChapterName",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName())\r\n                .categoryId(book.getCategoryId())\r\n                .categoryName(book.getCategoryName())\r\n                .authorId(book.getAuthorId())\r\n                .authorName(book.getAuthorName()).wordCount",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName())\r\n                .categoryId(book.getCategoryId())\r\n                .categoryName(book.getCategoryName())\r\n                .authorId(book.getAuthorId()).authorName",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName())\r\n                .categoryId(book.getCategoryId())\r\n                .categoryName(book.getCategoryName()).authorId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName())\r\n                .categoryId(book.getCategoryId()).categoryName",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId())\r\n                .bookName(book.getBookName()).categoryId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder()\r\n                .id(book.getId()).bookName",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder().id",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "BookInfoRespDto.builder",
+          "lineNumber": 92
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getId",
+          "lineNumber": 93
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getBookName",
+          "lineNumber": 94
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getCategoryId",
+          "lineNumber": 95
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getCategoryName",
+          "lineNumber": 96
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getAuthorId",
+          "lineNumber": 97
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getAuthorName",
+          "lineNumber": 98
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getWordCount",
+          "lineNumber": 99
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "book.getLastChapterName",
+          "lineNumber": 100
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 104
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "PageRespDto.of",
+          "lineNumber": 105
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageNum",
+          "lineNumber": 105
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "condition.getPageSize",
+          "lineNumber": 105
+        },
+        {
+          "caller": "searchBooks",
+          "callee": "total.value",
+          "lineNumber": 105
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "BoolQuery.of",
+          "lineNumber": 115
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 118
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of(m -> m\r\n                .field(EsConsts.BookIndex.FIELD_WORD_COUNT)\r\n                .gt(JsonData.of(0))\r\n            )._toQuery",
+          "lineNumber": 118
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of",
+          "lineNumber": 118
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m\r\n                .field(EsConsts.BookIndex.FIELD_WORD_COUNT).gt",
+          "lineNumber": 118
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m.field",
+          "lineNumber": 118
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "JsonData.of",
+          "lineNumber": 120
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "StringUtils.isBlank",
+          "lineNumber": 123
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getKeyword",
+          "lineNumber": 123
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 125
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "q.multiMatch",
+          "lineNumber": 125
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "t\r\n                    .fields(EsConsts.BookIndex.FIELD_BOOK_NAME + \"^2\",\r\n                        EsConsts.BookIndex.FIELD_AUTHOR_NAME + \"^1.8\",\r\n                        EsConsts.BookIndex.FIELD_BOOK_DESC + \"^0.1\").query",
+          "lineNumber": 125
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "t.fields",
+          "lineNumber": 125
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getKeyword",
+          "lineNumber": 129
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "Objects.nonNull",
+          "lineNumber": 135
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getWorkDirection",
+          "lineNumber": 135
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 136
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "TermQuery.of(m -> m\r\n                    .field(EsConsts.BookIndex.FIELD_WORK_DIRECTION)\r\n                    .value(condition.getWorkDirection())\r\n                )._toQuery",
+          "lineNumber": 136
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "TermQuery.of",
+          "lineNumber": 136
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m\r\n                    .field(EsConsts.BookIndex.FIELD_WORK_DIRECTION).value",
+          "lineNumber": 136
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m.field",
+          "lineNumber": 136
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getWorkDirection",
+          "lineNumber": 138
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "Objects.nonNull",
+          "lineNumber": 142
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getCategoryId",
+          "lineNumber": 142
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 143
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "TermQuery.of(m -> m\r\n                    .field(EsConsts.BookIndex.FIELD_CATEGORY_ID)\r\n                    .value(condition.getCategoryId())\r\n                )._toQuery",
+          "lineNumber": 143
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "TermQuery.of",
+          "lineNumber": 143
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m\r\n                    .field(EsConsts.BookIndex.FIELD_CATEGORY_ID).value",
+          "lineNumber": 143
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m.field",
+          "lineNumber": 143
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getCategoryId",
+          "lineNumber": 145
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "Objects.nonNull",
+          "lineNumber": 150
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getWordCountMin",
+          "lineNumber": 150
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of(m -> m\r\n                    .field(EsConsts.BookIndex.FIELD_WORD_COUNT)\r\n                    .gte(JsonData.of(condition.getWordCountMin()))\r\n                )._toQuery",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m\r\n                    .field(EsConsts.BookIndex.FIELD_WORD_COUNT).gte",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m.field",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "JsonData.of",
+          "lineNumber": 153
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getWordCountMin",
+          "lineNumber": 153
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "Objects.nonNull",
+          "lineNumber": 157
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getWordCountMax",
+          "lineNumber": 157
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 158
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of(m -> m\r\n                    .field(EsConsts.BookIndex.FIELD_WORD_COUNT)\r\n                    .lt(JsonData.of(condition.getWordCountMax()))\r\n                )._toQuery",
+          "lineNumber": 158
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of",
+          "lineNumber": 158
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m\r\n                    .field(EsConsts.BookIndex.FIELD_WORD_COUNT).lt",
+          "lineNumber": 158
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m.field",
+          "lineNumber": 158
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "JsonData.of",
+          "lineNumber": 160
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getWordCountMax",
+          "lineNumber": 160
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "Objects.nonNull",
+          "lineNumber": 164
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getUpdateTimeMin",
+          "lineNumber": 164
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "b.must",
+          "lineNumber": 165
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of(m -> m\r\n                    .field(EsConsts.BookIndex.FIELD_LAST_CHAPTER_UPDATE_TIME)\r\n                    .gte(JsonData.of(condition.getUpdateTimeMin().getTime()))\r\n                )._toQuery",
+          "lineNumber": 165
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "RangeQuery.of",
+          "lineNumber": 165
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m\r\n                    .field(EsConsts.BookIndex.FIELD_LAST_CHAPTER_UPDATE_TIME).gte",
+          "lineNumber": 165
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "m.field",
+          "lineNumber": 165
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "JsonData.of",
+          "lineNumber": 167
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getUpdateTimeMin().getTime",
+          "lineNumber": 167
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "condition.getUpdateTimeMin",
+          "lineNumber": 167
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "searchBuilder.query",
+          "lineNumber": 175
+        },
+        {
+          "caller": "buildSearchCondition",
+          "callee": "q.bool",
+          "lineNumber": 175
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/HomeServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "listHomeBooks",
+          "startLine": 28,
+          "endLine": 31,
+          "params": []
+        },
+        {
+          "name": "listHomeFriendLinks",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HomeServiceImpl",
+          "startLine": 20,
+          "endLine": 37,
+          "methods": [
+            "listHomeBooks",
+            "listHomeFriendLinks"
+          ],
+          "properties": [
+            "homeBookCacheManager",
+            "friendLinkCacheManager"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listHomeBooks",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "listHomeFriendLinks",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "HomeServiceImpl",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listHomeBooks",
+          "callee": "RestResp.ok",
+          "lineNumber": 30
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBookCacheManager.listHomeBooks",
+          "lineNumber": 30
+        },
+        {
+          "caller": "listHomeFriendLinks",
+          "callee": "RestResp.ok",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listHomeFriendLinks",
+          "callee": "friendLinkCacheManager.listFriendLinks",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/NewsServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "listLatestNews",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "getNews",
+          "startLine": 38,
+          "endLine": 51,
+          "params": [
+            "id"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewsServiceImpl",
+          "startLine": 23,
+          "endLine": 52,
+          "methods": [
+            "listLatestNews",
+            "getNews"
+          ],
+          "properties": [
+            "newsCacheManager",
+            "newsInfoMapper",
+            "newsContentMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listLatestNews",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "getNews",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "NewsServiceImpl",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listLatestNews",
+          "callee": "RestResp.ok",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "newsCacheManager.listLatestNews",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsInfoMapper.selectById",
+          "lineNumber": 40
+        },
+        {
+          "caller": "getNews",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getNews",
+          "callee": "queryWrapper.eq(DatabaseConsts.NewsContentTable.COLUMN_NEWS_ID, id).last",
+          "lineNumber": 42
+        },
+        {
+          "caller": "getNews",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 42
+        },
+        {
+          "caller": "getNews",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsContentMapper.selectOne",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getNews",
+          "callee": "RestResp.ok",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .title(newsInfo.getTitle())\r\n            .sourceName(newsInfo.getSourceName())\r\n            .updateTime(newsInfo.getUpdateTime())\r\n            .content(newsContent.getContent()).build",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .title(newsInfo.getTitle())\r\n            .sourceName(newsInfo.getSourceName())\r\n            .updateTime(newsInfo.getUpdateTime()).content",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .title(newsInfo.getTitle())\r\n            .sourceName(newsInfo.getSourceName()).updateTime",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .title(newsInfo.getTitle()).sourceName",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "NewsInfoRespDto.builder().title",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "NewsInfoRespDto.builder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsInfo.getTitle",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsInfo.getSourceName",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsInfo.getUpdateTime",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsContent.getContent",
+          "lineNumber": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/ResourceServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "getImgVerifyCode",
+          "startLine": 41,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "uploadImage",
+          "startLine": 50,
+          "endLine": 76,
+          "params": [
+            "file"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResourceServiceImpl",
+          "startLine": 31,
+          "endLine": 78,
+          "methods": [
+            "getImgVerifyCode",
+            "uploadImage"
+          ],
+          "properties": [
+            "verifyCodeManager",
+            "fileUploadPath"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getImgVerifyCode",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "uploadImage",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceServiceImpl",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "IdWorker.get32UUID",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "RestResp.ok",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "ImgVerifyCodeRespDto.builder()\r\n            .sessionId(sessionId)\r\n            .img(verifyCodeManager.genImgVerifyCode(sessionId)).build",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "ImgVerifyCodeRespDto.builder()\r\n            .sessionId(sessionId).img",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "ImgVerifyCodeRespDto.builder().sessionId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "ImgVerifyCodeRespDto.builder",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "verifyCodeManager.genImgVerifyCode",
+          "lineNumber": 46
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 53
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "now.format",
+          "lineNumber": 56
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 56
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "now.format",
+          "lineNumber": 57
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 57
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "now.format",
+          "lineNumber": 58
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 58
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 59
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "IdWorker.get32UUID",
+          "lineNumber": 61
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "oriName.substring",
+          "lineNumber": 61
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "oriName.lastIndexOf",
+          "lineNumber": 61
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "new File",
+          "lineNumber": 62
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "saveFile.getParentFile().exists",
+          "lineNumber": 63
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "saveFile.getParentFile",
+          "lineNumber": 63
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "saveFile.getParentFile().mkdirs",
+          "lineNumber": 64
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "saveFile.getParentFile",
+          "lineNumber": 64
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "new BusinessException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "file.transferTo",
+          "lineNumber": 69
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "Objects.isNull",
+          "lineNumber": 70
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "ImageIO.read",
+          "lineNumber": 70
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "Files.delete",
+          "lineNumber": 72
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "saveFile.toPath",
+          "lineNumber": 72
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "new BusinessException",
+          "lineNumber": 73
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "RestResp.ok",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/service/impl/UserServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 171,
+      "nonEmptyLines": 150,
+      "functions": [
+        {
+          "name": "register",
+          "startLine": 52,
+          "endLine": 91,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "login",
+          "startLine": 93,
+          "endLine": 117,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "saveFeedback",
+          "startLine": 119,
+          "endLine": 128,
+          "params": [
+            "userId",
+            "content"
+          ]
+        },
+        {
+          "name": "updateUserInfo",
+          "startLine": 130,
+          "endLine": 139,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "deleteFeedback",
+          "startLine": 141,
+          "endLine": 148,
+          "params": [
+            "userId",
+            "id"
+          ]
+        },
+        {
+          "name": "getBookshelfStatus",
+          "startLine": 150,
+          "endLine": 160,
+          "params": [
+            "userId",
+            "bookId"
+          ]
+        },
+        {
+          "name": "getUserInfo",
+          "startLine": 162,
+          "endLine": 170,
+          "params": [
+            "userId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserServiceImpl",
+          "startLine": 38,
+          "endLine": 171,
+          "methods": [
+            "register",
+            "login",
+            "saveFeedback",
+            "updateUserInfo",
+            "deleteFeedback",
+            "getBookshelfStatus",
+            "getUserInfo"
+          ],
+          "properties": [
+            "userInfoMapper",
+            "verifyCodeManager",
+            "userFeedbackMapper",
+            "userBookshelfMapper",
+            "jwtUtils"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "register",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "login",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "saveFeedback",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "updateUserInfo",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "deleteFeedback",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "getBookshelfStatus",
+          "line": 150,
+          "isDefault": false
+        },
+        {
+          "name": "getUserInfo",
+          "line": 162,
+          "isDefault": false
+        },
+        {
+          "name": "UserServiceImpl",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register",
+          "callee": "verifyCodeManager.imgVerifyCodeOk",
+          "lineNumber": 55
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getSessionId",
+          "lineNumber": 55
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getVelCode",
+          "lineNumber": 55
+        },
+        {
+          "caller": "register",
+          "callee": "new BusinessException",
+          "lineNumber": 57
+        },
+        {
+          "caller": "register",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 61
+        },
+        {
+          "caller": "register",
+          "callee": "queryWrapper.eq(DatabaseConsts.UserInfoTable.COLUMN_USERNAME, dto.getUsername()).last",
+          "lineNumber": 62
+        },
+        {
+          "caller": "register",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 62
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getUsername",
+          "lineNumber": 62
+        },
+        {
+          "caller": "register",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 63
+        },
+        {
+          "caller": "register",
+          "callee": "userInfoMapper.selectCount",
+          "lineNumber": 64
+        },
+        {
+          "caller": "register",
+          "callee": "new BusinessException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "register",
+          "callee": "new UserInfo",
+          "lineNumber": 70
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.setPassword",
+          "lineNumber": 71
+        },
+        {
+          "caller": "register",
+          "callee": "DigestUtils.md5DigestAsHex",
+          "lineNumber": 72
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getPassword().getBytes",
+          "lineNumber": 72
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getPassword",
+          "lineNumber": 72
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.setUsername",
+          "lineNumber": 73
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getUsername",
+          "lineNumber": 73
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.setNickName",
+          "lineNumber": 74
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getUsername",
+          "lineNumber": 74
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.setCreateTime",
+          "lineNumber": 75
+        },
+        {
+          "caller": "register",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 75
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.setUpdateTime",
+          "lineNumber": 76
+        },
+        {
+          "caller": "register",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 76
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.setSalt",
+          "lineNumber": 77
+        },
+        {
+          "caller": "register",
+          "callee": "userInfoMapper.insert",
+          "lineNumber": 78
+        },
+        {
+          "caller": "register",
+          "callee": "verifyCodeManager.removeImgVerifyCode",
+          "lineNumber": 81
+        },
+        {
+          "caller": "register",
+          "callee": "dto.getSessionId",
+          "lineNumber": 81
+        },
+        {
+          "caller": "register",
+          "callee": "RestResp.ok",
+          "lineNumber": 84
+        },
+        {
+          "caller": "register",
+          "callee": "UserRegisterRespDto.builder()\r\n                .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY))\r\n                .uid(userInfo.getId()).build",
+          "lineNumber": 85
+        },
+        {
+          "caller": "register",
+          "callee": "UserRegisterRespDto.builder()\r\n                .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY)).uid",
+          "lineNumber": 85
+        },
+        {
+          "caller": "register",
+          "callee": "UserRegisterRespDto.builder().token",
+          "lineNumber": 85
+        },
+        {
+          "caller": "register",
+          "callee": "UserRegisterRespDto.builder",
+          "lineNumber": 85
+        },
+        {
+          "caller": "register",
+          "callee": "jwtUtils.generateToken",
+          "lineNumber": 86
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.getId",
+          "lineNumber": 86
+        },
+        {
+          "caller": "register",
+          "callee": "userInfo.getId",
+          "lineNumber": 87
+        },
+        {
+          "caller": "login",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 96
+        },
+        {
+          "caller": "login",
+          "callee": "queryWrapper.eq(DatabaseConsts.UserInfoTable.COLUMN_USERNAME, dto.getUsername()).last",
+          "lineNumber": 97
+        },
+        {
+          "caller": "login",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 97
+        },
+        {
+          "caller": "login",
+          "callee": "dto.getUsername",
+          "lineNumber": 97
+        },
+        {
+          "caller": "login",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 98
+        },
+        {
+          "caller": "login",
+          "callee": "userInfoMapper.selectOne",
+          "lineNumber": 99
+        },
+        {
+          "caller": "login",
+          "callee": "Objects.isNull",
+          "lineNumber": 100
+        },
+        {
+          "caller": "login",
+          "callee": "new BusinessException",
+          "lineNumber": 102
+        },
+        {
+          "caller": "login",
+          "callee": "Objects.equals",
+          "lineNumber": 106
+        },
+        {
+          "caller": "login",
+          "callee": "userInfo.getPassword",
+          "lineNumber": 106
+        },
+        {
+          "caller": "login",
+          "callee": "DigestUtils.md5DigestAsHex",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "dto.getPassword().getBytes",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "dto.getPassword",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "new BusinessException",
+          "lineNumber": 109
+        },
+        {
+          "caller": "login",
+          "callee": "RestResp.ok",
+          "lineNumber": 113
+        },
+        {
+          "caller": "login",
+          "callee": "UserLoginRespDto.builder()\r\n            .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY))\r\n            .uid(userInfo.getId())\r\n            .nickName(userInfo.getNickName()).build",
+          "lineNumber": 113
+        },
+        {
+          "caller": "login",
+          "callee": "UserLoginRespDto.builder()\r\n            .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY))\r\n            .uid(userInfo.getId()).nickName",
+          "lineNumber": 113
+        },
+        {
+          "caller": "login",
+          "callee": "UserLoginRespDto.builder()\r\n            .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY)).uid",
+          "lineNumber": 113
+        },
+        {
+          "caller": "login",
+          "callee": "UserLoginRespDto.builder().token",
+          "lineNumber": 113
+        },
+        {
+          "caller": "login",
+          "callee": "UserLoginRespDto.builder",
+          "lineNumber": 113
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtils.generateToken",
+          "lineNumber": 114
+        },
+        {
+          "caller": "login",
+          "callee": "userInfo.getId",
+          "lineNumber": 114
+        },
+        {
+          "caller": "login",
+          "callee": "userInfo.getId",
+          "lineNumber": 115
+        },
+        {
+          "caller": "login",
+          "callee": "userInfo.getNickName",
+          "lineNumber": 116
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "new UserFeedback",
+          "lineNumber": 121
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "userFeedback.setUserId",
+          "lineNumber": 122
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "userFeedback.setContent",
+          "lineNumber": 123
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "userFeedback.setCreateTime",
+          "lineNumber": 124
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 124
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "userFeedback.setUpdateTime",
+          "lineNumber": 125
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 125
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "userFeedbackMapper.insert",
+          "lineNumber": 126
+        },
+        {
+          "caller": "saveFeedback",
+          "callee": "RestResp.ok",
+          "lineNumber": 127
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "new UserInfo",
+          "lineNumber": 132
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "userInfo.setId",
+          "lineNumber": 133
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "dto.getUserId",
+          "lineNumber": 133
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "userInfo.setNickName",
+          "lineNumber": 134
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "dto.getNickName",
+          "lineNumber": 134
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "userInfo.setUserPhoto",
+          "lineNumber": 135
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "dto.getUserPhoto",
+          "lineNumber": 135
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "userInfo.setUserSex",
+          "lineNumber": 136
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "dto.getUserSex",
+          "lineNumber": 136
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "userInfoMapper.updateById",
+          "lineNumber": 137
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "RestResp.ok",
+          "lineNumber": 138
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 143
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "queryWrapper.eq(DatabaseConsts.CommonColumnEnum.ID.getName(), id).eq",
+          "lineNumber": 144
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 144
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 144
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "userFeedbackMapper.delete",
+          "lineNumber": 146
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "RestResp.ok",
+          "lineNumber": 147
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "queryWrapper.eq(DatabaseConsts.UserBookshelfTable.COLUMN_USER_ID, userId).eq",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "RestResp.ok",
+          "lineNumber": 155
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "userBookshelfMapper.selectCount",
+          "lineNumber": 156
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "userInfoMapper.selectById",
+          "lineNumber": 164
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "RestResp.ok",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "UserInfoRespDto.builder()\r\n            .nickName(userInfo.getNickName())\r\n            .userSex(userInfo.getUserSex())\r\n            .userPhoto(userInfo.getUserPhoto()).build",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "UserInfoRespDto.builder()\r\n            .nickName(userInfo.getNickName())\r\n            .userSex(userInfo.getUserSex()).userPhoto",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "UserInfoRespDto.builder()\r\n            .nickName(userInfo.getNickName()).userSex",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "UserInfoRespDto.builder().nickName",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "UserInfoRespDto.builder",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "userInfo.getNickName",
+          "lineNumber": 166
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "userInfo.getUserSex",
+          "lineNumber": 167
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "userInfo.getUserPhoto",
+          "lineNumber": 168
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/resources/META-INF/additional-spring-configuration-metadata.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 76,
+      "nonEmptyLines": 76,
+      "sections": [
+        {
+          "heading": "properties",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "src/test/java/io/github/xxyopen/novel/generator/Generator.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 40,
+          "endLine": 45,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "genCode",
+          "startLine": 51,
+          "endLine": 86,
+          "params": [
+            "tables"
+          ]
+        },
+        {
+          "name": "getTables",
+          "startLine": 91,
+          "endLine": 93,
+          "params": [
+            "tables"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Generator",
+          "startLine": 18,
+          "endLine": 95,
+          "methods": [
+            "main",
+            "genCode",
+            "getTables"
+          ],
+          "properties": [
+            "USERNAME",
+            "PROJECT_PATH",
+            "JAVA_PATH",
+            "RESOURCE_PATH",
+            "BASE_PACKAGE",
+            "DATABASE_IP",
+            "DATABASE_PORT",
+            "DATABASE_NAME",
+            "DATABASE_USERNAME",
+            "DATABASE_PASSWORD"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "Generator",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "genCode",
+          "lineNumber": 43
+        },
+        {
+          "caller": "genCode",
+          "callee": "FastAutoGenerator.create(String.format(\"jdbc:mysql://%s:%s/%s?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai\", DATABASE_IP, DATABASE_PORT, DATABASE_NAME), DATABASE_USERNAME, DATABASE_PASSWORD)\r\n                .globalConfig(builder -> {\r\n                    builder.author(USERNAME) // 设置作者\r\n                            .fileOverride()\r\n                            // kotlin\r\n                            //.enableSwagger() // 开启 swagger 模式\r\n                            .fileOverride() // 覆盖已生成文件\r\n                            .commentDate(\"yyyy/MM/dd\")\r\n                            .outputDir(PROJECT_PATH + JAVA_PATH); // 指定输出目录\r\n                })\r\n                // 包配置\r\n                .packageConfig(builder -> builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\")\r\n                        .serviceImpl(\"service.impl\")\r\n                        .mapper(\"dao.mapper\")\r\n                        .controller(\"controller.front\")\r\n                        .pathInfo(Collections.singletonMap(OutputFile.mapperXml, PROJECT_PATH + RESOURCE_PATH + \"/mapper\")))\r\n                // 模版配置\r\n                .templateConfig(builder -> builder.disable(TemplateType.SERVICE)\r\n                        .disable(TemplateType.SERVICEIMPL)\r\n                        .disable(TemplateType.CONTROLLER))\r\n                // 策略配置\r\n                .strategyConfig(builder -> builder.addInclude(getTables(tables)) // 设置需要生成的表名\r\n                        .controllerBuilder()\r\n                        .enableRestStyle()\r\n                        .serviceBuilder()\r\n                        .formatServiceFileName(\"%sService\")\r\n                ).execute",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "FastAutoGenerator.create(String.format(\"jdbc:mysql://%s:%s/%s?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai\", DATABASE_IP, DATABASE_PORT, DATABASE_NAME), DATABASE_USERNAME, DATABASE_PASSWORD)\r\n                .globalConfig(builder -> {\r\n                    builder.author(USERNAME) // 设置作者\r\n                            .fileOverride()\r\n                            // kotlin\r\n                            //.enableSwagger() // 开启 swagger 模式\r\n                            .fileOverride() // 覆盖已生成文件\r\n                            .commentDate(\"yyyy/MM/dd\")\r\n                            .outputDir(PROJECT_PATH + JAVA_PATH); // 指定输出目录\r\n                })\r\n                // 包配置\r\n                .packageConfig(builder -> builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\")\r\n                        .serviceImpl(\"service.impl\")\r\n                        .mapper(\"dao.mapper\")\r\n                        .controller(\"controller.front\")\r\n                        .pathInfo(Collections.singletonMap(OutputFile.mapperXml, PROJECT_PATH + RESOURCE_PATH + \"/mapper\")))\r\n                // 模版配置\r\n                .templateConfig(builder -> builder.disable(TemplateType.SERVICE)\r\n                        .disable(TemplateType.SERVICEIMPL)\r\n                        .disable(TemplateType.CONTROLLER)).strategyConfig",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "FastAutoGenerator.create(String.format(\"jdbc:mysql://%s:%s/%s?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai\", DATABASE_IP, DATABASE_PORT, DATABASE_NAME), DATABASE_USERNAME, DATABASE_PASSWORD)\r\n                .globalConfig(builder -> {\r\n                    builder.author(USERNAME) // 设置作者\r\n                            .fileOverride()\r\n                            // kotlin\r\n                            //.enableSwagger() // 开启 swagger 模式\r\n                            .fileOverride() // 覆盖已生成文件\r\n                            .commentDate(\"yyyy/MM/dd\")\r\n                            .outputDir(PROJECT_PATH + JAVA_PATH); // 指定输出目录\r\n                })\r\n                // 包配置\r\n                .packageConfig(builder -> builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\")\r\n                        .serviceImpl(\"service.impl\")\r\n                        .mapper(\"dao.mapper\")\r\n                        .controller(\"controller.front\")\r\n                        .pathInfo(Collections.singletonMap(OutputFile.mapperXml, PROJECT_PATH + RESOURCE_PATH + \"/mapper\"))).templateConfig",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "FastAutoGenerator.create(String.format(\"jdbc:mysql://%s:%s/%s?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai\", DATABASE_IP, DATABASE_PORT, DATABASE_NAME), DATABASE_USERNAME, DATABASE_PASSWORD)\r\n                .globalConfig(builder -> {\r\n                    builder.author(USERNAME) // 设置作者\r\n                            .fileOverride()\r\n                            // kotlin\r\n                            //.enableSwagger() // 开启 swagger 模式\r\n                            .fileOverride() // 覆盖已生成文件\r\n                            .commentDate(\"yyyy/MM/dd\")\r\n                            .outputDir(PROJECT_PATH + JAVA_PATH); // 指定输出目录\r\n                }).packageConfig",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "FastAutoGenerator.create(String.format(\"jdbc:mysql://%s:%s/%s?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai\", DATABASE_IP, DATABASE_PORT, DATABASE_NAME), DATABASE_USERNAME, DATABASE_PASSWORD).globalConfig",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "FastAutoGenerator.create",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "String.format",
+          "lineNumber": 54
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.author(USERNAME) // 设置作者\r\n                            .fileOverride()\r\n                            // kotlin\r\n                            //.enableSwagger() // 开启 swagger 模式\r\n                            .fileOverride() // 覆盖已生成文件\r\n                            .commentDate(\"yyyy/MM/dd\").outputDir",
+          "lineNumber": 56
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.author(USERNAME) // 设置作者\r\n                            .fileOverride()\r\n                            // kotlin\r\n                            //.enableSwagger() // 开启 swagger 模式\r\n                            .fileOverride().commentDate",
+          "lineNumber": 56
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.author(USERNAME) // 设置作者\r\n                            .fileOverride().fileOverride",
+          "lineNumber": 56
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.author(USERNAME).fileOverride",
+          "lineNumber": 56
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.author",
+          "lineNumber": 56
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\")\r\n                        .serviceImpl(\"service.impl\")\r\n                        .mapper(\"dao.mapper\")\r\n                        .controller(\"controller.front\").pathInfo",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\")\r\n                        .serviceImpl(\"service.impl\")\r\n                        .mapper(\"dao.mapper\").controller",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\")\r\n                        .serviceImpl(\"service.impl\").mapper",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\")\r\n                        .service(\"service\").serviceImpl",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent(BASE_PACKAGE) // 设置父包名\r\n                        .entity(\"dao.entity\").service",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent(BASE_PACKAGE).entity",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.parent",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genCode",
+          "callee": "Collections.singletonMap",
+          "lineNumber": 71
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.disable(TemplateType.SERVICE)\r\n                        .disable(TemplateType.SERVICEIMPL).disable",
+          "lineNumber": 73
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.disable(TemplateType.SERVICE).disable",
+          "lineNumber": 73
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.disable",
+          "lineNumber": 73
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.addInclude(getTables(tables)) // 设置需要生成的表名\r\n                        .controllerBuilder()\r\n                        .enableRestStyle()\r\n                        .serviceBuilder().formatServiceFileName",
+          "lineNumber": 77
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.addInclude(getTables(tables)) // 设置需要生成的表名\r\n                        .controllerBuilder()\r\n                        .enableRestStyle().serviceBuilder",
+          "lineNumber": 77
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.addInclude(getTables(tables)) // 设置需要生成的表名\r\n                        .controllerBuilder().enableRestStyle",
+          "lineNumber": 77
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.addInclude(getTables(tables)).controllerBuilder",
+          "lineNumber": 77
+        },
+        {
+          "caller": "genCode",
+          "callee": "builder.addInclude",
+          "lineNumber": 77
+        },
+        {
+          "caller": "genCode",
+          "callee": "getTables",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getTables",
+          "callee": "\"all\".equals",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getTables",
+          "callee": "Collections.emptyList",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getTables",
+          "callee": "Arrays.asList",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getTables",
+          "callee": "tables.split",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    }
+  ]
+}

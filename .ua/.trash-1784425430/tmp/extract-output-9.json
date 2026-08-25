@@ -1,0 +1,6595 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookChapter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 132,
+      "nonEmptyLines": 103,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 55,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 59,
+          "endLine": 61,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 63,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 67,
+          "endLine": 69,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getChapterNum",
+          "startLine": 71,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "setChapterNum",
+          "startLine": 75,
+          "endLine": 77,
+          "params": [
+            "chapterNum"
+          ]
+        },
+        {
+          "name": "getChapterName",
+          "startLine": 79,
+          "endLine": 81,
+          "params": []
+        },
+        {
+          "name": "setChapterName",
+          "startLine": 83,
+          "endLine": 85,
+          "params": [
+            "chapterName"
+          ]
+        },
+        {
+          "name": "getWordCount",
+          "startLine": 87,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "setWordCount",
+          "startLine": 91,
+          "endLine": 93,
+          "params": [
+            "wordCount"
+          ]
+        },
+        {
+          "name": "getIsVip",
+          "startLine": 95,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "setIsVip",
+          "startLine": 99,
+          "endLine": 101,
+          "params": [
+            "isVip"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 103,
+          "endLine": 105,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 107,
+          "endLine": 109,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 111,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 115,
+          "endLine": 117,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 119,
+          "endLine": 131,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookChapter",
+          "startLine": 17,
+          "endLine": 132,
+          "methods": [
+            "getId",
+            "setId",
+            "getBookId",
+            "setBookId",
+            "getChapterNum",
+            "setChapterNum",
+            "getChapterName",
+            "setChapterName",
+            "getWordCount",
+            "setWordCount",
+            "getIsVip",
+            "setIsVip",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "bookId",
+            "chapterNum",
+            "chapterName",
+            "wordCount",
+            "isVip",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "getChapterNum",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "setChapterNum",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "getChapterName",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "setChapterName",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "getWordCount",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "setWordCount",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "getIsVip",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "setIsVip",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "BookChapter",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookComment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getCommentContent",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setCommentContent",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "commentContent"
+          ]
+        },
+        {
+          "name": "getReplyCount",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setReplyCount",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "replyCount"
+          ]
+        },
+        {
+          "name": "getAuditStatus",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setAuditStatus",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "auditStatus"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 112,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 116,
+          "endLine": 118,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 120,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 124,
+          "endLine": 126,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 128,
+          "endLine": 140,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookComment",
+          "startLine": 17,
+          "endLine": 141,
+          "methods": [
+            "getId",
+            "setId",
+            "getBookId",
+            "setBookId",
+            "getUserId",
+            "setUserId",
+            "getCommentContent",
+            "setCommentContent",
+            "getReplyCount",
+            "setReplyCount",
+            "getAuditStatus",
+            "setAuditStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "bookId",
+            "userId",
+            "commentContent",
+            "replyCount",
+            "auditStatus",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getCommentContent",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setCommentContent",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getReplyCount",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setReplyCount",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getAuditStatus",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setAuditStatus",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "BookComment",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentCopy1.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getCommentContent",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setCommentContent",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "commentContent"
+          ]
+        },
+        {
+          "name": "getReplyCount",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setReplyCount",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "replyCount"
+          ]
+        },
+        {
+          "name": "getAuditStatus",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setAuditStatus",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "auditStatus"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 112,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 116,
+          "endLine": 118,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 120,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 124,
+          "endLine": 126,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 128,
+          "endLine": 140,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookCommentCopy1",
+          "startLine": 17,
+          "endLine": 141,
+          "methods": [
+            "getId",
+            "setId",
+            "getBookId",
+            "setBookId",
+            "getUserId",
+            "setUserId",
+            "getCommentContent",
+            "setCommentContent",
+            "getReplyCount",
+            "setReplyCount",
+            "getAuditStatus",
+            "setAuditStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "bookId",
+            "userId",
+            "commentContent",
+            "replyCount",
+            "auditStatus",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getCommentContent",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setCommentContent",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getReplyCount",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setReplyCount",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getAuditStatus",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setAuditStatus",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "BookCommentCopy1",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentReply.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 56,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 60,
+          "endLine": 62,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getCommentId",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setCommentId",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "commentId"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getReplyContent",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setReplyContent",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "replyContent"
+          ]
+        },
+        {
+          "name": "getAuditStatus",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setAuditStatus",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "auditStatus"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 112,
+          "endLine": 123,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookCommentReply",
+          "startLine": 15,
+          "endLine": 124,
+          "methods": [
+            "getId",
+            "setId",
+            "getCommentId",
+            "setCommentId",
+            "getUserId",
+            "setUserId",
+            "getReplyContent",
+            "setReplyContent",
+            "getAuditStatus",
+            "setAuditStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "commentId",
+            "userId",
+            "replyContent",
+            "auditStatus",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "getCommentId",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setCommentId",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getReplyContent",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setReplyContent",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getAuditStatus",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setAuditStatus",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "BookCommentReply",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookContent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 73,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 43,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 47,
+          "endLine": 49,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getChapterId",
+          "startLine": 51,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "setChapterId",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "getContent",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "setContent",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 75,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 83,
+          "endLine": 92,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookContent",
+          "startLine": 17,
+          "endLine": 93,
+          "methods": [
+            "getId",
+            "setId",
+            "getChapterId",
+            "setChapterId",
+            "getContent",
+            "setContent",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "chapterId",
+            "content",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "getChapterId",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "setChapterId",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "getContent",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "setContent",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "BookContent",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 309,
+      "nonEmptyLines": 244,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 124,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getWorkDirection",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "setWorkDirection",
+          "startLine": 136,
+          "endLine": 138,
+          "params": [
+            "workDirection"
+          ]
+        },
+        {
+          "name": "getCategoryId",
+          "startLine": 140,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "setCategoryId",
+          "startLine": 144,
+          "endLine": 146,
+          "params": [
+            "categoryId"
+          ]
+        },
+        {
+          "name": "getCategoryName",
+          "startLine": 148,
+          "endLine": 150,
+          "params": []
+        },
+        {
+          "name": "setCategoryName",
+          "startLine": 152,
+          "endLine": 154,
+          "params": [
+            "categoryName"
+          ]
+        },
+        {
+          "name": "getPicUrl",
+          "startLine": 156,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "setPicUrl",
+          "startLine": 160,
+          "endLine": 162,
+          "params": [
+            "picUrl"
+          ]
+        },
+        {
+          "name": "getBookName",
+          "startLine": 164,
+          "endLine": 166,
+          "params": []
+        },
+        {
+          "name": "setBookName",
+          "startLine": 168,
+          "endLine": 170,
+          "params": [
+            "bookName"
+          ]
+        },
+        {
+          "name": "getAuthorId",
+          "startLine": 172,
+          "endLine": 174,
+          "params": []
+        },
+        {
+          "name": "setAuthorId",
+          "startLine": 176,
+          "endLine": 178,
+          "params": [
+            "authorId"
+          ]
+        },
+        {
+          "name": "getAuthorName",
+          "startLine": 180,
+          "endLine": 182,
+          "params": []
+        },
+        {
+          "name": "setAuthorName",
+          "startLine": 184,
+          "endLine": 186,
+          "params": [
+            "authorName"
+          ]
+        },
+        {
+          "name": "getBookDesc",
+          "startLine": 188,
+          "endLine": 190,
+          "params": []
+        },
+        {
+          "name": "setBookDesc",
+          "startLine": 192,
+          "endLine": 194,
+          "params": [
+            "bookDesc"
+          ]
+        },
+        {
+          "name": "getScore",
+          "startLine": 196,
+          "endLine": 198,
+          "params": []
+        },
+        {
+          "name": "setScore",
+          "startLine": 200,
+          "endLine": 202,
+          "params": [
+            "score"
+          ]
+        },
+        {
+          "name": "getBookStatus",
+          "startLine": 204,
+          "endLine": 206,
+          "params": []
+        },
+        {
+          "name": "setBookStatus",
+          "startLine": 208,
+          "endLine": 210,
+          "params": [
+            "bookStatus"
+          ]
+        },
+        {
+          "name": "getVisitCount",
+          "startLine": 212,
+          "endLine": 214,
+          "params": []
+        },
+        {
+          "name": "setVisitCount",
+          "startLine": 216,
+          "endLine": 218,
+          "params": [
+            "visitCount"
+          ]
+        },
+        {
+          "name": "getWordCount",
+          "startLine": 220,
+          "endLine": 222,
+          "params": []
+        },
+        {
+          "name": "setWordCount",
+          "startLine": 224,
+          "endLine": 226,
+          "params": [
+            "wordCount"
+          ]
+        },
+        {
+          "name": "getCommentCount",
+          "startLine": 228,
+          "endLine": 230,
+          "params": []
+        },
+        {
+          "name": "setCommentCount",
+          "startLine": 232,
+          "endLine": 234,
+          "params": [
+            "commentCount"
+          ]
+        },
+        {
+          "name": "getLastChapterId",
+          "startLine": 236,
+          "endLine": 238,
+          "params": []
+        },
+        {
+          "name": "setLastChapterId",
+          "startLine": 240,
+          "endLine": 242,
+          "params": [
+            "lastChapterId"
+          ]
+        },
+        {
+          "name": "getLastChapterName",
+          "startLine": 244,
+          "endLine": 246,
+          "params": []
+        },
+        {
+          "name": "setLastChapterName",
+          "startLine": 248,
+          "endLine": 250,
+          "params": [
+            "lastChapterName"
+          ]
+        },
+        {
+          "name": "getLastChapterUpdateTime",
+          "startLine": 252,
+          "endLine": 254,
+          "params": []
+        },
+        {
+          "name": "setLastChapterUpdateTime",
+          "startLine": 256,
+          "endLine": 258,
+          "params": [
+            "lastChapterUpdateTime"
+          ]
+        },
+        {
+          "name": "getIsVip",
+          "startLine": 260,
+          "endLine": 262,
+          "params": []
+        },
+        {
+          "name": "setIsVip",
+          "startLine": 264,
+          "endLine": 266,
+          "params": [
+            "isVip"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 268,
+          "endLine": 270,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 272,
+          "endLine": 274,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 276,
+          "endLine": 278,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 280,
+          "endLine": 282,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 284,
+          "endLine": 308,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookInfo",
+          "startLine": 17,
+          "endLine": 309,
+          "methods": [
+            "getId",
+            "setId",
+            "getWorkDirection",
+            "setWorkDirection",
+            "getCategoryId",
+            "setCategoryId",
+            "getCategoryName",
+            "setCategoryName",
+            "getPicUrl",
+            "setPicUrl",
+            "getBookName",
+            "setBookName",
+            "getAuthorId",
+            "setAuthorId",
+            "getAuthorName",
+            "setAuthorName",
+            "getBookDesc",
+            "setBookDesc",
+            "getScore",
+            "setScore",
+            "getBookStatus",
+            "setBookStatus",
+            "getVisitCount",
+            "setVisitCount",
+            "getWordCount",
+            "setWordCount",
+            "getCommentCount",
+            "setCommentCount",
+            "getLastChapterId",
+            "setLastChapterId",
+            "getLastChapterName",
+            "setLastChapterName",
+            "getLastChapterUpdateTime",
+            "setLastChapterUpdateTime",
+            "getIsVip",
+            "setIsVip",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "workDirection",
+            "categoryId",
+            "categoryName",
+            "picUrl",
+            "bookName",
+            "authorId",
+            "authorName",
+            "bookDesc",
+            "score",
+            "bookStatus",
+            "visitCount",
+            "wordCount",
+            "commentCount",
+            "lastChapterId",
+            "lastChapterName",
+            "lastChapterUpdateTime",
+            "isVip",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "getWorkDirection",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "setWorkDirection",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "getCategoryId",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "setCategoryId",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "getCategoryName",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "setCategoryName",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "getPicUrl",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "setPicUrl",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "getBookName",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "setBookName",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "getAuthorId",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "setAuthorId",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "getAuthorName",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "setAuthorName",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "getBookDesc",
+          "line": 188,
+          "isDefault": false
+        },
+        {
+          "name": "setBookDesc",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "getScore",
+          "line": 196,
+          "isDefault": false
+        },
+        {
+          "name": "setScore",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "getBookStatus",
+          "line": 204,
+          "isDefault": false
+        },
+        {
+          "name": "setBookStatus",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "getVisitCount",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "setVisitCount",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "getWordCount",
+          "line": 220,
+          "isDefault": false
+        },
+        {
+          "name": "setWordCount",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "getCommentCount",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "setCommentCount",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "getLastChapterId",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "setLastChapterId",
+          "line": 240,
+          "isDefault": false
+        },
+        {
+          "name": "getLastChapterName",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "setLastChapterName",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "getLastChapterUpdateTime",
+          "line": 252,
+          "isDefault": false
+        },
+        {
+          "name": "setLastChapterUpdateTime",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "getIsVip",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "setIsVip",
+          "line": 264,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 268,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 276,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 280,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 284,
+          "isDefault": false
+        },
+        {
+          "name": "BookInfo",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 42,
+        "functionCount": 41,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/HomeBook.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 51,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getType",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "setType",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "getSort",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "setSort",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "sort"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 75,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 87,
+          "endLine": 89,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 91,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 95,
+          "endLine": 97,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 99,
+          "endLine": 109,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HomeBook",
+          "startLine": 17,
+          "endLine": 110,
+          "methods": [
+            "getId",
+            "setId",
+            "getType",
+            "setType",
+            "getSort",
+            "setSort",
+            "getBookId",
+            "setBookId",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "type",
+            "sort",
+            "bookId",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "getType",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "setType",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "getSort",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "setSort",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "HomeBook",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/HomeFriendLink.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 56,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 60,
+          "endLine": 62,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getLinkName",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setLinkName",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "linkName"
+          ]
+        },
+        {
+          "name": "getLinkUrl",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setLinkUrl",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "linkUrl"
+          ]
+        },
+        {
+          "name": "getSort",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setSort",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "sort"
+          ]
+        },
+        {
+          "name": "getIsOpen",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setIsOpen",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "isOpen"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 112,
+          "endLine": 123,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HomeFriendLink",
+          "startLine": 17,
+          "endLine": 124,
+          "methods": [
+            "getId",
+            "setId",
+            "getLinkName",
+            "setLinkName",
+            "getLinkUrl",
+            "setLinkUrl",
+            "getSort",
+            "setSort",
+            "getIsOpen",
+            "setIsOpen",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "linkName",
+            "linkUrl",
+            "sort",
+            "isOpen",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "getLinkName",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setLinkName",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getLinkUrl",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setLinkUrl",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getSort",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setSort",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getIsOpen",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setIsOpen",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "HomeFriendLink",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/NewsCategory.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 46,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 50,
+          "endLine": 52,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getName",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setName",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "getSort",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setSort",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "sort"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 86,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewsCategory",
+          "startLine": 17,
+          "endLine": 96,
+          "methods": [
+            "getId",
+            "setId",
+            "getName",
+            "setName",
+            "getSort",
+            "setSort",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "name",
+            "sort",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "getName",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setName",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getSort",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setSort",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "NewsCategory",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/NewsContent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 99,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 49,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 53,
+          "endLine": 55,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getNewsId",
+          "startLine": 57,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "setNewsId",
+          "startLine": 61,
+          "endLine": 63,
+          "params": [
+            "newsId"
+          ]
+        },
+        {
+          "name": "getContent",
+          "startLine": 65,
+          "endLine": 67,
+          "params": []
+        },
+        {
+          "name": "setContent",
+          "startLine": 69,
+          "endLine": 71,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 73,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 77,
+          "endLine": 79,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 81,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 85,
+          "endLine": 87,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 89,
+          "endLine": 98,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewsContent",
+          "startLine": 17,
+          "endLine": 99,
+          "methods": [
+            "getId",
+            "setId",
+            "getNewsId",
+            "setNewsId",
+            "getContent",
+            "setContent",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "newsId",
+            "content",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "getNewsId",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "setNewsId",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "getContent",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "setContent",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "NewsContent",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/NewsInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 101,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getCategoryId",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "setCategoryId",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "categoryId"
+          ]
+        },
+        {
+          "name": "getCategoryName",
+          "startLine": 75,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "setCategoryName",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "categoryName"
+          ]
+        },
+        {
+          "name": "getSourceName",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "setSourceName",
+          "startLine": 87,
+          "endLine": 89,
+          "params": [
+            "sourceName"
+          ]
+        },
+        {
+          "name": "getTitle",
+          "startLine": 91,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "setTitle",
+          "startLine": 95,
+          "endLine": 97,
+          "params": [
+            "title"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 99,
+          "endLine": 101,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 103,
+          "endLine": 105,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 107,
+          "endLine": 109,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 111,
+          "endLine": 113,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 115,
+          "endLine": 126,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewsInfo",
+          "startLine": 17,
+          "endLine": 127,
+          "methods": [
+            "getId",
+            "setId",
+            "getCategoryId",
+            "setCategoryId",
+            "getCategoryName",
+            "setCategoryName",
+            "getSourceName",
+            "setSourceName",
+            "getTitle",
+            "setTitle",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "categoryId",
+            "categoryName",
+            "sourceName",
+            "title",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "getCategoryId",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "setCategoryId",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getCategoryName",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "setCategoryName",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "getSourceName",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "setSourceName",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "getTitle",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "setTitle",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "NewsInfo",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/PayAlipay.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 197,
+      "nonEmptyLines": 156,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 84,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 88,
+          "endLine": 90,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getOutTradeNo",
+          "startLine": 92,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "setOutTradeNo",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "outTradeNo"
+          ]
+        },
+        {
+          "name": "getTradeNo",
+          "startLine": 100,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "setTradeNo",
+          "startLine": 104,
+          "endLine": 106,
+          "params": [
+            "tradeNo"
+          ]
+        },
+        {
+          "name": "getBuyerId",
+          "startLine": 108,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "setBuyerId",
+          "startLine": 112,
+          "endLine": 114,
+          "params": [
+            "buyerId"
+          ]
+        },
+        {
+          "name": "getTradeStatus",
+          "startLine": 116,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "setTradeStatus",
+          "startLine": 120,
+          "endLine": 122,
+          "params": [
+            "tradeStatus"
+          ]
+        },
+        {
+          "name": "getTotalAmount",
+          "startLine": 124,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "setTotalAmount",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "totalAmount"
+          ]
+        },
+        {
+          "name": "getReceiptAmount",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "setReceiptAmount",
+          "startLine": 136,
+          "endLine": 138,
+          "params": [
+            "receiptAmount"
+          ]
+        },
+        {
+          "name": "getInvoiceAmount",
+          "startLine": 140,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "setInvoiceAmount",
+          "startLine": 144,
+          "endLine": 146,
+          "params": [
+            "invoiceAmount"
+          ]
+        },
+        {
+          "name": "getGmtCreate",
+          "startLine": 148,
+          "endLine": 150,
+          "params": []
+        },
+        {
+          "name": "setGmtCreate",
+          "startLine": 152,
+          "endLine": 154,
+          "params": [
+            "gmtCreate"
+          ]
+        },
+        {
+          "name": "getGmtPayment",
+          "startLine": 156,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "setGmtPayment",
+          "startLine": 160,
+          "endLine": 162,
+          "params": [
+            "gmtPayment"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 164,
+          "endLine": 166,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 168,
+          "endLine": 170,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 172,
+          "endLine": 174,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 176,
+          "endLine": 178,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 180,
+          "endLine": 196,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PayAlipay",
+          "startLine": 17,
+          "endLine": 197,
+          "methods": [
+            "getId",
+            "setId",
+            "getOutTradeNo",
+            "setOutTradeNo",
+            "getTradeNo",
+            "setTradeNo",
+            "getBuyerId",
+            "setBuyerId",
+            "getTradeStatus",
+            "setTradeStatus",
+            "getTotalAmount",
+            "setTotalAmount",
+            "getReceiptAmount",
+            "setReceiptAmount",
+            "getInvoiceAmount",
+            "setInvoiceAmount",
+            "getGmtCreate",
+            "setGmtCreate",
+            "getGmtPayment",
+            "setGmtPayment",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "outTradeNo",
+            "tradeNo",
+            "buyerId",
+            "tradeStatus",
+            "totalAmount",
+            "receiptAmount",
+            "invoiceAmount",
+            "gmtCreate",
+            "gmtPayment",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "getOutTradeNo",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "setOutTradeNo",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "getTradeNo",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "setTradeNo",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "getBuyerId",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "setBuyerId",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "getTradeStatus",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "setTradeStatus",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "getTotalAmount",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "setTotalAmount",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "getReceiptAmount",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "setReceiptAmount",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "getInvoiceAmount",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "setInvoiceAmount",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "getGmtCreate",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "setGmtCreate",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "getGmtPayment",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "setGmtPayment",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "PayAlipay",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 26,
+        "functionCount": 25,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/PayWechat.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 197,
+      "nonEmptyLines": 156,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 84,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 88,
+          "endLine": 90,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getOutTradeNo",
+          "startLine": 92,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "setOutTradeNo",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "outTradeNo"
+          ]
+        },
+        {
+          "name": "getTransactionId",
+          "startLine": 100,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "setTransactionId",
+          "startLine": 104,
+          "endLine": 106,
+          "params": [
+            "transactionId"
+          ]
+        },
+        {
+          "name": "getTradeType",
+          "startLine": 108,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "setTradeType",
+          "startLine": 112,
+          "endLine": 114,
+          "params": [
+            "tradeType"
+          ]
+        },
+        {
+          "name": "getTradeState",
+          "startLine": 116,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "setTradeState",
+          "startLine": 120,
+          "endLine": 122,
+          "params": [
+            "tradeState"
+          ]
+        },
+        {
+          "name": "getTradeStateDesc",
+          "startLine": 124,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "setTradeStateDesc",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "tradeStateDesc"
+          ]
+        },
+        {
+          "name": "getAmount",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "setAmount",
+          "startLine": 136,
+          "endLine": 138,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "getPayerTotal",
+          "startLine": 140,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "setPayerTotal",
+          "startLine": 144,
+          "endLine": 146,
+          "params": [
+            "payerTotal"
+          ]
+        },
+        {
+          "name": "getSuccessTime",
+          "startLine": 148,
+          "endLine": 150,
+          "params": []
+        },
+        {
+          "name": "setSuccessTime",
+          "startLine": 152,
+          "endLine": 154,
+          "params": [
+            "successTime"
+          ]
+        },
+        {
+          "name": "getPayerOpenid",
+          "startLine": 156,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "setPayerOpenid",
+          "startLine": 160,
+          "endLine": 162,
+          "params": [
+            "payerOpenid"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 164,
+          "endLine": 166,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 168,
+          "endLine": 170,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 172,
+          "endLine": 174,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 176,
+          "endLine": 178,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 180,
+          "endLine": 196,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PayWechat",
+          "startLine": 17,
+          "endLine": 197,
+          "methods": [
+            "getId",
+            "setId",
+            "getOutTradeNo",
+            "setOutTradeNo",
+            "getTransactionId",
+            "setTransactionId",
+            "getTradeType",
+            "setTradeType",
+            "getTradeState",
+            "setTradeState",
+            "getTradeStateDesc",
+            "setTradeStateDesc",
+            "getAmount",
+            "setAmount",
+            "getPayerTotal",
+            "setPayerTotal",
+            "getSuccessTime",
+            "setSuccessTime",
+            "getPayerOpenid",
+            "setPayerOpenid",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "outTradeNo",
+            "transactionId",
+            "tradeType",
+            "tradeState",
+            "tradeStateDesc",
+            "amount",
+            "payerTotal",
+            "successTime",
+            "payerOpenid",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "getOutTradeNo",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "setOutTradeNo",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "getTransactionId",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "setTransactionId",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "getTradeType",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "setTradeType",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "getTradeState",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "setTradeState",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "getTradeStateDesc",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "setTradeStateDesc",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "getAmount",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "setAmount",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "getPayerTotal",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "setPayerTotal",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "getSuccessTime",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "setSuccessTime",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "getPayerOpenid",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "setPayerOpenid",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "PayWechat",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 26,
+        "functionCount": 25,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysLog.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 152,
+      "nonEmptyLines": 120,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 66,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 70,
+          "endLine": 72,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 74,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 78,
+          "endLine": 80,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getUsername",
+          "startLine": 82,
+          "endLine": 84,
+          "params": []
+        },
+        {
+          "name": "setUsername",
+          "startLine": 86,
+          "endLine": 88,
+          "params": [
+            "username"
+          ]
+        },
+        {
+          "name": "getOperation",
+          "startLine": 90,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "setOperation",
+          "startLine": 94,
+          "endLine": 96,
+          "params": [
+            "operation"
+          ]
+        },
+        {
+          "name": "getTime",
+          "startLine": 98,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "setTime",
+          "startLine": 102,
+          "endLine": 104,
+          "params": [
+            "time"
+          ]
+        },
+        {
+          "name": "getMethod",
+          "startLine": 106,
+          "endLine": 108,
+          "params": []
+        },
+        {
+          "name": "setMethod",
+          "startLine": 110,
+          "endLine": 112,
+          "params": [
+            "method"
+          ]
+        },
+        {
+          "name": "getParams",
+          "startLine": 114,
+          "endLine": 116,
+          "params": []
+        },
+        {
+          "name": "setParams",
+          "startLine": 118,
+          "endLine": 120,
+          "params": [
+            "params"
+          ]
+        },
+        {
+          "name": "getIp",
+          "startLine": 122,
+          "endLine": 124,
+          "params": []
+        },
+        {
+          "name": "setIp",
+          "startLine": 126,
+          "endLine": 128,
+          "params": [
+            "ip"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 130,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 134,
+          "endLine": 136,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 138,
+          "endLine": 151,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SysLog",
+          "startLine": 17,
+          "endLine": 152,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getUsername",
+            "setUsername",
+            "getOperation",
+            "setOperation",
+            "getTime",
+            "setTime",
+            "getMethod",
+            "setMethod",
+            "getParams",
+            "setParams",
+            "getIp",
+            "setIp",
+            "getCreateTime",
+            "setCreateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "username",
+            "operation",
+            "time",
+            "method",
+            "params",
+            "ip",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "getUsername",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "setUsername",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "getOperation",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "setOperation",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "getTime",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "setTime",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "getMethod",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "setMethod",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "getParams",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "setParams",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "getIp",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "setIp",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "SysLog",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 20,
+        "functionCount": 19,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysMenu.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 152,
+      "nonEmptyLines": 120,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 66,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 70,
+          "endLine": 72,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getParentId",
+          "startLine": 74,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "setParentId",
+          "startLine": 78,
+          "endLine": 80,
+          "params": [
+            "parentId"
+          ]
+        },
+        {
+          "name": "getName",
+          "startLine": 82,
+          "endLine": 84,
+          "params": []
+        },
+        {
+          "name": "setName",
+          "startLine": 86,
+          "endLine": 88,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "getUrl",
+          "startLine": 90,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "setUrl",
+          "startLine": 94,
+          "endLine": 96,
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "getType",
+          "startLine": 98,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "setType",
+          "startLine": 102,
+          "endLine": 104,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "getIcon",
+          "startLine": 106,
+          "endLine": 108,
+          "params": []
+        },
+        {
+          "name": "setIcon",
+          "startLine": 110,
+          "endLine": 112,
+          "params": [
+            "icon"
+          ]
+        },
+        {
+          "name": "getSort",
+          "startLine": 114,
+          "endLine": 116,
+          "params": []
+        },
+        {
+          "name": "setSort",
+          "startLine": 118,
+          "endLine": 120,
+          "params": [
+            "sort"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 122,
+          "endLine": 124,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 126,
+          "endLine": 128,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 130,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 134,
+          "endLine": 136,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 138,
+          "endLine": 151,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SysMenu",
+          "startLine": 17,
+          "endLine": 152,
+          "methods": [
+            "getId",
+            "setId",
+            "getParentId",
+            "setParentId",
+            "getName",
+            "setName",
+            "getUrl",
+            "setUrl",
+            "getType",
+            "setType",
+            "getIcon",
+            "setIcon",
+            "getSort",
+            "setSort",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "parentId",
+            "name",
+            "url",
+            "type",
+            "icon",
+            "sort",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "getParentId",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "setParentId",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "getName",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "setName",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "getUrl",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "setUrl",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "getType",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "setType",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "getIcon",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "setIcon",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "getSort",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "setSort",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "SysMenu",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 20,
+        "functionCount": 19,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysRole.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 51,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getRoleName",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "setRoleName",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "roleName"
+          ]
+        },
+        {
+          "name": "getRoleSign",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "setRoleSign",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "roleSign"
+          ]
+        },
+        {
+          "name": "getRemark",
+          "startLine": 75,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "setRemark",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "remark"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 87,
+          "endLine": 89,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 91,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 95,
+          "endLine": 97,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 99,
+          "endLine": 109,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SysRole",
+          "startLine": 17,
+          "endLine": 110,
+          "methods": [
+            "getId",
+            "setId",
+            "getRoleName",
+            "setRoleName",
+            "getRoleSign",
+            "setRoleSign",
+            "getRemark",
+            "setRemark",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "roleName",
+            "roleSign",
+            "remark",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "getRoleName",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "setRoleName",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "getRoleSign",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "setRoleSign",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getRemark",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "setRemark",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "SysRole",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysRoleMenu.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 46,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 50,
+          "endLine": 52,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getRoleId",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setRoleId",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "roleId"
+          ]
+        },
+        {
+          "name": "getMenuId",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setMenuId",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "menuId"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 86,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SysRoleMenu",
+          "startLine": 17,
+          "endLine": 96,
+          "methods": [
+            "getId",
+            "setId",
+            "getRoleId",
+            "setRoleId",
+            "getMenuId",
+            "setMenuId",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "roleId",
+            "menuId",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "getRoleId",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setRoleId",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getMenuId",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setMenuId",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "SysRoleMenu",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysUser.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 180,
+      "nonEmptyLines": 142,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 80,
+          "endLine": 82,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUsername",
+          "startLine": 84,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "setUsername",
+          "startLine": 88,
+          "endLine": 90,
+          "params": [
+            "username"
+          ]
+        },
+        {
+          "name": "getPassword",
+          "startLine": 92,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "setPassword",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "password"
+          ]
+        },
+        {
+          "name": "getName",
+          "startLine": 100,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "setName",
+          "startLine": 104,
+          "endLine": 106,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "getSex",
+          "startLine": 108,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "setSex",
+          "startLine": 112,
+          "endLine": 114,
+          "params": [
+            "sex"
+          ]
+        },
+        {
+          "name": "getBirth",
+          "startLine": 116,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "setBirth",
+          "startLine": 120,
+          "endLine": 122,
+          "params": [
+            "birth"
+          ]
+        },
+        {
+          "name": "getEmail",
+          "startLine": 124,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "setEmail",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "email"
+          ]
+        },
+        {
+          "name": "getMobile",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "setMobile",
+          "startLine": 136,
+          "endLine": 138,
+          "params": [
+            "mobile"
+          ]
+        },
+        {
+          "name": "getStatus",
+          "startLine": 140,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "setStatus",
+          "startLine": 144,
+          "endLine": 146,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 148,
+          "endLine": 150,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 152,
+          "endLine": 154,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 156,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 160,
+          "endLine": 162,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 164,
+          "endLine": 179,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SysUser",
+          "startLine": 17,
+          "endLine": 180,
+          "methods": [
+            "getId",
+            "setId",
+            "getUsername",
+            "setUsername",
+            "getPassword",
+            "setPassword",
+            "getName",
+            "setName",
+            "getSex",
+            "setSex",
+            "getBirth",
+            "setBirth",
+            "getEmail",
+            "setEmail",
+            "getMobile",
+            "setMobile",
+            "getStatus",
+            "setStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "username",
+            "password",
+            "name",
+            "sex",
+            "birth",
+            "email",
+            "mobile",
+            "status",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "getUsername",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "setUsername",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "getPassword",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "setPassword",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "getName",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "setName",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "getSex",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "setSex",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "getBirth",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "setBirth",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "getEmail",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "setEmail",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "getMobile",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "setMobile",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "getStatus",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "setStatus",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "SysUser",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 23,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysUserRole.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 46,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 50,
+          "endLine": 52,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getRoleId",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setRoleId",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "roleId"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 86,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SysUserRole",
+          "startLine": 17,
+          "endLine": 96,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getRoleId",
+            "setRoleId",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "roleId",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getRoleId",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setRoleId",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "SysUserRole",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserBookshelf.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getPreContentId",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setPreContentId",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "preContentId"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 86,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 90,
+          "endLine": 92,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 94,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 98,
+          "endLine": 100,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 102,
+          "endLine": 112,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserBookshelf",
+          "startLine": 17,
+          "endLine": 113,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getBookId",
+            "setBookId",
+            "getPreContentId",
+            "setPreContentId",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "bookId",
+            "preContentId",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getPreContentId",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setPreContentId",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "UserBookshelf",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserComment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getCommentContent",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setCommentContent",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "commentContent"
+          ]
+        },
+        {
+          "name": "getReplyCount",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setReplyCount",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "replyCount"
+          ]
+        },
+        {
+          "name": "getAuditStatus",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setAuditStatus",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "auditStatus"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 112,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 116,
+          "endLine": 118,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 120,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 124,
+          "endLine": 126,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 128,
+          "endLine": 140,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserComment",
+          "startLine": 17,
+          "endLine": 141,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getBookId",
+            "setBookId",
+            "getCommentContent",
+            "setCommentContent",
+            "getReplyCount",
+            "setReplyCount",
+            "getAuditStatus",
+            "setAuditStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "bookId",
+            "commentContent",
+            "replyCount",
+            "auditStatus",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getCommentContent",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setCommentContent",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getReplyCount",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setReplyCount",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getAuditStatus",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setAuditStatus",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "UserComment",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserCommentReply.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 56,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 60,
+          "endLine": 62,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getCommentId",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setCommentId",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "commentId"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getReplyContent",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setReplyContent",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "replyContent"
+          ]
+        },
+        {
+          "name": "getAuditStatus",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setAuditStatus",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "auditStatus"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 112,
+          "endLine": 123,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserCommentReply",
+          "startLine": 15,
+          "endLine": 124,
+          "methods": [
+            "getId",
+            "setId",
+            "getCommentId",
+            "setCommentId",
+            "getUserId",
+            "setUserId",
+            "getReplyContent",
+            "setReplyContent",
+            "getAuditStatus",
+            "setAuditStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "commentId",
+            "userId",
+            "replyContent",
+            "auditStatus",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "getCommentId",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setCommentId",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getReplyContent",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setReplyContent",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getAuditStatus",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setAuditStatus",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "UserCommentReply",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserConsumeLog.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 123,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 69,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 73,
+          "endLine": 75,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 77,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 81,
+          "endLine": 83,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getAmount",
+          "startLine": 85,
+          "endLine": 87,
+          "params": []
+        },
+        {
+          "name": "setAmount",
+          "startLine": 89,
+          "endLine": 91,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "getProductType",
+          "startLine": 93,
+          "endLine": 95,
+          "params": []
+        },
+        {
+          "name": "setProductType",
+          "startLine": 97,
+          "endLine": 99,
+          "params": [
+            "productType"
+          ]
+        },
+        {
+          "name": "getProductId",
+          "startLine": 101,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "setProductId",
+          "startLine": 105,
+          "endLine": 107,
+          "params": [
+            "productId"
+          ]
+        },
+        {
+          "name": "getProducName",
+          "startLine": 109,
+          "endLine": 111,
+          "params": []
+        },
+        {
+          "name": "setProducName",
+          "startLine": 113,
+          "endLine": 115,
+          "params": [
+            "producName"
+          ]
+        },
+        {
+          "name": "getProducValue",
+          "startLine": 117,
+          "endLine": 119,
+          "params": []
+        },
+        {
+          "name": "setProducValue",
+          "startLine": 121,
+          "endLine": 123,
+          "params": [
+            "producValue"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 125,
+          "endLine": 127,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 129,
+          "endLine": 131,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 133,
+          "endLine": 135,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 137,
+          "endLine": 139,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 141,
+          "endLine": 154,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserConsumeLog",
+          "startLine": 17,
+          "endLine": 155,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getAmount",
+            "setAmount",
+            "getProductType",
+            "setProductType",
+            "getProductId",
+            "setProductId",
+            "getProducName",
+            "setProducName",
+            "getProducValue",
+            "setProducValue",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "amount",
+            "productType",
+            "productId",
+            "producName",
+            "producValue",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "getAmount",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "setAmount",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "getProductType",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "setProductType",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "getProductId",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "setProductId",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "getProducName",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "setProducName",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "getProducValue",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "setProducValue",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "UserConsumeLog",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 20,
+        "functionCount": 19,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserFeedback.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 46,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 50,
+          "endLine": 52,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getContent",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setContent",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 86,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserFeedback",
+          "startLine": 17,
+          "endLine": 96,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getContent",
+            "setContent",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "content",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getContent",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setContent",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "UserFeedback",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 180,
+      "nonEmptyLines": 142,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 76,
+          "endLine": 78,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 80,
+          "endLine": 82,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUsername",
+          "startLine": 84,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "setUsername",
+          "startLine": 88,
+          "endLine": 90,
+          "params": [
+            "username"
+          ]
+        },
+        {
+          "name": "getPassword",
+          "startLine": 92,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "setPassword",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "password"
+          ]
+        },
+        {
+          "name": "getSalt",
+          "startLine": 100,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "setSalt",
+          "startLine": 104,
+          "endLine": 106,
+          "params": [
+            "salt"
+          ]
+        },
+        {
+          "name": "getNickName",
+          "startLine": 108,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "setNickName",
+          "startLine": 112,
+          "endLine": 114,
+          "params": [
+            "nickName"
+          ]
+        },
+        {
+          "name": "getUserPhoto",
+          "startLine": 116,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "setUserPhoto",
+          "startLine": 120,
+          "endLine": 122,
+          "params": [
+            "userPhoto"
+          ]
+        },
+        {
+          "name": "getUserSex",
+          "startLine": 124,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "setUserSex",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "userSex"
+          ]
+        },
+        {
+          "name": "getAccountBalance",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "setAccountBalance",
+          "startLine": 136,
+          "endLine": 138,
+          "params": [
+            "accountBalance"
+          ]
+        },
+        {
+          "name": "getStatus",
+          "startLine": 140,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "setStatus",
+          "startLine": 144,
+          "endLine": 146,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 148,
+          "endLine": 150,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 152,
+          "endLine": 154,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 156,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 160,
+          "endLine": 162,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 164,
+          "endLine": 179,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserInfo",
+          "startLine": 17,
+          "endLine": 180,
+          "methods": [
+            "getId",
+            "setId",
+            "getUsername",
+            "setUsername",
+            "getPassword",
+            "setPassword",
+            "getSalt",
+            "setSalt",
+            "getNickName",
+            "setNickName",
+            "getUserPhoto",
+            "setUserPhoto",
+            "getUserSex",
+            "setUserSex",
+            "getAccountBalance",
+            "setAccountBalance",
+            "getStatus",
+            "setStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "username",
+            "password",
+            "salt",
+            "nickName",
+            "userPhoto",
+            "userSex",
+            "accountBalance",
+            "status",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "getUsername",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "setUsername",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "getPassword",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "setPassword",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "getSalt",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "setSalt",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "getNickName",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "setNickName",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "getUserPhoto",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "setUserPhoto",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "getUserSex",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "setUserSex",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "getAccountBalance",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "setAccountBalance",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "getStatus",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "setStatus",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "UserInfo",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 23,
+        "classCount": 1
+      }
+    }
+  ]
+}

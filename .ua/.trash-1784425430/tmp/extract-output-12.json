@@ -1,0 +1,2461 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookContentAboutRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 29,
+      "classes": [
+        {
+          "name": "BookContentAboutRespDto",
+          "startLine": 13,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "bookInfo",
+            "chapterInfo",
+            "bookContent"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookContentAboutRespDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookInfoRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 119,
+      "nonEmptyLines": 98,
+      "classes": [
+        {
+          "name": "BookInfoRespDto",
+          "startLine": 15,
+          "endLine": 119,
+          "methods": [],
+          "properties": [
+            "id",
+            "categoryId",
+            "categoryName",
+            "picUrl",
+            "bookName",
+            "authorId",
+            "authorName",
+            "bookDesc",
+            "bookStatus",
+            "visitCount",
+            "wordCount",
+            "commentCount",
+            "firstChapterId",
+            "lastChapterId",
+            "lastChapterName",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookInfoRespDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookRankRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 69,
+      "classes": [
+        {
+          "name": "BookRankRespDto",
+          "startLine": 17,
+          "endLine": 84,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "categoryId",
+            "categoryName",
+            "picUrl",
+            "bookName",
+            "authorName",
+            "bookDesc",
+            "wordCount",
+            "lastChapterName",
+            "lastChapterUpdateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookRankRespDto",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/ChapterContentRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 29,
+      "classes": [
+        {
+          "name": "ChapterContentRespDto",
+          "startLine": 13,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "chapterName",
+            "chapterContent",
+            "isVip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChapterContentRespDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/HomeBookRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 42,
+      "classes": [
+        {
+          "name": "HomeBookRespDto",
+          "startLine": 12,
+          "endLine": 51,
+          "methods": [],
+          "properties": [
+            "type",
+            "bookId",
+            "picUrl",
+            "bookName",
+            "authorName",
+            "bookDesc"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HomeBookRespDto",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/HomeFriendLinkRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "HomeFriendLinkRespDto",
+          "startLine": 15,
+          "endLine": 32,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "linkName",
+            "linkUrl"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HomeFriendLinkRespDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/ImgVerifyCodeRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "ImgVerifyCodeRespDto",
+          "startLine": 12,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "sessionId",
+            "img"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ImgVerifyCodeRespDto",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/NewsInfoRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 52,
+      "classes": [
+        {
+          "name": "NewsInfoRespDto",
+          "startLine": 16,
+          "endLine": 64,
+          "methods": [],
+          "properties": [
+            "id",
+            "categoryId",
+            "categoryName",
+            "sourceName",
+            "title",
+            "updateTime",
+            "content"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewsInfoRespDto",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserCommentRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "UserCommentRespDto",
+          "startLine": 16,
+          "endLine": 33,
+          "methods": [],
+          "properties": [
+            "commentContent",
+            "commentBookPic",
+            "commentBook",
+            "commentTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserCommentRespDto",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserInfoRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 29,
+      "classes": [
+        {
+          "name": "UserInfoRespDto",
+          "startLine": 13,
+          "endLine": 34,
+          "methods": [],
+          "properties": [
+            "nickName",
+            "userPhoto",
+            "userSex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserInfoRespDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserLoginRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "UserLoginRespDto",
+          "startLine": 12,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "uid",
+            "nickName",
+            "token"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserLoginRespDto",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserRegisterRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "UserRegisterRespDto",
+          "startLine": 12,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "uid",
+            "token"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserRegisterRespDto",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/AuthorInfoCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "getAuthor",
+          "startLine": 30,
+          "endLine": 45,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "evictAuthorCache",
+          "startLine": 47,
+          "endLine": 51,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorInfoCacheManager",
+          "startLine": 21,
+          "endLine": 53,
+          "methods": [
+            "getAuthor",
+            "evictAuthorCache"
+          ],
+          "properties": [
+            "authorInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getAuthor",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "evictAuthorCache",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorInfoCacheManager",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAuthor",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "queryWrapper\r\n            .eq(DatabaseConsts.AuthorInfoTable.COLUMN_USER_ID, userId).last",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 36
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "authorInfoMapper.selectOne",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "Objects.isNull",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "AuthorInfoDto.builder()\r\n            .id(authorInfo.getId())\r\n            .penName(authorInfo.getPenName())\r\n            .status(authorInfo.getStatus()).build",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "AuthorInfoDto.builder()\r\n            .id(authorInfo.getId())\r\n            .penName(authorInfo.getPenName()).status",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "AuthorInfoDto.builder()\r\n            .id(authorInfo.getId()).penName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "AuthorInfoDto.builder().id",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "AuthorInfoDto.builder",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "authorInfo.getId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "authorInfo.getPenName",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getAuthor",
+          "callee": "authorInfo.getStatus",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookCategoryCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "listCategory",
+          "startLine": 29,
+          "endLine": 39,
+          "params": [
+            "workDirection"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookCategoryCacheManager",
+          "startLine": 20,
+          "endLine": 41,
+          "methods": [
+            "listCategory"
+          ],
+          "properties": [
+            "bookCategoryMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listCategory",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "BookCategoryCacheManager",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listCategory",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 32
+        },
+        {
+          "caller": "listCategory",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 33
+        },
+        {
+          "caller": "listCategory",
+          "callee": "bookCategoryMapper.selectList(queryWrapper).stream().map(v ->\r\n            BookCategoryRespDto.builder()\r\n                .id(v.getId())\r\n                .name(v.getName())\r\n                .build()).toList",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listCategory",
+          "callee": "bookCategoryMapper.selectList(queryWrapper).stream().map",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listCategory",
+          "callee": "bookCategoryMapper.selectList(queryWrapper).stream",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listCategory",
+          "callee": "bookCategoryMapper.selectList",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listCategory",
+          "callee": "BookCategoryRespDto.builder()\r\n                .id(v.getId())\r\n                .name(v.getName()).build",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listCategory",
+          "callee": "BookCategoryRespDto.builder()\r\n                .id(v.getId()).name",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listCategory",
+          "callee": "BookCategoryRespDto.builder().id",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listCategory",
+          "callee": "BookCategoryRespDto.builder",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listCategory",
+          "callee": "v.getId",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listCategory",
+          "callee": "v.getName",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookChapterCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "getChapter",
+          "startLine": 27,
+          "endLine": 40,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "evictBookChapterCache",
+          "startLine": 42,
+          "endLine": 46,
+          "params": [
+            "chapterId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookChapterCacheManager",
+          "startLine": 18,
+          "endLine": 48,
+          "methods": [
+            "getChapter",
+            "evictBookChapterCache"
+          ],
+          "properties": [
+            "bookChapterMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getChapter",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "evictBookChapterCache",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "BookChapterCacheManager",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getChapter",
+          "callee": "bookChapterMapper.selectById",
+          "lineNumber": 30
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId)\r\n            .bookId(bookChapter.getBookId())\r\n            .chapterNum(bookChapter.getChapterNum())\r\n            .chapterName(bookChapter.getChapterName())\r\n            .chapterWordCount(bookChapter.getWordCount())\r\n            .chapterUpdateTime(bookChapter.getUpdateTime())\r\n            .isVip(bookChapter.getIsVip()).build",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId)\r\n            .bookId(bookChapter.getBookId())\r\n            .chapterNum(bookChapter.getChapterNum())\r\n            .chapterName(bookChapter.getChapterName())\r\n            .chapterWordCount(bookChapter.getWordCount())\r\n            .chapterUpdateTime(bookChapter.getUpdateTime()).isVip",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId)\r\n            .bookId(bookChapter.getBookId())\r\n            .chapterNum(bookChapter.getChapterNum())\r\n            .chapterName(bookChapter.getChapterName())\r\n            .chapterWordCount(bookChapter.getWordCount()).chapterUpdateTime",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId)\r\n            .bookId(bookChapter.getBookId())\r\n            .chapterNum(bookChapter.getChapterNum())\r\n            .chapterName(bookChapter.getChapterName()).chapterWordCount",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId)\r\n            .bookId(bookChapter.getBookId())\r\n            .chapterNum(bookChapter.getChapterNum()).chapterName",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId)\r\n            .bookId(bookChapter.getBookId()).chapterNum",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder()\r\n            .id(chapterId).bookId",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder().id",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "BookChapterRespDto.builder",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getChapter",
+          "callee": "bookChapter.getBookId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getChapter",
+          "callee": "bookChapter.getChapterNum",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getChapter",
+          "callee": "bookChapter.getChapterName",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getChapter",
+          "callee": "bookChapter.getWordCount",
+          "lineNumber": 36
+        },
+        {
+          "caller": "getChapter",
+          "callee": "bookChapter.getUpdateTime",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getChapter",
+          "callee": "bookChapter.getIsVip",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookContentCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "getBookContent",
+          "startLine": 28,
+          "endLine": 36,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "evictBookContentCache",
+          "startLine": 38,
+          "endLine": 42,
+          "params": [
+            "chapterId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookContentCacheManager",
+          "startLine": 19,
+          "endLine": 45,
+          "methods": [
+            "getBookContent",
+            "evictBookContentCache"
+          ],
+          "properties": [
+            "bookContentMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getBookContent",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "evictBookContentCache",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "BookContentCacheManager",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getBookContent",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getBookContent",
+          "callee": "contentQueryWrapper.eq(DatabaseConsts.BookContentTable.COLUMN_CHAPTER_ID, chapterId).last",
+          "lineNumber": 32
+        },
+        {
+          "caller": "getBookContent",
+          "callee": "contentQueryWrapper.eq",
+          "lineNumber": 32
+        },
+        {
+          "caller": "getBookContent",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getBookContent",
+          "callee": "bookContentMapper.selectOne",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getBookContent",
+          "callee": "bookContent.getContent",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookInfoCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 86,
+      "functions": [
+        {
+          "name": "getBookInfo",
+          "startLine": 36,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "cachePutBookInfo",
+          "startLine": 45,
+          "endLine": 74,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "evictBookInfoCache",
+          "startLine": 76,
+          "endLine": 80,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getLastUpdateIdList",
+          "startLine": 85,
+          "endLine": 94,
+          "params": [
+            "categoryId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookInfoCacheManager",
+          "startLine": 25,
+          "endLine": 96,
+          "methods": [
+            "getBookInfo",
+            "cachePutBookInfo",
+            "evictBookInfoCache",
+            "getLastUpdateIdList"
+          ],
+          "properties": [
+            "bookInfoMapper",
+            "bookChapterMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getBookInfo",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "cachePutBookInfo",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "evictBookInfoCache",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getLastUpdateIdList",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "BookInfoCacheManager",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getBookInfo",
+          "callee": "cachePutBookInfo",
+          "lineNumber": 39
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfoMapper.selectById",
+          "lineNumber": 49
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 51
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "queryWrapper\r\n            .eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, id)\r\n            .orderByAsc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM).last",
+          "lineNumber": 52
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "queryWrapper\r\n            .eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, id).orderByAsc",
+          "lineNumber": 52
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 52
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_1.getSql",
+          "lineNumber": 55
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookChapterMapper.selectOne",
+          "lineNumber": 56
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName())\r\n            .commentCount(bookInfo.getCommentCount())\r\n            .firstChapterId(firstBookChapter.getId())\r\n            .lastChapterId(bookInfo.getLastChapterId())\r\n            .picUrl(bookInfo.getPicUrl())\r\n            .visitCount(bookInfo.getVisitCount())\r\n            .wordCount(bookInfo.getWordCount()).build",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName())\r\n            .commentCount(bookInfo.getCommentCount())\r\n            .firstChapterId(firstBookChapter.getId())\r\n            .lastChapterId(bookInfo.getLastChapterId())\r\n            .picUrl(bookInfo.getPicUrl())\r\n            .visitCount(bookInfo.getVisitCount()).wordCount",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName())\r\n            .commentCount(bookInfo.getCommentCount())\r\n            .firstChapterId(firstBookChapter.getId())\r\n            .lastChapterId(bookInfo.getLastChapterId())\r\n            .picUrl(bookInfo.getPicUrl()).visitCount",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName())\r\n            .commentCount(bookInfo.getCommentCount())\r\n            .firstChapterId(firstBookChapter.getId())\r\n            .lastChapterId(bookInfo.getLastChapterId()).picUrl",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName())\r\n            .commentCount(bookInfo.getCommentCount())\r\n            .firstChapterId(firstBookChapter.getId()).lastChapterId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName())\r\n            .commentCount(bookInfo.getCommentCount()).firstChapterId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId())\r\n            .categoryName(bookInfo.getCategoryName()).commentCount",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName())\r\n            .categoryId(bookInfo.getCategoryId()).categoryName",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId())\r\n            .authorName(bookInfo.getAuthorName()).categoryId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus())\r\n            .authorId(bookInfo.getAuthorId()).authorName",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc())\r\n            .bookStatus(bookInfo.getBookStatus()).authorId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName())\r\n            .bookDesc(bookInfo.getBookDesc()).bookStatus",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId())\r\n            .bookName(bookInfo.getBookName()).bookDesc",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder()\r\n            .id(bookInfo.getId()).bookName",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder().id",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "BookInfoRespDto.builder",
+          "lineNumber": 58
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getId",
+          "lineNumber": 59
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getBookName",
+          "lineNumber": 60
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getBookDesc",
+          "lineNumber": 61
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getBookStatus",
+          "lineNumber": 62
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getAuthorId",
+          "lineNumber": 63
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getAuthorName",
+          "lineNumber": 64
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getCategoryId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getCategoryName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getCommentCount",
+          "lineNumber": 67
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "firstBookChapter.getId",
+          "lineNumber": 68
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getLastChapterId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getPicUrl",
+          "lineNumber": 70
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getVisitCount",
+          "lineNumber": 71
+        },
+        {
+          "caller": "cachePutBookInfo",
+          "callee": "bookInfo.getWordCount",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 88
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookTable.COLUMN_CATEGORY_ID, categoryId)\r\n            .gt(DatabaseConsts.BookTable.COLUMN_WORD_COUNT, 0)\r\n            .orderByDesc(DatabaseConsts.BookTable.COLUMN_LAST_CHAPTER_UPDATE_TIME).last",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookTable.COLUMN_CATEGORY_ID, categoryId)\r\n            .gt(DatabaseConsts.BookTable.COLUMN_WORD_COUNT, 0).orderByDesc",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "queryWrapper.eq(DatabaseConsts.BookTable.COLUMN_CATEGORY_ID, categoryId).gt",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "queryWrapper.eq",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_500.getSql",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "bookInfoMapper.selectList(queryWrapper).stream().map(BookInfo::getId).toList",
+          "lineNumber": 93
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "bookInfoMapper.selectList(queryWrapper).stream().map",
+          "lineNumber": 93
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "bookInfoMapper.selectList(queryWrapper).stream",
+          "lineNumber": 93
+        },
+        {
+          "caller": "getLastUpdateIdList",
+          "callee": "bookInfoMapper.selectList",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookRankCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "listVisitRankBooks",
+          "startLine": 29,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "listNewestRankBooks",
+          "startLine": 40,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "listUpdateRankBooks",
+          "startLine": 53,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "listRankBooks",
+          "startLine": 63,
+          "endLine": 81,
+          "params": [
+            "bookInfoQueryWrapper"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookRankCacheManager",
+          "startLine": 20,
+          "endLine": 83,
+          "methods": [
+            "listVisitRankBooks",
+            "listNewestRankBooks",
+            "listUpdateRankBooks",
+            "listRankBooks"
+          ],
+          "properties": [
+            "bookInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listVisitRankBooks",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "listNewestRankBooks",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "listUpdateRankBooks",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "BookRankCacheManager",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listVisitRankBooks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 32
+        },
+        {
+          "caller": "listVisitRankBooks",
+          "callee": "bookInfoQueryWrapper.orderByDesc",
+          "lineNumber": 33
+        },
+        {
+          "caller": "listVisitRankBooks",
+          "callee": "listRankBooks",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 43
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "bookInfoQueryWrapper\r\n            .gt(DatabaseConsts.BookTable.COLUMN_WORD_COUNT, 0).orderByDesc",
+          "lineNumber": 44
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "bookInfoQueryWrapper.gt",
+          "lineNumber": 44
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName",
+          "lineNumber": 46
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "listRankBooks",
+          "lineNumber": 47
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 56
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "bookInfoQueryWrapper\r\n            .gt(DatabaseConsts.BookTable.COLUMN_WORD_COUNT, 0).orderByDesc",
+          "lineNumber": 57
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "bookInfoQueryWrapper.gt",
+          "lineNumber": 57
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "DatabaseConsts.CommonColumnEnum.UPDATE_TIME.getName",
+          "lineNumber": 59
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "listRankBooks",
+          "lineNumber": 60
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "bookInfoQueryWrapper\r\n            .gt(DatabaseConsts.BookTable.COLUMN_WORD_COUNT, 0).last",
+          "lineNumber": 64
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "bookInfoQueryWrapper.gt",
+          "lineNumber": 64
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_30.getSql",
+          "lineNumber": 66
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "bookInfoMapper.selectList(bookInfoQueryWrapper).stream().map(v -> {\r\n            BookRankRespDto respDto = new BookRankRespDto();\r\n            respDto.setId(v.getId());\r\n            respDto.setCategoryId(v.getCategoryId());\r\n            respDto.setCategoryName(v.getCategoryName());\r\n            respDto.setBookName(v.getBookName());\r\n            respDto.setAuthorName(v.getAuthorName());\r\n            respDto.setPicUrl(v.getPicUrl());\r\n            respDto.setBookDesc(v.getBookDesc());\r\n            respDto.setLastChapterName(v.getLastChapterName());\r\n            respDto.setLastChapterUpdateTime(v.getLastChapterUpdateTime());\r\n            respDto.setWordCount(v.getWordCount());\r\n            return respDto;\r\n        }).toList",
+          "lineNumber": 67
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "bookInfoMapper.selectList(bookInfoQueryWrapper).stream().map",
+          "lineNumber": 67
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "bookInfoMapper.selectList(bookInfoQueryWrapper).stream",
+          "lineNumber": 67
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "bookInfoMapper.selectList",
+          "lineNumber": 67
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "new BookRankRespDto",
+          "lineNumber": 68
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setCategoryId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getCategoryId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setCategoryName",
+          "lineNumber": 71
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getCategoryName",
+          "lineNumber": 71
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setBookName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getBookName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setAuthorName",
+          "lineNumber": 73
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getAuthorName",
+          "lineNumber": 73
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setPicUrl",
+          "lineNumber": 74
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getPicUrl",
+          "lineNumber": 74
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setBookDesc",
+          "lineNumber": 75
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getBookDesc",
+          "lineNumber": 75
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setLastChapterName",
+          "lineNumber": 76
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getLastChapterName",
+          "lineNumber": 76
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setLastChapterUpdateTime",
+          "lineNumber": 77
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getLastChapterUpdateTime",
+          "lineNumber": 77
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "respDto.setWordCount",
+          "lineNumber": 78
+        },
+        {
+          "caller": "listRankBooks",
+          "callee": "v.getWordCount",
+          "lineNumber": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/FriendLinkCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "listFriendLinks",
+          "startLine": 29,
+          "endLine": 41,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FriendLinkCacheManager",
+          "startLine": 20,
+          "endLine": 43,
+          "methods": [
+            "listFriendLinks"
+          ],
+          "properties": [
+            "friendLinkMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listFriendLinks",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "FriendLinkCacheManager",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listFriendLinks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 33
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "queryWrapper.orderByAsc",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "DatabaseConsts.CommonColumnEnum.SORT.getName",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "friendLinkMapper.selectList(queryWrapper).stream().map(v -> {\r\n            HomeFriendLinkRespDto respDto = new HomeFriendLinkRespDto();\r\n            respDto.setLinkName(v.getLinkName());\r\n            respDto.setLinkUrl(v.getLinkUrl());\r\n            return respDto;\r\n        }).toList",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "friendLinkMapper.selectList(queryWrapper).stream().map",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "friendLinkMapper.selectList(queryWrapper).stream",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "friendLinkMapper.selectList",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "new HomeFriendLinkRespDto",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "respDto.setLinkName",
+          "lineNumber": 37
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "v.getLinkName",
+          "lineNumber": 37
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "respDto.setLinkUrl",
+          "lineNumber": 38
+        },
+        {
+          "caller": "listFriendLinks",
+          "callee": "v.getLinkUrl",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/HomeBookCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "listHomeBooks",
+          "startLine": 38,
+          "endLine": 78,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HomeBookCacheManager",
+          "startLine": 27,
+          "endLine": 80,
+          "methods": [
+            "listHomeBooks"
+          ],
+          "properties": [
+            "homeBookMapper",
+            "bookInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listHomeBooks",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "HomeBookCacheManager",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listHomeBooks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 42
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "queryWrapper.orderByAsc",
+          "lineNumber": 43
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "DatabaseConsts.CommonColumnEnum.SORT.getName",
+          "lineNumber": 43
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBookMapper.selectList",
+          "lineNumber": 44
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 47
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBooks.stream()\r\n                .map(HomeBook::getBookId).toList",
+          "lineNumber": 48
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBooks.stream().map",
+          "lineNumber": 48
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBooks.stream",
+          "lineNumber": 48
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 53
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfoQueryWrapper.in",
+          "lineNumber": 54
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 54
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfoMapper.selectList",
+          "lineNumber": 55
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 58
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfos.stream().collect",
+          "lineNumber": 59
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfos.stream",
+          "lineNumber": 59
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "Collectors.toMap",
+          "lineNumber": 60
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "Function.identity",
+          "lineNumber": 60
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBooks.stream().map(v -> {\r\n                    BookInfo bookInfo = bookInfoMap.get(v.getBookId());\r\n                    HomeBookRespDto bookRespDto = new HomeBookRespDto();\r\n                    bookRespDto.setType(v.getType());\r\n                    bookRespDto.setBookId(v.getBookId());\r\n                    bookRespDto.setBookName(bookInfo.getBookName());\r\n                    bookRespDto.setPicUrl(bookInfo.getPicUrl());\r\n                    bookRespDto.setAuthorName(bookInfo.getAuthorName());\r\n                    bookRespDto.setBookDesc(bookInfo.getBookDesc());\r\n                    return bookRespDto;\r\n                }).toList",
+          "lineNumber": 61
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBooks.stream().map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeBooks.stream",
+          "lineNumber": 61
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfoMap.get",
+          "lineNumber": 62
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "v.getBookId",
+          "lineNumber": 62
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "new HomeBookRespDto",
+          "lineNumber": 63
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookRespDto.setType",
+          "lineNumber": 64
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "v.getType",
+          "lineNumber": 64
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookRespDto.setBookId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "v.getBookId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookRespDto.setBookName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfo.getBookName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookRespDto.setPicUrl",
+          "lineNumber": 67
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfo.getPicUrl",
+          "lineNumber": 67
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookRespDto.setAuthorName",
+          "lineNumber": 68
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfo.getAuthorName",
+          "lineNumber": 68
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookRespDto.setBookDesc",
+          "lineNumber": 69
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "bookInfo.getBookDesc",
+          "lineNumber": 69
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "Collections.emptyList",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/NewsCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "listLatestNews",
+          "startLine": 29,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewsCacheManager",
+          "startLine": 20,
+          "endLine": 46,
+          "methods": [
+            "listLatestNews"
+          ],
+          "properties": [
+            "newsInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listLatestNews",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "NewsCacheManager",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listLatestNews",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 33
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "queryWrapper.orderByDesc(DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName()).last",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "queryWrapper.orderByDesc",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName",
+          "lineNumber": 34
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_2.getSql",
+          "lineNumber": 35
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "newsInfoMapper.selectList(queryWrapper).stream().map(v -> NewsInfoRespDto.builder()\r\n            .id(v.getId())\r\n            .categoryId(v.getCategoryId())\r\n            .categoryName(v.getCategoryName())\r\n            .title(v.getTitle())\r\n            .sourceName(v.getSourceName())\r\n            .updateTime(v.getUpdateTime())\r\n            .build()).toList",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "newsInfoMapper.selectList(queryWrapper).stream().map",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "newsInfoMapper.selectList(queryWrapper).stream",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "newsInfoMapper.selectList",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .id(v.getId())\r\n            .categoryId(v.getCategoryId())\r\n            .categoryName(v.getCategoryName())\r\n            .title(v.getTitle())\r\n            .sourceName(v.getSourceName())\r\n            .updateTime(v.getUpdateTime()).build",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .id(v.getId())\r\n            .categoryId(v.getCategoryId())\r\n            .categoryName(v.getCategoryName())\r\n            .title(v.getTitle())\r\n            .sourceName(v.getSourceName()).updateTime",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .id(v.getId())\r\n            .categoryId(v.getCategoryId())\r\n            .categoryName(v.getCategoryName())\r\n            .title(v.getTitle()).sourceName",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .id(v.getId())\r\n            .categoryId(v.getCategoryId())\r\n            .categoryName(v.getCategoryName()).title",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .id(v.getId())\r\n            .categoryId(v.getCategoryId()).categoryName",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder()\r\n            .id(v.getId()).categoryId",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder().id",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "NewsInfoRespDto.builder",
+          "lineNumber": 36
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "v.getId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "v.getCategoryId",
+          "lineNumber": 38
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "v.getCategoryName",
+          "lineNumber": 39
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "v.getTitle",
+          "lineNumber": 40
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "v.getSourceName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "listLatestNews",
+          "callee": "v.getUpdateTime",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/cache/UserInfoCacheManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "getUser",
+          "startLine": 27,
+          "endLine": 37,
+          "params": [
+            "userId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserInfoCacheManager",
+          "startLine": 18,
+          "endLine": 40,
+          "methods": [
+            "getUser"
+          ],
+          "properties": [
+            "userInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getUser",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "UserInfoCacheManager",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getUser",
+          "callee": "userInfoMapper.selectById",
+          "lineNumber": 30
+        },
+        {
+          "caller": "getUser",
+          "callee": "Objects.isNull",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getUser",
+          "callee": "UserInfoDto.builder()\r\n            .id(userInfo.getId())\r\n            .status(userInfo.getStatus()).build",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getUser",
+          "callee": "UserInfoDto.builder()\r\n            .id(userInfo.getId()).status",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getUser",
+          "callee": "UserInfoDto.builder().id",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getUser",
+          "callee": "UserInfoDto.builder",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getUser",
+          "callee": "userInfo.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getUser",
+          "callee": "userInfo.getStatus",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/dao/UserDaoManager.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "listUsers",
+          "startLine": 29,
+          "endLine": 33,
+          "params": [
+            "userIds"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserDaoManager",
+          "startLine": 17,
+          "endLine": 35,
+          "methods": [
+            "listUsers"
+          ],
+          "properties": [
+            "userInfoMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listUsers",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "UserDaoManager",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listUsers",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 30
+        },
+        {
+          "caller": "listUsers",
+          "callee": "queryWrapper.in",
+          "lineNumber": 31
+        },
+        {
+          "caller": "listUsers",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 31
+        },
+        {
+          "caller": "listUsers",
+          "callee": "userInfoMapper.selectList",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMailSender.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "sendMessage",
+          "startLine": 25,
+          "endLine": 48,
+          "params": [
+            "toUserId",
+            "messageTitle",
+            "messageContent"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AbstractMailSender",
+          "startLine": 17,
+          "endLine": 50,
+          "methods": [
+            "sendMessage"
+          ],
+          "properties": [
+            "mailProperties",
+            "mailSender"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AbstractMailSender",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sendMessage",
+          "callee": "log.info",
+          "lineNumber": 30
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "mailSender.createMimeMessage",
+          "lineNumber": 32
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "new MimeMessageHelper",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "helper.setFrom",
+          "lineNumber": 37
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "new InternetAddress",
+          "lineNumber": 37
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "mailProperties.username",
+          "lineNumber": 37
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "mailProperties.nickname",
+          "lineNumber": 37
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "helper.setTo",
+          "lineNumber": 38
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "helper.setSubject",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "helper.setText",
+          "lineNumber": 41
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "mailSender.send",
+          "lineNumber": 42
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "log.info",
+          "lineNumber": 43
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "log.error",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMessageSender.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 83,
+      "functions": [
+        {
+          "name": "sendMessage",
+          "startLine": 22,
+          "endLine": 34,
+          "params": [
+            "toUserId"
+          ]
+        },
+        {
+          "name": "sendMessage",
+          "startLine": 43,
+          "endLine": 43,
+          "params": [
+            "toUserId",
+            "messageTitle",
+            "messageContent"
+          ]
+        },
+        {
+          "name": "getTitleTemplate",
+          "startLine": 50,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "getContentTemplate",
+          "startLine": 57,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "resolveTitle",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "titleTemplate"
+          ]
+        },
+        {
+          "name": "resolveContent",
+          "startLine": 79,
+          "endLine": 90,
+          "params": [
+            "contentTemplate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AbstractMessageSender",
+          "startLine": 15,
+          "endLine": 92,
+          "methods": [
+            "sendMessage",
+            "sendMessage",
+            "getTitleTemplate",
+            "getContentTemplate",
+            "resolveTitle",
+            "resolveContent"
+          ],
+          "properties": [
+            "PLACEHOLDER"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sendMessage",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "AbstractMessageSender",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sendMessage",
+          "callee": "getTitleTemplate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "getContentTemplate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "resolveTitle",
+          "lineNumber": 29
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "resolveContent",
+          "lineNumber": 31
+        },
+        {
+          "caller": "sendMessage",
+          "callee": "sendMessage",
+          "lineNumber": 33
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "new StringBuilder",
+          "lineNumber": 81
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "formattedContent.indexOf",
+          "lineNumber": 83
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "formattedContent.replace",
+          "lineNumber": 84
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "PLACEHOLDER.length",
+          "lineNumber": 84
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "String.valueOf",
+          "lineNumber": 85
+        },
+        {
+          "caller": "resolveContent",
+          "callee": "formattedContent.toString",
+          "lineNumber": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

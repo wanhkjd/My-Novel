@@ -1,0 +1,3444 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/XssProperties.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "XssProperties",
+          "startLine": 12,
+          "endLine": 15,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "XssProperties",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/XxlJobConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "xxlJobExecutor",
+          "startLine": 33,
+          "endLine": 42,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "XxlJobConfig",
+          "startLine": 16,
+          "endLine": 44,
+          "methods": [
+            "xxlJobExecutor"
+          ],
+          "properties": [
+            "adminAddresses",
+            "accessToken",
+            "appname",
+            "logPath"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "xxlJobExecutor",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "XxlJobConfig",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "log.info",
+          "lineNumber": 35
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "new XxlJobSpringExecutor",
+          "lineNumber": 36
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "xxlJobSpringExecutor.setAdminAddresses",
+          "lineNumber": 37
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "xxlJobSpringExecutor.setAccessToken",
+          "lineNumber": 38
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "xxlJobSpringExecutor.setAppname",
+          "lineNumber": 39
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "xxlJobSpringExecutor.setLogPath",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/AmqpConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "AmqpConsts",
+          "startLine": 9,
+          "endLine": 33,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AmqpConsts",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/ApiRouterConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 86,
+      "functions": [
+        {
+          "name": "ApiRouterConsts",
+          "startLine": 11,
+          "endLine": 13,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ApiRouterConsts",
+          "startLine": 9,
+          "endLine": 108,
+          "methods": [
+            "ApiRouterConsts"
+          ],
+          "properties": [
+            "API_URL_PREFIX",
+            "API_FRONT_URL_PREFIX",
+            "API_AUTHOR_URL_PREFIX",
+            "API_ADMIN_URL_PREFIX",
+            "HOME_URL_PREFIX",
+            "NEWS_URL_PREFIX",
+            "BOOK_URL_PREFIX",
+            "USER_URL_PREFIX",
+            "RESOURCE_URL_PREFIX",
+            "SEARCH_URL_PREFIX",
+            "AI_URL_PREFIX",
+            "API_FRONT_HOME_URL_PREFIX",
+            "API_FRONT_NEWS_URL_PREFIX",
+            "API_FRONT_BOOK_URL_PREFIX",
+            "API_FRONT_USER_URL_PREFIX",
+            "API_FRONT_RESOURCE_URL_PREFIX",
+            "API_FRONT_SEARCH_URL_PREFIX",
+            "API_AUTHOR_AI_URL_PREFIX"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "API_URL_PREFIX",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_URL_PREFIX",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "API_AUTHOR_URL_PREFIX",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "API_ADMIN_URL_PREFIX",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "HOME_URL_PREFIX",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "NEWS_URL_PREFIX",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_URL_PREFIX",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "USER_URL_PREFIX",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "RESOURCE_URL_PREFIX",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "SEARCH_URL_PREFIX",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "AI_URL_PREFIX",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_HOME_URL_PREFIX",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_NEWS_URL_PREFIX",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_BOOK_URL_PREFIX",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_USER_URL_PREFIX",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_RESOURCE_URL_PREFIX",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "API_FRONT_SEARCH_URL_PREFIX",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "API_AUTHOR_AI_URL_PREFIX",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "ApiRouterConsts",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ApiRouterConsts",
+          "callee": "new IllegalStateException",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 19,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/CacheConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 175,
+      "nonEmptyLines": 133,
+      "classes": [
+        {
+          "name": "CacheConsts",
+          "startLine": 9,
+          "endLine": 175,
+          "methods": [],
+          "properties": [
+            "REDIS_CACHE_PREFIX",
+            "CAFFEINE_CACHE_MANAGER",
+            "REDIS_CACHE_MANAGER",
+            "HOME_BOOK_CACHE_NAME",
+            "LATEST_NEWS_CACHE_NAME",
+            "BOOK_VISIT_RANK_CACHE_NAME",
+            "BOOK_NEWEST_RANK_CACHE_NAME",
+            "BOOK_UPDATE_RANK_CACHE_NAME",
+            "HOME_FRIEND_LINK_CACHE_NAME",
+            "BOOK_CATEGORY_LIST_CACHE_NAME",
+            "BOOK_INFO_CACHE_NAME",
+            "BOOK_CHAPTER_CACHE_NAME",
+            "BOOK_CONTENT_CACHE_NAME",
+            "LAST_UPDATE_BOOK_ID_LIST_CACHE_NAME",
+            "IMG_VERIFY_CODE_CACHE_KEY",
+            "USER_INFO_CACHE_NAME",
+            "AUTHOR_INFO_CACHE_NAME"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "REDIS_CACHE_PREFIX",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "CAFFEINE_CACHE_MANAGER",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "REDIS_CACHE_MANAGER",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "HOME_BOOK_CACHE_NAME",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "LATEST_NEWS_CACHE_NAME",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_VISIT_RANK_CACHE_NAME",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_NEWEST_RANK_CACHE_NAME",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_UPDATE_RANK_CACHE_NAME",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "HOME_FRIEND_LINK_CACHE_NAME",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_CATEGORY_LIST_CACHE_NAME",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_INFO_CACHE_NAME",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_CHAPTER_CACHE_NAME",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "BOOK_CONTENT_CACHE_NAME",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "LAST_UPDATE_BOOK_ID_LIST_CACHE_NAME",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "IMG_VERIFY_CODE_CACHE_KEY",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "USER_INFO_CACHE_NAME",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "AUTHOR_INFO_CACHE_NAME",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "CacheConsts",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/DatabaseConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 201,
+      "nonEmptyLines": 138,
+      "classes": [
+        {
+          "name": "DatabaseConsts",
+          "startLine": 11,
+          "endLine": 201,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DatabaseConsts",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "UserInfoTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 19
+        },
+        {
+          "caller": "UserFeedBackTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 32
+        },
+        {
+          "caller": "UserBookshelfTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 45
+        },
+        {
+          "caller": "AuthorInfoTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 60
+        },
+        {
+          "caller": "BookCategoryTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 73
+        },
+        {
+          "caller": "BookTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 86
+        },
+        {
+          "caller": "BookChapterTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 109
+        },
+        {
+          "caller": "BookContentTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 126
+        },
+        {
+          "caller": "BookCommentTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 139
+        },
+        {
+          "caller": "NewsContentTable",
+          "callee": "new IllegalStateException",
+          "lineNumber": 154
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/EsConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 92,
+      "functions": [
+        {
+          "name": "EsConsts",
+          "startLine": 11,
+          "endLine": 13,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "EsConsts",
+          "startLine": 9,
+          "endLine": 116,
+          "methods": [
+            "EsConsts"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EsConsts",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "EsConsts",
+          "callee": "new IllegalStateException",
+          "lineNumber": 12
+        },
+        {
+          "caller": "BookIndex",
+          "callee": "new IllegalStateException",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/MessageSenderTypeConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "MessageSenderTypeConsts",
+          "startLine": 11,
+          "endLine": 13,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MessageSenderTypeConsts",
+          "startLine": 9,
+          "endLine": 25,
+          "methods": [
+            "MessageSenderTypeConsts"
+          ],
+          "properties": [
+            "REGISTER_MAIL_SENDER",
+            "SECKILL_SYS_NOTICE_SENDER"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "REGISTER_MAIL_SENDER",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "SECKILL_SYS_NOTICE_SENDER",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "MessageSenderTypeConsts",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MessageSenderTypeConsts",
+          "callee": "new IllegalStateException",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/constant/SystemConfigConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "SystemConfigConsts",
+          "startLine": 11,
+          "endLine": 13,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SystemConfigConsts",
+          "startLine": 9,
+          "endLine": 45,
+          "methods": [
+            "SystemConfigConsts"
+          ],
+          "properties": [
+            "HTTP_AUTH_HEADER_NAME",
+            "NOVEL_FRONT_KEY",
+            "NOVEL_AUTHOR_KEY",
+            "NOVEL_ADMIN_KEY",
+            "IMAGE_UPLOAD_DIRECTORY",
+            "CONST_INSTANCE_EXCEPTION_MSG"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HTTP_AUTH_HEADER_NAME",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "NOVEL_FRONT_KEY",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "NOVEL_AUTHOR_KEY",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "NOVEL_ADMIN_KEY",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "IMAGE_UPLOAD_DIRECTORY",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "CONST_INSTANCE_EXCEPTION_MSG",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "SystemConfigConsts",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SystemConfigConsts",
+          "callee": "new IllegalStateException",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/filter/XssFilter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "init",
+          "startLine": 37,
+          "endLine": 40,
+          "params": [
+            "filterConfig"
+          ]
+        },
+        {
+          "name": "doFilter",
+          "startLine": 42,
+          "endLine": 53,
+          "params": [
+            "servletRequest",
+            "servletResponse",
+            "filterChain"
+          ]
+        },
+        {
+          "name": "handleExcludeUrl",
+          "startLine": 55,
+          "endLine": 68,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "destroy",
+          "startLine": 70,
+          "endLine": 73,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "XssFilter",
+          "startLine": 28,
+          "endLine": 74,
+          "methods": [
+            "init",
+            "doFilter",
+            "handleExcludeUrl",
+            "destroy"
+          ],
+          "properties": [
+            "xssProperties"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "init",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "doFilter",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "destroy",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "XssFilter",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "init",
+          "callee": "Filter.init",
+          "lineNumber": 39
+        },
+        {
+          "caller": "doFilter",
+          "callee": "handleExcludeUrl",
+          "lineNumber": 46
+        },
+        {
+          "caller": "doFilter",
+          "callee": "filterChain.doFilter",
+          "lineNumber": 47
+        },
+        {
+          "caller": "doFilter",
+          "callee": "new XssHttpServletRequestWrapper",
+          "lineNumber": 50
+        },
+        {
+          "caller": "doFilter",
+          "callee": "filterChain.doFilter",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "CollectionUtils.isEmpty",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "xssProperties.excludes",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "request.getServletPath",
+          "lineNumber": 59
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "xssProperties.excludes",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "Pattern.compile",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "p.matcher",
+          "lineNumber": 62
+        },
+        {
+          "caller": "handleExcludeUrl",
+          "callee": "m.find",
+          "lineNumber": 63
+        },
+        {
+          "caller": "destroy",
+          "callee": "Filter.destroy",
+          "lineNumber": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/AuthInterceptor.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "preHandle",
+          "startLine": 38,
+          "endLine": 65,
+          "params": [
+            "request",
+            "response",
+            "handler"
+          ]
+        },
+        {
+          "name": "postHandle",
+          "startLine": 70,
+          "endLine": 75,
+          "params": [
+            "request",
+            "response",
+            "handler",
+            "modelAndView"
+          ]
+        },
+        {
+          "name": "afterCompletion",
+          "startLine": 80,
+          "endLine": 87,
+          "params": [
+            "request",
+            "response",
+            "handler",
+            "ex"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthInterceptor",
+          "startLine": 27,
+          "endLine": 89,
+          "methods": [
+            "preHandle",
+            "postHandle",
+            "afterCompletion"
+          ],
+          "properties": [
+            "authStrategy",
+            "objectMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "preHandle",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "postHandle",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "afterCompletion",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "AuthInterceptor",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "preHandle",
+          "callee": "request.getHeader",
+          "lineNumber": 43
+        },
+        {
+          "caller": "preHandle",
+          "callee": "request.getRequestURI",
+          "lineNumber": 46
+        },
+        {
+          "caller": "preHandle",
+          "callee": "requestUri.substring",
+          "lineNumber": 49
+        },
+        {
+          "caller": "preHandle",
+          "callee": "ApiRouterConsts.API_URL_PREFIX.length",
+          "lineNumber": 49
+        },
+        {
+          "caller": "preHandle",
+          "callee": "subUri.substring",
+          "lineNumber": 50
+        },
+        {
+          "caller": "preHandle",
+          "callee": "subUri.indexOf",
+          "lineNumber": 50
+        },
+        {
+          "caller": "preHandle",
+          "callee": "String.format",
+          "lineNumber": 51
+        },
+        {
+          "caller": "preHandle",
+          "callee": "authStrategy.get(authStrategyName).auth",
+          "lineNumber": 55
+        },
+        {
+          "caller": "preHandle",
+          "callee": "authStrategy.get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "preHandle",
+          "callee": "HandlerInterceptor.preHandle",
+          "lineNumber": 56
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.setCharacterEncoding",
+          "lineNumber": 59
+        },
+        {
+          "caller": "preHandle",
+          "callee": "StandardCharsets.UTF_8.name",
+          "lineNumber": 59
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.setContentType",
+          "lineNumber": 60
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.getWriter().write",
+          "lineNumber": 61
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.getWriter",
+          "lineNumber": 61
+        },
+        {
+          "caller": "preHandle",
+          "callee": "objectMapper.writeValueAsString",
+          "lineNumber": 62
+        },
+        {
+          "caller": "preHandle",
+          "callee": "RestResp.fail",
+          "lineNumber": 62
+        },
+        {
+          "caller": "preHandle",
+          "callee": "exception.getErrorCodeEnum",
+          "lineNumber": 62
+        },
+        {
+          "caller": "postHandle",
+          "callee": "HandlerInterceptor.postHandle",
+          "lineNumber": 74
+        },
+        {
+          "caller": "afterCompletion",
+          "callee": "UserHolder.clear",
+          "lineNumber": 85
+        },
+        {
+          "caller": "afterCompletion",
+          "callee": "HandlerInterceptor.afterCompletion",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/FileInterceptor.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "preHandle",
+          "startLine": 26,
+          "endLine": 42,
+          "params": [
+            "request",
+            "response",
+            "handler"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FileInterceptor",
+          "startLine": 19,
+          "endLine": 44,
+          "methods": [
+            "preHandle"
+          ],
+          "properties": [
+            "fileUploadPath"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "preHandle",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "FileInterceptor",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "preHandle",
+          "callee": "request.getRequestURI",
+          "lineNumber": 31
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.setDateHeader",
+          "lineNumber": 33
+        },
+        {
+          "caller": "preHandle",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 33
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.getOutputStream",
+          "lineNumber": 34
+        },
+        {
+          "caller": "preHandle",
+          "callee": "new FileInputStream",
+          "lineNumber": 34
+        },
+        {
+          "caller": "preHandle",
+          "callee": "input.read",
+          "lineNumber": 37
+        },
+        {
+          "caller": "preHandle",
+          "callee": "out.write",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/FlowLimitInterceptor.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 98,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "preHandle",
+          "startLine": 70,
+          "endLine": 96,
+          "params": [
+            "request",
+            "response",
+            "handler"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FlowLimitInterceptor",
+          "startLine": 34,
+          "endLine": 98,
+          "methods": [
+            "preHandle"
+          ],
+          "properties": [
+            "objectMapper",
+            "NOVEL_RESOURCE"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "preHandle",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "FlowLimitInterceptor",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "preHandle",
+          "callee": "IpUtils.getRealIp",
+          "lineNumber": 73
+        },
+        {
+          "caller": "preHandle",
+          "callee": "SphU.entry",
+          "lineNumber": 79
+        },
+        {
+          "caller": "preHandle",
+          "callee": "HandlerInterceptor.preHandle",
+          "lineNumber": 81
+        },
+        {
+          "caller": "preHandle",
+          "callee": "log.info",
+          "lineNumber": 84
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.setCharacterEncoding",
+          "lineNumber": 85
+        },
+        {
+          "caller": "preHandle",
+          "callee": "StandardCharsets.UTF_8.name",
+          "lineNumber": 85
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.setContentType",
+          "lineNumber": 86
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.getWriter().write",
+          "lineNumber": 87
+        },
+        {
+          "caller": "preHandle",
+          "callee": "response.getWriter",
+          "lineNumber": 87
+        },
+        {
+          "caller": "preHandle",
+          "callee": "objectMapper.writeValueAsString",
+          "lineNumber": 88
+        },
+        {
+          "caller": "preHandle",
+          "callee": "RestResp.fail",
+          "lineNumber": 88
+        },
+        {
+          "caller": "preHandle",
+          "callee": "entry.exit",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/TokenParseInterceptor.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "preHandle",
+          "startLine": 25,
+          "endLine": 36,
+          "params": [
+            "request",
+            "response",
+            "handler"
+          ]
+        },
+        {
+          "name": "afterCompletion",
+          "startLine": 41,
+          "endLine": 48,
+          "params": [
+            "request",
+            "response",
+            "handler",
+            "ex"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TokenParseInterceptor",
+          "startLine": 19,
+          "endLine": 50,
+          "methods": [
+            "preHandle",
+            "afterCompletion"
+          ],
+          "properties": [
+            "jwtUtils"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "preHandle",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "afterCompletion",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "TokenParseInterceptor",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "preHandle",
+          "callee": "request.getHeader",
+          "lineNumber": 30
+        },
+        {
+          "caller": "preHandle",
+          "callee": "StringUtils.hasText",
+          "lineNumber": 31
+        },
+        {
+          "caller": "preHandle",
+          "callee": "UserHolder.setUserId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "preHandle",
+          "callee": "jwtUtils.parseToken",
+          "lineNumber": 33
+        },
+        {
+          "caller": "preHandle",
+          "callee": "HandlerInterceptor.preHandle",
+          "lineNumber": 35
+        },
+        {
+          "caller": "afterCompletion",
+          "callee": "UserHolder.clear",
+          "lineNumber": 46
+        },
+        {
+          "caller": "afterCompletion",
+          "callee": "HandlerInterceptor.afterCompletion",
+          "lineNumber": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/json/deserializer/GlobalJsonDeserializer.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 27,
+      "classes": [
+        {
+          "name": "GlobalJsonDeserializer",
+          "startLine": 16,
+          "endLine": 32,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GlobalJsonDeserializer",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "deserialize",
+          "callee": "jsonParser.getValueAsString()\r\n                .replace(\"<\", \"&lt;\").replace",
+          "lineNumber": 27
+        },
+        {
+          "caller": "deserialize",
+          "callee": "jsonParser.getValueAsString().replace",
+          "lineNumber": 27
+        },
+        {
+          "caller": "deserialize",
+          "callee": "jsonParser.getValueAsString",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/json/serializer/UsernameSerializer.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "serialize",
+          "startLine": 16,
+          "endLine": 20,
+          "params": [
+            "s",
+            "jsonGenerator",
+            "serializerProvider"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UsernameSerializer",
+          "startLine": 14,
+          "endLine": 22,
+          "methods": [
+            "serialize"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "serialize",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "UsernameSerializer",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "serialize",
+          "callee": "jsonGenerator.writeString",
+          "lineNumber": 19
+        },
+        {
+          "caller": "serialize",
+          "callee": "s.substring",
+          "lineNumber": 19
+        },
+        {
+          "caller": "serialize",
+          "callee": "s.substring",
+          "lineNumber": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/listener/RabbitQueueListener.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "updateEsBook",
+          "startLine": 37,
+          "endLine": 47,
+          "params": [
+            "bookId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RabbitQueueListener",
+          "startLine": 23,
+          "endLine": 49,
+          "methods": [
+            "updateEsBook"
+          ],
+          "properties": [
+            "bookInfoMapper",
+            "esClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "updateEsBook",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "RabbitQueueListener",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "updateEsBook",
+          "callee": "bookInfoMapper.selectById",
+          "lineNumber": 40
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "esClient.index",
+          "lineNumber": 41
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "i\r\n            .index(EsConsts.BookIndex.INDEX_NAME)\r\n            .id(bookInfo.getId().toString()).document",
+          "lineNumber": 41
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "i\r\n            .index(EsConsts.BookIndex.INDEX_NAME).id",
+          "lineNumber": 41
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "i.index",
+          "lineNumber": 41
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "bookInfo.getId().toString",
+          "lineNumber": 43
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "bookInfo.getId",
+          "lineNumber": 43
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "EsBookDto.build",
+          "lineNumber": 44
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "log.info",
+          "lineNumber": 46
+        },
+        {
+          "caller": "updateEsBook",
+          "callee": "response.version",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/task/BookToEsTask.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 83,
+      "functions": [
+        {
+          "name": "saveToEs",
+          "startLine": 43,
+          "endLine": 92,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookToEsTask",
+          "startLine": 30,
+          "endLine": 94,
+          "methods": [
+            "saveToEs"
+          ],
+          "properties": [
+            "bookInfoMapper",
+            "elasticsearchClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "saveToEs",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "BookToEsTask",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "saveToEs",
+          "callee": "new QueryWrapper<>",
+          "lineNumber": 48
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "queryWrapper.clear",
+          "lineNumber": 52
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "queryWrapper\r\n                    .orderByAsc(DatabaseConsts.CommonColumnEnum.ID.getName())\r\n                    .gt(DatabaseConsts.CommonColumnEnum.ID.getName(), maxId)\r\n                    .gt(DatabaseConsts.BookTable.COLUMN_WORD_COUNT, 0).last",
+          "lineNumber": 53
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "queryWrapper\r\n                    .orderByAsc(DatabaseConsts.CommonColumnEnum.ID.getName())\r\n                    .gt(DatabaseConsts.CommonColumnEnum.ID.getName(), maxId).gt",
+          "lineNumber": 53
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "queryWrapper\r\n                    .orderByAsc(DatabaseConsts.CommonColumnEnum.ID.getName()).gt",
+          "lineNumber": 53
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "queryWrapper.orderByAsc",
+          "lineNumber": 53
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 54
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "DatabaseConsts.CommonColumnEnum.ID.getName",
+          "lineNumber": 55
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "DatabaseConsts.SqlEnum.LIMIT_30.getSql",
+          "lineNumber": 57
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "bookInfoMapper.selectList",
+          "lineNumber": 58
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "bookInfos.isEmpty",
+          "lineNumber": 59
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "new BulkRequest.Builder",
+          "lineNumber": 62
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "br.operations(op -> op\r\n                        .index(idx -> idx\r\n                            .index(EsConsts.BookIndex.INDEX_NAME)\r\n                            .id(book.getId().toString())\r\n                            .document(EsBookDto.build(book))\r\n                        )\r\n                    ).timeout",
+          "lineNumber": 65
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "br.operations",
+          "lineNumber": 65
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "op.index",
+          "lineNumber": 65
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "idx\r\n                            .index(EsConsts.BookIndex.INDEX_NAME)\r\n                            .id(book.getId().toString()).document",
+          "lineNumber": 66
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "idx\r\n                            .index(EsConsts.BookIndex.INDEX_NAME).id",
+          "lineNumber": 66
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "idx.index",
+          "lineNumber": 66
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "book.getId().toString",
+          "lineNumber": 68
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "book.getId",
+          "lineNumber": 68
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "EsBookDto.build",
+          "lineNumber": 69
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "Time.of",
+          "lineNumber": 71
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "t.time",
+          "lineNumber": 71
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "book.getId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "elasticsearchClient.bulk",
+          "lineNumber": 75
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "br.build",
+          "lineNumber": 75
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "result.errors",
+          "lineNumber": 78
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "log.error",
+          "lineNumber": 79
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "result.items",
+          "lineNumber": 80
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "item.error",
+          "lineNumber": 81
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "log.error",
+          "lineNumber": 82
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "item.error().reason",
+          "lineNumber": 82
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "item.error",
+          "lineNumber": 82
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "log.error",
+          "lineNumber": 89
+        },
+        {
+          "caller": "saveToEs",
+          "callee": "e.getMessage",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/util/JwtUtils.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "generateToken",
+          "startLine": 44,
+          "endLine": 50,
+          "params": [
+            "uid",
+            "systemKey"
+          ]
+        },
+        {
+          "name": "parseToken",
+          "startLine": 59,
+          "endLine": 76,
+          "params": [
+            "token",
+            "systemKey"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "JwtUtils",
+          "startLine": 21,
+          "endLine": 78,
+          "methods": [
+            "generateToken",
+            "parseToken"
+          ],
+          "properties": [
+            "secret",
+            "HEADER_SYSTEM_KEY"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateToken",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "parseToken",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "JwtUtils",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generateToken",
+          "callee": "Jwts.builder()\r\n            .setHeaderParam(HEADER_SYSTEM_KEY, systemKey)\r\n            .setSubject(uid.toString())\r\n            .signWith(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8))).compact",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateToken",
+          "callee": "Jwts.builder()\r\n            .setHeaderParam(HEADER_SYSTEM_KEY, systemKey)\r\n            .setSubject(uid.toString()).signWith",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateToken",
+          "callee": "Jwts.builder()\r\n            .setHeaderParam(HEADER_SYSTEM_KEY, systemKey).setSubject",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateToken",
+          "callee": "Jwts.builder().setHeaderParam",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateToken",
+          "callee": "Jwts.builder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateToken",
+          "callee": "uid.toString",
+          "lineNumber": 47
+        },
+        {
+          "caller": "generateToken",
+          "callee": "Keys.hmacShaKeyFor",
+          "lineNumber": 48
+        },
+        {
+          "caller": "generateToken",
+          "callee": "secret.getBytes",
+          "lineNumber": 48
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Jwts.parserBuilder()\r\n                .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))\r\n                .build().parseClaimsJws",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Jwts.parserBuilder()\r\n                .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8))).build",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Jwts.parserBuilder().setSigningKey",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Jwts.parserBuilder",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Keys.hmacShaKeyFor",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parseToken",
+          "callee": "secret.getBytes",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Objects.equals",
+          "lineNumber": 68
+        },
+        {
+          "caller": "parseToken",
+          "callee": "claimsJws.getHeader().get",
+          "lineNumber": 68
+        },
+        {
+          "caller": "parseToken",
+          "callee": "claimsJws.getHeader",
+          "lineNumber": 68
+        },
+        {
+          "caller": "parseToken",
+          "callee": "Long.parseLong",
+          "lineNumber": 69
+        },
+        {
+          "caller": "parseToken",
+          "callee": "claimsJws.getBody().getSubject",
+          "lineNumber": 69
+        },
+        {
+          "caller": "parseToken",
+          "callee": "claimsJws.getBody",
+          "lineNumber": 69
+        },
+        {
+          "caller": "parseToken",
+          "callee": "log.warn",
+          "lineNumber": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/wrapper/XssHttpServletRequestWrapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "XssHttpServletRequestWrapper",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "getParameterValues",
+          "startLine": 27,
+          "endLine": 42,
+          "params": [
+            "name"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "XssHttpServletRequestWrapper",
+          "startLine": 14,
+          "endLine": 43,
+          "methods": [
+            "XssHttpServletRequestWrapper",
+            "getParameterValues"
+          ],
+          "properties": [
+            "REPLACE_RULE"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "XssHttpServletRequestWrapper",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "getParameterValues",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "XssHttpServletRequestWrapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getParameterValues",
+          "callee": "super.getParameterValues",
+          "lineNumber": 29
+        },
+        {
+          "caller": "getParameterValues",
+          "callee": "REPLACE_RULE.forEach",
+          "lineNumber": 36
+        },
+        {
+          "caller": "getParameterValues",
+          "callee": "escapeValues[index].replaceAll",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorCode.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getInviteCode",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setInviteCode",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "inviteCode"
+          ]
+        },
+        {
+          "name": "getValidityTime",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setValidityTime",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "validityTime"
+          ]
+        },
+        {
+          "name": "getIsUsed",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setIsUsed",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "isUsed"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 86,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 90,
+          "endLine": 92,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 94,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 98,
+          "endLine": 100,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 102,
+          "endLine": 112,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorCode",
+          "startLine": 17,
+          "endLine": 113,
+          "methods": [
+            "getId",
+            "setId",
+            "getInviteCode",
+            "setInviteCode",
+            "getValidityTime",
+            "setValidityTime",
+            "getIsUsed",
+            "setIsUsed",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "inviteCode",
+            "validityTime",
+            "isUsed",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getInviteCode",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setInviteCode",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getValidityTime",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setValidityTime",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getIsUsed",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setIsUsed",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorCode",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncome.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 184,
+      "nonEmptyLines": 146,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getAuthorId",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setAuthorId",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "authorId"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getIncomeMonth",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setIncomeMonth",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "incomeMonth"
+          ]
+        },
+        {
+          "name": "getPreTaxIncome",
+          "startLine": 112,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "setPreTaxIncome",
+          "startLine": 116,
+          "endLine": 118,
+          "params": [
+            "preTaxIncome"
+          ]
+        },
+        {
+          "name": "getAfterTaxIncome",
+          "startLine": 120,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "setAfterTaxIncome",
+          "startLine": 124,
+          "endLine": 126,
+          "params": [
+            "afterTaxIncome"
+          ]
+        },
+        {
+          "name": "getPayStatus",
+          "startLine": 128,
+          "endLine": 130,
+          "params": []
+        },
+        {
+          "name": "setPayStatus",
+          "startLine": 132,
+          "endLine": 134,
+          "params": [
+            "payStatus"
+          ]
+        },
+        {
+          "name": "getConfirmStatus",
+          "startLine": 136,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "setConfirmStatus",
+          "startLine": 140,
+          "endLine": 142,
+          "params": [
+            "confirmStatus"
+          ]
+        },
+        {
+          "name": "getDetail",
+          "startLine": 144,
+          "endLine": 146,
+          "params": []
+        },
+        {
+          "name": "setDetail",
+          "startLine": 148,
+          "endLine": 150,
+          "params": [
+            "detail"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 152,
+          "endLine": 154,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 156,
+          "endLine": 158,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 160,
+          "endLine": 162,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 164,
+          "endLine": 166,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 168,
+          "endLine": 183,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorIncome",
+          "startLine": 18,
+          "endLine": 184,
+          "methods": [
+            "getId",
+            "setId",
+            "getAuthorId",
+            "setAuthorId",
+            "getBookId",
+            "setBookId",
+            "getIncomeMonth",
+            "setIncomeMonth",
+            "getPreTaxIncome",
+            "setPreTaxIncome",
+            "getAfterTaxIncome",
+            "setAfterTaxIncome",
+            "getPayStatus",
+            "setPayStatus",
+            "getConfirmStatus",
+            "setConfirmStatus",
+            "getDetail",
+            "setDetail",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "authorId",
+            "bookId",
+            "incomeMonth",
+            "preTaxIncome",
+            "afterTaxIncome",
+            "payStatus",
+            "confirmStatus",
+            "detail",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getAuthorId",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setAuthorId",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getIncomeMonth",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setIncomeMonth",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "getPreTaxIncome",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "setPreTaxIncome",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "getAfterTaxIncome",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "setAfterTaxIncome",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "getPayStatus",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "setPayStatus",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "getConfirmStatus",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "setConfirmStatus",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "getDetail",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "setDetail",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorIncome",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 23,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncomeDetail.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 156,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getAuthorId",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setAuthorId",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "authorId"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 86,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 90,
+          "endLine": 92,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getIncomeDate",
+          "startLine": 94,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "setIncomeDate",
+          "startLine": 98,
+          "endLine": 100,
+          "params": [
+            "incomeDate"
+          ]
+        },
+        {
+          "name": "getIncomeAccount",
+          "startLine": 102,
+          "endLine": 104,
+          "params": []
+        },
+        {
+          "name": "setIncomeAccount",
+          "startLine": 106,
+          "endLine": 108,
+          "params": [
+            "incomeAccount"
+          ]
+        },
+        {
+          "name": "getIncomeCount",
+          "startLine": 110,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "setIncomeCount",
+          "startLine": 114,
+          "endLine": 116,
+          "params": [
+            "incomeCount"
+          ]
+        },
+        {
+          "name": "getIncomeNumber",
+          "startLine": 118,
+          "endLine": 120,
+          "params": []
+        },
+        {
+          "name": "setIncomeNumber",
+          "startLine": 122,
+          "endLine": 124,
+          "params": [
+            "incomeNumber"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 126,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 130,
+          "endLine": 132,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 134,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 138,
+          "endLine": 140,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 142,
+          "endLine": 155,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorIncomeDetail",
+          "startLine": 18,
+          "endLine": 156,
+          "methods": [
+            "getId",
+            "setId",
+            "getAuthorId",
+            "setAuthorId",
+            "getBookId",
+            "setBookId",
+            "getIncomeDate",
+            "setIncomeDate",
+            "getIncomeAccount",
+            "setIncomeAccount",
+            "getIncomeCount",
+            "setIncomeCount",
+            "getIncomeNumber",
+            "setIncomeNumber",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "authorId",
+            "bookId",
+            "incomeDate",
+            "incomeAccount",
+            "incomeCount",
+            "incomeNumber",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getAuthorId",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setAuthorId",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "getIncomeDate",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "setIncomeDate",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "getIncomeAccount",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "setIncomeAccount",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "getIncomeCount",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "setIncomeCount",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "getIncomeNumber",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "setIncomeNumber",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorIncomeDetail",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 20,
+        "functionCount": 19,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 183,
+      "nonEmptyLines": 145,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 79,
+          "endLine": 81,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 83,
+          "endLine": 85,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 87,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 91,
+          "endLine": 93,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getInviteCode",
+          "startLine": 95,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "setInviteCode",
+          "startLine": 99,
+          "endLine": 101,
+          "params": [
+            "inviteCode"
+          ]
+        },
+        {
+          "name": "getPenName",
+          "startLine": 103,
+          "endLine": 105,
+          "params": []
+        },
+        {
+          "name": "setPenName",
+          "startLine": 107,
+          "endLine": 109,
+          "params": [
+            "penName"
+          ]
+        },
+        {
+          "name": "getTelPhone",
+          "startLine": 111,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "setTelPhone",
+          "startLine": 115,
+          "endLine": 117,
+          "params": [
+            "telPhone"
+          ]
+        },
+        {
+          "name": "getChatAccount",
+          "startLine": 119,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "setChatAccount",
+          "startLine": 123,
+          "endLine": 125,
+          "params": [
+            "chatAccount"
+          ]
+        },
+        {
+          "name": "getEmail",
+          "startLine": 127,
+          "endLine": 129,
+          "params": []
+        },
+        {
+          "name": "setEmail",
+          "startLine": 131,
+          "endLine": 133,
+          "params": [
+            "email"
+          ]
+        },
+        {
+          "name": "getWorkDirection",
+          "startLine": 135,
+          "endLine": 137,
+          "params": []
+        },
+        {
+          "name": "setWorkDirection",
+          "startLine": 139,
+          "endLine": 141,
+          "params": [
+            "workDirection"
+          ]
+        },
+        {
+          "name": "getStatus",
+          "startLine": 143,
+          "endLine": 145,
+          "params": []
+        },
+        {
+          "name": "setStatus",
+          "startLine": 147,
+          "endLine": 149,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 151,
+          "endLine": 153,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 155,
+          "endLine": 157,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 159,
+          "endLine": 161,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 163,
+          "endLine": 165,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 167,
+          "endLine": 182,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorInfo",
+          "startLine": 17,
+          "endLine": 183,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getInviteCode",
+            "setInviteCode",
+            "getPenName",
+            "setPenName",
+            "getTelPhone",
+            "setTelPhone",
+            "getChatAccount",
+            "setChatAccount",
+            "getEmail",
+            "setEmail",
+            "getWorkDirection",
+            "setWorkDirection",
+            "getStatus",
+            "setStatus",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "inviteCode",
+            "penName",
+            "telPhone",
+            "chatAccount",
+            "email",
+            "workDirection",
+            "status",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "getInviteCode",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "setInviteCode",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "getPenName",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "setPenName",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "getTelPhone",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "setTelPhone",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "getChatAccount",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "setChatAccount",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "getEmail",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "setEmail",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "getWorkDirection",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "setWorkDirection",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "getStatus",
+          "line": 143,
+          "isDefault": false
+        },
+        {
+          "name": "setStatus",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorInfo",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 23,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookCategory.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 51,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getWorkDirection",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "setWorkDirection",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "workDirection"
+          ]
+        },
+        {
+          "name": "getName",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "setName",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "getSort",
+          "startLine": 75,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "setSort",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "sort"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 87,
+          "endLine": 89,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 91,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 95,
+          "endLine": 97,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 99,
+          "endLine": 109,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookCategory",
+          "startLine": 17,
+          "endLine": 110,
+          "methods": [
+            "getId",
+            "setId",
+            "getWorkDirection",
+            "setWorkDirection",
+            "getName",
+            "setName",
+            "getSort",
+            "setSort",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "workDirection",
+            "name",
+            "sort",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "getWorkDirection",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "setWorkDirection",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "getName",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "setName",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getSort",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "setSort",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "BookCategory",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    }
+  ]
+}

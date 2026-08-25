@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            ".mvn/wrapper/maven-wrapper.jar":  [
+
+                                                               ],
+                            ".mvn/wrapper/maven-wrapper.properties":  [
+
+                                                                      ],
+                            "doc/es/book.http":  [
+
+                                                 ],
+                            "doc/sql/novel.sql/__MACOSX/._novel_data.sql":  [
+
+                                                                            ],
+                            "doc/sql/novel.sql/novel_data.sql":  [
+
+                                                                 ],
+                            "doc/sql/novel.sql/novel_struc.sql":  [
+
+                                                                  ],
+                            "doc/style/README.md":  [
+
+                                                    ],
+                            "doc/style/intellij-java-google-style.xml":  [
+
+                                                                         ],
+                            "mvnw":  [
+
+                                     ],
+                            "src/main/java/io/github/xxyopen/novel/NovelApplication.java":  [
+
+                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/controller/author/AuthorAiController.java":  [
+
+                                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/controller/author/AuthorController.java":  [
+
+                                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/controller/front/BookController.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/controller/front/HomeController.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/controller/front/NewsController.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/controller/front/ResourceController.java":  [
+
+                                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/controller/front/SearchController.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/controller/front/UserController.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/core/annotation/Key.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/core/annotation/Lock.java":  [
+
+                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/core/annotation/ValidateSortOrder.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/core/aspect/LockAspect.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/core/aspect/SortOrderValidationAspect.java":  [
+
+                                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/core/auth/AdminAuthStrategy.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/core/auth/AuthStrategy.java":  [
+
+                                                                                                  ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  ".mvn/wrapper/maven-wrapper.jar",
+                           "language":  "jar",
+                           "sizeLines":  219,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  ".mvn/wrapper/maven-wrapper.properties",
+                           "language":  "properties",
+                           "sizeLines":  2,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "doc/es/book.http",
+                           "language":  "http",
+                           "sizeLines":  61,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "doc/sql/novel.sql/__MACOSX/._novel_data.sql",
+                           "language":  "sql",
+                           "sizeLines":  0,
+                           "fileCategory":  "data"
+                       },
+                       {
+                           "path":  "doc/sql/novel.sql/novel_data.sql",
+                           "language":  "sql",
+                           "sizeLines":  22467,
+                           "fileCategory":  "data"
+                       },
+                       {
+                           "path":  "doc/sql/novel.sql/novel_struc.sql",
+                           "language":  "sql",
+                           "sizeLines":  598,
+                           "fileCategory":  "data"
+                       },
+                       {
+                           "path":  "doc/style/README.md",
+                           "language":  "markdown",
+                           "sizeLines":  2,
+                           "fileCategory":  "docs"
+                       },
+                       {
+                           "path":  "doc/style/intellij-java-google-style.xml",
+                           "language":  "xml",
+                           "sizeLines":  35,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "mvnw",
+                           "language":  "unknown",
+                           "sizeLines":  316,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/NovelApplication.java",
+                           "language":  "java",
+                           "sizeLines":  66,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/author/AuthorAiController.java",
+                           "language":  "java",
+                           "sizeLines":  83,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/author/AuthorController.java",
+                           "language":  "java",
+                           "sizeLines":  135,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/front/BookController.java",
+                           "language":  "java",
+                           "sizeLines":  165,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/front/HomeController.java",
+                           "language":  "java",
+                           "sizeLines":  53,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/front/NewsController.java",
+                           "language":  "java",
+                           "sizeLines":  49,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/front/ResourceController.java",
+                           "language":  "java",
+                           "sizeLines":  52,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/front/SearchController.java",
+                           "language":  "java",
+                           "sizeLines":  41,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/controller/front/UserController.java",
+                           "language":  "java",
+                           "sizeLines":  146,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/annotation/Key.java",
+                           "language":  "java",
+                           "sizeLines":  23,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/annotation/Lock.java",
+                           "language":  "java",
+                           "sizeLines":  31,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/annotation/ValidateSortOrder.java",
+                           "language":  "java",
+                           "sizeLines":  18,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/aspect/LockAspect.java",
+                           "language":  "java",
+                           "sizeLines":  86,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/aspect/SortOrderValidationAspect.java",
+                           "language":  "java",
+                           "sizeLines":  129,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/auth/AdminAuthStrategy.java",
+                           "language":  "java",
+                           "sizeLines":  21,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/auth/AuthStrategy.java",
+                           "language":  "java",
+                           "sizeLines":  59,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

@@ -1,0 +1,34 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/resources/application.yml":  [
+
+                                                                   ],
+                            "src/main/resources/logback-spring.xml":  [
+
+                                                                      ],
+                            "src/main/resources/shardingsphere-jdbc.yml":  [
+
+                                                                           ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/resources/application.yml",
+                           "language":  "yaml",
+                           "sizeLines":  278,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/logback-spring.xml",
+                           "language":  "xml",
+                           "sizeLines":  82,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/shardingsphere-jdbc.yml",
+                           "language":  "yaml",
+                           "sizeLines":  55,
+                           "fileCategory":  "config"
+                       }
+                   ]
+}

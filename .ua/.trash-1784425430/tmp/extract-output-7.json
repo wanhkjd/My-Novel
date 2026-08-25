@@ -1,0 +1,2487 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/auth/AuthorAuthStrategy.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "auth",
+          "startLine": 39,
+          "endLine": 56,
+          "params": [
+            "token",
+            "requestUri"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorAuthStrategy",
+          "startLine": 21,
+          "endLine": 58,
+          "methods": [
+            "auth"
+          ],
+          "properties": [
+            "jwtUtils",
+            "userInfoCacheManager",
+            "authorInfoCacheManager",
+            "EXCLUDE_URI"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "auth",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorAuthStrategy",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "auth",
+          "callee": "authSSO",
+          "lineNumber": 42
+        },
+        {
+          "caller": "auth",
+          "callee": "EXCLUDE_URI.contains",
+          "lineNumber": 43
+        },
+        {
+          "caller": "auth",
+          "callee": "authorInfoCacheManager.getAuthor",
+          "lineNumber": 48
+        },
+        {
+          "caller": "auth",
+          "callee": "Objects.isNull",
+          "lineNumber": 49
+        },
+        {
+          "caller": "auth",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "auth",
+          "callee": "UserHolder.setAuthorId",
+          "lineNumber": 55
+        },
+        {
+          "caller": "auth",
+          "callee": "authorInfo.getId",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/auth/FrontAuthStrategy.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "auth",
+          "startLine": 23,
+          "endLine": 27,
+          "params": [
+            "token",
+            "requestUri"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FrontAuthStrategy",
+          "startLine": 15,
+          "endLine": 29,
+          "methods": [
+            "auth"
+          ],
+          "properties": [
+            "jwtUtils",
+            "userInfoCacheManager"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "auth",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "FrontAuthStrategy",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "auth",
+          "callee": "authSSO",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/auth/UserHolder.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "setUserId",
+          "startLine": 24,
+          "endLine": 26,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 28,
+          "endLine": 30,
+          "params": []
+        },
+        {
+          "name": "setAuthorId",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "authorId"
+          ]
+        },
+        {
+          "name": "getAuthorId",
+          "startLine": 36,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "clear",
+          "startLine": 40,
+          "endLine": 43,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserHolder",
+          "startLine": 11,
+          "endLine": 45,
+          "methods": [
+            "setUserId",
+            "getUserId",
+            "setAuthorId",
+            "getAuthorId",
+            "clear"
+          ],
+          "properties": [
+            "userIdTL",
+            "authorIdTL"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "setUserId",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "setAuthorId",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "getAuthorId",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "clear",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "UserHolder",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUserId",
+          "callee": "userIdTL.set",
+          "lineNumber": 25
+        },
+        {
+          "caller": "getUserId",
+          "callee": "userIdTL.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "setAuthorId",
+          "callee": "authorIdTL.set",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getAuthorId",
+          "callee": "authorIdTL.get",
+          "lineNumber": 37
+        },
+        {
+          "caller": "clear",
+          "callee": "userIdTL.remove",
+          "lineNumber": 41
+        },
+        {
+          "caller": "clear",
+          "callee": "authorIdTL.remove",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/constant/CommonConsts.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 44,
+      "classes": [
+        {
+          "name": "CommonConsts",
+          "startLine": 10,
+          "endLine": 57,
+          "methods": [],
+          "properties": [
+            "YES",
+            "TRUE",
+            "NO",
+            "FALSE"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "YES",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "TRUE",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "NO",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "FALSE",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "CommonConsts",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/constant/ErrorCodeEnum.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 157,
+      "nonEmptyLines": 127,
+      "classes": [
+        {
+          "name": "ErrorCodeEnum",
+          "startLine": 18,
+          "endLine": 157,
+          "methods": [],
+          "properties": [
+            "code",
+            "message"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ErrorCodeEnum",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/exception/BusinessException.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "BusinessException",
+          "startLine": 19,
+          "endLine": 24,
+          "params": [
+            "errorCodeEnum"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BusinessException",
+          "startLine": 13,
+          "endLine": 26,
+          "methods": [
+            "BusinessException"
+          ],
+          "properties": [
+            "errorCodeEnum"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BusinessException",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "BusinessException",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "BusinessException",
+          "callee": "errorCodeEnum.getMessage",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/exception/CommonExceptionHandler.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "handlerNotFound",
+          "startLine": 26,
+          "endLine": 30,
+          "params": []
+        },
+        {
+          "name": "handlerBindException",
+          "startLine": 35,
+          "endLine": 39,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handlerBusinessException",
+          "startLine": 44,
+          "endLine": 48,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handlerException",
+          "startLine": 53,
+          "endLine": 57,
+          "params": [
+            "e"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CommonExceptionHandler",
+          "startLine": 19,
+          "endLine": 59,
+          "methods": [
+            "handlerNotFound",
+            "handlerBindException",
+            "handlerBusinessException",
+            "handlerException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "handlerNotFound",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "handlerBindException",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "handlerBusinessException",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "handlerException",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "CommonExceptionHandler",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "handlerBindException",
+          "callee": "log.error",
+          "lineNumber": 37
+        },
+        {
+          "caller": "handlerBindException",
+          "callee": "e.getMessage",
+          "lineNumber": 37
+        },
+        {
+          "caller": "handlerBindException",
+          "callee": "RestResp.fail",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handlerBusinessException",
+          "callee": "log.error",
+          "lineNumber": 46
+        },
+        {
+          "caller": "handlerBusinessException",
+          "callee": "e.getMessage",
+          "lineNumber": 46
+        },
+        {
+          "caller": "handlerBusinessException",
+          "callee": "RestResp.fail",
+          "lineNumber": 47
+        },
+        {
+          "caller": "handlerBusinessException",
+          "callee": "e.getErrorCodeEnum",
+          "lineNumber": 47
+        },
+        {
+          "caller": "handlerException",
+          "callee": "log.error",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handlerException",
+          "callee": "e.getMessage",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handlerException",
+          "callee": "RestResp.error",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/req/PageReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 37,
+      "classes": [
+        {
+          "name": "PageReqDto",
+          "startLine": 12,
+          "endLine": 45,
+          "methods": [],
+          "properties": [
+            "pageNum",
+            "pageSize",
+            "fetchAll",
+            "sort",
+            "order"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PageReqDto",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/resp/PageRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "PageRespDto",
+          "startLine": 38,
+          "endLine": 43,
+          "params": [
+            "pageNum",
+            "pageSize",
+            "total",
+            "list"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 45,
+          "endLine": 47,
+          "params": [
+            "pageNum",
+            "pageSize",
+            "total",
+            "list"
+          ]
+        },
+        {
+          "name": "getPages",
+          "startLine": 52,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PageRespDto",
+          "startLine": 12,
+          "endLine": 63,
+          "methods": [
+            "PageRespDto",
+            "of",
+            "getPages"
+          ],
+          "properties": [
+            "pageNum",
+            "pageSize",
+            "total",
+            "list"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PageRespDto",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "of",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "getPages",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "PageRespDto",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new PageRespDto<>",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/resp/RestResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 87,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "RestResp",
+          "startLine": 36,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "RestResp",
+          "startLine": 41,
+          "endLine": 44,
+          "params": [
+            "errorCode"
+          ]
+        },
+        {
+          "name": "RestResp",
+          "startLine": 46,
+          "endLine": 49,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "ok",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "ok",
+          "startLine": 61,
+          "endLine": 63,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "fail",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "errorCode"
+          ]
+        },
+        {
+          "name": "error",
+          "startLine": 76,
+          "endLine": 78,
+          "params": []
+        },
+        {
+          "name": "isOk",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RestResp",
+          "startLine": 15,
+          "endLine": 87,
+          "methods": [
+            "RestResp",
+            "RestResp",
+            "RestResp",
+            "ok",
+            "ok",
+            "fail",
+            "error",
+            "isOk"
+          ],
+          "properties": [
+            "code",
+            "message",
+            "data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ok",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "ok",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "fail",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "error",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "isOk",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "RestResp",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RestResp",
+          "callee": "ErrorCodeEnum.OK.getCode",
+          "lineNumber": 37
+        },
+        {
+          "caller": "RestResp",
+          "callee": "ErrorCodeEnum.OK.getMessage",
+          "lineNumber": 38
+        },
+        {
+          "caller": "RestResp",
+          "callee": "errorCode.getCode",
+          "lineNumber": 42
+        },
+        {
+          "caller": "RestResp",
+          "callee": "errorCode.getMessage",
+          "lineNumber": 43
+        },
+        {
+          "caller": "ok",
+          "callee": "new RestResp<>",
+          "lineNumber": 55
+        },
+        {
+          "caller": "ok",
+          "callee": "new RestResp<>",
+          "lineNumber": 62
+        },
+        {
+          "caller": "fail",
+          "callee": "new RestResp<>",
+          "lineNumber": 69
+        },
+        {
+          "caller": "error",
+          "callee": "new RestResp<>",
+          "lineNumber": 77
+        },
+        {
+          "caller": "isOk",
+          "callee": "Objects.equals",
+          "lineNumber": 84
+        },
+        {
+          "caller": "isOk",
+          "callee": "ErrorCodeEnum.OK.getCode",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/util/ImgVerifyCodeUtils.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "getFont",
+          "startLine": 43,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "genVerifyCodeImg",
+          "startLine": 51,
+          "endLine": 74,
+          "params": [
+            "verifyCode"
+          ]
+        },
+        {
+          "name": "drawString",
+          "startLine": 79,
+          "endLine": 87,
+          "params": [
+            "g",
+            "verifyCode"
+          ]
+        },
+        {
+          "name": "drawLine",
+          "startLine": 92,
+          "endLine": 98,
+          "params": [
+            "g"
+          ]
+        },
+        {
+          "name": "getRandomVerifyCode",
+          "startLine": 103,
+          "endLine": 111,
+          "params": [
+            "num"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ImgVerifyCodeUtils",
+          "startLine": 20,
+          "endLine": 113,
+          "methods": [
+            "getFont",
+            "genVerifyCodeImg",
+            "drawString",
+            "drawLine",
+            "getRandomVerifyCode"
+          ],
+          "properties": [
+            "randNumber",
+            "width",
+            "height",
+            "random"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "genVerifyCodeImg",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "getRandomVerifyCode",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "ImgVerifyCodeUtils",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getFont",
+          "callee": "new Font",
+          "lineNumber": 44
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "new BufferedImage",
+          "lineNumber": 53
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "image.getGraphics",
+          "lineNumber": 55
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "g.fillRect",
+          "lineNumber": 57
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "g.setColor",
+          "lineNumber": 60
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "new Color",
+          "lineNumber": 60
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "drawLine",
+          "lineNumber": 65
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "drawString",
+          "lineNumber": 68
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "g.dispose",
+          "lineNumber": 69
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "new ByteArrayOutputStream",
+          "lineNumber": 71
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "ImageIO.write",
+          "lineNumber": 72
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "Base64.getEncoder().encodeToString",
+          "lineNumber": 73
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "Base64.getEncoder",
+          "lineNumber": 73
+        },
+        {
+          "caller": "genVerifyCodeImg",
+          "callee": "stream.toByteArray",
+          "lineNumber": 73
+        },
+        {
+          "caller": "drawString",
+          "callee": "verifyCode.length",
+          "lineNumber": 80
+        },
+        {
+          "caller": "drawString",
+          "callee": "g.setFont",
+          "lineNumber": 81
+        },
+        {
+          "caller": "drawString",
+          "callee": "getFont",
+          "lineNumber": 81
+        },
+        {
+          "caller": "drawString",
+          "callee": "g.setColor",
+          "lineNumber": 82
+        },
+        {
+          "caller": "drawString",
+          "callee": "new Color",
+          "lineNumber": 82
+        },
+        {
+          "caller": "drawString",
+          "callee": "random.nextInt",
+          "lineNumber": 82
+        },
+        {
+          "caller": "drawString",
+          "callee": "random.nextInt",
+          "lineNumber": 82
+        },
+        {
+          "caller": "drawString",
+          "callee": "random.nextInt",
+          "lineNumber": 82
+        },
+        {
+          "caller": "drawString",
+          "callee": "g.translate",
+          "lineNumber": 84
+        },
+        {
+          "caller": "drawString",
+          "callee": "random.nextInt",
+          "lineNumber": 84
+        },
+        {
+          "caller": "drawString",
+          "callee": "random.nextInt",
+          "lineNumber": 84
+        },
+        {
+          "caller": "drawString",
+          "callee": "g.drawString",
+          "lineNumber": 85
+        },
+        {
+          "caller": "drawString",
+          "callee": "String.valueOf",
+          "lineNumber": 85
+        },
+        {
+          "caller": "drawString",
+          "callee": "verifyCode.charAt",
+          "lineNumber": 85
+        },
+        {
+          "caller": "drawLine",
+          "callee": "random.nextInt",
+          "lineNumber": 93
+        },
+        {
+          "caller": "drawLine",
+          "callee": "random.nextInt",
+          "lineNumber": 94
+        },
+        {
+          "caller": "drawLine",
+          "callee": "random.nextInt",
+          "lineNumber": 95
+        },
+        {
+          "caller": "drawLine",
+          "callee": "random.nextInt",
+          "lineNumber": 96
+        },
+        {
+          "caller": "drawLine",
+          "callee": "g.drawLine",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "randNumber.length",
+          "lineNumber": 104
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "new StringBuilder",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "String.valueOf",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "randNumber.charAt",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "random.nextInt",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "verifyCode.append",
+          "lineNumber": 108
+        },
+        {
+          "caller": "getRandomVerifyCode",
+          "callee": "verifyCode.toString",
+          "lineNumber": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/util/IpUtils.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "getRealIp",
+          "startLine": 22,
+          "endLine": 43,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IpUtils",
+          "startLine": 10,
+          "endLine": 44,
+          "methods": [
+            "getRealIp"
+          ],
+          "properties": [
+            "UNKNOWN_IP",
+            "IP_SEPARATOR"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getRealIp",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "IpUtils",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRealIp",
+          "callee": "request.getHeader",
+          "lineNumber": 24
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "ip.length",
+          "lineNumber": 25
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "UNKNOWN_IP.equalsIgnoreCase",
+          "lineNumber": 25
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "request.getHeader",
+          "lineNumber": 26
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "ip.length",
+          "lineNumber": 28
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "UNKNOWN_IP.equalsIgnoreCase",
+          "lineNumber": 28
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "request.getHeader",
+          "lineNumber": 29
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "ip.length",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "UNKNOWN_IP.equalsIgnoreCase",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "request.getHeader",
+          "lineNumber": 32
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "ip.length",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "UNKNOWN_IP.equalsIgnoreCase",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "request.getRemoteAddr",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "ip.contains",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getRealIp",
+          "callee": "ip.split",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/common/util/SortWhitelistUtil.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "sanitizeColumn",
+          "startLine": 47,
+          "endLine": 49,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "sanitizeOrder",
+          "startLine": 60,
+          "endLine": 62,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SortWhitelistUtil",
+          "startLine": 22,
+          "endLine": 63,
+          "methods": [
+            "sanitizeColumn",
+            "sanitizeOrder"
+          ],
+          "properties": [
+            "allowedColumns",
+            "allowedOrders"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sanitizeColumn",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "sanitizeOrder",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "SortWhitelistUtil",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sanitizeColumn",
+          "callee": "allowedColumns.contains",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sanitizeColumn",
+          "callee": "input.toLowerCase",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sanitizeColumn",
+          "callee": "input.toLowerCase",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sanitizeOrder",
+          "callee": "allowedOrders.contains",
+          "lineNumber": 61
+        },
+        {
+          "caller": "sanitizeOrder",
+          "callee": "input.toLowerCase",
+          "lineNumber": 61
+        },
+        {
+          "caller": "sanitizeOrder",
+          "callee": "input.toLowerCase",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/AiConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "restClientBuilder",
+          "startLine": 32,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "chatClient",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "chatClientBuilder"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiConfig",
+          "startLine": 16,
+          "endLine": 47,
+          "methods": [
+            "restClientBuilder",
+            "chatClient"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "restClientBuilder",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "chatClient",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "AiConfig",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "restClientBuilder",
+          "callee": "new SimpleClientHttpRequestFactory",
+          "lineNumber": 34
+        },
+        {
+          "caller": "restClientBuilder",
+          "callee": "factory.setConnectTimeout",
+          "lineNumber": 36
+        },
+        {
+          "caller": "restClientBuilder",
+          "callee": "factory.setReadTimeout",
+          "lineNumber": 38
+        },
+        {
+          "caller": "restClientBuilder",
+          "callee": "RestClient.builder().requestFactory",
+          "lineNumber": 39
+        },
+        {
+          "caller": "restClientBuilder",
+          "callee": "RestClient.builder",
+          "lineNumber": 39
+        },
+        {
+          "caller": "chatClient",
+          "callee": "chatClientBuilder.build",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/AmqpConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "bookChangeExchange",
+          "startLine": 23,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "esBookUpdateQueue",
+          "startLine": 31,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "esBookUpdateQueueBinding",
+          "startLine": 39,
+          "endLine": 42,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AmqpConfig",
+          "startLine": 17,
+          "endLine": 44,
+          "methods": [
+            "bookChangeExchange",
+            "esBookUpdateQueue",
+            "esBookUpdateQueueBinding"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "bookChangeExchange",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "esBookUpdateQueue",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "esBookUpdateQueueBinding",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "AmqpConfig",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "bookChangeExchange",
+          "callee": "new FanoutExchange",
+          "lineNumber": 25
+        },
+        {
+          "caller": "esBookUpdateQueue",
+          "callee": "new Queue",
+          "lineNumber": 33
+        },
+        {
+          "caller": "esBookUpdateQueueBinding",
+          "callee": "BindingBuilder.bind(esBookUpdateQueue()).to",
+          "lineNumber": 41
+        },
+        {
+          "caller": "esBookUpdateQueueBinding",
+          "callee": "BindingBuilder.bind",
+          "lineNumber": 41
+        },
+        {
+          "caller": "esBookUpdateQueueBinding",
+          "callee": "esBookUpdateQueue",
+          "lineNumber": 41
+        },
+        {
+          "caller": "esBookUpdateQueueBinding",
+          "callee": "bookChangeExchange",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/CacheConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "caffeineCacheManager",
+          "startLine": 33,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "redisCacheManager",
+          "startLine": 58,
+          "endLine": 89,
+          "params": [
+            "connectionFactory"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CacheConfig",
+          "startLine": 27,
+          "endLine": 91,
+          "methods": [
+            "caffeineCacheManager",
+            "redisCacheManager"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "caffeineCacheManager",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "redisCacheManager",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "CacheConfig",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "new SimpleCacheManager",
+          "lineNumber": 36
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "new ArrayList<>",
+          "lineNumber": 38
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "CacheConsts.CacheEnum.values",
+          "lineNumber": 38
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "CacheConsts.CacheEnum.values",
+          "lineNumber": 40
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "c.isLocal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "Caffeine.newBuilder().recordStats().maximumSize",
+          "lineNumber": 42
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "Caffeine.newBuilder().recordStats",
+          "lineNumber": 42
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "Caffeine.newBuilder",
+          "lineNumber": 42
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "c.getMaxSize",
+          "lineNumber": 43
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "c.getTtl",
+          "lineNumber": 44
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "caffeine.expireAfterWrite",
+          "lineNumber": 45
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 45
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "c.getTtl",
+          "lineNumber": 45
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "caches.add",
+          "lineNumber": 47
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "new CaffeineCache",
+          "lineNumber": 47
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "c.getName",
+          "lineNumber": 47
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "caffeine.build",
+          "lineNumber": 47
+        },
+        {
+          "caller": "caffeineCacheManager",
+          "callee": "cacheManager.setCaches",
+          "lineNumber": 51
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheWriter.nonLockingRedisCacheWriter",
+          "lineNumber": 60
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig()\r\n            .disableCachingNullValues().prefixCacheNameWith",
+          "lineNumber": 63
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues",
+          "lineNumber": 63
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig",
+          "lineNumber": 63
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 66
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "CacheConsts.CacheEnum.values",
+          "lineNumber": 67
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "CacheConsts.CacheEnum.values",
+          "lineNumber": 69
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "c.isRemote",
+          "lineNumber": 70
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "c.getTtl",
+          "lineNumber": 71
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "cacheMap.put",
+          "lineNumber": 72
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "c.getName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues()\r\n                            .prefixCacheNameWith(CacheConsts.REDIS_CACHE_PREFIX).entryTtl",
+          "lineNumber": 73
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues().prefixCacheNameWith",
+          "lineNumber": 73
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues",
+          "lineNumber": 73
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig",
+          "lineNumber": 73
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 75
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "c.getTtl",
+          "lineNumber": 75
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "cacheMap.put",
+          "lineNumber": 77
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "c.getName",
+          "lineNumber": 77
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues().prefixCacheNameWith",
+          "lineNumber": 78
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues",
+          "lineNumber": 78
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "RedisCacheConfiguration.defaultCacheConfig",
+          "lineNumber": 78
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "new RedisCacheManager",
+          "lineNumber": 84
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "redisCacheManager.setTransactionAware",
+          "lineNumber": 86
+        },
+        {
+          "caller": "redisCacheManager",
+          "callee": "redisCacheManager.initializeCaches",
+          "lineNumber": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/CorsConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "corsFilter",
+          "startLine": 24,
+          "endLine": 42,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CorsConfig",
+          "startLine": 17,
+          "endLine": 44,
+          "methods": [
+            "corsFilter"
+          ],
+          "properties": [
+            "corsProperties"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "corsFilter",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "CorsConfig",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "corsFilter",
+          "callee": "new CorsConfiguration",
+          "lineNumber": 26
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "corsProperties.allowOrigins",
+          "lineNumber": 28
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "config.addAllowedOrigin",
+          "lineNumber": 29
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "config.addAllowedHeader",
+          "lineNumber": 32
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "config.addAllowedMethod",
+          "lineNumber": 34
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "config.setAllowCredentials",
+          "lineNumber": 36
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "new UrlBasedCorsConfigurationSource",
+          "lineNumber": 38
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "configurationSource.registerCorsConfiguration",
+          "lineNumber": 40
+        },
+        {
+          "caller": "corsFilter",
+          "callee": "new CorsFilter",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/CorsProperties.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "CorsProperties",
+          "startLine": 13,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CorsProperties",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/EsConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "elasticsearchRestClient",
+          "startLine": 35,
+          "endLine": 71,
+          "params": [
+            "restClientBuilder",
+            "builderCustomizers"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EsConfig",
+          "startLine": 27,
+          "endLine": 73,
+          "methods": [
+            "elasticsearchRestClient"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EsConfig",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "restClientBuilder.setHttpClientConfigCallback",
+          "lineNumber": 39
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "new X509TrustManager",
+          "lineNumber": 40
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "SSLContext.getInstance",
+          "lineNumber": 58
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "sc.init",
+          "lineNumber": 59
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "new SecureRandom",
+          "lineNumber": 59
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "log.error",
+          "lineNumber": 61
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "clientBuilder.setSSLContext",
+          "lineNumber": 64
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "clientBuilder.setSSLHostnameVerifier",
+          "lineNumber": 65
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "builderCustomizers.orderedStream().forEach",
+          "lineNumber": 67
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "builderCustomizers.orderedStream",
+          "lineNumber": 67
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "customizer.customize",
+          "lineNumber": 67
+        },
+        {
+          "caller": "elasticsearchRestClient",
+          "callee": "restClientBuilder.build",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/LogbookConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "logbook",
+          "startLine": 18,
+          "endLine": 35,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LogbookConfig",
+          "startLine": 15,
+          "endLine": 37,
+          "methods": [
+            "logbook"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "logbook",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "LogbookConfig",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "logbook",
+          "callee": "Logbook.builder()\r\n            .condition(exclude(\r\n                // 忽略 OPTIONS 请求\r\n                requestWithMethod(\"OPTIONS\"),\r\n                // 忽略 /actuator 以及其子路径（Spring Boot Actuator 提供的端点）的请求\r\n                requestTo(\"/actuator/**\"),\r\n                // 忽略 Swagger 文档路径\r\n                requestTo(\"/swagger-ui/**\"),\r\n                requestTo(\"/v3/api-docs/**\"),\r\n                // 忽略二进制文件请求\r\n                contentType(\"application/octet-stream\"),\r\n                // 忽略文件上传请求\r\n                contentType(\"multipart/form-data\")\r\n            )).build",
+          "lineNumber": 20
+        },
+        {
+          "caller": "logbook",
+          "callee": "Logbook.builder().condition",
+          "lineNumber": 20
+        },
+        {
+          "caller": "logbook",
+          "callee": "Logbook.builder",
+          "lineNumber": 20
+        },
+        {
+          "caller": "logbook",
+          "callee": "exclude",
+          "lineNumber": 21
+        },
+        {
+          "caller": "logbook",
+          "callee": "requestWithMethod",
+          "lineNumber": 23
+        },
+        {
+          "caller": "logbook",
+          "callee": "requestTo",
+          "lineNumber": 25
+        },
+        {
+          "caller": "logbook",
+          "callee": "requestTo",
+          "lineNumber": 27
+        },
+        {
+          "caller": "logbook",
+          "callee": "requestTo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "logbook",
+          "callee": "contentType",
+          "lineNumber": 30
+        },
+        {
+          "caller": "logbook",
+          "callee": "contentType",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/MailProperties.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "MailProperties",
+          "startLine": 11,
+          "endLine": 14,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MailProperties",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/MybatisPlusConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "mybatisPlusInterceptor",
+          "startLine": 21,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MybatisPlusConfig",
+          "startLine": 15,
+          "endLine": 28,
+          "methods": [
+            "mybatisPlusInterceptor"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "mybatisPlusInterceptor",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "MybatisPlusConfig",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "new MybatisPlusInterceptor",
+          "lineNumber": 23
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "interceptor.addInnerInterceptor",
+          "lineNumber": 24
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "new PaginationInnerInterceptor",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/OpenApiConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "OpenApiConfig",
+          "startLine": 19,
+          "endLine": 25,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OpenApiConfig",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/ShardingSphereConfiguration.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "shardingSphereDataSource",
+          "startLine": 31,
+          "endLine": 38,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ShardingSphereConfiguration",
+          "startLine": 20,
+          "endLine": 40,
+          "methods": [
+            "shardingSphereDataSource"
+          ],
+          "properties": [
+            "URL"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "shardingSphereDataSource",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "ShardingSphereConfiguration",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "shardingSphereDataSource",
+          "callee": "log.info",
+          "lineNumber": 34
+        },
+        {
+          "caller": "shardingSphereDataSource",
+          "callee": "new ShardingSphereURLLoadEngine",
+          "lineNumber": 35
+        },
+        {
+          "caller": "shardingSphereDataSource",
+          "callee": "ShardingSphereURL.parse",
+          "lineNumber": 36
+        },
+        {
+          "caller": "shardingSphereDataSource",
+          "callee": "YamlShardingSphereDataSourceFactory.createDataSource",
+          "lineNumber": 37
+        },
+        {
+          "caller": "shardingSphereDataSource",
+          "callee": "urlLoadEngine.loadContent",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/config/WebConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "addInterceptors",
+          "startLine": 33,
+          "endLine": 66,
+          "params": [
+            "registry"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "WebConfig",
+          "startLine": 21,
+          "endLine": 67,
+          "methods": [
+            "addInterceptors"
+          ],
+          "properties": [
+            "flowLimitInterceptor",
+            "authInterceptor",
+            "fileInterceptor",
+            "tokenParseInterceptor"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "addInterceptors",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "WebConfig",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(flowLimitInterceptor)\r\n            .addPathPatterns(\"/**\").order",
+          "lineNumber": 37
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(flowLimitInterceptor).addPathPatterns",
+          "lineNumber": 37
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor",
+          "lineNumber": 37
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(fileInterceptor)\r\n            .addPathPatterns(SystemConfigConsts.IMAGE_UPLOAD_DIRECTORY + \"**\").order",
+          "lineNumber": 42
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(fileInterceptor).addPathPatterns",
+          "lineNumber": 42
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor",
+          "lineNumber": 42
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(authInterceptor)\r\n            // 拦截会员中心相关请求接口\r\n            .addPathPatterns(ApiRouterConsts.API_FRONT_USER_URL_PREFIX + \"/**\",\r\n                // 拦截作家后台相关请求接口\r\n                ApiRouterConsts.API_AUTHOR_URL_PREFIX + \"/**\",\r\n                // 拦截平台后台相关请求接口\r\n                ApiRouterConsts.API_ADMIN_URL_PREFIX + \"/**\")\r\n            // 放行登录注册相关请求接口\r\n            .excludePathPatterns(ApiRouterConsts.API_FRONT_USER_URL_PREFIX + \"/register\",\r\n                ApiRouterConsts.API_FRONT_USER_URL_PREFIX + \"/login\",\r\n                ApiRouterConsts.API_ADMIN_URL_PREFIX + \"/login\").order",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(authInterceptor)\r\n            // 拦截会员中心相关请求接口\r\n            .addPathPatterns(ApiRouterConsts.API_FRONT_USER_URL_PREFIX + \"/**\",\r\n                // 拦截作家后台相关请求接口\r\n                ApiRouterConsts.API_AUTHOR_URL_PREFIX + \"/**\",\r\n                // 拦截平台后台相关请求接口\r\n                ApiRouterConsts.API_ADMIN_URL_PREFIX + \"/**\").excludePathPatterns",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(authInterceptor).addPathPatterns",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(tokenParseInterceptor)\r\n            // 拦截小说内容查询接口，需要解析 token 以判断该用户是否有权阅读该章节（付费章节是否已购买）\r\n            .addPathPatterns(ApiRouterConsts.API_FRONT_BOOK_URL_PREFIX + \"/content/*\").order",
+          "lineNumber": 61
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor(tokenParseInterceptor).addPathPatterns",
+          "lineNumber": 61
+        },
+        {
+          "caller": "addInterceptors",
+          "callee": "registry.addInterceptor",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,3187 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 246,
+  "totalBatches": 14,
+  "exportsByPath": {
+    ".mvn/wrapper/maven-wrapper.jar": [],
+    "doc/es/book.http": [],
+    "mvnw": [],
+    "src/main/java/io/github/xxyopen/novel/NovelApplication.java": [
+      "main",
+      "commandLineRunner",
+      "securityFilterChain",
+      "NovelApplication"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/author/AuthorAiController.java": [
+      "expandText",
+      "condenseText",
+      "continueText",
+      "polishText",
+      "AuthorAiController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/author/AuthorController.java": [
+      "register",
+      "getStatus",
+      "publishBook",
+      "listBooks",
+      "publishBookChapter",
+      "deleteBookChapter",
+      "getBookChapter",
+      "updateBookChapter",
+      "listBookChapters",
+      "AuthorController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/front/BookController.java": [
+      "listCategory",
+      "getBookById",
+      "addVisitCount",
+      "getLastChapterAbout",
+      "listRecBooks",
+      "listChapters",
+      "getBookContentAbout",
+      "getPreChapterId",
+      "getNextChapterId",
+      "listVisitRankBooks",
+      "listNewestRankBooks",
+      "listUpdateRankBooks",
+      "listNewestComments",
+      "BookController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/front/HomeController.java": [
+      "listHomeBooks",
+      "listHomeFriendLinks",
+      "HomeController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/front/NewsController.java": [
+      "listLatestNews",
+      "getNews",
+      "NewsController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/front/ResourceController.java": [
+      "getImgVerifyCode",
+      "ResourceController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/front/SearchController.java": [
+      "searchBooks",
+      "SearchController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/controller/front/UserController.java": [
+      "register",
+      "login",
+      "getUserInfo",
+      "updateUserInfo",
+      "submitFeedback",
+      "deleteFeedback",
+      "comment",
+      "updateComment",
+      "deleteComment",
+      "getBookshelfStatus",
+      "listComments",
+      "UserController"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/annotation/Key.java": [],
+    "src/main/java/io/github/xxyopen/novel/core/annotation/Lock.java": [],
+    "src/main/java/io/github/xxyopen/novel/core/annotation/ValidateSortOrder.java": [],
+    "src/main/java/io/github/xxyopen/novel/core/aspect/LockAspect.java": [
+      "doAround",
+      "LockAspect"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/aspect/SortOrderValidationAspect.java": [
+      "processSortOrderFields",
+      "SortOrderValidationAspect"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/auth/AdminAuthStrategy.java": [
+      "auth",
+      "AdminAuthStrategy"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/auth/AuthStrategy.java": [
+      "AuthStrategy"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/auth/AuthorAuthStrategy.java": [
+      "auth",
+      "AuthorAuthStrategy"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/auth/FrontAuthStrategy.java": [
+      "auth",
+      "FrontAuthStrategy"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/auth/UserHolder.java": [
+      "setUserId",
+      "getUserId",
+      "setAuthorId",
+      "getAuthorId",
+      "clear",
+      "UserHolder"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/constant/CommonConsts.java": [
+      "YES",
+      "TRUE",
+      "NO",
+      "FALSE",
+      "CommonConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/constant/ErrorCodeEnum.java": [
+      "ErrorCodeEnum"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/exception/BusinessException.java": [
+      "BusinessException",
+      "BusinessException"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/exception/CommonExceptionHandler.java": [
+      "handlerNotFound",
+      "handlerBindException",
+      "handlerBusinessException",
+      "handlerException",
+      "CommonExceptionHandler"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/req/PageReqDto.java": [
+      "PageReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/resp/PageRespDto.java": [
+      "PageRespDto",
+      "of",
+      "getPages",
+      "PageRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/resp/RestResp.java": [
+      "ok",
+      "ok",
+      "fail",
+      "error",
+      "isOk",
+      "RestResp"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/util/ImgVerifyCodeUtils.java": [
+      "genVerifyCodeImg",
+      "getRandomVerifyCode",
+      "ImgVerifyCodeUtils"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/util/IpUtils.java": [
+      "getRealIp",
+      "IpUtils"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/common/util/SortWhitelistUtil.java": [
+      "sanitizeColumn",
+      "sanitizeOrder",
+      "SortWhitelistUtil"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/AiConfig.java": [
+      "restClientBuilder",
+      "chatClient",
+      "AiConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/AmqpConfig.java": [
+      "bookChangeExchange",
+      "esBookUpdateQueue",
+      "esBookUpdateQueueBinding",
+      "AmqpConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/CacheConfig.java": [
+      "caffeineCacheManager",
+      "redisCacheManager",
+      "CacheConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/CorsConfig.java": [
+      "corsFilter",
+      "CorsConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/CorsProperties.java": [
+      "CorsProperties"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/EsConfig.java": [
+      "EsConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/LogbookConfig.java": [
+      "logbook",
+      "LogbookConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/MailProperties.java": [
+      "MailProperties"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/MybatisPlusConfig.java": [
+      "mybatisPlusInterceptor",
+      "MybatisPlusConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/OpenApiConfig.java": [
+      "OpenApiConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/ShardingSphereConfiguration.java": [
+      "shardingSphereDataSource",
+      "ShardingSphereConfiguration"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/WebConfig.java": [
+      "addInterceptors",
+      "WebConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/XssProperties.java": [
+      "XssProperties"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/config/XxlJobConfig.java": [
+      "xxlJobExecutor",
+      "XxlJobConfig"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/AmqpConsts.java": [
+      "AmqpConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/ApiRouterConsts.java": [
+      "API_URL_PREFIX",
+      "API_FRONT_URL_PREFIX",
+      "API_AUTHOR_URL_PREFIX",
+      "API_ADMIN_URL_PREFIX",
+      "HOME_URL_PREFIX",
+      "NEWS_URL_PREFIX",
+      "BOOK_URL_PREFIX",
+      "USER_URL_PREFIX",
+      "RESOURCE_URL_PREFIX",
+      "SEARCH_URL_PREFIX",
+      "AI_URL_PREFIX",
+      "API_FRONT_HOME_URL_PREFIX",
+      "API_FRONT_NEWS_URL_PREFIX",
+      "API_FRONT_BOOK_URL_PREFIX",
+      "API_FRONT_USER_URL_PREFIX",
+      "API_FRONT_RESOURCE_URL_PREFIX",
+      "API_FRONT_SEARCH_URL_PREFIX",
+      "API_AUTHOR_AI_URL_PREFIX",
+      "ApiRouterConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/CacheConsts.java": [
+      "REDIS_CACHE_PREFIX",
+      "CAFFEINE_CACHE_MANAGER",
+      "REDIS_CACHE_MANAGER",
+      "HOME_BOOK_CACHE_NAME",
+      "LATEST_NEWS_CACHE_NAME",
+      "BOOK_VISIT_RANK_CACHE_NAME",
+      "BOOK_NEWEST_RANK_CACHE_NAME",
+      "BOOK_UPDATE_RANK_CACHE_NAME",
+      "HOME_FRIEND_LINK_CACHE_NAME",
+      "BOOK_CATEGORY_LIST_CACHE_NAME",
+      "BOOK_INFO_CACHE_NAME",
+      "BOOK_CHAPTER_CACHE_NAME",
+      "BOOK_CONTENT_CACHE_NAME",
+      "LAST_UPDATE_BOOK_ID_LIST_CACHE_NAME",
+      "IMG_VERIFY_CODE_CACHE_KEY",
+      "USER_INFO_CACHE_NAME",
+      "AUTHOR_INFO_CACHE_NAME",
+      "CacheConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/DatabaseConsts.java": [
+      "DatabaseConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/EsConsts.java": [
+      "EsConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/MessageSenderTypeConsts.java": [
+      "REGISTER_MAIL_SENDER",
+      "SECKILL_SYS_NOTICE_SENDER",
+      "MessageSenderTypeConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/constant/SystemConfigConsts.java": [
+      "HTTP_AUTH_HEADER_NAME",
+      "NOVEL_FRONT_KEY",
+      "NOVEL_AUTHOR_KEY",
+      "NOVEL_ADMIN_KEY",
+      "IMAGE_UPLOAD_DIRECTORY",
+      "CONST_INSTANCE_EXCEPTION_MSG",
+      "SystemConfigConsts"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/filter/XssFilter.java": [
+      "init",
+      "doFilter",
+      "destroy",
+      "XssFilter"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/interceptor/AuthInterceptor.java": [
+      "preHandle",
+      "postHandle",
+      "afterCompletion",
+      "AuthInterceptor"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/interceptor/FileInterceptor.java": [
+      "preHandle",
+      "FileInterceptor"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/interceptor/FlowLimitInterceptor.java": [
+      "preHandle",
+      "FlowLimitInterceptor"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/interceptor/TokenParseInterceptor.java": [
+      "preHandle",
+      "afterCompletion",
+      "TokenParseInterceptor"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/json/deserializer/GlobalJsonDeserializer.java": [
+      "GlobalJsonDeserializer"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/json/serializer/UsernameSerializer.java": [
+      "serialize",
+      "UsernameSerializer"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/listener/RabbitQueueListener.java": [
+      "updateEsBook",
+      "RabbitQueueListener"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/task/BookToEsTask.java": [
+      "saveToEs",
+      "BookToEsTask"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/util/JwtUtils.java": [
+      "generateToken",
+      "parseToken",
+      "JwtUtils"
+    ],
+    "src/main/java/io/github/xxyopen/novel/core/wrapper/XssHttpServletRequestWrapper.java": [
+      "XssHttpServletRequestWrapper",
+      "getParameterValues",
+      "XssHttpServletRequestWrapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorCode.java": [
+      "getId",
+      "setId",
+      "getInviteCode",
+      "setInviteCode",
+      "getValidityTime",
+      "setValidityTime",
+      "getIsUsed",
+      "setIsUsed",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "AuthorCode"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncome.java": [
+      "getId",
+      "setId",
+      "getAuthorId",
+      "setAuthorId",
+      "getBookId",
+      "setBookId",
+      "getIncomeMonth",
+      "setIncomeMonth",
+      "getPreTaxIncome",
+      "setPreTaxIncome",
+      "getAfterTaxIncome",
+      "setAfterTaxIncome",
+      "getPayStatus",
+      "setPayStatus",
+      "getConfirmStatus",
+      "setConfirmStatus",
+      "getDetail",
+      "setDetail",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "AuthorIncome"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncomeDetail.java": [
+      "getId",
+      "setId",
+      "getAuthorId",
+      "setAuthorId",
+      "getBookId",
+      "setBookId",
+      "getIncomeDate",
+      "setIncomeDate",
+      "getIncomeAccount",
+      "setIncomeAccount",
+      "getIncomeCount",
+      "setIncomeCount",
+      "getIncomeNumber",
+      "setIncomeNumber",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "AuthorIncomeDetail"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorInfo.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getInviteCode",
+      "setInviteCode",
+      "getPenName",
+      "setPenName",
+      "getTelPhone",
+      "setTelPhone",
+      "getChatAccount",
+      "setChatAccount",
+      "getEmail",
+      "setEmail",
+      "getWorkDirection",
+      "setWorkDirection",
+      "getStatus",
+      "setStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "AuthorInfo"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookCategory.java": [
+      "getId",
+      "setId",
+      "getWorkDirection",
+      "setWorkDirection",
+      "getName",
+      "setName",
+      "getSort",
+      "setSort",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookCategory"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookChapter.java": [
+      "getId",
+      "setId",
+      "getBookId",
+      "setBookId",
+      "getChapterNum",
+      "setChapterNum",
+      "getChapterName",
+      "setChapterName",
+      "getWordCount",
+      "setWordCount",
+      "getIsVip",
+      "setIsVip",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookChapter"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookComment.java": [
+      "getId",
+      "setId",
+      "getBookId",
+      "setBookId",
+      "getUserId",
+      "setUserId",
+      "getCommentContent",
+      "setCommentContent",
+      "getReplyCount",
+      "setReplyCount",
+      "getAuditStatus",
+      "setAuditStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookComment"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentCopy1.java": [
+      "getId",
+      "setId",
+      "getBookId",
+      "setBookId",
+      "getUserId",
+      "setUserId",
+      "getCommentContent",
+      "setCommentContent",
+      "getReplyCount",
+      "setReplyCount",
+      "getAuditStatus",
+      "setAuditStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookCommentCopy1"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentReply.java": [
+      "getId",
+      "setId",
+      "getCommentId",
+      "setCommentId",
+      "getUserId",
+      "setUserId",
+      "getReplyContent",
+      "setReplyContent",
+      "getAuditStatus",
+      "setAuditStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookCommentReply"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookContent.java": [
+      "getId",
+      "setId",
+      "getChapterId",
+      "setChapterId",
+      "getContent",
+      "setContent",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookContent"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/BookInfo.java": [
+      "getId",
+      "setId",
+      "getWorkDirection",
+      "setWorkDirection",
+      "getCategoryId",
+      "setCategoryId",
+      "getCategoryName",
+      "setCategoryName",
+      "getPicUrl",
+      "setPicUrl",
+      "getBookName",
+      "setBookName",
+      "getAuthorId",
+      "setAuthorId",
+      "getAuthorName",
+      "setAuthorName",
+      "getBookDesc",
+      "setBookDesc",
+      "getScore",
+      "setScore",
+      "getBookStatus",
+      "setBookStatus",
+      "getVisitCount",
+      "setVisitCount",
+      "getWordCount",
+      "setWordCount",
+      "getCommentCount",
+      "setCommentCount",
+      "getLastChapterId",
+      "setLastChapterId",
+      "getLastChapterName",
+      "setLastChapterName",
+      "getLastChapterUpdateTime",
+      "setLastChapterUpdateTime",
+      "getIsVip",
+      "setIsVip",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "BookInfo"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/HomeBook.java": [
+      "getId",
+      "setId",
+      "getType",
+      "setType",
+      "getSort",
+      "setSort",
+      "getBookId",
+      "setBookId",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "HomeBook"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/HomeFriendLink.java": [
+      "getId",
+      "setId",
+      "getLinkName",
+      "setLinkName",
+      "getLinkUrl",
+      "setLinkUrl",
+      "getSort",
+      "setSort",
+      "getIsOpen",
+      "setIsOpen",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "HomeFriendLink"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/NewsCategory.java": [
+      "getId",
+      "setId",
+      "getName",
+      "setName",
+      "getSort",
+      "setSort",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "NewsCategory"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/NewsContent.java": [
+      "getId",
+      "setId",
+      "getNewsId",
+      "setNewsId",
+      "getContent",
+      "setContent",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "NewsContent"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/NewsInfo.java": [
+      "getId",
+      "setId",
+      "getCategoryId",
+      "setCategoryId",
+      "getCategoryName",
+      "setCategoryName",
+      "getSourceName",
+      "setSourceName",
+      "getTitle",
+      "setTitle",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "NewsInfo"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/PayAlipay.java": [
+      "getId",
+      "setId",
+      "getOutTradeNo",
+      "setOutTradeNo",
+      "getTradeNo",
+      "setTradeNo",
+      "getBuyerId",
+      "setBuyerId",
+      "getTradeStatus",
+      "setTradeStatus",
+      "getTotalAmount",
+      "setTotalAmount",
+      "getReceiptAmount",
+      "setReceiptAmount",
+      "getInvoiceAmount",
+      "setInvoiceAmount",
+      "getGmtCreate",
+      "setGmtCreate",
+      "getGmtPayment",
+      "setGmtPayment",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "PayAlipay"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/PayWechat.java": [
+      "getId",
+      "setId",
+      "getOutTradeNo",
+      "setOutTradeNo",
+      "getTransactionId",
+      "setTransactionId",
+      "getTradeType",
+      "setTradeType",
+      "getTradeState",
+      "setTradeState",
+      "getTradeStateDesc",
+      "setTradeStateDesc",
+      "getAmount",
+      "setAmount",
+      "getPayerTotal",
+      "setPayerTotal",
+      "getSuccessTime",
+      "setSuccessTime",
+      "getPayerOpenid",
+      "setPayerOpenid",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "PayWechat"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/SysLog.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getUsername",
+      "setUsername",
+      "getOperation",
+      "setOperation",
+      "getTime",
+      "setTime",
+      "getMethod",
+      "setMethod",
+      "getParams",
+      "setParams",
+      "getIp",
+      "setIp",
+      "getCreateTime",
+      "setCreateTime",
+      "toString",
+      "SysLog"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/SysMenu.java": [
+      "getId",
+      "setId",
+      "getParentId",
+      "setParentId",
+      "getName",
+      "setName",
+      "getUrl",
+      "setUrl",
+      "getType",
+      "setType",
+      "getIcon",
+      "setIcon",
+      "getSort",
+      "setSort",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "SysMenu"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/SysRole.java": [
+      "getId",
+      "setId",
+      "getRoleName",
+      "setRoleName",
+      "getRoleSign",
+      "setRoleSign",
+      "getRemark",
+      "setRemark",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "SysRole"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/SysRoleMenu.java": [
+      "getId",
+      "setId",
+      "getRoleId",
+      "setRoleId",
+      "getMenuId",
+      "setMenuId",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "SysRoleMenu"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/SysUser.java": [
+      "getId",
+      "setId",
+      "getUsername",
+      "setUsername",
+      "getPassword",
+      "setPassword",
+      "getName",
+      "setName",
+      "getSex",
+      "setSex",
+      "getBirth",
+      "setBirth",
+      "getEmail",
+      "setEmail",
+      "getMobile",
+      "setMobile",
+      "getStatus",
+      "setStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "SysUser"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/SysUserRole.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getRoleId",
+      "setRoleId",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "SysUserRole"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserBookshelf.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getBookId",
+      "setBookId",
+      "getPreContentId",
+      "setPreContentId",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserBookshelf"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserComment.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getBookId",
+      "setBookId",
+      "getCommentContent",
+      "setCommentContent",
+      "getReplyCount",
+      "setReplyCount",
+      "getAuditStatus",
+      "setAuditStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserComment"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserCommentReply.java": [
+      "getId",
+      "setId",
+      "getCommentId",
+      "setCommentId",
+      "getUserId",
+      "setUserId",
+      "getReplyContent",
+      "setReplyContent",
+      "getAuditStatus",
+      "setAuditStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserCommentReply"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserConsumeLog.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getAmount",
+      "setAmount",
+      "getProductType",
+      "setProductType",
+      "getProductId",
+      "setProductId",
+      "getProducName",
+      "setProducName",
+      "getProducValue",
+      "setProducValue",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserConsumeLog"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserFeedback.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getContent",
+      "setContent",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserFeedback"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserInfo.java": [
+      "getId",
+      "setId",
+      "getUsername",
+      "setUsername",
+      "getPassword",
+      "setPassword",
+      "getSalt",
+      "setSalt",
+      "getNickName",
+      "setNickName",
+      "getUserPhoto",
+      "setUserPhoto",
+      "getUserSex",
+      "setUserSex",
+      "getAccountBalance",
+      "setAccountBalance",
+      "getStatus",
+      "setStatus",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserInfo"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserPayLog.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getPayChannel",
+      "setPayChannel",
+      "getOutTradeNo",
+      "setOutTradeNo",
+      "getAmount",
+      "setAmount",
+      "getProductType",
+      "setProductType",
+      "getProductId",
+      "setProductId",
+      "getProductName",
+      "setProductName",
+      "getProductValue",
+      "setProductValue",
+      "getPayTime",
+      "setPayTime",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserPayLog"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/entity/UserReadHistory.java": [
+      "getId",
+      "setId",
+      "getUserId",
+      "setUserId",
+      "getBookId",
+      "setBookId",
+      "getPreContentId",
+      "setPreContentId",
+      "getCreateTime",
+      "setCreateTime",
+      "getUpdateTime",
+      "setUpdateTime",
+      "toString",
+      "UserReadHistory"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorCodeMapper.java": [
+      "AuthorCodeMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeDetailMapper.java": [
+      "AuthorIncomeDetailMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeMapper.java": [
+      "AuthorIncomeMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorInfoMapper.java": [
+      "AuthorInfoMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCategoryMapper.java": [
+      "BookCategoryMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookChapterMapper.java": [
+      "BookChapterMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentCopy1Mapper.java": [
+      "BookCommentCopy1Mapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentMapper.java": [
+      "BookCommentMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentReplyMapper.java": [
+      "BookCommentReplyMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookContentMapper.java": [
+      "BookContentMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/BookInfoMapper.java": [
+      "BookInfoMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeBookMapper.java": [
+      "HomeBookMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeFriendLinkMapper.java": [
+      "HomeFriendLinkMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsCategoryMapper.java": [
+      "NewsCategoryMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsContentMapper.java": [
+      "NewsContentMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsInfoMapper.java": [
+      "NewsInfoMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/PayAlipayMapper.java": [
+      "PayAlipayMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/PayWechatMapper.java": [
+      "PayWechatMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/SysLogMapper.java": [
+      "SysLogMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/SysMenuMapper.java": [
+      "SysMenuMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMapper.java": [
+      "SysRoleMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMenuMapper.java": [
+      "SysRoleMenuMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserMapper.java": [
+      "SysUserMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserRoleMapper.java": [
+      "SysUserRoleMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserBookshelfMapper.java": [
+      "UserBookshelfMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentMapper.java": [
+      "UserCommentMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentReplyMapper.java": [
+      "UserCommentReplyMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserConsumeLogMapper.java": [
+      "UserConsumeLogMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserFeedbackMapper.java": [
+      "UserFeedbackMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserInfoMapper.java": [
+      "UserInfoMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserPayLogMapper.java": [
+      "UserPayLogMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dao/mapper/UserReadHistoryMapper.java": [
+      "UserReadHistoryMapper"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/AuthorInfoDto.java": [
+      "AuthorInfoDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/UserInfoDto.java": [
+      "UserInfoDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/es/EsBookDto.java": [
+      "build",
+      "EsBookDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/AuthorRegisterReqDto.java": [
+      "AuthorRegisterReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/BookAddReqDto.java": [
+      "BookAddReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/BookSearchReqDto.java": [
+      "BookSearchReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/ChapterAddReqDto.java": [
+      "ChapterAddReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/ChapterUpdateReqDto.java": [
+      "ChapterUpdateReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/UserCommentReqDto.java": [
+      "UserCommentReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/UserInfoUptReqDto.java": [
+      "UserInfoUptReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/UserLoginReqDto.java": [
+      "UserLoginReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/req/UserRegisterReqDto.java": [
+      "UserRegisterReqDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookCategoryRespDto.java": [
+      "BookCategoryRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterAboutRespDto.java": [
+      "BookChapterAboutRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterRespDto.java": [
+      "BookChapterRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookCommentRespDto.java": [
+      "BookCommentRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookContentAboutRespDto.java": [
+      "BookContentAboutRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookInfoRespDto.java": [
+      "BookInfoRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/BookRankRespDto.java": [
+      "BookRankRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/ChapterContentRespDto.java": [
+      "ChapterContentRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/HomeBookRespDto.java": [
+      "HomeBookRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/HomeFriendLinkRespDto.java": [
+      "HomeFriendLinkRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/ImgVerifyCodeRespDto.java": [
+      "ImgVerifyCodeRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/NewsInfoRespDto.java": [
+      "NewsInfoRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/UserCommentRespDto.java": [
+      "UserCommentRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/UserInfoRespDto.java": [
+      "UserInfoRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/UserLoginRespDto.java": [
+      "UserLoginRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/dto/resp/UserRegisterRespDto.java": [
+      "UserRegisterRespDto"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/AuthorInfoCacheManager.java": [
+      "getAuthor",
+      "evictAuthorCache",
+      "AuthorInfoCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/BookCategoryCacheManager.java": [
+      "listCategory",
+      "BookCategoryCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/BookChapterCacheManager.java": [
+      "getChapter",
+      "evictBookChapterCache",
+      "BookChapterCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/BookContentCacheManager.java": [
+      "getBookContent",
+      "evictBookContentCache",
+      "BookContentCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/BookInfoCacheManager.java": [
+      "getBookInfo",
+      "cachePutBookInfo",
+      "evictBookInfoCache",
+      "getLastUpdateIdList",
+      "BookInfoCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/BookRankCacheManager.java": [
+      "listVisitRankBooks",
+      "listNewestRankBooks",
+      "listUpdateRankBooks",
+      "BookRankCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/FriendLinkCacheManager.java": [
+      "listFriendLinks",
+      "FriendLinkCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/HomeBookCacheManager.java": [
+      "listHomeBooks",
+      "HomeBookCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/NewsCacheManager.java": [
+      "listLatestNews",
+      "NewsCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/cache/UserInfoCacheManager.java": [
+      "getUser",
+      "UserInfoCacheManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/dao/UserDaoManager.java": [
+      "listUsers",
+      "UserDaoManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMailSender.java": [
+      "AbstractMailSender"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMessageSender.java": [
+      "sendMessage",
+      "AbstractMessageSender"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/message/AbstractSysNoticeSender.java": [
+      "AbstractSysNoticeSender"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/message/MessageSender.java": [
+      "MessageSender"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/message/RegisterMailSender.java": [
+      "RegisterMailSender",
+      "RegisterMailSender"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/message/SeckillSystemNoticeSender.java": [
+      "SeckillSystemNoticeSender"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/mq/AmqpMsgManager.java": [
+      "sendBookChangeMsg",
+      "AmqpMsgManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/manager/redis/VerifyCodeManager.java": [
+      "genImgVerifyCode",
+      "imgVerifyCodeOk",
+      "removeImgVerifyCode",
+      "VerifyCodeManager"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/AuthorService.java": [
+      "AuthorService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/BookService.java": [
+      "BookService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/HomeService.java": [
+      "HomeService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/NewsService.java": [
+      "NewsService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/ResourceService.java": [
+      "ResourceService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/SearchService.java": [
+      "SearchService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/UserService.java": [
+      "UserService"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/AuthorServiceImpl.java": [
+      "register",
+      "getStatus",
+      "AuthorServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/BookServiceImpl.java": [
+      "listVisitRankBooks",
+      "listNewestRankBooks",
+      "listUpdateRankBooks",
+      "getBookById",
+      "getLastChapterAbout",
+      "listRecBooks",
+      "addVisitCount",
+      "getPreChapterId",
+      "getNextChapterId",
+      "listChapters",
+      "listCategory",
+      "saveComment",
+      "listNewestComments",
+      "deleteComment",
+      "updateComment",
+      "saveBook",
+      "saveBookChapter",
+      "listAuthorBooks",
+      "listBookChapters",
+      "listComments",
+      "deleteBookChapter",
+      "getBookChapter",
+      "updateBookChapter",
+      "getBookContentAbout",
+      "BookServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/DbSearchServiceImpl.java": [
+      "searchBooks",
+      "DbSearchServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/EsSearchServiceImpl.java": [
+      "searchBooks",
+      "EsSearchServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/HomeServiceImpl.java": [
+      "listHomeBooks",
+      "listHomeFriendLinks",
+      "HomeServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/NewsServiceImpl.java": [
+      "listLatestNews",
+      "getNews",
+      "NewsServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/ResourceServiceImpl.java": [
+      "getImgVerifyCode",
+      "uploadImage",
+      "ResourceServiceImpl"
+    ],
+    "src/main/java/io/github/xxyopen/novel/service/impl/UserServiceImpl.java": [
+      "register",
+      "login",
+      "saveFeedback",
+      "updateUserInfo",
+      "deleteFeedback",
+      "getBookshelfStatus",
+      "getUserInfo",
+      "UserServiceImpl"
+    ],
+    "src/test/java/io/github/xxyopen/novel/generator/Generator.java": [
+      "main",
+      "Generator"
+    ],
+    "src/test/resources/templates/controller.java.vm": [],
+    "src/test/resources/templates/entity.java.vm": [],
+    "src/test/resources/templates/entity.kt.vm": [],
+    "src/test/resources/templates/mapper.java.vm": [],
+    "src/test/resources/templates/mapper.xml.vm": [],
+    "src/test/resources/templates/service.java.vm": [],
+    "src/test/resources/templates/serviceImpl.java.vm": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 233,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "mvnw.cmd",
+          "language": "batch",
+          "sizeLines": 188,
+          "fileCategory": "script"
+        },
+        {
+          "path": "pom.xml",
+          "language": "xml",
+          "sizeLines": 284,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "README.md": [],
+        "mvnw.cmd": [],
+        "pom.xml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "doc/sql/README.md",
+          "language": "markdown",
+          "sizeLines": 4,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "doc/sql/shardingsphere-jdbc.sql",
+          "language": "sql",
+          "sizeLines": 170,
+          "fileCategory": "data"
+        },
+        {
+          "path": "doc/sql/xxl-job.sql",
+          "language": "sql",
+          "sizeLines": 189,
+          "fileCategory": "data"
+        }
+      ],
+      "batchImportData": {
+        "doc/sql/README.md": [],
+        "doc/sql/shardingsphere-jdbc.sql": [],
+        "doc/sql/xxl-job.sql": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "src/main/resources/application.yml",
+          "language": "yaml",
+          "sizeLines": 278,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/logback-spring.xml",
+          "language": "xml",
+          "sizeLines": 82,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/shardingsphere-jdbc.yml",
+          "language": "yaml",
+          "sizeLines": 55,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "src/main/resources/application.yml": [],
+        "src/main/resources/logback-spring.xml": [],
+        "src/main/resources/shardingsphere-jdbc.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "src/main/resources/mapper/AuthorCodeMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/AuthorIncomeDetailMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/AuthorIncomeMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/AuthorInfoMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookCategoryMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookChapterMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookCommentCopy1Mapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookCommentMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookCommentReplyMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookContentMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/BookInfoMapper.xml",
+          "language": "xml",
+          "sizeLines": 45,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/HomeBookMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/HomeFriendLinkMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/NewsCategoryMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/NewsContentMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/NewsInfoMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/PayAlipayMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/PayWechatMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/SysLogMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/SysMenuMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "src/main/resources/mapper/AuthorCodeMapper.xml": [],
+        "src/main/resources/mapper/AuthorIncomeDetailMapper.xml": [],
+        "src/main/resources/mapper/AuthorIncomeMapper.xml": [],
+        "src/main/resources/mapper/AuthorInfoMapper.xml": [],
+        "src/main/resources/mapper/BookCategoryMapper.xml": [],
+        "src/main/resources/mapper/BookChapterMapper.xml": [],
+        "src/main/resources/mapper/BookCommentCopy1Mapper.xml": [],
+        "src/main/resources/mapper/BookCommentMapper.xml": [],
+        "src/main/resources/mapper/BookCommentReplyMapper.xml": [],
+        "src/main/resources/mapper/BookContentMapper.xml": [],
+        "src/main/resources/mapper/BookInfoMapper.xml": [],
+        "src/main/resources/mapper/HomeBookMapper.xml": [],
+        "src/main/resources/mapper/HomeFriendLinkMapper.xml": [],
+        "src/main/resources/mapper/NewsCategoryMapper.xml": [],
+        "src/main/resources/mapper/NewsContentMapper.xml": [],
+        "src/main/resources/mapper/NewsInfoMapper.xml": [],
+        "src/main/resources/mapper/PayAlipayMapper.xml": [],
+        "src/main/resources/mapper/PayWechatMapper.xml": [],
+        "src/main/resources/mapper/SysLogMapper.xml": [],
+        "src/main/resources/mapper/SysMenuMapper.xml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "src/main/resources/mapper/SysRoleMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/SysRoleMenuMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/SysUserMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/SysUserRoleMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserBookshelfMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserCommentMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserCommentReplyMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserConsumeLogMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserFeedbackMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserInfoMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserPayLogMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/main/resources/mapper/UserReadHistoryMapper.xml",
+          "language": "xml",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "src/main/resources/mapper/SysRoleMapper.xml": [],
+        "src/main/resources/mapper/SysRoleMenuMapper.xml": [],
+        "src/main/resources/mapper/SysUserMapper.xml": [],
+        "src/main/resources/mapper/SysUserRoleMapper.xml": [],
+        "src/main/resources/mapper/UserBookshelfMapper.xml": [],
+        "src/main/resources/mapper/UserCommentMapper.xml": [],
+        "src/main/resources/mapper/UserCommentReplyMapper.xml": [],
+        "src/main/resources/mapper/UserConsumeLogMapper.xml": [],
+        "src/main/resources/mapper/UserFeedbackMapper.xml": [],
+        "src/main/resources/mapper/UserInfoMapper.xml": [],
+        "src/main/resources/mapper/UserPayLogMapper.xml": [],
+        "src/main/resources/mapper/UserReadHistoryMapper.xml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": ".mvn/wrapper/maven-wrapper.jar",
+          "language": "jar",
+          "sizeLines": 219,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".mvn/wrapper/maven-wrapper.properties",
+          "language": "properties",
+          "sizeLines": 2,
+          "fileCategory": "config"
+        },
+        {
+          "path": "doc/es/book.http",
+          "language": "http",
+          "sizeLines": 61,
+          "fileCategory": "code"
+        },
+        {
+          "path": "doc/sql/novel.sql/__MACOSX/._novel_data.sql",
+          "language": "sql",
+          "sizeLines": 0,
+          "fileCategory": "data"
+        },
+        {
+          "path": "doc/sql/novel.sql/novel_data.sql",
+          "language": "sql",
+          "sizeLines": 22467,
+          "fileCategory": "data"
+        },
+        {
+          "path": "doc/sql/novel.sql/novel_struc.sql",
+          "language": "sql",
+          "sizeLines": 598,
+          "fileCategory": "data"
+        },
+        {
+          "path": "doc/style/README.md",
+          "language": "markdown",
+          "sizeLines": 2,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "doc/style/intellij-java-google-style.xml",
+          "language": "xml",
+          "sizeLines": 35,
+          "fileCategory": "config"
+        },
+        {
+          "path": "mvnw",
+          "language": "unknown",
+          "sizeLines": 316,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/NovelApplication.java",
+          "language": "java",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/author/AuthorAiController.java",
+          "language": "java",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/author/AuthorController.java",
+          "language": "java",
+          "sizeLines": 135,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/front/BookController.java",
+          "language": "java",
+          "sizeLines": 165,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/front/HomeController.java",
+          "language": "java",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/front/NewsController.java",
+          "language": "java",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/front/ResourceController.java",
+          "language": "java",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/front/SearchController.java",
+          "language": "java",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/controller/front/UserController.java",
+          "language": "java",
+          "sizeLines": 146,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/annotation/Key.java",
+          "language": "java",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/annotation/Lock.java",
+          "language": "java",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/annotation/ValidateSortOrder.java",
+          "language": "java",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/aspect/LockAspect.java",
+          "language": "java",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/aspect/SortOrderValidationAspect.java",
+          "language": "java",
+          "sizeLines": 129,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/auth/AdminAuthStrategy.java",
+          "language": "java",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/auth/AuthStrategy.java",
+          "language": "java",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".mvn/wrapper/maven-wrapper.jar": [],
+        ".mvn/wrapper/maven-wrapper.properties": [],
+        "doc/es/book.http": [],
+        "doc/sql/novel.sql/__MACOSX/._novel_data.sql": [],
+        "doc/sql/novel.sql/novel_data.sql": [],
+        "doc/sql/novel.sql/novel_struc.sql": [],
+        "doc/style/README.md": [],
+        "doc/style/intellij-java-google-style.xml": [],
+        "mvnw": [],
+        "src/main/java/io/github/xxyopen/novel/NovelApplication.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/author/AuthorAiController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/author/AuthorController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/front/BookController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/front/HomeController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/front/NewsController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/front/ResourceController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/front/SearchController.java": [],
+        "src/main/java/io/github/xxyopen/novel/controller/front/UserController.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/annotation/Key.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/annotation/Lock.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/annotation/ValidateSortOrder.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/aspect/LockAspect.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/aspect/SortOrderValidationAspect.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/auth/AdminAuthStrategy.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/auth/AuthStrategy.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/auth/AuthorAuthStrategy.java",
+          "language": "java",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/auth/FrontAuthStrategy.java",
+          "language": "java",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/auth/UserHolder.java",
+          "language": "java",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/constant/CommonConsts.java",
+          "language": "java",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/constant/ErrorCodeEnum.java",
+          "language": "java",
+          "sizeLines": 157,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/exception/BusinessException.java",
+          "language": "java",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/exception/CommonExceptionHandler.java",
+          "language": "java",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/req/PageReqDto.java",
+          "language": "java",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/resp/PageRespDto.java",
+          "language": "java",
+          "sizeLines": 63,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/resp/RestResp.java",
+          "language": "java",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/util/ImgVerifyCodeUtils.java",
+          "language": "java",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/util/IpUtils.java",
+          "language": "java",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/common/util/SortWhitelistUtil.java",
+          "language": "java",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/AiConfig.java",
+          "language": "java",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/AmqpConfig.java",
+          "language": "java",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/CacheConfig.java",
+          "language": "java",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/CorsConfig.java",
+          "language": "java",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/CorsProperties.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/EsConfig.java",
+          "language": "java",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/LogbookConfig.java",
+          "language": "java",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/MailProperties.java",
+          "language": "java",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/MybatisPlusConfig.java",
+          "language": "java",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/OpenApiConfig.java",
+          "language": "java",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/ShardingSphereConfiguration.java",
+          "language": "java",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/WebConfig.java",
+          "language": "java",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/core/auth/AuthorAuthStrategy.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/auth/FrontAuthStrategy.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/auth/UserHolder.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/constant/CommonConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/constant/ErrorCodeEnum.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/exception/BusinessException.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/exception/CommonExceptionHandler.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/req/PageReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/resp/PageRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/resp/RestResp.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/util/ImgVerifyCodeUtils.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/util/IpUtils.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/common/util/SortWhitelistUtil.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/AiConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/AmqpConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/CacheConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/CorsConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/CorsProperties.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/EsConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/LogbookConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/MailProperties.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/MybatisPlusConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/OpenApiConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/ShardingSphereConfiguration.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/WebConfig.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/XssProperties.java",
+          "language": "java",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/config/XxlJobConfig.java",
+          "language": "java",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/AmqpConsts.java",
+          "language": "java",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/ApiRouterConsts.java",
+          "language": "java",
+          "sizeLines": 108,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/CacheConsts.java",
+          "language": "java",
+          "sizeLines": 175,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/DatabaseConsts.java",
+          "language": "java",
+          "sizeLines": 201,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/EsConsts.java",
+          "language": "java",
+          "sizeLines": 116,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/MessageSenderTypeConsts.java",
+          "language": "java",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/constant/SystemConfigConsts.java",
+          "language": "java",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/filter/XssFilter.java",
+          "language": "java",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/AuthInterceptor.java",
+          "language": "java",
+          "sizeLines": 89,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/FileInterceptor.java",
+          "language": "java",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/FlowLimitInterceptor.java",
+          "language": "java",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/interceptor/TokenParseInterceptor.java",
+          "language": "java",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/json/deserializer/GlobalJsonDeserializer.java",
+          "language": "java",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/json/serializer/UsernameSerializer.java",
+          "language": "java",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/listener/RabbitQueueListener.java",
+          "language": "java",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/task/BookToEsTask.java",
+          "language": "java",
+          "sizeLines": 94,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/util/JwtUtils.java",
+          "language": "java",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/core/wrapper/XssHttpServletRequestWrapper.java",
+          "language": "java",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorCode.java",
+          "language": "java",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncome.java",
+          "language": "java",
+          "sizeLines": 184,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncomeDetail.java",
+          "language": "java",
+          "sizeLines": 156,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorInfo.java",
+          "language": "java",
+          "sizeLines": 183,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookCategory.java",
+          "language": "java",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/core/config/XssProperties.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/config/XxlJobConfig.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/AmqpConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/ApiRouterConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/CacheConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/DatabaseConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/EsConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/MessageSenderTypeConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/constant/SystemConfigConsts.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/filter/XssFilter.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/interceptor/AuthInterceptor.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/interceptor/FileInterceptor.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/interceptor/FlowLimitInterceptor.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/interceptor/TokenParseInterceptor.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/json/deserializer/GlobalJsonDeserializer.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/json/serializer/UsernameSerializer.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/listener/RabbitQueueListener.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/task/BookToEsTask.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/util/JwtUtils.java": [],
+        "src/main/java/io/github/xxyopen/novel/core/wrapper/XssHttpServletRequestWrapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorCode.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncome.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncomeDetail.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorInfo.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookCategory.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookChapter.java",
+          "language": "java",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookComment.java",
+          "language": "java",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentCopy1.java",
+          "language": "java",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentReply.java",
+          "language": "java",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookContent.java",
+          "language": "java",
+          "sizeLines": 93,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/BookInfo.java",
+          "language": "java",
+          "sizeLines": 309,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/HomeBook.java",
+          "language": "java",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/HomeFriendLink.java",
+          "language": "java",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/NewsCategory.java",
+          "language": "java",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/NewsContent.java",
+          "language": "java",
+          "sizeLines": 99,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/NewsInfo.java",
+          "language": "java",
+          "sizeLines": 127,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/PayAlipay.java",
+          "language": "java",
+          "sizeLines": 197,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/PayWechat.java",
+          "language": "java",
+          "sizeLines": 197,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysLog.java",
+          "language": "java",
+          "sizeLines": 152,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysMenu.java",
+          "language": "java",
+          "sizeLines": 152,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysRole.java",
+          "language": "java",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysRoleMenu.java",
+          "language": "java",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysUser.java",
+          "language": "java",
+          "sizeLines": 180,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/SysUserRole.java",
+          "language": "java",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserBookshelf.java",
+          "language": "java",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserComment.java",
+          "language": "java",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserCommentReply.java",
+          "language": "java",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserConsumeLog.java",
+          "language": "java",
+          "sizeLines": 155,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserFeedback.java",
+          "language": "java",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserInfo.java",
+          "language": "java",
+          "sizeLines": 180,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookChapter.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookComment.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentCopy1.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentReply.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookContent.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/BookInfo.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/HomeBook.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/HomeFriendLink.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/NewsCategory.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/NewsContent.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/NewsInfo.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/PayAlipay.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/PayWechat.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/SysLog.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/SysMenu.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/SysRole.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/SysRoleMenu.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/SysUser.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/SysUserRole.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserBookshelf.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserComment.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserCommentReply.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserConsumeLog.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserFeedback.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserInfo.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserPayLog.java",
+          "language": "java",
+          "sizeLines": 194,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserReadHistory.java",
+          "language": "java",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorCodeMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeDetailMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorInfoMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCategoryMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookChapterMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentCopy1Mapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentReplyMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookContentMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookInfoMapper.java",
+          "language": "java",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeBookMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeFriendLinkMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsCategoryMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsContentMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsInfoMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/PayAlipayMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/PayWechatMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysLogMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysMenuMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMenuMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserPayLog.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/entity/UserReadHistory.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorCodeMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeDetailMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorInfoMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCategoryMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookChapterMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentCopy1Mapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentReplyMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookContentMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/BookInfoMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeBookMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeFriendLinkMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsCategoryMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsContentMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsInfoMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/PayAlipayMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/PayWechatMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/SysLogMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/SysMenuMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMenuMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserMapper.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserRoleMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserBookshelfMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentReplyMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserConsumeLogMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserFeedbackMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserInfoMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserPayLogMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserReadHistoryMapper.java",
+          "language": "java",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/AuthorInfoDto.java",
+          "language": "java",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/UserInfoDto.java",
+          "language": "java",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/es/EsBookDto.java",
+          "language": "java",
+          "sizeLines": 130,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/AuthorRegisterReqDto.java",
+          "language": "java",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/BookAddReqDto.java",
+          "language": "java",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/BookSearchReqDto.java",
+          "language": "java",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/ChapterAddReqDto.java",
+          "language": "java",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/ChapterUpdateReqDto.java",
+          "language": "java",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserCommentReqDto.java",
+          "language": "java",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserInfoUptReqDto.java",
+          "language": "java",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserLoginReqDto.java",
+          "language": "java",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserRegisterReqDto.java",
+          "language": "java",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookCategoryRespDto.java",
+          "language": "java",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterAboutRespDto.java",
+          "language": "java",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterRespDto.java",
+          "language": "java",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookCommentRespDto.java",
+          "language": "java",
+          "sizeLines": 54,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserRoleMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserBookshelfMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentReplyMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserConsumeLogMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserFeedbackMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserInfoMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserPayLogMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dao/mapper/UserReadHistoryMapper.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/AuthorInfoDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/UserInfoDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/es/EsBookDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/AuthorRegisterReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/BookAddReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/BookSearchReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/ChapterAddReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/ChapterUpdateReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/UserCommentReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/UserInfoUptReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/UserLoginReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/req/UserRegisterReqDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookCategoryRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterAboutRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookCommentRespDto.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookContentAboutRespDto.java",
+          "language": "java",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookInfoRespDto.java",
+          "language": "java",
+          "sizeLines": 119,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookRankRespDto.java",
+          "language": "java",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/ChapterContentRespDto.java",
+          "language": "java",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/HomeBookRespDto.java",
+          "language": "java",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/HomeFriendLinkRespDto.java",
+          "language": "java",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/ImgVerifyCodeRespDto.java",
+          "language": "java",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/NewsInfoRespDto.java",
+          "language": "java",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserCommentRespDto.java",
+          "language": "java",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserInfoRespDto.java",
+          "language": "java",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserLoginRespDto.java",
+          "language": "java",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/dto/resp/UserRegisterRespDto.java",
+          "language": "java",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/AuthorInfoCacheManager.java",
+          "language": "java",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookCategoryCacheManager.java",
+          "language": "java",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookChapterCacheManager.java",
+          "language": "java",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookContentCacheManager.java",
+          "language": "java",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookInfoCacheManager.java",
+          "language": "java",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/BookRankCacheManager.java",
+          "language": "java",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/FriendLinkCacheManager.java",
+          "language": "java",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/HomeBookCacheManager.java",
+          "language": "java",
+          "sizeLines": 80,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/NewsCacheManager.java",
+          "language": "java",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/cache/UserInfoCacheManager.java",
+          "language": "java",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/dao/UserDaoManager.java",
+          "language": "java",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMailSender.java",
+          "language": "java",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMessageSender.java",
+          "language": "java",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookContentAboutRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookInfoRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/BookRankRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/ChapterContentRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/HomeBookRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/HomeFriendLinkRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/ImgVerifyCodeRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/NewsInfoRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/UserCommentRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/UserInfoRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/UserLoginRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/dto/resp/UserRegisterRespDto.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/AuthorInfoCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/BookCategoryCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/BookChapterCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/BookContentCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/BookInfoCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/BookRankCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/FriendLinkCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/HomeBookCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/NewsCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/cache/UserInfoCacheManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/dao/UserDaoManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMailSender.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/message/AbstractMessageSender.java": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/message/AbstractSysNoticeSender.java",
+          "language": "java",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/message/MessageSender.java",
+          "language": "java",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/message/RegisterMailSender.java",
+          "language": "java",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/message/SeckillSystemNoticeSender.java",
+          "language": "java",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/mq/AmqpMsgManager.java",
+          "language": "java",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/manager/redis/VerifyCodeManager.java",
+          "language": "java",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/AuthorService.java",
+          "language": "java",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/BookService.java",
+          "language": "java",
+          "sizeLines": 217,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/HomeService.java",
+          "language": "java",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/NewsService.java",
+          "language": "java",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/ResourceService.java",
+          "language": "java",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/SearchService.java",
+          "language": "java",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/UserService.java",
+          "language": "java",
+          "sizeLines": 76,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/AuthorServiceImpl.java",
+          "language": "java",
+          "sizeLines": 63,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/BookServiceImpl.java",
+          "language": "java",
+          "sizeLines": 595,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/DbSearchServiceImpl.java",
+          "language": "java",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/EsSearchServiceImpl.java",
+          "language": "java",
+          "sizeLines": 178,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/HomeServiceImpl.java",
+          "language": "java",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/NewsServiceImpl.java",
+          "language": "java",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/ResourceServiceImpl.java",
+          "language": "java",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/java/io/github/xxyopen/novel/service/impl/UserServiceImpl.java",
+          "language": "java",
+          "sizeLines": 171,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main/resources/META-INF/additional-spring-configuration-metadata.json",
+          "language": "json",
+          "sizeLines": 75,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/test/java/io/github/xxyopen/novel/generator/Generator.java",
+          "language": "java",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/resources/templates/controller.java.vm",
+          "language": "vm",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/resources/templates/entity.java.vm",
+          "language": "vm",
+          "sizeLines": 157,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/main/java/io/github/xxyopen/novel/manager/message/AbstractSysNoticeSender.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/message/MessageSender.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/message/RegisterMailSender.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/message/SeckillSystemNoticeSender.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/mq/AmqpMsgManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/manager/redis/VerifyCodeManager.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/AuthorService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/BookService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/HomeService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/NewsService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/ResourceService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/SearchService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/UserService.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/AuthorServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/BookServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/DbSearchServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/EsSearchServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/HomeServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/NewsServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/ResourceServiceImpl.java": [],
+        "src/main/java/io/github/xxyopen/novel/service/impl/UserServiceImpl.java": [],
+        "src/main/resources/META-INF/additional-spring-configuration-metadata.json": [],
+        "src/test/java/io/github/xxyopen/novel/generator/Generator.java": [],
+        "src/test/resources/templates/controller.java.vm": [],
+        "src/test/resources/templates/entity.java.vm": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "src/test/resources/templates/entity.kt.vm",
+          "language": "vm",
+          "sizeLines": 116,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/resources/templates/mapper.java.vm",
+          "language": "vm",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/resources/templates/mapper.xml.vm",
+          "language": "vm",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/resources/templates/service.java.vm",
+          "language": "vm",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/resources/templates/serviceImpl.java.vm",
+          "language": "vm",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/test/resources/templates/entity.kt.vm": [],
+        "src/test/resources/templates/mapper.java.vm": [],
+        "src/test/resources/templates/mapper.xml.vm": [],
+        "src/test/resources/templates/service.java.vm": [],
+        "src/test/resources/templates/serviceImpl.java.vm": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

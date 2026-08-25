@@ -1,0 +1,115 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/resources/mapper/SysRoleMapper.xml":  [
+
+                                                                            ],
+                            "src/main/resources/mapper/SysRoleMenuMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/SysUserMapper.xml":  [
+
+                                                                            ],
+                            "src/main/resources/mapper/SysUserRoleMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/UserBookshelfMapper.xml":  [
+
+                                                                                  ],
+                            "src/main/resources/mapper/UserCommentMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/UserCommentReplyMapper.xml":  [
+
+                                                                                     ],
+                            "src/main/resources/mapper/UserConsumeLogMapper.xml":  [
+
+                                                                                   ],
+                            "src/main/resources/mapper/UserFeedbackMapper.xml":  [
+
+                                                                                 ],
+                            "src/main/resources/mapper/UserInfoMapper.xml":  [
+
+                                                                             ],
+                            "src/main/resources/mapper/UserPayLogMapper.xml":  [
+
+                                                                               ],
+                            "src/main/resources/mapper/UserReadHistoryMapper.xml":  [
+
+                                                                                    ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/resources/mapper/SysRoleMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/SysRoleMenuMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/SysUserMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/SysUserRoleMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserBookshelfMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserCommentMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserCommentReplyMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserConsumeLogMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserFeedbackMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserInfoMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserPayLogMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/UserReadHistoryMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       }
+                   ]
+}

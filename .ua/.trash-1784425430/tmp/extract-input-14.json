@@ -1,0 +1,52 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/test/resources/templates/entity.kt.vm":  [
+
+                                                                          ],
+                            "src/test/resources/templates/mapper.java.vm":  [
+
+                                                                            ],
+                            "src/test/resources/templates/mapper.xml.vm":  [
+
+                                                                           ],
+                            "src/test/resources/templates/service.java.vm":  [
+
+                                                                             ],
+                            "src/test/resources/templates/serviceImpl.java.vm":  [
+
+                                                                                 ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/test/resources/templates/entity.kt.vm",
+                           "language":  "vm",
+                           "sizeLines":  116,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/test/resources/templates/mapper.java.vm",
+                           "language":  "vm",
+                           "sizeLines":  26,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/test/resources/templates/mapper.xml.vm",
+                           "language":  "vm",
+                           "sizeLines":  39,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/test/resources/templates/service.java.vm",
+                           "language":  "vm",
+                           "sizeLines":  20,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/test/resources/templates/serviceImpl.java.vm",
+                           "language":  "vm",
+                           "sizeLines":  26,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

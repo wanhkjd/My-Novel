@@ -1,0 +1,1266 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserPayLog.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 194,
+      "nonEmptyLines": 153,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 81,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 85,
+          "endLine": 87,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 89,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 93,
+          "endLine": 95,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getPayChannel",
+          "startLine": 97,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "setPayChannel",
+          "startLine": 101,
+          "endLine": 103,
+          "params": [
+            "payChannel"
+          ]
+        },
+        {
+          "name": "getOutTradeNo",
+          "startLine": 105,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "setOutTradeNo",
+          "startLine": 109,
+          "endLine": 111,
+          "params": [
+            "outTradeNo"
+          ]
+        },
+        {
+          "name": "getAmount",
+          "startLine": 113,
+          "endLine": 115,
+          "params": []
+        },
+        {
+          "name": "setAmount",
+          "startLine": 117,
+          "endLine": 119,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "getProductType",
+          "startLine": 121,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "setProductType",
+          "startLine": 125,
+          "endLine": 127,
+          "params": [
+            "productType"
+          ]
+        },
+        {
+          "name": "getProductId",
+          "startLine": 129,
+          "endLine": 131,
+          "params": []
+        },
+        {
+          "name": "setProductId",
+          "startLine": 133,
+          "endLine": 135,
+          "params": [
+            "productId"
+          ]
+        },
+        {
+          "name": "getProductName",
+          "startLine": 137,
+          "endLine": 139,
+          "params": []
+        },
+        {
+          "name": "setProductName",
+          "startLine": 141,
+          "endLine": 143,
+          "params": [
+            "productName"
+          ]
+        },
+        {
+          "name": "getProductValue",
+          "startLine": 145,
+          "endLine": 147,
+          "params": []
+        },
+        {
+          "name": "setProductValue",
+          "startLine": 149,
+          "endLine": 151,
+          "params": [
+            "productValue"
+          ]
+        },
+        {
+          "name": "getPayTime",
+          "startLine": 153,
+          "endLine": 155,
+          "params": []
+        },
+        {
+          "name": "setPayTime",
+          "startLine": 157,
+          "endLine": 159,
+          "params": [
+            "payTime"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 161,
+          "endLine": 163,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 165,
+          "endLine": 167,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 169,
+          "endLine": 171,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 173,
+          "endLine": 175,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 177,
+          "endLine": 193,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserPayLog",
+          "startLine": 17,
+          "endLine": 194,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getPayChannel",
+            "setPayChannel",
+            "getOutTradeNo",
+            "setOutTradeNo",
+            "getAmount",
+            "setAmount",
+            "getProductType",
+            "setProductType",
+            "getProductId",
+            "setProductId",
+            "getProductName",
+            "setProductName",
+            "getProductValue",
+            "setProductValue",
+            "getPayTime",
+            "setPayTime",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "payChannel",
+            "outTradeNo",
+            "amount",
+            "productType",
+            "productId",
+            "productName",
+            "productValue",
+            "payTime",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "getPayChannel",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "setPayChannel",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "getOutTradeNo",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "setOutTradeNo",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "getAmount",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "setAmount",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "getProductType",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "setProductType",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "getProductId",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "setProductId",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "getProductName",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "setProductName",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "getProductValue",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "setProductValue",
+          "line": 149,
+          "isDefault": false
+        },
+        {
+          "name": "getPayTime",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "setPayTime",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 161,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 169,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 173,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 177,
+          "isDefault": false
+        },
+        {
+          "name": "UserPayLog",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 26,
+        "functionCount": 25,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/entity/UserReadHistory.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "getId",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "setId",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getUserId",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "setUserId",
+          "startLine": 66,
+          "endLine": 68,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "getBookId",
+          "startLine": 70,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "setBookId",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getPreContentId",
+          "startLine": 78,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "setPreContentId",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "preContentId"
+          ]
+        },
+        {
+          "name": "getCreateTime",
+          "startLine": 86,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "setCreateTime",
+          "startLine": 90,
+          "endLine": 92,
+          "params": [
+            "createTime"
+          ]
+        },
+        {
+          "name": "getUpdateTime",
+          "startLine": 94,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "setUpdateTime",
+          "startLine": 98,
+          "endLine": 100,
+          "params": [
+            "updateTime"
+          ]
+        },
+        {
+          "name": "toString",
+          "startLine": 102,
+          "endLine": 112,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserReadHistory",
+          "startLine": 17,
+          "endLine": 113,
+          "methods": [
+            "getId",
+            "setId",
+            "getUserId",
+            "setUserId",
+            "getBookId",
+            "setBookId",
+            "getPreContentId",
+            "setPreContentId",
+            "getCreateTime",
+            "setCreateTime",
+            "getUpdateTime",
+            "setUpdateTime",
+            "toString"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "userId",
+            "bookId",
+            "preContentId",
+            "createTime",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getId",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "setId",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getUserId",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "setUserId",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getBookId",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "setBookId",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getPreContentId",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "setPreContentId",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "getCreateTime",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "setCreateTime",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "getUpdateTime",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "setUpdateTime",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "UserReadHistory",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorCodeMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AuthorCodeMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorCodeMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeDetailMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AuthorIncomeDetailMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorIncomeDetailMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AuthorIncomeMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorIncomeMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorInfoMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AuthorInfoMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorInfoMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCategoryMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "BookCategoryMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookCategoryMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookChapterMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "BookChapterMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookChapterMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentCopy1Mapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "BookCommentCopy1Mapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookCommentCopy1Mapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "BookCommentMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookCommentMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentReplyMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "BookCommentReplyMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookCommentReplyMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookContentMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "BookContentMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookContentMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/BookInfoMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 32,
+      "classes": [
+        {
+          "name": "BookInfoMapper",
+          "startLine": 21,
+          "endLine": 38,
+          "methods": [
+            "addVisitCount",
+            "searchBooks"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookInfoMapper",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeBookMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "HomeBookMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HomeBookMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeFriendLinkMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "HomeFriendLinkMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HomeFriendLinkMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsCategoryMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "NewsCategoryMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewsCategoryMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsContentMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "NewsContentMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewsContentMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsInfoMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "NewsInfoMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewsInfoMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/PayAlipayMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "PayAlipayMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PayAlipayMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/PayWechatMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "PayWechatMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PayWechatMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysLogMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SysLogMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SysLogMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysMenuMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SysMenuMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SysMenuMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SysRoleMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SysRoleMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMenuMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SysRoleMenuMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SysRoleMenuMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SysUserMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SysUserMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

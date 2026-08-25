@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/java/io/github/xxyopen/novel/core/auth/AuthorAuthStrategy.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/core/auth/FrontAuthStrategy.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/core/auth/UserHolder.java":  [
+
+                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/constant/CommonConsts.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/constant/ErrorCodeEnum.java":  [
+
+                                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/exception/BusinessException.java":  [
+
+                                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/exception/CommonExceptionHandler.java":  [
+
+                                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/req/PageReqDto.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/resp/PageRespDto.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/resp/RestResp.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/util/ImgVerifyCodeUtils.java":  [
+
+                                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/util/IpUtils.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/core/common/util/SortWhitelistUtil.java":  [
+
+                                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/AiConfig.java":  [
+
+                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/AmqpConfig.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/CacheConfig.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/CorsConfig.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/CorsProperties.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/EsConfig.java":  [
+
+                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/LogbookConfig.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/MailProperties.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/MybatisPlusConfig.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/OpenApiConfig.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/ShardingSphereConfiguration.java":  [
+
+                                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/WebConfig.java":  [
+
+                                                                                                 ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/auth/AuthorAuthStrategy.java",
+                           "language":  "java",
+                           "sizeLines":  57,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/auth/FrontAuthStrategy.java",
+                           "language":  "java",
+                           "sizeLines":  28,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/auth/UserHolder.java",
+                           "language":  "java",
+                           "sizeLines":  45,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/constant/CommonConsts.java",
+                           "language":  "java",
+                           "sizeLines":  57,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/constant/ErrorCodeEnum.java",
+                           "language":  "java",
+                           "sizeLines":  157,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/exception/BusinessException.java",
+                           "language":  "java",
+                           "sizeLines":  26,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/exception/CommonExceptionHandler.java",
+                           "language":  "java",
+                           "sizeLines":  59,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/req/PageReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  45,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/resp/PageRespDto.java",
+                           "language":  "java",
+                           "sizeLines":  63,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/resp/RestResp.java",
+                           "language":  "java",
+                           "sizeLines":  87,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/util/ImgVerifyCodeUtils.java",
+                           "language":  "java",
+                           "sizeLines":  113,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/util/IpUtils.java",
+                           "language":  "java",
+                           "sizeLines":  44,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/common/util/SortWhitelistUtil.java",
+                           "language":  "java",
+                           "sizeLines":  62,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/AiConfig.java",
+                           "language":  "java",
+                           "sizeLines":  47,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/AmqpConfig.java",
+                           "language":  "java",
+                           "sizeLines":  44,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/CacheConfig.java",
+                           "language":  "java",
+                           "sizeLines":  91,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/CorsConfig.java",
+                           "language":  "java",
+                           "sizeLines":  44,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/CorsProperties.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/EsConfig.java",
+                           "language":  "java",
+                           "sizeLines":  73,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/LogbookConfig.java",
+                           "language":  "java",
+                           "sizeLines":  37,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/MailProperties.java",
+                           "language":  "java",
+                           "sizeLines":  14,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/MybatisPlusConfig.java",
+                           "language":  "java",
+                           "sizeLines":  28,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/OpenApiConfig.java",
+                           "language":  "java",
+                           "sizeLines":  25,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/ShardingSphereConfiguration.java",
+                           "language":  "java",
+                           "sizeLines":  40,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/WebConfig.java",
+                           "language":  "java",
+                           "sizeLines":  67,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserPayLog.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserReadHistory.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorCodeMapper.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeDetailMapper.java":  [
+
+                                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeMapper.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorInfoMapper.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCategoryMapper.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookChapterMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentCopy1Mapper.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentReplyMapper.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookContentMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/BookInfoMapper.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeBookMapper.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeFriendLinkMapper.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsCategoryMapper.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsContentMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsInfoMapper.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/PayAlipayMapper.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/PayWechatMapper.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/SysLogMapper.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/SysMenuMapper.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMapper.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMenuMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserMapper.java":  [
+
+                                                                                                    ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserPayLog.java",
+                           "language":  "java",
+                           "sizeLines":  194,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserReadHistory.java",
+                           "language":  "java",
+                           "sizeLines":  113,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorCodeMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeDetailMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorIncomeMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/AuthorInfoMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCategoryMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookChapterMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentCopy1Mapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookCommentReplyMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookContentMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/BookInfoMapper.java",
+                           "language":  "java",
+                           "sizeLines":  38,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeBookMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/HomeFriendLinkMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsCategoryMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsContentMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/NewsInfoMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/PayAlipayMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/PayWechatMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/SysLogMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/SysMenuMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/SysRoleMenuMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

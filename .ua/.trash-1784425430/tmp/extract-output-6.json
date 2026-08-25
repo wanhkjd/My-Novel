@@ -1,0 +1,2497 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [
+    ".mvn/wrapper/maven-wrapper.jar",
+    ".mvn/wrapper/maven-wrapper.properties",
+    "doc/es/book.http",
+    "doc/style/intellij-java-google-style.xml",
+    "mvnw"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 20,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 16,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "doc/sql/novel.sql/__MACOSX/._novel_data.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 0
+      }
+    },
+    {
+      "path": "doc/sql/novel.sql/novel_data.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 22467,
+      "nonEmptyLines": 22449,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 0
+      }
+    },
+    {
+      "path": "doc/sql/novel.sql/novel_struc.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 598,
+      "nonEmptyLines": 560,
+      "definitions": [
+        {
+          "name": "author_code",
+          "kind": "table",
+          "fields": [],
+          "startLine": 24,
+          "endLine": 29
+        },
+        {
+          "name": "author_income",
+          "kind": "table",
+          "fields": [],
+          "startLine": 40,
+          "endLine": 45
+        },
+        {
+          "name": "author_income_detail",
+          "kind": "table",
+          "fields": [],
+          "startLine": 60,
+          "endLine": 65
+        },
+        {
+          "name": "author_info",
+          "kind": "table",
+          "fields": [],
+          "startLine": 78,
+          "endLine": 83
+        },
+        {
+          "name": "book_category",
+          "kind": "table",
+          "fields": [],
+          "startLine": 99,
+          "endLine": 104
+        },
+        {
+          "name": "book_chapter",
+          "kind": "table",
+          "fields": [],
+          "startLine": 114,
+          "endLine": 119
+        },
+        {
+          "name": "book_comment",
+          "kind": "table",
+          "fields": [],
+          "startLine": 133,
+          "endLine": 138
+        },
+        {
+          "name": "book_comment_copy1",
+          "kind": "table",
+          "fields": [],
+          "startLine": 151,
+          "endLine": 156
+        },
+        {
+          "name": "book_comment_reply",
+          "kind": "table",
+          "fields": [],
+          "startLine": 169,
+          "endLine": 174
+        },
+        {
+          "name": "book_content",
+          "kind": "table",
+          "fields": [],
+          "startLine": 185,
+          "endLine": 190
+        },
+        {
+          "name": "book_info",
+          "kind": "table",
+          "fields": [],
+          "startLine": 200,
+          "endLine": 205
+        },
+        {
+          "name": "home_book",
+          "kind": "table",
+          "fields": [],
+          "startLine": 232,
+          "endLine": 237
+        },
+        {
+          "name": "home_friend_link",
+          "kind": "table",
+          "fields": [],
+          "startLine": 247,
+          "endLine": 252
+        },
+        {
+          "name": "news_category",
+          "kind": "table",
+          "fields": [],
+          "startLine": 263,
+          "endLine": 268
+        },
+        {
+          "name": "news_content",
+          "kind": "table",
+          "fields": [],
+          "startLine": 277,
+          "endLine": 282
+        },
+        {
+          "name": "news_info",
+          "kind": "table",
+          "fields": [],
+          "startLine": 292,
+          "endLine": 297
+        },
+        {
+          "name": "pay_alipay",
+          "kind": "table",
+          "fields": [],
+          "startLine": 308,
+          "endLine": 313
+        },
+        {
+          "name": "pay_wechat",
+          "kind": "table",
+          "fields": [],
+          "startLine": 330,
+          "endLine": 335
+        },
+        {
+          "name": "sys_log",
+          "kind": "table",
+          "fields": [],
+          "startLine": 352,
+          "endLine": 357
+        },
+        {
+          "name": "sys_menu",
+          "kind": "table",
+          "fields": [],
+          "startLine": 370,
+          "endLine": 375
+        },
+        {
+          "name": "sys_role",
+          "kind": "table",
+          "fields": [],
+          "startLine": 388,
+          "endLine": 393
+        },
+        {
+          "name": "sys_role_menu",
+          "kind": "table",
+          "fields": [],
+          "startLine": 403,
+          "endLine": 408
+        },
+        {
+          "name": "sys_user",
+          "kind": "table",
+          "fields": [],
+          "startLine": 417,
+          "endLine": 422
+        },
+        {
+          "name": "sys_user_role",
+          "kind": "table",
+          "fields": [],
+          "startLine": 437,
+          "endLine": 442
+        },
+        {
+          "name": "test",
+          "kind": "table",
+          "fields": [],
+          "startLine": 451,
+          "endLine": 456
+        },
+        {
+          "name": "user_bookshelf",
+          "kind": "table",
+          "fields": [],
+          "startLine": 462,
+          "endLine": 467
+        },
+        {
+          "name": "user_comment",
+          "kind": "table",
+          "fields": [],
+          "startLine": 478,
+          "endLine": 483
+        },
+        {
+          "name": "user_comment_reply",
+          "kind": "table",
+          "fields": [],
+          "startLine": 496,
+          "endLine": 501
+        },
+        {
+          "name": "user_consume_log",
+          "kind": "table",
+          "fields": [],
+          "startLine": 512,
+          "endLine": 517
+        },
+        {
+          "name": "user_feedback",
+          "kind": "table",
+          "fields": [],
+          "startLine": 530,
+          "endLine": 535
+        },
+        {
+          "name": "user_info",
+          "kind": "table",
+          "fields": [],
+          "startLine": 544,
+          "endLine": 549
+        },
+        {
+          "name": "user_pay_log",
+          "kind": "table",
+          "fields": [],
+          "startLine": 565,
+          "endLine": 570
+        },
+        {
+          "name": "user_read_history",
+          "kind": "table",
+          "fields": [],
+          "startLine": 586,
+          "endLine": 591
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 33
+      }
+    },
+    {
+      "path": "doc/style/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/NovelApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 30,
+          "endLine": 32,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "commandLineRunner",
+          "startLine": 34,
+          "endLine": 55,
+          "params": [
+            "context",
+            "dataSource"
+          ]
+        },
+        {
+          "name": "securityFilterChain",
+          "startLine": 57,
+          "endLine": 64,
+          "params": [
+            "http"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NovelApplication",
+          "startLine": 23,
+          "endLine": 66,
+          "methods": [
+            "main",
+            "commandLineRunner",
+            "securityFilterChain"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "commandLineRunner",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "securityFilterChain",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "NovelApplication",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 31
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "context.getBeansOfType",
+          "lineNumber": 37
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 38
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "beans.forEach",
+          "lineNumber": 39
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 40
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "v.getClass().getName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "v.getClass",
+          "lineNumber": 40
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 41
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "v.getCacheNames",
+          "lineNumber": 41
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "dataSource.getConnection",
+          "lineNumber": 46
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 47
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "hikariDataSource.getMinimumIdle",
+          "lineNumber": 47
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 48
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "hikariDataSource.getMaximumPoolSize",
+          "lineNumber": 48
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 50
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "connection.getMetaData().getDatabaseProductName",
+          "lineNumber": 50
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "connection.getMetaData",
+          "lineNumber": 50
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "log.info",
+          "lineNumber": 51
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "connection.getMetaData().getDatabaseProductVersion",
+          "lineNumber": 51
+        },
+        {
+          "caller": "commandLineRunner",
+          "callee": "connection.getMetaData",
+          "lineNumber": 51
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.csrf(csrf -> csrf.disable())\r\n            .securityMatcher(EndpointRequest.toAnyEndpoint())\r\n            .authorizeHttpRequests(requests -> requests.anyRequest().hasRole(\"ENDPOINT_ADMIN\")).httpBasic",
+          "lineNumber": 59
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.csrf(csrf -> csrf.disable())\r\n            .securityMatcher(EndpointRequest.toAnyEndpoint()).authorizeHttpRequests",
+          "lineNumber": 59
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.csrf(csrf -> csrf.disable()).securityMatcher",
+          "lineNumber": 59
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.csrf",
+          "lineNumber": 59
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "csrf.disable",
+          "lineNumber": 59
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "EndpointRequest.toAnyEndpoint",
+          "lineNumber": 60
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "requests.anyRequest().hasRole",
+          "lineNumber": 61
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "requests.anyRequest",
+          "lineNumber": 61
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "Customizer.withDefaults",
+          "lineNumber": 62
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.build",
+          "lineNumber": 63
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/author/AuthorAiController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "expandText",
+          "startLine": 34,
+          "endLine": 42,
+          "params": [
+            "text",
+            "ratio"
+          ]
+        },
+        {
+          "name": "condenseText",
+          "startLine": 47,
+          "endLine": 55,
+          "params": [
+            "text",
+            "ratio"
+          ]
+        },
+        {
+          "name": "continueText",
+          "startLine": 60,
+          "endLine": 68,
+          "params": [
+            "text",
+            "length"
+          ]
+        },
+        {
+          "name": "polishText",
+          "startLine": 73,
+          "endLine": 81,
+          "params": [
+            "text"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorAiController",
+          "startLine": 22,
+          "endLine": 83,
+          "methods": [
+            "expandText",
+            "condenseText",
+            "continueText",
+            "polishText"
+          ],
+          "properties": [
+            "chatClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "expandText",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "condenseText",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "continueText",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "polishText",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorAiController",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "expandText",
+          "callee": "RestResp.ok",
+          "lineNumber": 38
+        },
+        {
+          "caller": "expandText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt)\r\n            .call().content",
+          "lineNumber": 38
+        },
+        {
+          "caller": "expandText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt).call",
+          "lineNumber": 38
+        },
+        {
+          "caller": "expandText",
+          "callee": "chatClient.prompt().user",
+          "lineNumber": 38
+        },
+        {
+          "caller": "expandText",
+          "callee": "chatClient.prompt",
+          "lineNumber": 38
+        },
+        {
+          "caller": "condenseText",
+          "callee": "RestResp.ok",
+          "lineNumber": 51
+        },
+        {
+          "caller": "condenseText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt)\r\n            .call().content",
+          "lineNumber": 51
+        },
+        {
+          "caller": "condenseText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt).call",
+          "lineNumber": 51
+        },
+        {
+          "caller": "condenseText",
+          "callee": "chatClient.prompt().user",
+          "lineNumber": 51
+        },
+        {
+          "caller": "condenseText",
+          "callee": "chatClient.prompt",
+          "lineNumber": 51
+        },
+        {
+          "caller": "continueText",
+          "callee": "RestResp.ok",
+          "lineNumber": 64
+        },
+        {
+          "caller": "continueText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt)\r\n            .call().content",
+          "lineNumber": 64
+        },
+        {
+          "caller": "continueText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt).call",
+          "lineNumber": 64
+        },
+        {
+          "caller": "continueText",
+          "callee": "chatClient.prompt().user",
+          "lineNumber": 64
+        },
+        {
+          "caller": "continueText",
+          "callee": "chatClient.prompt",
+          "lineNumber": 64
+        },
+        {
+          "caller": "polishText",
+          "callee": "RestResp.ok",
+          "lineNumber": 77
+        },
+        {
+          "caller": "polishText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt)\r\n            .call().content",
+          "lineNumber": 77
+        },
+        {
+          "caller": "polishText",
+          "callee": "chatClient.prompt()\r\n            .user(prompt).call",
+          "lineNumber": 77
+        },
+        {
+          "caller": "polishText",
+          "callee": "chatClient.prompt().user",
+          "lineNumber": 77
+        },
+        {
+          "caller": "polishText",
+          "callee": "chatClient.prompt",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/author/AuthorController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 121,
+      "functions": [
+        {
+          "name": "register",
+          "startLine": 47,
+          "endLine": 52,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "getStatus",
+          "startLine": 57,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "publishBook",
+          "startLine": 66,
+          "endLine": 70,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "listBooks",
+          "startLine": 75,
+          "endLine": 79,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "publishBookChapter",
+          "startLine": 84,
+          "endLine": 91,
+          "params": [
+            "bookId",
+            "dto"
+          ]
+        },
+        {
+          "name": "deleteBookChapter",
+          "startLine": 96,
+          "endLine": 101,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "getBookChapter",
+          "startLine": 106,
+          "endLine": 111,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "updateBookChapter",
+          "startLine": 116,
+          "endLine": 122,
+          "params": [
+            "chapterId",
+            "dto"
+          ]
+        },
+        {
+          "name": "listBookChapters",
+          "startLine": 127,
+          "endLine": 133,
+          "params": [
+            "bookId",
+            "dto"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthorController",
+          "startLine": 33,
+          "endLine": 135,
+          "methods": [
+            "register",
+            "getStatus",
+            "publishBook",
+            "listBooks",
+            "publishBookChapter",
+            "deleteBookChapter",
+            "getBookChapter",
+            "updateBookChapter",
+            "listBookChapters"
+          ],
+          "properties": [
+            "authorService",
+            "bookService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "register",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "getStatus",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "publishBook",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "listBooks",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "publishBookChapter",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "deleteBookChapter",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "getBookChapter",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "updateBookChapter",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "listBookChapters",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "AuthorController",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register",
+          "callee": "dto.setUserId",
+          "lineNumber": 50
+        },
+        {
+          "caller": "register",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 50
+        },
+        {
+          "caller": "register",
+          "callee": "authorService.register",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getStatus",
+          "callee": "authorService.getStatus",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getStatus",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 60
+        },
+        {
+          "caller": "publishBook",
+          "callee": "bookService.saveBook",
+          "lineNumber": 69
+        },
+        {
+          "caller": "listBooks",
+          "callee": "bookService.listAuthorBooks",
+          "lineNumber": 78
+        },
+        {
+          "caller": "publishBookChapter",
+          "callee": "dto.setBookId",
+          "lineNumber": 89
+        },
+        {
+          "caller": "publishBookChapter",
+          "callee": "bookService.saveBookChapter",
+          "lineNumber": 90
+        },
+        {
+          "caller": "deleteBookChapter",
+          "callee": "bookService.deleteBookChapter",
+          "lineNumber": 100
+        },
+        {
+          "caller": "getBookChapter",
+          "callee": "bookService.getBookChapter",
+          "lineNumber": 110
+        },
+        {
+          "caller": "updateBookChapter",
+          "callee": "bookService.updateBookChapter",
+          "lineNumber": 121
+        },
+        {
+          "caller": "listBookChapters",
+          "callee": "bookService.listBookChapters",
+          "lineNumber": 132
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/front/BookController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 165,
+      "nonEmptyLines": 148,
+      "functions": [
+        {
+          "name": "listCategory",
+          "startLine": 42,
+          "endLine": 47,
+          "params": [
+            "workDirection"
+          ]
+        },
+        {
+          "name": "getBookById",
+          "startLine": 52,
+          "endLine": 57,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "addVisitCount",
+          "startLine": 62,
+          "endLine": 66,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getLastChapterAbout",
+          "startLine": 71,
+          "endLine": 76,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "listRecBooks",
+          "startLine": 81,
+          "endLine": 86,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "listChapters",
+          "startLine": 91,
+          "endLine": 96,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "getBookContentAbout",
+          "startLine": 101,
+          "endLine": 106,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "getPreChapterId",
+          "startLine": 111,
+          "endLine": 116,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "getNextChapterId",
+          "startLine": 121,
+          "endLine": 126,
+          "params": [
+            "chapterId"
+          ]
+        },
+        {
+          "name": "listVisitRankBooks",
+          "startLine": 131,
+          "endLine": 135,
+          "params": []
+        },
+        {
+          "name": "listNewestRankBooks",
+          "startLine": 140,
+          "endLine": 144,
+          "params": []
+        },
+        {
+          "name": "listUpdateRankBooks",
+          "startLine": 149,
+          "endLine": 153,
+          "params": []
+        },
+        {
+          "name": "listNewestComments",
+          "startLine": 158,
+          "endLine": 163,
+          "params": [
+            "bookId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookController",
+          "startLine": 31,
+          "endLine": 165,
+          "methods": [
+            "listCategory",
+            "getBookById",
+            "addVisitCount",
+            "getLastChapterAbout",
+            "listRecBooks",
+            "listChapters",
+            "getBookContentAbout",
+            "getPreChapterId",
+            "getNextChapterId",
+            "listVisitRankBooks",
+            "listNewestRankBooks",
+            "listUpdateRankBooks",
+            "listNewestComments"
+          ],
+          "properties": [
+            "bookService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listCategory",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "getBookById",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "addVisitCount",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "getLastChapterAbout",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "listRecBooks",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "listChapters",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "getBookContentAbout",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "getPreChapterId",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "getNextChapterId",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "listVisitRankBooks",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "listNewestRankBooks",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "listUpdateRankBooks",
+          "line": 149,
+          "isDefault": false
+        },
+        {
+          "name": "listNewestComments",
+          "line": 158,
+          "isDefault": false
+        },
+        {
+          "name": "BookController",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listCategory",
+          "callee": "bookService.listCategory",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getBookById",
+          "callee": "bookService.getBookById",
+          "lineNumber": 56
+        },
+        {
+          "caller": "addVisitCount",
+          "callee": "bookService.addVisitCount",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getLastChapterAbout",
+          "callee": "bookService.getLastChapterAbout",
+          "lineNumber": 75
+        },
+        {
+          "caller": "listRecBooks",
+          "callee": "bookService.listRecBooks",
+          "lineNumber": 85
+        },
+        {
+          "caller": "listChapters",
+          "callee": "bookService.listChapters",
+          "lineNumber": 95
+        },
+        {
+          "caller": "getBookContentAbout",
+          "callee": "bookService.getBookContentAbout",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getPreChapterId",
+          "callee": "bookService.getPreChapterId",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getNextChapterId",
+          "callee": "bookService.getNextChapterId",
+          "lineNumber": 125
+        },
+        {
+          "caller": "listVisitRankBooks",
+          "callee": "bookService.listVisitRankBooks",
+          "lineNumber": 134
+        },
+        {
+          "caller": "listNewestRankBooks",
+          "callee": "bookService.listNewestRankBooks",
+          "lineNumber": 143
+        },
+        {
+          "caller": "listUpdateRankBooks",
+          "callee": "bookService.listUpdateRankBooks",
+          "lineNumber": 152
+        },
+        {
+          "caller": "listNewestComments",
+          "callee": "bookService.listNewestComments",
+          "lineNumber": 162
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/front/HomeController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "listHomeBooks",
+          "startLine": 36,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "listHomeFriendLinks",
+          "startLine": 47,
+          "endLine": 51,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HomeController",
+          "startLine": 24,
+          "endLine": 53,
+          "methods": [
+            "listHomeBooks",
+            "listHomeFriendLinks"
+          ],
+          "properties": [
+            "homeService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listHomeBooks",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "listHomeFriendLinks",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "HomeController",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listHomeBooks",
+          "callee": "log.debug",
+          "lineNumber": 40
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "Thread.currentThread",
+          "lineNumber": 40
+        },
+        {
+          "caller": "listHomeBooks",
+          "callee": "homeService.listHomeBooks",
+          "lineNumber": 41
+        },
+        {
+          "caller": "listHomeFriendLinks",
+          "callee": "homeService.listHomeFriendLinks",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/front/NewsController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "listLatestNews",
+          "startLine": 34,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "getNews",
+          "startLine": 43,
+          "endLine": 48,
+          "params": [
+            "id"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NewsController",
+          "startLine": 23,
+          "endLine": 49,
+          "methods": [
+            "listLatestNews",
+            "getNews"
+          ],
+          "properties": [
+            "newsService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listLatestNews",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "getNews",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "NewsController",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listLatestNews",
+          "callee": "newsService.listLatestNews",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getNews",
+          "callee": "newsService.getNews",
+          "lineNumber": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/front/ResourceController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "getImgVerifyCode",
+          "startLine": 36,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "uploadImage",
+          "startLine": 45,
+          "endLine": 50,
+          "params": [
+            "file"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResourceController",
+          "startLine": 25,
+          "endLine": 52,
+          "methods": [
+            "getImgVerifyCode",
+            "uploadImage"
+          ],
+          "properties": [
+            "resourceService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getImgVerifyCode",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceController",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getImgVerifyCode",
+          "callee": "resourceService.getImgVerifyCode",
+          "lineNumber": 39
+        },
+        {
+          "caller": "uploadImage",
+          "callee": "resourceService.uploadImage",
+          "lineNumber": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/front/SearchController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "searchBooks",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "condition"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SearchController",
+          "startLine": 23,
+          "endLine": 41,
+          "methods": [
+            "searchBooks"
+          ],
+          "properties": [
+            "searchService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "searchBooks",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "SearchController",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "searchBooks",
+          "callee": "searchService.searchBooks",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/controller/front/UserController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 146,
+      "nonEmptyLines": 130,
+      "functions": [
+        {
+          "name": "register",
+          "startLine": 47,
+          "endLine": 51,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "login",
+          "startLine": 56,
+          "endLine": 60,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "getUserInfo",
+          "startLine": 65,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "updateUserInfo",
+          "startLine": 74,
+          "endLine": 79,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "submitFeedback",
+          "startLine": 84,
+          "endLine": 88,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "deleteFeedback",
+          "startLine": 93,
+          "endLine": 97,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "comment",
+          "startLine": 102,
+          "endLine": 107,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "updateComment",
+          "startLine": 112,
+          "endLine": 117,
+          "params": [
+            "id",
+            "content"
+          ]
+        },
+        {
+          "name": "deleteComment",
+          "startLine": 122,
+          "endLine": 126,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getBookshelfStatus",
+          "startLine": 131,
+          "endLine": 135,
+          "params": [
+            "bookId"
+          ]
+        },
+        {
+          "name": "listComments",
+          "startLine": 140,
+          "endLine": 144,
+          "params": [
+            "pageReqDto"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserController",
+          "startLine": 33,
+          "endLine": 146,
+          "methods": [
+            "register",
+            "login",
+            "getUserInfo",
+            "updateUserInfo",
+            "submitFeedback",
+            "deleteFeedback",
+            "comment",
+            "updateComment",
+            "deleteComment",
+            "getBookshelfStatus",
+            "listComments"
+          ],
+          "properties": [
+            "userService",
+            "bookService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "register",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "login",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "getUserInfo",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "updateUserInfo",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "submitFeedback",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "deleteFeedback",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "comment",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "updateComment",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "deleteComment",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "getBookshelfStatus",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "listComments",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "UserController",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register",
+          "callee": "userService.register",
+          "lineNumber": 50
+        },
+        {
+          "caller": "login",
+          "callee": "userService.login",
+          "lineNumber": 59
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "userService.getUserInfo",
+          "lineNumber": 68
+        },
+        {
+          "caller": "getUserInfo",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 68
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "dto.setUserId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "updateUserInfo",
+          "callee": "userService.updateUserInfo",
+          "lineNumber": 78
+        },
+        {
+          "caller": "submitFeedback",
+          "callee": "userService.saveFeedback",
+          "lineNumber": 87
+        },
+        {
+          "caller": "submitFeedback",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 87
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "userService.deleteFeedback",
+          "lineNumber": 96
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 96
+        },
+        {
+          "caller": "comment",
+          "callee": "dto.setUserId",
+          "lineNumber": 105
+        },
+        {
+          "caller": "comment",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 105
+        },
+        {
+          "caller": "comment",
+          "callee": "bookService.saveComment",
+          "lineNumber": 106
+        },
+        {
+          "caller": "updateComment",
+          "callee": "bookService.updateComment",
+          "lineNumber": 116
+        },
+        {
+          "caller": "updateComment",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 116
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "bookService.deleteComment",
+          "lineNumber": 125
+        },
+        {
+          "caller": "deleteComment",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "userService.getBookshelfStatus",
+          "lineNumber": 134
+        },
+        {
+          "caller": "getBookshelfStatus",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 134
+        },
+        {
+          "caller": "listComments",
+          "callee": "bookService.listComments",
+          "lineNumber": 143
+        },
+        {
+          "caller": "listComments",
+          "callee": "UserHolder.getUserId",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/annotation/Key.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/annotation/Lock.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 22,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/annotation/ValidateSortOrder.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 15,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/aspect/LockAspect.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 86,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "doAround",
+          "startLine": 42,
+          "endLine": 59,
+          "params": [
+            "joinPoint"
+          ]
+        },
+        {
+          "name": "buildLockKey",
+          "startLine": 61,
+          "endLine": 75,
+          "params": [
+            "prefix",
+            "method",
+            "args"
+          ]
+        },
+        {
+          "name": "parseKeyExpr",
+          "startLine": 77,
+          "endLine": 84,
+          "params": [
+            "expr",
+            "arg"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LockAspect",
+          "startLine": 31,
+          "endLine": 86,
+          "methods": [
+            "doAround",
+            "buildLockKey",
+            "parseKeyExpr"
+          ],
+          "properties": [
+            "redissonClient",
+            "KEY_PREFIX",
+            "KEY_SEPARATOR"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "doAround",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "LockAspect",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "doAround",
+          "callee": "joinPoint.getSignature",
+          "lineNumber": 45
+        },
+        {
+          "caller": "doAround",
+          "callee": "methodSignature.getMethod",
+          "lineNumber": 46
+        },
+        {
+          "caller": "doAround",
+          "callee": "targetMethod.getAnnotation",
+          "lineNumber": 47
+        },
+        {
+          "caller": "doAround",
+          "callee": "buildLockKey",
+          "lineNumber": 48
+        },
+        {
+          "caller": "doAround",
+          "callee": "lock.prefix",
+          "lineNumber": 48
+        },
+        {
+          "caller": "doAround",
+          "callee": "joinPoint.getArgs",
+          "lineNumber": 49
+        },
+        {
+          "caller": "doAround",
+          "callee": "redissonClient.getLock",
+          "lineNumber": 50
+        },
+        {
+          "caller": "doAround",
+          "callee": "lock.isWait",
+          "lineNumber": 51
+        },
+        {
+          "caller": "doAround",
+          "callee": "rLock.tryLock",
+          "lineNumber": 51
+        },
+        {
+          "caller": "doAround",
+          "callee": "lock.waitTime",
+          "lineNumber": 51
+        },
+        {
+          "caller": "doAround",
+          "callee": "rLock.tryLock",
+          "lineNumber": 51
+        },
+        {
+          "caller": "doAround",
+          "callee": "joinPoint.proceed",
+          "lineNumber": 53
+        },
+        {
+          "caller": "doAround",
+          "callee": "rLock.unlock",
+          "lineNumber": 55
+        },
+        {
+          "caller": "doAround",
+          "callee": "new BusinessException",
+          "lineNumber": 58
+        },
+        {
+          "caller": "doAround",
+          "callee": "lock.failCode",
+          "lineNumber": 58
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "new StringBuilder",
+          "lineNumber": 62
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "StringUtils.hasText",
+          "lineNumber": 63
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "builder.append(KEY_SEPARATOR).append",
+          "lineNumber": 64
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "builder.append",
+          "lineNumber": 64
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "method.getParameters",
+          "lineNumber": 66
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "builder.append",
+          "lineNumber": 68
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "parameters[i].isAnnotationPresent",
+          "lineNumber": 69
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "parameters[i].getAnnotation",
+          "lineNumber": 70
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "builder.append",
+          "lineNumber": 71
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "parseKeyExpr",
+          "lineNumber": 71
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "key.expr",
+          "lineNumber": 71
+        },
+        {
+          "caller": "buildLockKey",
+          "callee": "builder.toString",
+          "lineNumber": 74
+        },
+        {
+          "caller": "parseKeyExpr",
+          "callee": "StringUtils.hasText",
+          "lineNumber": 78
+        },
+        {
+          "caller": "parseKeyExpr",
+          "callee": "arg.toString",
+          "lineNumber": 79
+        },
+        {
+          "caller": "parseKeyExpr",
+          "callee": "new SpelExpressionParser",
+          "lineNumber": 81
+        },
+        {
+          "caller": "parseKeyExpr",
+          "callee": "parser.parseExpression",
+          "lineNumber": 82
+        },
+        {
+          "caller": "parseKeyExpr",
+          "callee": "new TemplateParserContext",
+          "lineNumber": 82
+        },
+        {
+          "caller": "parseKeyExpr",
+          "callee": "expression.getValue",
+          "lineNumber": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/aspect/SortOrderValidationAspect.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 118,
+      "functions": [
+        {
+          "name": "processSortOrderFields",
+          "startLine": 43,
+          "endLine": 66,
+          "params": [
+            "joinPoint"
+          ]
+        },
+        {
+          "name": "handleAnnotatedParameter",
+          "startLine": 71,
+          "endLine": 80,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "processPageReqDto",
+          "startLine": 85,
+          "endLine": 92,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "processMap",
+          "startLine": 97,
+          "endLine": 104,
+          "params": [
+            "map"
+          ]
+        },
+        {
+          "name": "processGenericObject",
+          "startLine": 110,
+          "endLine": 129,
+          "params": [
+            "obj"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SortOrderValidationAspect",
+          "startLine": 34,
+          "endLine": 130,
+          "methods": [
+            "processSortOrderFields",
+            "handleAnnotatedParameter",
+            "processPageReqDto",
+            "processMap",
+            "processGenericObject"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "processSortOrderFields",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "SortOrderValidationAspect",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "processSortOrderFields",
+          "callee": "joinPoint.getArgs",
+          "lineNumber": 46
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "joinPoint.getSignature",
+          "lineNumber": 47
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "signature.getMethod",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "method.getParameterAnnotations",
+          "lineNumber": 51
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "Arrays.stream(parameterAnnotations[i]).anyMatch",
+          "lineNumber": 55
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "Arrays.stream",
+          "lineNumber": 55
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "a.annotationType().equals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "a.annotationType",
+          "lineNumber": 56
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "handleAnnotatedParameter",
+          "lineNumber": 60
+        },
+        {
+          "caller": "processSortOrderFields",
+          "callee": "joinPoint.proceed",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleAnnotatedParameter",
+          "callee": "processPageReqDto",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleAnnotatedParameter",
+          "callee": "processMap",
+          "lineNumber": 76
+        },
+        {
+          "caller": "handleAnnotatedParameter",
+          "callee": "processGenericObject",
+          "lineNumber": 78
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "dto.getSort",
+          "lineNumber": 86
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "dto.setSort",
+          "lineNumber": 87
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "SortWhitelistUtil.sanitizeColumn",
+          "lineNumber": 87
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "dto.getSort",
+          "lineNumber": 87
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "dto.getOrder",
+          "lineNumber": 89
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "dto.setOrder",
+          "lineNumber": 90
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "SortWhitelistUtil.sanitizeOrder",
+          "lineNumber": 90
+        },
+        {
+          "caller": "processPageReqDto",
+          "callee": "dto.getOrder",
+          "lineNumber": 90
+        },
+        {
+          "caller": "processMap",
+          "callee": "map.get",
+          "lineNumber": 98
+        },
+        {
+          "caller": "processMap",
+          "callee": "map.put",
+          "lineNumber": 99
+        },
+        {
+          "caller": "processMap",
+          "callee": "SortWhitelistUtil.sanitizeColumn",
+          "lineNumber": 99
+        },
+        {
+          "caller": "processMap",
+          "callee": "map.get",
+          "lineNumber": 101
+        },
+        {
+          "caller": "processMap",
+          "callee": "map.put",
+          "lineNumber": 102
+        },
+        {
+          "caller": "processMap",
+          "callee": "SortWhitelistUtil.sanitizeOrder",
+          "lineNumber": 102
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "obj.getClass().getDeclaredFields",
+          "lineNumber": 112
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "obj.getClass",
+          "lineNumber": 112
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "field.getName",
+          "lineNumber": 113
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "field.setAccessible",
+          "lineNumber": 115
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "field.get",
+          "lineNumber": 116
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "\"sort\".equals",
+          "lineNumber": 118
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "field.getName",
+          "lineNumber": 118
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "SortWhitelistUtil.sanitizeColumn",
+          "lineNumber": 119
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "SortWhitelistUtil.sanitizeOrder",
+          "lineNumber": 120
+        },
+        {
+          "caller": "processGenericObject",
+          "callee": "field.set",
+          "lineNumber": 121
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/auth/AdminAuthStrategy.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "auth",
+          "startLine": 17,
+          "endLine": 20,
+          "params": [
+            "token",
+            "requestUri"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AdminAuthStrategy",
+          "startLine": 13,
+          "endLine": 22,
+          "methods": [
+            "auth"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "auth",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "AdminAuthStrategy",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/core/auth/AuthStrategy.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 54,
+      "classes": [
+        {
+          "name": "AuthStrategy",
+          "startLine": 18,
+          "endLine": 59,
+          "methods": [
+            "auth",
+            "authSSO"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthStrategy",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "authSSO",
+          "callee": "StringUtils.hasText",
+          "lineNumber": 39
+        },
+        {
+          "caller": "authSSO",
+          "callee": "new BusinessException",
+          "lineNumber": 41
+        },
+        {
+          "caller": "authSSO",
+          "callee": "jwtUtils.parseToken",
+          "lineNumber": 43
+        },
+        {
+          "caller": "authSSO",
+          "callee": "Objects.isNull",
+          "lineNumber": 44
+        },
+        {
+          "caller": "authSSO",
+          "callee": "new BusinessException",
+          "lineNumber": 46
+        },
+        {
+          "caller": "authSSO",
+          "callee": "userInfoCacheManager.getUser",
+          "lineNumber": 48
+        },
+        {
+          "caller": "authSSO",
+          "callee": "Objects.isNull",
+          "lineNumber": 49
+        },
+        {
+          "caller": "authSSO",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "authSSO",
+          "callee": "UserHolder.setUserId",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

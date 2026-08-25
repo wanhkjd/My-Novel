@@ -1,0 +1,34 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "doc/sql/README.md":  [
+
+                                                  ],
+                            "doc/sql/shardingsphere-jdbc.sql":  [
+
+                                                                ],
+                            "doc/sql/xxl-job.sql":  [
+
+                                                    ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "doc/sql/README.md",
+                           "language":  "markdown",
+                           "sizeLines":  4,
+                           "fileCategory":  "docs"
+                       },
+                       {
+                           "path":  "doc/sql/shardingsphere-jdbc.sql",
+                           "language":  "sql",
+                           "sizeLines":  170,
+                           "fileCategory":  "data"
+                       },
+                       {
+                           "path":  "doc/sql/xxl-job.sql",
+                           "language":  "sql",
+                           "sizeLines":  189,
+                           "fileCategory":  "data"
+                       }
+                   ]
+}

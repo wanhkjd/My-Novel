@@ -1,0 +1,34 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "README.md":  [
+
+                                          ],
+                            "mvnw.cmd":  [
+
+                                         ],
+                            "pom.xml":  [
+
+                                        ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "README.md",
+                           "language":  "markdown",
+                           "sizeLines":  233,
+                           "fileCategory":  "docs"
+                       },
+                       {
+                           "path":  "mvnw.cmd",
+                           "language":  "batch",
+                           "sizeLines":  188,
+                           "fileCategory":  "script"
+                       },
+                       {
+                           "path":  "pom.xml",
+                           "language":  "xml",
+                           "sizeLines":  284,
+                           "fileCategory":  "config"
+                       }
+                   ]
+}

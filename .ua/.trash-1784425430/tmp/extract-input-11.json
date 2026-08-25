@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserRoleMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserBookshelfMapper.java":  [
+
+                                                                                                          ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentMapper.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentReplyMapper.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserConsumeLogMapper.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserFeedbackMapper.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserInfoMapper.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserPayLogMapper.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dao/mapper/UserReadHistoryMapper.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/dto/AuthorInfoDto.java":  [
+
+                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/dto/UserInfoDto.java":  [
+
+                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/dto/es/EsBookDto.java":  [
+
+                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/AuthorRegisterReqDto.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/BookAddReqDto.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/BookSearchReqDto.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/ChapterAddReqDto.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/ChapterUpdateReqDto.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/UserCommentReqDto.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/UserInfoUptReqDto.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/UserLoginReqDto.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/dto/req/UserRegisterReqDto.java":  [
+
+                                                                                                      ],
+                            "src/main/java/io/github/xxyopen/novel/dto/resp/BookCategoryRespDto.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterAboutRespDto.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterRespDto.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dto/resp/BookCommentRespDto.java":  [
+
+                                                                                                       ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserRoleMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserBookshelfMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentReplyMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserConsumeLogMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserFeedbackMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserInfoMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserPayLogMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/mapper/UserReadHistoryMapper.java",
+                           "language":  "java",
+                           "sizeLines":  16,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/AuthorInfoDto.java",
+                           "language":  "java",
+                           "sizeLines":  28,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/UserInfoDto.java",
+                           "language":  "java",
+                           "sizeLines":  26,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/es/EsBookDto.java",
+                           "language":  "java",
+                           "sizeLines":  130,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/AuthorRegisterReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  58,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/BookAddReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  65,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/BookSearchReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  73,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/ChapterAddReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  46,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/ChapterUpdateReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  40,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/UserCommentReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  28,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/UserInfoUptReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  33,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/UserLoginReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  26,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/req/UserRegisterReqDto.java",
+                           "language":  "java",
+                           "sizeLines":  40,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/resp/BookCategoryRespDto.java",
+                           "language":  "java",
+                           "sizeLines":  29,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterAboutRespDto.java",
+                           "language":  "java",
+                           "sizeLines":  31,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterRespDto.java",
+                           "language":  "java",
+                           "sizeLines":  68,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dto/resp/BookCommentRespDto.java",
+                           "language":  "java",
+                           "sizeLines":  54,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

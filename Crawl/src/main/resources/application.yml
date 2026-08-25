@@ -1,0 +1,132 @@
+#--------------------------通用配置-------------------------
+spring:
+  application:
+    # 应用名
+    name: novel-crawl
+  jackson:
+    generator:
+      # JSON 序列化时数字转字符串返回，避免前端 JS 处理 bigint 主键时精度丢失
+      write-numbers-as-strings: true
+  servlet:
+    multipart:
+      # 上传 TXT 文件的大小限制
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  # 端口号（novel 主项目为 8888，这里错开）
+  port: 8899
+
+--- #---------------------数据库配置---------------------------
+spring:
+  datasource:
+    # 与 novel 主项目使用同一个数据库（按自己环境修改地址/账号/密码）
+    url: jdbc:mysql://192.168.100.129:3306/novel?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true
+    username: root
+    password: 123
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  global-config:
+    # 关闭启动 banner
+    banner: false
+    db-config:
+      # 主键使用数据库自增（novel 库各表均为 AUTO_INCREMENT）
+      id-type: auto
+
+# 日志级别
+logging:
+  level:
+    io.github.xxyopen.novel.crawl: info
+
+--- #---------------------爬虫与导入配置------------------------
+novel-crawl:
+  # 入库时使用的默认作家ID（爬取/导入的书没有真实作家账号，统一挂在该ID下）
+  default-author-id: 0
+  # 默认评分（存库值 = 展示分 x 10，80 代表 8.0 分）
+  default-score: 80
+  # 默认封面地址（TXT 导入或没爬到封面时写入 book_info.pic_url）
+  default-pic-url: /bookpic/default.png
+  # 默认书籍简介
+  default-book-desc: 暂无简介
+  # 章节内容存储格式：html-每段带缩进并以 <br/><br/> 分段（与 novel 前端阅读页兼容）；text-纯文本
+  content-format: html
+  # 是否把爬到的封面图片下载到本地（false 则直接把源站图片地址写入数据库）
+  download-cover: false
+  # 封面下载保存目录
+  cover-save-path: ./covers
+  # 封面入库路径前缀（写入数据库的地址 = 前缀 + 文件名）
+  cover-url-prefix: /bookpic/
+  # TXT 里找不到章节标题时，是否按固定字数自动分章
+  auto-split-when-no-chapter: true
+  # 自动分章时每章的字数
+  auto-split-word-count: 3000
+  # TXT 导入批量入库时每批的章节数
+  batch-size: 100
+
+  # ------------------ 站点爬取规则 ------------------
+  # 每个站点一套规则，提交爬取任务时通过 sourceName 指定；
+  # 也可以配置 url-prefixes，按书籍URL前缀自动匹配站点。
+  # 全部使用 Jsoup 的 CSS 选择器语法，正则用于从选择器命中的文本中二次提取。
+  sources:
+    - name: biquge
+      # 站点说明
+      remark: "笔趣阁模板站示例规则（适配常见 #info / #list / #content 结构的站点，用前先按目标站微调）"
+      # 按URL前缀自动匹配站点规则（可配多个）
+      url-prefixes:
+        - http://www.example-biquge.com
+      # 页面编码，留空自动识别（常见值 UTF-8 / GBK）
+      charset: ""
+      # 请求超时（毫秒）
+      timeout-ms: 15000
+      # 每章抓取间隔（毫秒），限速防封
+      interval-ms: 800
+      # 失败重试次数
+      retry: 3
+      # 请求 User-Agent
+      user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+      # 书籍信息页规则
+      book:
+        # 书名
+        name-selector: "#info h1"
+        # 作者（选择器命中文本后再用正则提取第1个分组）
+        author-selector: "#info p:first-of-type"
+        author-regex: "作\\s*者[：:]?\\s*(.+)"
+        # 简介
+        desc-selector: "#intro"
+        # 封面图片
+        pic-selector: "#fmimg img"
+        pic-attr: src
+        # 连载状态（可留空；命中文本包含 finished-keyword 视为已完结）
+        status-selector: ""
+        finished-keyword: 完结
+      # 目录页规则（默认目录和书籍信息在同一页面）
+      toc:
+        # 目录中章节链接（a 标签）
+        item-selector: "#list dd a"
+        # 跳过目录最前面的 N 条（有的站点目录顶部是"最新章节"重复区，可用它跳过）
+        skip: 0
+        # 按链接地址去重（同一URL保留最后一次出现，自动去掉顶部"最新章节"重复块）
+        dedupe: true
+      # 章节内容页规则
+      chapter:
+        # 章节标题（留空则使用目录里的链接文字）
+        title-selector: ".bookname h1"
+        # 正文容器
+        content-selector: "#content"
+        # 解析前先从正文容器里移除的节点（脚本、广告块、链接等）
+        remove-selectors: "script, style, a, iframe, ins"
+        # 按行过滤广告水印（整行匹配以下任一正则即删除该行）
+        filter-regexes:
+          - "^.*笔趣阁.*$"
+          - "^.*[wW][wW][wW]\\..*$"
+          - "^.*(请记住本书|首发地址|最新章节|无弹窗|告诉您的朋友).*$"
+          - "^.*[0-9]+秒记住.*$"
+          - "^\\s*(手机|移动)(用户)?(请)?(访问|阅读).*$"
+          - "^.*(天才一秒|一秒记住|章节错误|内容防盗).*$"
+        # 章节内容分页站点的"下一页"链接选择器（留空表示章节不分页）
+        next-page-selector: ""
+        # "下一页"链接文字必须包含的关键字（避免误跟"下一章"）
+        next-page-text: 下一页
+        # 单章最多翻页数（防御性上限）
+        max-pages: 20

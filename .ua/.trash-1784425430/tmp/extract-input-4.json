@@ -1,0 +1,187 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/resources/mapper/AuthorCodeMapper.xml":  [
+
+                                                                               ],
+                            "src/main/resources/mapper/AuthorIncomeDetailMapper.xml":  [
+
+                                                                                       ],
+                            "src/main/resources/mapper/AuthorIncomeMapper.xml":  [
+
+                                                                                 ],
+                            "src/main/resources/mapper/AuthorInfoMapper.xml":  [
+
+                                                                               ],
+                            "src/main/resources/mapper/BookCategoryMapper.xml":  [
+
+                                                                                 ],
+                            "src/main/resources/mapper/BookChapterMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/BookCommentCopy1Mapper.xml":  [
+
+                                                                                     ],
+                            "src/main/resources/mapper/BookCommentMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/BookCommentReplyMapper.xml":  [
+
+                                                                                     ],
+                            "src/main/resources/mapper/BookContentMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/BookInfoMapper.xml":  [
+
+                                                                             ],
+                            "src/main/resources/mapper/HomeBookMapper.xml":  [
+
+                                                                             ],
+                            "src/main/resources/mapper/HomeFriendLinkMapper.xml":  [
+
+                                                                                   ],
+                            "src/main/resources/mapper/NewsCategoryMapper.xml":  [
+
+                                                                                 ],
+                            "src/main/resources/mapper/NewsContentMapper.xml":  [
+
+                                                                                ],
+                            "src/main/resources/mapper/NewsInfoMapper.xml":  [
+
+                                                                             ],
+                            "src/main/resources/mapper/PayAlipayMapper.xml":  [
+
+                                                                              ],
+                            "src/main/resources/mapper/PayWechatMapper.xml":  [
+
+                                                                              ],
+                            "src/main/resources/mapper/SysLogMapper.xml":  [
+
+                                                                           ],
+                            "src/main/resources/mapper/SysMenuMapper.xml":  [
+
+                                                                            ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/resources/mapper/AuthorCodeMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/AuthorIncomeDetailMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/AuthorIncomeMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/AuthorInfoMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookCategoryMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookChapterMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookCommentCopy1Mapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookCommentMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookCommentReplyMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookContentMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/BookInfoMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  45,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/HomeBookMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/HomeFriendLinkMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/NewsCategoryMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/NewsContentMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/NewsInfoMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/PayAlipayMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/PayWechatMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/SysLogMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/main/resources/mapper/SysMenuMapper.xml",
+                           "language":  "xml",
+                           "sizeLines":  5,
+                           "fileCategory":  "config"
+                       }
+                   ]
+}

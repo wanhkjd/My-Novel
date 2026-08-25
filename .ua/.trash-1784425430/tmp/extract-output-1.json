@@ -1,0 +1,107 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "mvnw.cmd",
+    "pom.xml"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 233,
+      "nonEmptyLines": 168,
+      "sections": [
+        {
+          "heading": "项目简介",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "项目地址",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "开发环境",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "后端技术选型",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "前端技术选型",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "编码规范",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "包结构",
+          "level": 2,
+          "line": 86
+        },
+        {
+          "heading": "截图",
+          "level": 2,
+          "line": 131
+        },
+        {
+          "heading": "安装步骤",
+          "level": 2,
+          "line": 189
+        },
+        {
+          "heading": "联系我们",
+          "level": 2,
+          "line": 193
+        },
+        {
+          "heading": "问题",
+          "level": 2,
+          "line": 197
+        },
+        {
+          "heading": "为什么有 novel/novel-cloud 学习版？",
+          "level": 3,
+          "line": 199
+        },
+        {
+          "heading": "谁适合使用 novel/novel-cloud 学习版项目？",
+          "level": 3,
+          "line": 216
+        },
+        {
+          "heading": "谁暂时还不适合使用 novel/novel-cloud 学习版项目？",
+          "level": 3,
+          "line": 225
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "files": 246,
+  "fileCategories": {
+    "code": 198,
+    "config": 39,
+    "docs": 3,
+    "data": 5,
+    "script": 1
+  },
+  "nodes": 646,
+  "nodeTypes": {
+    "file": 199,
+    "config": 39,
+    "document": 3,
+    "schema": 5,
+    "class": 185,
+    "function": 130,
+    "table": 41,
+    "endpoint": 44
+  },
+  "edges": 1136,
+  "edgeTypes": {
+    "contains": 315,
+    "defines_schema": 73,
+    "imports": 334,
+    "depends_on": 327,
+    "implements": 6,
+    "configures": 36,
+    "reads_from": 1,
+    "routes": 44
+  },
+  "layers": [
+    "文档与数据脚本",
+    "构建与项目配置",
+    "应用配置",
+    "应用启动",
+    "Web API 层",
+    "业务服务层",
+    "业务支撑管理层",
+    "数据访问层",
+    "DTO 与传输模型",
+    "基础设施与横切能力",
+    "核心公共能力",
+    "定时任务与异步流程",
+    "测试与生成模板"
+  ],
+  "tourSteps": 6,
+  "gitCommitHash": "4710791e1486dd79dcfb8d2c389fd1b9bc1de1f2"
+}

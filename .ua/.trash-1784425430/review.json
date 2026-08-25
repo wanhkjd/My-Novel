@@ -1,0 +1,51 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'file:.mvn/wrapper/maven-wrapper.jar' has no edges (orphan)",
+    "Node 'config:.mvn/wrapper/maven-wrapper.properties' has no edges (orphan)",
+    "Node 'document:README.md' has no edges (orphan)",
+    "Node 'file:doc/es/book.http' has no edges (orphan)",
+    "Node 'document:doc/sql/README.md' has no edges (orphan)",
+    "Node 'schema:doc/sql/novel.sql/__MACOSX/._novel_data.sql' has no edges (orphan)",
+    "Node 'schema:doc/sql/novel.sql/novel_data.sql' has no edges (orphan)",
+    "Node 'schema:doc/sql/shardingsphere-jdbc.sql' has no edges (orphan)",
+    "Node 'document:doc/style/README.md' has no edges (orphan)",
+    "Node 'config:doc/style/intellij-java-google-style.xml' has no edges (orphan)",
+    "Node 'file:mvnw' has no edges (orphan)",
+    "Node 'file:mvnw.cmd' has no edges (orphan)",
+    "Node 'config:src/main/resources/META-INF/additional-spring-configuration-metadata.json' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/controller.java.vm' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/entity.java.vm' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/entity.kt.vm' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/mapper.java.vm' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/mapper.xml.vm' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/service.java.vm' has no edges (orphan)",
+    "Node 'file:src/test/resources/templates/serviceImpl.java.vm' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 646,
+    "totalEdges": 1136,
+    "totalLayers": 13,
+    "tourSteps": 6,
+    "nodeTypes": {
+      "file": 199,
+      "config": 39,
+      "document": 3,
+      "schema": 5,
+      "class": 185,
+      "function": 130,
+      "table": 41,
+      "endpoint": 44
+    },
+    "edgeTypes": {
+      "contains": 315,
+      "defines_schema": 73,
+      "imports": 334,
+      "depends_on": 327,
+      "implements": 6,
+      "configures": 36,
+      "reads_from": 1,
+      "routes": 44
+    }
+  }
+}

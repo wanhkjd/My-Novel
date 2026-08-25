@@ -1,0 +1,23 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "src/test/resources/templates/entity.kt.vm",
+    "src/test/resources/templates/mapper.java.vm",
+    "src/test/resources/templates/mapper.xml.vm",
+    "src/test/resources/templates/service.java.vm",
+    "src/test/resources/templates/serviceImpl.java.vm"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

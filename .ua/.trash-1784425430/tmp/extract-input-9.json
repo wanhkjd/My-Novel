@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookChapter.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookComment.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentCopy1.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentReply.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookContent.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookInfo.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/HomeBook.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/HomeFriendLink.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/NewsCategory.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/NewsContent.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/NewsInfo.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/PayAlipay.java":  [
+
+                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/PayWechat.java":  [
+
+                                                                                                ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/SysLog.java":  [
+
+                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/SysMenu.java":  [
+
+                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/SysRole.java":  [
+
+                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/SysRoleMenu.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/SysUser.java":  [
+
+                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/SysUserRole.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserBookshelf.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserComment.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserCommentReply.java":  [
+
+                                                                                                       ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserConsumeLog.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserFeedback.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/UserInfo.java":  [
+
+                                                                                               ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookChapter.java",
+                           "language":  "java",
+                           "sizeLines":  132,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookComment.java",
+                           "language":  "java",
+                           "sizeLines":  141,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentCopy1.java",
+                           "language":  "java",
+                           "sizeLines":  141,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookCommentReply.java",
+                           "language":  "java",
+                           "sizeLines":  124,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookContent.java",
+                           "language":  "java",
+                           "sizeLines":  93,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookInfo.java",
+                           "language":  "java",
+                           "sizeLines":  309,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/HomeBook.java",
+                           "language":  "java",
+                           "sizeLines":  110,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/HomeFriendLink.java",
+                           "language":  "java",
+                           "sizeLines":  124,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/NewsCategory.java",
+                           "language":  "java",
+                           "sizeLines":  96,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/NewsContent.java",
+                           "language":  "java",
+                           "sizeLines":  99,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/NewsInfo.java",
+                           "language":  "java",
+                           "sizeLines":  127,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/PayAlipay.java",
+                           "language":  "java",
+                           "sizeLines":  197,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/PayWechat.java",
+                           "language":  "java",
+                           "sizeLines":  197,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/SysLog.java",
+                           "language":  "java",
+                           "sizeLines":  152,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/SysMenu.java",
+                           "language":  "java",
+                           "sizeLines":  152,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/SysRole.java",
+                           "language":  "java",
+                           "sizeLines":  110,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/SysRoleMenu.java",
+                           "language":  "java",
+                           "sizeLines":  96,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/SysUser.java",
+                           "language":  "java",
+                           "sizeLines":  180,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/SysUserRole.java",
+                           "language":  "java",
+                           "sizeLines":  96,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserBookshelf.java",
+                           "language":  "java",
+                           "sizeLines":  113,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserComment.java",
+                           "language":  "java",
+                           "sizeLines":  141,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserCommentReply.java",
+                           "language":  "java",
+                           "sizeLines":  124,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserConsumeLog.java",
+                           "language":  "java",
+                           "sizeLines":  155,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserFeedback.java",
+                           "language":  "java",
+                           "sizeLines":  96,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/UserInfo.java",
+                           "language":  "java",
+                           "sizeLines":  180,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

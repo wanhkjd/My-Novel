@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/java/io/github/xxyopen/novel/core/config/XssProperties.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/core/config/XxlJobConfig.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/AmqpConsts.java":  [
+
+                                                                                                    ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/ApiRouterConsts.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/CacheConsts.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/DatabaseConsts.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/EsConsts.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/MessageSenderTypeConsts.java":  [
+
+                                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/core/constant/SystemConfigConsts.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/core/filter/XssFilter.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/core/interceptor/AuthInterceptor.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/core/interceptor/FileInterceptor.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/core/interceptor/FlowLimitInterceptor.java":  [
+
+                                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/core/interceptor/TokenParseInterceptor.java":  [
+
+                                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/core/json/deserializer/GlobalJsonDeserializer.java":  [
+
+                                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/core/json/serializer/UsernameSerializer.java":  [
+
+                                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/core/listener/RabbitQueueListener.java":  [
+
+                                                                                                             ],
+                            "src/main/java/io/github/xxyopen/novel/core/task/BookToEsTask.java":  [
+
+                                                                                                  ],
+                            "src/main/java/io/github/xxyopen/novel/core/util/JwtUtils.java":  [
+
+                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/core/wrapper/XssHttpServletRequestWrapper.java":  [
+
+                                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorCode.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncome.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncomeDetail.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorInfo.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/dao/entity/BookCategory.java":  [
+
+                                                                                                   ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/XssProperties.java",
+                           "language":  "java",
+                           "sizeLines":  15,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/config/XxlJobConfig.java",
+                           "language":  "java",
+                           "sizeLines":  43,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/AmqpConsts.java",
+                           "language":  "java",
+                           "sizeLines":  33,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/ApiRouterConsts.java",
+                           "language":  "java",
+                           "sizeLines":  108,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/CacheConsts.java",
+                           "language":  "java",
+                           "sizeLines":  175,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/DatabaseConsts.java",
+                           "language":  "java",
+                           "sizeLines":  201,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/EsConsts.java",
+                           "language":  "java",
+                           "sizeLines":  116,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/MessageSenderTypeConsts.java",
+                           "language":  "java",
+                           "sizeLines":  25,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/constant/SystemConfigConsts.java",
+                           "language":  "java",
+                           "sizeLines":  45,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/filter/XssFilter.java",
+                           "language":  "java",
+                           "sizeLines":  73,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/interceptor/AuthInterceptor.java",
+                           "language":  "java",
+                           "sizeLines":  89,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/interceptor/FileInterceptor.java",
+                           "language":  "java",
+                           "sizeLines":  44,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/interceptor/FlowLimitInterceptor.java",
+                           "language":  "java",
+                           "sizeLines":  98,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/interceptor/TokenParseInterceptor.java",
+                           "language":  "java",
+                           "sizeLines":  50,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/json/deserializer/GlobalJsonDeserializer.java",
+                           "language":  "java",
+                           "sizeLines":  32,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/json/serializer/UsernameSerializer.java",
+                           "language":  "java",
+                           "sizeLines":  22,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/listener/RabbitQueueListener.java",
+                           "language":  "java",
+                           "sizeLines":  49,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/task/BookToEsTask.java",
+                           "language":  "java",
+                           "sizeLines":  94,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/util/JwtUtils.java",
+                           "language":  "java",
+                           "sizeLines":  78,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/core/wrapper/XssHttpServletRequestWrapper.java",
+                           "language":  "java",
+                           "sizeLines":  43,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorCode.java",
+                           "language":  "java",
+                           "sizeLines":  113,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncome.java",
+                           "language":  "java",
+                           "sizeLines":  184,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorIncomeDetail.java",
+                           "language":  "java",
+                           "sizeLines":  156,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/AuthorInfo.java",
+                           "language":  "java",
+                           "sizeLines":  183,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/dao/entity/BookCategory.java",
+                           "language":  "java",
+                           "sizeLines":  110,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

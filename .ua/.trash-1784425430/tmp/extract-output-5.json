@@ -1,0 +1,30 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "src/main/resources/mapper/SysRoleMapper.xml",
+    "src/main/resources/mapper/SysRoleMenuMapper.xml",
+    "src/main/resources/mapper/SysUserMapper.xml",
+    "src/main/resources/mapper/SysUserRoleMapper.xml",
+    "src/main/resources/mapper/UserBookshelfMapper.xml",
+    "src/main/resources/mapper/UserCommentMapper.xml",
+    "src/main/resources/mapper/UserCommentReplyMapper.xml",
+    "src/main/resources/mapper/UserConsumeLogMapper.xml",
+    "src/main/resources/mapper/UserFeedbackMapper.xml",
+    "src/main/resources/mapper/UserInfoMapper.xml",
+    "src/main/resources/mapper/UserPayLogMapper.xml",
+    "src/main/resources/mapper/UserReadHistoryMapper.xml"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

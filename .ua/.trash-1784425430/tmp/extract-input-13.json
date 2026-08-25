@@ -1,0 +1,232 @@
+{
+    "projectRoot":  "D:\\javaweb\\workspace\\novel\\novel",
+    "batchImportData":  {
+                            "src/main/java/io/github/xxyopen/novel/manager/message/AbstractSysNoticeSender.java":  [
+
+                                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/manager/message/MessageSender.java":  [
+
+                                                                                                         ],
+                            "src/main/java/io/github/xxyopen/novel/manager/message/RegisterMailSender.java":  [
+
+                                                                                                              ],
+                            "src/main/java/io/github/xxyopen/novel/manager/message/SeckillSystemNoticeSender.java":  [
+
+                                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/manager/mq/AmqpMsgManager.java":  [
+
+                                                                                                     ],
+                            "src/main/java/io/github/xxyopen/novel/manager/redis/VerifyCodeManager.java":  [
+
+                                                                                                           ],
+                            "src/main/java/io/github/xxyopen/novel/service/AuthorService.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/service/BookService.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/service/HomeService.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/service/NewsService.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/service/ResourceService.java":  [
+
+                                                                                                   ],
+                            "src/main/java/io/github/xxyopen/novel/service/SearchService.java":  [
+
+                                                                                                 ],
+                            "src/main/java/io/github/xxyopen/novel/service/UserService.java":  [
+
+                                                                                               ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/AuthorServiceImpl.java":  [
+
+                                                                                                          ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/BookServiceImpl.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/DbSearchServiceImpl.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/EsSearchServiceImpl.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/HomeServiceImpl.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/NewsServiceImpl.java":  [
+
+                                                                                                        ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/ResourceServiceImpl.java":  [
+
+                                                                                                            ],
+                            "src/main/java/io/github/xxyopen/novel/service/impl/UserServiceImpl.java":  [
+
+                                                                                                        ],
+                            "src/main/resources/META-INF/additional-spring-configuration-metadata.json":  [
+
+                                                                                                          ],
+                            "src/test/java/io/github/xxyopen/novel/generator/Generator.java":  [
+
+                                                                                               ],
+                            "src/test/resources/templates/controller.java.vm":  [
+
+                                                                                ],
+                            "src/test/resources/templates/entity.java.vm":  [
+
+                                                                            ]
+                        },
+    "batchFiles":  [
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/manager/message/AbstractSysNoticeSender.java",
+                           "language":  "java",
+                           "sizeLines":  26,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/manager/message/MessageSender.java",
+                           "language":  "java",
+                           "sizeLines":  21,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/manager/message/RegisterMailSender.java",
+                           "language":  "java",
+                           "sizeLines":  60,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/manager/message/SeckillSystemNoticeSender.java",
+                           "language":  "java",
+                           "sizeLines":  25,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/manager/mq/AmqpMsgManager.java",
+                           "language":  "java",
+                           "sizeLines":  51,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/manager/redis/VerifyCodeManager.java",
+                           "language":  "java",
+                           "sizeLines":  52,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/AuthorService.java",
+                           "language":  "java",
+                           "sizeLines":  29,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/BookService.java",
+                           "language":  "java",
+                           "sizeLines":  217,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/HomeService.java",
+                           "language":  "java",
+                           "sizeLines":  30,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/NewsService.java",
+                           "language":  "java",
+                           "sizeLines":  30,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/ResourceService.java",
+                           "language":  "java",
+                           "sizeLines":  31,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/SearchService.java",
+                           "language":  "java",
+                           "sizeLines":  24,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/UserService.java",
+                           "language":  "java",
+                           "sizeLines":  76,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/AuthorServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  63,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/BookServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  595,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/DbSearchServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  52,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/EsSearchServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  178,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/HomeServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  37,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/NewsServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  52,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/ResourceServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  78,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/java/io/github/xxyopen/novel/service/impl/UserServiceImpl.java",
+                           "language":  "java",
+                           "sizeLines":  171,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/main/resources/META-INF/additional-spring-configuration-metadata.json",
+                           "language":  "json",
+                           "sizeLines":  75,
+                           "fileCategory":  "config"
+                       },
+                       {
+                           "path":  "src/test/java/io/github/xxyopen/novel/generator/Generator.java",
+                           "language":  "java",
+                           "sizeLines":  95,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/test/resources/templates/controller.java.vm",
+                           "language":  "vm",
+                           "sizeLines":  38,
+                           "fileCategory":  "code"
+                       },
+                       {
+                           "path":  "src/test/resources/templates/entity.java.vm",
+                           "language":  "vm",
+                           "sizeLines":  157,
+                           "fileCategory":  "code"
+                       }
+                   ]
+}

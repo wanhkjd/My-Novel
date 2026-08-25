@@ -1,0 +1,1053 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/SysUserRoleMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SysUserRoleMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SysUserRoleMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserBookshelfMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserBookshelfMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserBookshelfMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserCommentMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserCommentMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserCommentReplyMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserCommentReplyMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserCommentReplyMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserConsumeLogMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserConsumeLogMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserConsumeLogMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserFeedbackMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserFeedbackMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserFeedbackMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserInfoMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserInfoMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserInfoMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserPayLogMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserPayLogMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserPayLogMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dao/mapper/UserReadHistoryMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "UserReadHistoryMapper",
+          "startLine": 14,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserReadHistoryMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/AuthorInfoDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "AuthorInfoDto",
+          "startLine": 15,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "penName",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorInfoDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/UserInfoDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "UserInfoDto",
+          "startLine": 15,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserInfoDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/es/EsBookDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "build",
+          "startLine": 107,
+          "endLine": 128,
+          "params": [
+            "bookInfo"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EsBookDto",
+          "startLine": 16,
+          "endLine": 130,
+          "methods": [
+            "build"
+          ],
+          "properties": [
+            "id",
+            "workDirection",
+            "categoryId",
+            "categoryName",
+            "bookName",
+            "authorId",
+            "authorName",
+            "bookDesc",
+            "score",
+            "bookStatus",
+            "visitCount",
+            "wordCount",
+            "commentCount",
+            "lastChapterId",
+            "lastChapterName",
+            "lastChapterUpdateTime",
+            "isVip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "build",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "EsBookDto",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore())\r\n                .visitCount(bookInfo.getVisitCount())\r\n                .wordCount(bookInfo.getWordCount())\r\n                .workDirection(bookInfo.getWorkDirection())\r\n                .lastChapterId(bookInfo.getLastChapterId())\r\n                .lastChapterName(bookInfo.getLastChapterName())\r\n                .lastChapterUpdateTime(bookInfo.getLastChapterUpdateTime()\r\n                        .toInstant(ZoneOffset.ofHours(8)).toEpochMilli()).build",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore())\r\n                .visitCount(bookInfo.getVisitCount())\r\n                .wordCount(bookInfo.getWordCount())\r\n                .workDirection(bookInfo.getWorkDirection())\r\n                .lastChapterId(bookInfo.getLastChapterId())\r\n                .lastChapterName(bookInfo.getLastChapterName()).lastChapterUpdateTime",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore())\r\n                .visitCount(bookInfo.getVisitCount())\r\n                .wordCount(bookInfo.getWordCount())\r\n                .workDirection(bookInfo.getWorkDirection())\r\n                .lastChapterId(bookInfo.getLastChapterId()).lastChapterName",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore())\r\n                .visitCount(bookInfo.getVisitCount())\r\n                .wordCount(bookInfo.getWordCount())\r\n                .workDirection(bookInfo.getWorkDirection()).lastChapterId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore())\r\n                .visitCount(bookInfo.getVisitCount())\r\n                .wordCount(bookInfo.getWordCount()).workDirection",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore())\r\n                .visitCount(bookInfo.getVisitCount()).wordCount",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip())\r\n                .score(bookInfo.getScore()).visitCount",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount())\r\n                .isVip(bookInfo.getIsVip()).score",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus())\r\n                .commentCount(bookInfo.getCommentCount()).isVip",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName())\r\n                .bookStatus(bookInfo.getBookStatus()).commentCount",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId())\r\n                .authorName(bookInfo.getAuthorName()).bookStatus",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName())\r\n                .authorId(bookInfo.getAuthorId()).authorName",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc())\r\n                .bookName(bookInfo.getBookName()).authorId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName())\r\n                .bookDesc(bookInfo.getBookDesc()).bookName",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId())\r\n                .categoryName(bookInfo.getCategoryName()).bookDesc",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId())\r\n                .categoryId(bookInfo.getCategoryId()).categoryName",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder()\r\n                .id(bookInfo.getId()).categoryId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder().id",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "EsBookDto.builder",
+          "lineNumber": 108
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getCategoryId",
+          "lineNumber": 110
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getCategoryName",
+          "lineNumber": 111
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getBookDesc",
+          "lineNumber": 112
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getBookName",
+          "lineNumber": 113
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getAuthorId",
+          "lineNumber": 114
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getAuthorName",
+          "lineNumber": 115
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getBookStatus",
+          "lineNumber": 116
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getCommentCount",
+          "lineNumber": 117
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getIsVip",
+          "lineNumber": 118
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getScore",
+          "lineNumber": 119
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getVisitCount",
+          "lineNumber": 120
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getWordCount",
+          "lineNumber": 121
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getWorkDirection",
+          "lineNumber": 122
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getLastChapterId",
+          "lineNumber": 123
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getLastChapterName",
+          "lineNumber": 124
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getLastChapterUpdateTime()\r\n                        .toInstant(ZoneOffset.ofHours(8)).toEpochMilli",
+          "lineNumber": 125
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getLastChapterUpdateTime().toInstant",
+          "lineNumber": 125
+        },
+        {
+          "caller": "build",
+          "callee": "bookInfo.getLastChapterUpdateTime",
+          "lineNumber": 125
+        },
+        {
+          "caller": "build",
+          "callee": "ZoneOffset.ofHours",
+          "lineNumber": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/AuthorRegisterReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 49,
+      "classes": [
+        {
+          "name": "AuthorRegisterReqDto",
+          "startLine": 13,
+          "endLine": 58,
+          "methods": [],
+          "properties": [
+            "userId",
+            "penName",
+            "telPhone",
+            "chatAccount",
+            "email",
+            "workDirection"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthorRegisterReqDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/BookAddReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 56,
+      "classes": [
+        {
+          "name": "BookAddReqDto",
+          "startLine": 14,
+          "endLine": 65,
+          "methods": [],
+          "properties": [
+            "workDirection",
+            "categoryId",
+            "categoryName",
+            "picUrl",
+            "bookName",
+            "bookDesc",
+            "isVip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookAddReqDto",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/BookSearchReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 61,
+      "classes": [
+        {
+          "name": "BookSearchReqDto",
+          "startLine": 17,
+          "endLine": 73,
+          "methods": [],
+          "properties": [
+            "keyword",
+            "workDirection",
+            "categoryId",
+            "isVip",
+            "bookStatus",
+            "wordCountMin",
+            "wordCountMax",
+            "updateTimeMin"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookSearchReqDto",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/ChapterAddReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 39,
+      "classes": [
+        {
+          "name": "ChapterAddReqDto",
+          "startLine": 15,
+          "endLine": 46,
+          "methods": [],
+          "properties": [
+            "bookId",
+            "chapterName",
+            "chapterContent",
+            "isVip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChapterAddReqDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/ChapterUpdateReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "ChapterUpdateReqDto",
+          "startLine": 15,
+          "endLine": 40,
+          "methods": [],
+          "properties": [
+            "chapterName",
+            "chapterContent",
+            "isVip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChapterUpdateReqDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserCommentReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "UserCommentReqDto",
+          "startLine": 14,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "userId",
+            "bookId",
+            "commentContent"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserCommentReqDto",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserInfoUptReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "UserInfoUptReqDto",
+          "startLine": 15,
+          "endLine": 33,
+          "methods": [],
+          "properties": [
+            "userId",
+            "nickName",
+            "userPhoto",
+            "userSex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserInfoUptReqDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserLoginReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "UserLoginReqDto",
+          "startLine": 14,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "username",
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserLoginReqDto",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/req/UserRegisterReqDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 33,
+      "classes": [
+        {
+          "name": "UserRegisterReqDto",
+          "startLine": 15,
+          "endLine": 40,
+          "methods": [],
+          "properties": [
+            "username",
+            "password",
+            "velCode",
+            "sessionId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserRegisterReqDto",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookCategoryRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 24,
+      "classes": [
+        {
+          "name": "BookCategoryRespDto",
+          "startLine": 13,
+          "endLine": 29,
+          "methods": [],
+          "properties": [
+            "id",
+            "name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookCategoryRespDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterAboutRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "BookChapterAboutRespDto",
+          "startLine": 13,
+          "endLine": 31,
+          "methods": [],
+          "properties": [
+            "chapterInfo",
+            "chapterTotal",
+            "contentSummary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookChapterAboutRespDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookChapterRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 56,
+      "classes": [
+        {
+          "name": "BookChapterRespDto",
+          "startLine": 18,
+          "endLine": 68,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "bookId",
+            "chapterNum",
+            "chapterName",
+            "chapterWordCount",
+            "chapterUpdateTime",
+            "isVip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookChapterRespDto",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main/java/io/github/xxyopen/novel/dto/resp/BookCommentRespDto.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 40,
+      "classes": [
+        {
+          "name": "BookCommentRespDto",
+          "startLine": 18,
+          "endLine": 54,
+          "methods": [],
+          "properties": [
+            "commentTotal",
+            "comments"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BookCommentRespDto",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}
