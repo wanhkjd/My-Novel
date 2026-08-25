@@ -9,7 +9,7 @@
         <version>3.3.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>io.github.xxyopen</groupId>
+    <groupId>novel</groupId>
     <artifactId>novel</artifactId>
     <version>3.5.1-SNAPSHOT</version>
     <name>novel</name>

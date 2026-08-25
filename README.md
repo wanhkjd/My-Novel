@@ -86,11 +86,11 @@ novel 是一套基于时下**最新** Java 技术栈 Spring Boot 3 + Vue 3 开�
 ## 包结构
 
 ```
-io
- +- github
-     +- xxyopen   
-        +- novel
-            +- NovelApplication.java -- 项目启动类
++- github
+    +- xxyopen   
+       +- novel
+- novel
+    +- NovelApplication.java -- 项目启动类
             |
             +- core -- 项目核心模块，包括各种工具、配置和常量等
             |   +- common -- 业务无关的通用模块
