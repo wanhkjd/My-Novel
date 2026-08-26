@@ -12,6 +12,9 @@ import lombok.Data;
 @Data
 public class PageReqDto {
 
+    private static final int MIN_PAGE_NUM = 1;
+    private static final int MAX_PAGE_SIZE = 100;
+
     /**
      * 请求页码，默认第 1 页
      */
@@ -41,5 +44,13 @@ public class PageReqDto {
      */
     @Parameter(description = "排序方式")
     private String order;
+
+    public void setPageNum(int pageNum) {
+        this.pageNum = Math.max(MIN_PAGE_NUM, pageNum);
+    }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = Math.min(MAX_PAGE_SIZE, Math.max(MIN_PAGE_NUM, pageSize));
+    }
 
 }

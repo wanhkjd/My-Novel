@@ -3,6 +3,8 @@ package novel.dto.req;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.Data;
 
 /**
@@ -19,6 +21,8 @@ public class BookAddReqDto {
      */
     @Schema(description = "作品方向;0-男频 1-女频", required = true)
     @NotNull
+    @Min(0)
+    @Max(1)
     private Integer workDirection;
 
     /**
@@ -61,5 +65,7 @@ public class BookAddReqDto {
      */
     @Schema(description = "是否收费;1-收费 0-免费", required = true)
     @NotNull
+    @Min(0)
+    @Max(1)
     private Integer isVip;
 }

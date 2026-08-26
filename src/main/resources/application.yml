@@ -242,6 +242,10 @@ logbook:
 #      path: D:\javaweb\workspace\novel\novel\uploads
 #---------------------自定义配置----------------------------
 novel:
+  website:
+    name: Novel
+    link: http://localhost:1024
+    support-email: support@novel.local
   # 跨域配置
   cors:
     # 允许跨域的域名（根据实际情况添加）

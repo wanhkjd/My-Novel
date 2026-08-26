@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import novel.core.common.req.PageReqDto;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -15,6 +16,7 @@ import java.util.Date;
  * @date 2022/5/16
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class BookSearchReqDto extends PageReqDto {
 
     /**

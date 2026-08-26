@@ -1,6 +1,7 @@
 package novel.manager.message;
 
 import novel.core.config.MailProperties;
+import novel.core.config.WebsiteProperties;
 import novel.core.constant.MessageSenderTypeConsts;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -16,23 +17,27 @@ import java.util.stream.Stream;
  * @date 2023/3/24
  */
 @Component(value = MessageSenderTypeConsts.REGISTER_MAIL_SENDER)
-@EnableConfigurationProperties(MailProperties.class)
+@EnableConfigurationProperties({MailProperties.class, WebsiteProperties.class})
 public class RegisterMailSender extends AbstractMailSender {
 
-    public RegisterMailSender(MailProperties mailProperties, JavaMailSender mailSender) {
+    private final WebsiteProperties websiteProperties;
+
+    public RegisterMailSender(MailProperties mailProperties,
+        JavaMailSender mailSender, WebsiteProperties websiteProperties) {
         super(mailProperties, mailSender);
+        this.websiteProperties = websiteProperties;
     }
 
     @Override
     protected String getTitleTemplate() {
-        return "欢迎来到小说精品屋";
+        return "欢迎来到" + websiteProperties.name();
     }
 
     @Override
     protected String getContentTemplate() {
         return """
                 <div>
-                    感谢你注册小说精品屋！你的账户现在处于活动状态。
+                感谢你注册{}！你的账户现在处于活动状态。
                 </div>
                 <ul>
                     <li> 你的账户电子邮件：{}
@@ -50,11 +55,9 @@ public class RegisterMailSender extends AbstractMailSender {
 
     @Override
     protected String resolveContent(String content, Object... args) {
-        // TODO 去数据库/配置文件中查询网站配置
-        String websiteLink = "https://www.xxyopen.com";
-        String websiteEmail = "xxyopen@foxmail.com";
         return super.resolveContent(content,
-            Stream.of(args, new Object[]{websiteLink, websiteEmail}).flatMap(Arrays::stream).toArray());
+            Stream.of(args, new Object[]{websiteProperties.name(), websiteProperties.link(),
+                websiteProperties.supportEmail()}).flatMap(Arrays::stream).toArray());
     }
 
 }

@@ -6,7 +6,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import novel.core.annotation.Key;
 import novel.core.annotation.Lock;
 import novel.core.auth.UserHolder;
+import novel.core.common.constant.CommonConsts;
 import novel.core.common.constant.ErrorCodeEnum;
+import novel.core.common.exception.BusinessException;
 import novel.core.common.req.PageReqDto;
 import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
@@ -258,6 +260,8 @@ public class BookServiceImpl implements BookService {
         // 查询评论总数
         QueryWrapper<BookComment> commentCountQueryWrapper = new QueryWrapper<>();
         commentCountQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID, bookId);
+        commentCountQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_AUDIT_STATUS,
+            CommonConsts.YES);
         Long commentTotal = bookCommentMapper.selectCount(commentCountQueryWrapper);
         BookCommentRespDto bookCommentRespDto = BookCommentRespDto.builder()
             .commentTotal(commentTotal).build();
@@ -266,6 +270,7 @@ public class BookServiceImpl implements BookService {
             // 查询最新的评论列表
             QueryWrapper<BookComment> commentQueryWrapper = new QueryWrapper<>();
             commentQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID, bookId)
+                .eq(DatabaseConsts.BookCommentTable.COLUMN_AUDIT_STATUS, CommonConsts.YES)
                 .orderByDesc(DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName())
                 .last(DatabaseConsts.SqlEnum.LIMIT_5.getSql());
             List<BookComment> bookComments = bookCommentMapper.selectList(commentQueryWrapper);
@@ -306,6 +311,7 @@ public class BookServiceImpl implements BookService {
             .eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID, userId);
         BookComment bookComment = new BookComment();
         bookComment.setCommentContent(content);
+        bookComment.setAuditStatus(CommonConsts.NO);
         bookCommentMapper.update(bookComment, queryWrapper);
         return RestResp.ok();
     }
@@ -317,6 +323,13 @@ public class BookServiceImpl implements BookService {
         queryWrapper.eq(DatabaseConsts.BookTable.COLUMN_BOOK_NAME, dto.getBookName());
         if (bookInfoMapper.selectCount(queryWrapper) > 0) {
             return RestResp.fail(ErrorCodeEnum.AUTHOR_BOOK_NAME_EXIST);
+        }
+        boolean categoryValid = bookCategoryCacheManager.listCategory(dto.getWorkDirection())
+            .stream()
+            .anyMatch(category -> Objects.equals(category.getId(), dto.getCategoryId())
+                && Objects.equals(category.getName(), dto.getCategoryName()));
+        if (!categoryValid) {
+            return RestResp.fail(ErrorCodeEnum.BOOK_CATEGORY_INVALID);
         }
         BookInfo bookInfo = new BookInfo();
         // 设置作家信息
@@ -417,6 +430,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public RestResp<PageRespDto<BookChapterRespDto>> listBookChapters(Long bookId, PageReqDto dto) {
+        BookInfo bookInfo = bookInfoMapper.selectById(bookId);
+        if (Objects.isNull(bookInfo)
+            || !Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
         IPage<BookChapter> page = new Page<>();
         page.setCurrent(dto.getPageNum());
         page.setSize(dto.getPageSize());
@@ -455,10 +473,12 @@ public class BookServiceImpl implements BookService {
             commentRespDtoList = comments.stream().map(v -> {
                 BookInfo bookInfo = bookInfoMap.get(v.getBookId());
                 return UserCommentRespDto.builder()
+                    .id(v.getId())
                     .commentContent(v.getCommentContent())
                     .commentBook(bookInfo != null ? bookInfo.getBookName() : null)
                     .commentBookPic(bookInfo != null ? bookInfo.getPicUrl() : null)
                     .commentTime(v.getCreateTime())
+                    .auditStatus(v.getAuditStatus())
                     .build();
             }).toList();
         }
@@ -474,6 +494,9 @@ public class BookServiceImpl implements BookService {
         BookChapterRespDto chapter = bookChapterCacheManager.getChapter(chapterId);
         // 2.查询小说信息
         BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(chapter.getBookId());
+        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
         // 3.删除章节信息
         bookChapterMapper.deleteById(chapterId);
         // 4.删除章节内容
@@ -519,6 +542,10 @@ public class BookServiceImpl implements BookService {
     @Override
     public RestResp<ChapterContentRespDto> getBookChapter(Long chapterId) {
         BookChapterRespDto chapter = bookChapterCacheManager.getChapter(chapterId);
+        BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(chapter.getBookId());
+        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
         String bookContent = bookContentCacheManager.getBookContent(chapterId);
         return RestResp.ok(
             ChapterContentRespDto.builder()
@@ -535,6 +562,9 @@ public class BookServiceImpl implements BookService {
         BookChapterRespDto chapter = bookChapterCacheManager.getChapter(chapterId);
         // 2.查询小说信息
         BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(chapter.getBookId());
+        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
         // 3.更新章节信息
         BookChapter newChapter = new BookChapter();
         newChapter.setId(chapterId);
