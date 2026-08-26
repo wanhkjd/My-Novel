@@ -1,9 +1,13 @@
 package novel.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import novel.core.common.constant.CommonConsts;
 import novel.core.common.constant.ErrorCodeEnum;
 import novel.core.common.exception.BusinessException;
+import novel.core.common.req.PageReqDto;
+import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
 import novel.core.constant.DatabaseConsts;
 import novel.core.constant.SystemConfigConsts;
@@ -11,6 +15,8 @@ import novel.core.util.JwtUtils;
 import novel.dao.entity.UserBookshelf;
 import novel.dao.entity.UserFeedback;
 import novel.dao.entity.UserInfo;
+import novel.dao.entity.BookInfo;
+import novel.dao.mapper.BookInfoMapper;
 import novel.dao.mapper.UserBookshelfMapper;
 import novel.dao.mapper.UserFeedbackMapper;
 import novel.dao.mapper.UserInfoMapper;
@@ -20,13 +26,20 @@ import novel.dto.req.UserRegisterReqDto;
 import novel.dto.resp.UserInfoRespDto;
 import novel.dto.resp.UserLoginRespDto;
 import novel.dto.resp.UserRegisterRespDto;
+import novel.dto.resp.UserFeedbackRespDto;
+import novel.dto.resp.BookInfoRespDto;
 import novel.manager.redis.VerifyCodeManager;
 import novel.service.UserService;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 /**
@@ -46,6 +59,8 @@ public class UserServiceImpl implements UserService {
     private final UserFeedbackMapper userFeedbackMapper;
 
     private final UserBookshelfMapper userBookshelfMapper;
+
+    private final BookInfoMapper bookInfoMapper;
 
     private final JwtUtils jwtUtils;
 
@@ -128,6 +143,25 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public RestResp<PageRespDto<UserFeedbackRespDto>> listFeedbacks(Long userId,
+        PageReqDto pageReqDto) {
+        Page<UserFeedback> page = new Page<>(pageReqDto.getPageNum(), pageReqDto.getPageSize());
+        QueryWrapper<UserFeedback> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DatabaseConsts.UserFeedBackTable.COLUMN_USER_ID, userId)
+            .orderByDesc(DatabaseConsts.CommonColumnEnum.UPDATE_TIME.getName())
+            .orderByDesc(DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName());
+        IPage<UserFeedback> feedbackPage = userFeedbackMapper.selectPage(page, queryWrapper);
+        return RestResp.ok(PageRespDto.of(pageReqDto.getPageNum(), pageReqDto.getPageSize(),
+            feedbackPage.getTotal(), feedbackPage.getRecords().stream()
+                .map(feedback -> UserFeedbackRespDto.builder()
+                    .id(feedback.getId())
+                    .content(feedback.getContent())
+                    .createTime(feedback.getCreateTime())
+                    .build())
+                .toList()));
+    }
+
+    @Override
     public RestResp<Void> updateUserInfo(UserInfoUptReqDto dto) {
         UserInfo userInfo = new UserInfo();
         userInfo.setId(dto.getUserId());
@@ -157,6 +191,74 @@ public class UserServiceImpl implements UserService {
                 ? CommonConsts.YES
                 : CommonConsts.NO
         );
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public RestResp<Void> addBookshelf(Long userId, Long bookId) {
+        if (Objects.isNull(bookInfoMapper.selectById(bookId))) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
+        QueryWrapper<UserBookshelf> shelfQueryWrapper = new QueryWrapper<>();
+        shelfQueryWrapper.eq(DatabaseConsts.UserBookshelfTable.COLUMN_USER_ID, userId)
+            .eq(DatabaseConsts.UserBookshelfTable.COLUMN_BOOK_ID, bookId);
+        if (userBookshelfMapper.selectCount(shelfQueryWrapper) > 0) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_ALREADY_IN_SHELF);
+        }
+        LocalDateTime now = LocalDateTime.now();
+        UserBookshelf userBookshelf = new UserBookshelf();
+        userBookshelf.setUserId(userId);
+        userBookshelf.setBookId(bookId);
+        userBookshelf.setCreateTime(now);
+        userBookshelf.setUpdateTime(now);
+        userBookshelfMapper.insert(userBookshelf);
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<PageRespDto<BookInfoRespDto>> listBookshelf(Long userId,
+        PageReqDto pageReqDto) {
+        Page<UserBookshelf> page = new Page<>(pageReqDto.getPageNum(), pageReqDto.getPageSize());
+        QueryWrapper<UserBookshelf> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DatabaseConsts.UserBookshelfTable.COLUMN_USER_ID, userId)
+            .orderByDesc(DatabaseConsts.CommonColumnEnum.UPDATE_TIME.getName());
+        IPage<UserBookshelf> bookshelfPage = userBookshelfMapper.selectPage(page, queryWrapper);
+        List<UserBookshelf> bookshelfList = bookshelfPage.getRecords();
+        if (bookshelfList.isEmpty()) {
+            return RestResp.ok(PageRespDto.of(pageReqDto.getPageNum(), pageReqDto.getPageSize(),
+                0L, List.of()));
+        }
+        List<Long> bookIds = bookshelfList.stream().map(UserBookshelf::getBookId).toList();
+        Map<Long, BookInfo> bookMap = bookInfoMapper.selectBatchIds(bookIds).stream()
+            .collect(Collectors.toMap(BookInfo::getId, Function.identity()));
+        List<BookInfoRespDto> books = bookshelfList.stream()
+            .filter(shelf -> bookMap.containsKey(shelf.getBookId()))
+            .map(shelf -> {
+                BookInfo book = bookMap.get(shelf.getBookId());
+                return BookInfoRespDto.builder()
+                    .id(book.getId())
+                    .bookName(book.getBookName())
+                    .picUrl(book.getPicUrl())
+                    .authorName(book.getAuthorName())
+                    .categoryName(book.getCategoryName())
+                    .wordCount(book.getWordCount())
+                    .visitCount(book.getVisitCount())
+                    .lastChapterName(book.getLastChapterName())
+                    .updateTime(book.getUpdateTime())
+                    .build();
+            })
+            .toList();
+        return RestResp.ok(PageRespDto.of(pageReqDto.getPageNum(), pageReqDto.getPageSize(),
+            bookshelfPage.getTotal(), books));
+    }
+
+    @Override
+    public RestResp<Void> removeBookshelf(Long userId, Long bookId) {
+        QueryWrapper<UserBookshelf> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DatabaseConsts.UserBookshelfTable.COLUMN_USER_ID, userId)
+            .eq(DatabaseConsts.UserBookshelfTable.COLUMN_BOOK_ID, bookId);
+        userBookshelfMapper.delete(queryWrapper);
+        return RestResp.ok();
     }
 
     @Override

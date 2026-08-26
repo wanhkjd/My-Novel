@@ -105,6 +105,11 @@ public enum ErrorCodeEnum {
     BOOK_NOT_FOUND("A2002", "小说ID不存在"),
 
     /**
+     * 小说已在书架
+     */
+    BOOK_ALREADY_IN_SHELF("A2003", "小说已在书架"),
+
+    /**
      * 作家发布异常
      */
     AUTHOR_PUBLISH("A3000", "作家发布异常"),
@@ -113,6 +118,11 @@ public enum ErrorCodeEnum {
      * 小说名已存在
      */
     AUTHOR_BOOK_NAME_EXIST("A3001", "小说名已存在"),
+
+    /**
+     * 小说分类无效
+     */
+    BOOK_CATEGORY_INVALID("A3002", "小说分类无效"),
 
     /**
      * 用户上传文件异常

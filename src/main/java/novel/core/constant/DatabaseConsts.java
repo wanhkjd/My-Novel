@@ -143,6 +143,8 @@ public class DatabaseConsts {
 
         public static final String COLUMN_USER_ID = "user_id";
 
+        public static final String COLUMN_AUDIT_STATUS = "audit_status";
+
     }
 
     /**

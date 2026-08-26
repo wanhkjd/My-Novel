@@ -1,5 +1,7 @@
 package novel.service;
 
+import novel.core.common.req.PageReqDto;
+import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
 import novel.dto.req.UserInfoUptReqDto;
 import novel.dto.req.UserLoginReqDto;
@@ -7,6 +9,8 @@ import novel.dto.req.UserRegisterReqDto;
 import novel.dto.resp.UserInfoRespDto;
 import novel.dto.resp.UserLoginRespDto;
 import novel.dto.resp.UserRegisterRespDto;
+import novel.dto.resp.BookInfoRespDto;
+import novel.dto.resp.UserFeedbackRespDto;
 
 /**
  * 会员模块 服务类
@@ -42,6 +46,11 @@ public interface UserService {
     RestResp<Void> saveFeedback(Long userId, String content);
 
     /**
+     * 分页查询当前用户的反馈
+     */
+    RestResp<PageRespDto<UserFeedbackRespDto>> listFeedbacks(Long userId, PageReqDto pageReqDto);
+
+    /**
      * 用户信息修改
      *
      * @param dto 用户信息
@@ -66,6 +75,21 @@ public interface UserService {
      * @return 0-不在书架 1-已在书架
      */
     RestResp<Integer> getBookshelfStatus(Long userId, String bookId);
+
+    /**
+     * 添加小说到当前用户书架
+     */
+    RestResp<Void> addBookshelf(Long userId, Long bookId);
+
+    /**
+     * 分页查询当前用户书架
+     */
+    RestResp<PageRespDto<BookInfoRespDto>> listBookshelf(Long userId, PageReqDto pageReqDto);
+
+    /**
+     * 从当前用户书架移除小说
+     */
+    RestResp<Void> removeBookshelf(Long userId, Long bookId);
 
     /**
      * 用户信息查询

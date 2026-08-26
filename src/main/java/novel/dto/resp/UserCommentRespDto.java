@@ -17,6 +17,9 @@ import java.time.LocalDateTime;
 @Builder
 public class UserCommentRespDto {
 
+    @Schema(description = "评论ID")
+    private Long id;
+
     @Schema(description = "评论内容")
     private String commentContent;
 
@@ -29,5 +32,8 @@ public class UserCommentRespDto {
     @Schema(description = "评论时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime commentTime;
+
+    @Schema(description = "审核状态;0-待审核 1-审核通过 2-审核不通过")
+    private Integer auditStatus;
 
 }

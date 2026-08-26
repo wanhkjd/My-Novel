@@ -11,9 +11,11 @@ import novel.dto.req.UserInfoUptReqDto;
 import novel.dto.req.UserLoginReqDto;
 import novel.dto.req.UserRegisterReqDto;
 import novel.dto.resp.UserCommentRespDto;
+import novel.dto.resp.UserFeedbackRespDto;
 import novel.dto.resp.UserInfoRespDto;
 import novel.dto.resp.UserLoginRespDto;
 import novel.dto.resp.UserRegisterRespDto;
+import novel.dto.resp.BookInfoRespDto;
 import novel.service.BookService;
 import novel.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -21,6 +23,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.hibernate.validator.constraints.Length;
+import org.springframework.validation.annotation.Validated;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +38,7 @@ import org.springframework.web.bind.annotation.*;
 @SecurityRequirement(name = SystemConfigConsts.HTTP_AUTH_HEADER_NAME)
 @RestController
 @RequestMapping(ApiRouterConsts.API_FRONT_USER_URL_PREFIX)
+@Validated
 @RequiredArgsConstructor
 public class UserController {
 
@@ -83,8 +88,19 @@ public class UserController {
      */
     @Operation(summary = "用户反馈提交接口")
     @PostMapping("feedback")
-    public RestResp<Void> submitFeedback(@RequestBody String content) {
+    public RestResp<Void> submitFeedback(
+        @Length(min = 5, max = 512, message = "反馈内容长度必须在 5 到 512 个字符之间")
+        @RequestBody String content) {
         return userService.saveFeedback(UserHolder.getUserId(), content);
+    }
+
+    /**
+     * 分页查询用户反馈接口
+     */
+    @Operation(summary = "查询会员反馈列表接口")
+    @GetMapping("feedbacks")
+    public RestResp<PageRespDto<UserFeedbackRespDto>> listFeedbacks(PageReqDto pageReqDto) {
+        return userService.listFeedbacks(UserHolder.getUserId(), pageReqDto);
     }
 
     /**
@@ -132,6 +148,35 @@ public class UserController {
     @GetMapping("bookshelf_status")
     public RestResp<Integer> getBookshelfStatus(@Parameter(description = "小说ID") String bookId) {
         return userService.getBookshelfStatus(UserHolder.getUserId(), bookId);
+    }
+
+    /**
+     * 添加小说到书架接口
+     */
+    @Operation(summary = "添加小说到书架接口")
+    @PostMapping("bookshelf/{bookId}")
+    public RestResp<Void> addBookshelf(
+        @Parameter(description = "小说ID") @PathVariable Long bookId) {
+        return userService.addBookshelf(UserHolder.getUserId(), bookId);
+    }
+
+    /**
+     * 分页查询书架接口
+     */
+    @Operation(summary = "查询会员书架列表接口")
+    @GetMapping("bookshelf")
+    public RestResp<PageRespDto<BookInfoRespDto>> listBookshelf(PageReqDto pageReqDto) {
+        return userService.listBookshelf(UserHolder.getUserId(), pageReqDto);
+    }
+
+    /**
+     * 从书架移除小说接口
+     */
+    @Operation(summary = "从书架移除小说接口")
+    @DeleteMapping("bookshelf/{bookId}")
+    public RestResp<Void> removeBookshelf(
+        @Parameter(description = "小说ID") @PathVariable Long bookId) {
+        return userService.removeBookshelf(UserHolder.getUserId(), bookId);
     }
 
     /**
