@@ -1,0 +1,77 @@
+#=============================================================
+#                 Novel 开发环境配置 (application-dev.yml)
+# 采用苍穹外卖 (sky-take-out) 风格：集中配置 novel 下所有开发参数
+#=============================================================
+
+novel:
+  # 数据源配置
+  datasource:
+    host: 192.168.100.129
+    port: 3306
+    database: novel
+    username: root
+    password: 123
+
+  # Redis 缓存配置
+  redis:
+    host: 192.168.100.129
+    port: 6379
+    password: 123321
+    database: 0
+
+  # Spring AI (大模型) 配置
+  ai:
+    api-key: sk-rrrupturhdofbiqzjutduuiceecpvfqlnvmgcyiaipbdikoi
+    base-url: https://api.siliconflow.cn
+    chat:
+      model: deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+
+  # 邮件服务配置
+  mail:
+    host: smtp.163.com
+    port: 465
+    username: xxx@163.com
+    password: xxx
+    nickname: xxyopen
+
+  # Elasticsearch 搜索引擎配置
+  elasticsearch:
+    enabled: false
+    uris: https://my-deployment-ce7ca3.es.us-central1.gcp.cloud.es.io:9243
+    username: elastic
+    password: qTjgYVKSuExX6tWAsDuvuvwl
+
+  # RabbitMQ 消息队列配置
+  amqp:
+    enabled: false
+  rabbitmq:
+    addresses: amqp://guest:guest@47.106.243.172
+    virtual-host: novel
+
+  # XXL-JOB 任务调度配置
+  xxl-job:
+    enabled: false
+    admin:
+      addresses: http://127.0.0.1:8080/xxl-job-admin
+    executor:
+      appname: xxl-job-executor-novel
+      logpath: logs/xxl-job/jobhandler
+    accessToken: 123
+
+  # Swagger / SpringDoc 接口文档（开发环境开启）
+  springdoc:
+    enabled: true
+
+  # 文件上传本地路径
+  file:
+    upload:
+      path: ./uploads
+
+  # JWT 密钥
+  jwt:
+    secret: E66559580A1ADF48CDD928516062F12E
+
+# 日志输出配置
+logging:
+  level:
+    novel: debug

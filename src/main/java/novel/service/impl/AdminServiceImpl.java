@@ -9,6 +9,7 @@ import novel.core.common.req.PageReqDto;
 import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
 import novel.core.constant.SystemConfigConsts;
+import novel.core.util.BCryptPasswordHelper;
 import novel.core.util.JwtUtils;
 import novel.dao.entity.AuthorInfo;
 import novel.dao.entity.BookCategory;
@@ -86,6 +87,8 @@ public class AdminServiceImpl implements AdminService {
 
     private final JwtUtils jwtUtils;
 
+    private BCryptPasswordHelper bCryptPasswordHelper;
+
     @Override
     public RestResp<AdminLoginRespDto> login(AdminLoginReqDto dto) {
         QueryWrapper<SysUser> queryWrapper = new QueryWrapper<>();
@@ -94,8 +97,11 @@ public class AdminServiceImpl implements AdminService {
         if (Objects.isNull(sysUser)) {
             throw new BusinessException(ErrorCodeEnum.USER_ACCOUNT_NOT_EXIST);
         }
-        String password = DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8));
-        if (!Objects.equals(sysUser.getPassword(), password)) {
+//        String password = DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8));
+//        if (!Objects.equals(sysUser.getPassword(), password)) {
+//            throw new BusinessException(ErrorCodeEnum.USER_PASSWORD_ERROR);
+//        }
+        if (!bCryptPasswordHelper.matches(dto.getPassword(), sysUser.getPassword())) {
             throw new BusinessException(ErrorCodeEnum.USER_PASSWORD_ERROR);
         }
         if (Objects.equals(sysUser.getStatus(), 0)) {

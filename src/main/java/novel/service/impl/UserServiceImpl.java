@@ -11,6 +11,7 @@ import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
 import novel.core.constant.DatabaseConsts;
 import novel.core.constant.SystemConfigConsts;
+import novel.core.util.BCryptPasswordHelper;
 import novel.core.util.JwtUtils;
 import novel.dao.entity.UserBookshelf;
 import novel.dao.entity.UserFeedback;
@@ -38,6 +39,7 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
@@ -64,8 +66,11 @@ public class UserServiceImpl implements UserService {
 
     private final JwtUtils jwtUtils;
 
+    private final BCryptPasswordHelper bCryptPasswordHelper;
+
     @Override
     public RestResp<UserRegisterRespDto> register(UserRegisterReqDto dto) {
+
         // 校验图形验证码是否正确
         if (!verifyCodeManager.imgVerifyCodeOk(dto.getSessionId(), dto.getVelCode())) {
             // 图形验证码校验失败
@@ -84,12 +89,14 @@ public class UserServiceImpl implements UserService {
         // 注册成功，保存用户信息
         UserInfo userInfo = new UserInfo();
         userInfo.setPassword(
-            DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8)));
+            //DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8)
+            bCryptPasswordHelper.encode((dto.getPassword()))
+                );
         userInfo.setUsername(dto.getUsername());
         userInfo.setNickName(dto.getUsername());
         userInfo.setCreateTime(LocalDateTime.now());
         userInfo.setUpdateTime(LocalDateTime.now());
-        userInfo.setSalt("0");
+        userInfo.setSalt("");
         userInfoMapper.insert(userInfo);
 
         // 删除验证码
@@ -110,7 +117,7 @@ public class UserServiceImpl implements UserService {
         // 查询用户信息
         QueryWrapper<UserInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(DatabaseConsts.UserInfoTable.COLUMN_USERNAME, dto.getUsername())
-            .last(DatabaseConsts.SqlEnum.LIMIT_1.getSql());
+                .last(DatabaseConsts.SqlEnum.LIMIT_1.getSql());
         UserInfo userInfo = userInfoMapper.selectOne(queryWrapper);
         if (Objects.isNull(userInfo)) {
             // 用户不存在
@@ -118,11 +125,18 @@ public class UserServiceImpl implements UserService {
         }
 
         // 判断密码是否正确
-        if (!Objects.equals(userInfo.getPassword()
-            , DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8)))) {
-            // 密码错误
+
+        // if (!Objects.equals(userInfo.getPassword(),
+        //       DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8)))
+        //     {
+        // 密码错误
+        //    throw new BusinessException(ErrorCodeEnum.USER_PASSWORD_ERROR);
+
+        boolean isPass = bCryptPasswordHelper.matches(dto.getPassword(), userInfo.getPassword());
+        if (!isPass) {
             throw new BusinessException(ErrorCodeEnum.USER_PASSWORD_ERROR);
         }
+
 
         // 登录成功，生成JWT并返回
         return RestResp.ok(UserLoginRespDto.builder()

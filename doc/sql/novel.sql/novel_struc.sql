@@ -417,7 +417,7 @@ DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL COMMENT '用户名',
-  `password` varchar(50) NOT NULL COMMENT '密码',
+  `password` varchar(100) NOT NULL COMMENT '密码',
   `name` varchar(100) DEFAULT NULL COMMENT '真实姓名',
   `sex` tinyint(3) unsigned DEFAULT NULL COMMENT '性别;0-男 1-女',
   `birth` datetime DEFAULT NULL COMMENT '出身日期',

@@ -1,0 +1,78 @@
+#=============================================================
+#                 Novel 生产环境配置 (application-prod.yml)
+# 采用苍穹外卖 (sky-take-out) 风格：集中配置 novel 下所有生产参数
+#=============================================================
+
+novel:
+  # 生产环境数据源配置
+  datasource:
+    host: ${DB_HOST:127.0.0.1}
+    port: ${DB_PORT:3306}
+    database: ${DB_NAME:novel}
+    username: ${DB_USERNAME:novel_prod_user}
+    password: ${DB_PASSWORD:your_prod_password}
+
+  # 生产环境 Redis 配置
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:your_prod_redis_password}
+    database: ${REDIS_DATABASE:0}
+
+  # 生产环境 Spring AI 配置
+  ai:
+    api-key: ${AI_API_KEY:your_prod_api_key}
+    base-url: ${AI_BASE_URL:https://api.siliconflow.cn}
+    chat:
+      model: ${AI_MODEL:deepseek-ai/DeepSeek-R1-0528-Qwen3-8B}
+
+  # 生产环境邮件配置
+  mail:
+    host: ${MAIL_HOST:smtp.163.com}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:your_prod_email@163.com}
+    password: ${MAIL_PASSWORD:your_prod_auth_code}
+    nickname: Novel小说网
+
+  # 生产环境 Elasticsearch 配置
+  elasticsearch:
+    enabled: ${ES_ENABLED:false}
+    uris: ${ES_URIS:http://127.0.0.1:9200}
+    username: ${ES_USERNAME:elastic}
+    password: ${ES_PASSWORD:}
+
+  # 生产环境 RabbitMQ 消息队列配置
+  amqp:
+    enabled: ${AMQP_ENABLED:false}
+  rabbitmq:
+    addresses: ${RABBITMQ_ADDRESSES:amqp://guest:guest@127.0.0.1:5672}
+    virtual-host: ${RABBITMQ_VIRTUAL_HOST:novel}
+
+  # 生产环境 XXL-JOB 配置
+  xxl-job:
+    enabled: ${XXL_JOB_ENABLED:false}
+    admin:
+      addresses: ${XXL_JOB_ADMIN_ADDRESSES:http://127.0.0.1:8080/xxl-job-admin}
+    executor:
+      appname: ${XXL_JOB_EXECUTOR_APPNAME:xxl-job-executor-novel}
+      logpath: ${XXL_JOB_EXECUTOR_LOGPATH:/data/novel/logs/xxl-job}
+    accessToken: ${XXL_JOB_ACCESS_TOKEN:your_xxl_job_token}
+
+  # 生产环境禁用接口文档（提升安全性）
+  springdoc:
+    enabled: false
+
+  # 生产环境 Linux 文件存储挂载路径
+  file:
+    upload:
+      path: ${NOVEL_FILE_UPLOAD_PATH:/data/novel/uploads}
+
+  # 生产环境强 JWT 签名密钥
+  jwt:
+    secret: ${NOVEL_JWT_SECRET:YOUR_PRODUCTION_VERY_STRONG_JWT_SECRET_KEY_123456}
+
+# 日志输出配置
+logging:
+  level:
+    novel: info
+    org.springframework.web: warn
