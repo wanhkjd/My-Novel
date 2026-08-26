@@ -1,26 +1,14 @@
-[![index]( https://youdoc.github.io/img/tencent.jpg )]( https://cloud.tencent.com/act/cps/redirect?redirect=2446&cps_key=736e609d66e0ac4e57813316cec6fd0b&from=console )
+# Novel 个人定制后端
 
-<p align="center">
-    <a href='https://github.com/201206030/novel'><img alt="Github stars" src="https://img.shields.io/github/stars/201206030/novel?logo=github"></a>
-    <a href='https://github.com/201206030/novel'><img alt="Github forks" src="https://img.shields.io/github/forks/201206030/novel?logo=github"></a>
-    <a href='https://gitee.com/novel_dev_team/novel'><img alt="Gitee stars" src="https://gitee.com/novel_dev_team/novel/badge/star.svg?theme=gitee"></a>
-    <a href='https://gitee.com/novel_dev_team/novel'><img alt="Gitee forks" src="https://gitee.com/novel_dev_team/novel/badge/fork.svg?theme=gitee"></a>
-    <a href='https://gitcode.com/opennovel/novel'><img alt="GitCode star" src="https://gitcode.com/opennovel/novel/star/badge.svg"></a>
-</p>
+本项目基于开源小说系统 novel 深度定制，当前作为 Java 后端实习求职作品维护。基础包已调整为
+`src/main/java/novel`，并补充了会员书架、反馈列表、作家作品归属校验等接口能力。
 
 ## 项目简介
 
-novel 是一套基于时下**最新** Java 技术栈 Spring Boot 3 + Vue 3 开发的前后端分离**学习型**
-小说项目，配备[保姆级教程](https://docs.xxyopen.com/course/novel)手把手教你**从零开始**开发上线一套生产级别的 Java
-系统，由小说门户系统、作家后台管理系统、平台后台管理系统等多个子系统构成。包括小说推荐、作品检索、小说排行榜、小说阅读、小说评论、会员中心、作家专区、充值订阅、新闻发布等功能。
+系统采用 Spring Boot 3、Java 21、MyBatis-Plus、MySQL、Redis、Caffeine、JWT、Springdoc 和可选的
+Elasticsearch/RabbitMQ/XXL-JOB/ShardingSphere-JDBC。业务覆盖前台门户、作家后台和平台管理后台。
 
-## 项目地址
-
-- 后端项目（更新中）：[GitHub](https://github.com/201206030/novel) ｜ [码云](https://gitee.com/novel_dev_team/novel) ｜ [GitCode](https://gitcode.com/opennovel/novel)
-- 前端项目（更新中）：[GitHub](https://github.com/201206030/novel-front-web) 
-  ｜ [码云](https://gitee.com/novel_dev_team/novel-front-web) ｜ [GitCode](https://gitcode.com/opennovel/novel-front-web)
-- 线上应用版：[GitHub](https://github.com/201206030/novel-plus) ｜ [码云](https://gitee.com/novel_dev_team/novel-plus)
-- 微服务版：[GitHub](https://github.com/201206030/novel-cloud) ｜ [码云](https://gitee.com/novel_dev_team/novel-cloud)
+架构审查与未启动技术的落地步骤见 [ARCHITECTURE_REVIEW.md](docs/ARCHITECTURE_REVIEW.md)。
 
 ## 开发环境
 
@@ -86,10 +74,7 @@ novel 是一套基于时下**最新** Java 技术栈 Spring Boot 3 + Vue 3 开�
 ## 包结构
 
 ```
-+- github
-    +- xxyopen   
-       +- novel
-- novel
+novel
     +- NovelApplication.java -- 项目启动类
             |
             +- core -- 项目核心模块，包括各种工具、配置和常量等
