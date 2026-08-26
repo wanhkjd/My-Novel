@@ -35,5 +35,7 @@ build/
 /logs/
 /.shardingsphere/
 .ua/
+doc/sql/*.zip
 doc/sql/novel.sql/novel_data.sql
 doc/sql/novel.sql/__MACOSX/
+*.zip
