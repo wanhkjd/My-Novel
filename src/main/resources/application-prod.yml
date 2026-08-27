@@ -19,13 +19,6 @@ novel:
     password: ${REDIS_PASSWORD:your_prod_redis_password}
     database: ${REDIS_DATABASE:0}
 
-  # 生产环境 Spring AI 配置
-  ai:
-    api-key: ${AI_API_KEY:your_prod_api_key}
-    base-url: ${AI_BASE_URL:https://api.siliconflow.cn}
-    chat:
-      model: ${AI_MODEL:deepseek-ai/DeepSeek-R1-0528-Qwen3-8B}
-
   # 生产环境邮件配置
   mail:
     host: ${MAIL_HOST:smtp.163.com}

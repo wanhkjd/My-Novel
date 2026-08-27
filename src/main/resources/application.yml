@@ -34,15 +34,6 @@ spring:
     enabled: ${novel.flyway.enabled:false}
     baseline-on-migrate: true
 
-  #--------------------- Spring AI 配置 ---------------------
-  ai:
-    openai:
-      api-key: ${novel.ai.api-key}
-      base-url: ${novel.ai.base-url}
-      chat:
-        options:
-          model: ${novel.ai.chat.model}
-
   #--------------------- 数据库配置 -------------------------
   datasource:
     url: jdbc:mysql://${novel.datasource.host}:${novel.datasource.port}/${novel.datasource.database}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
