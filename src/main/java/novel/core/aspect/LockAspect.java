@@ -52,7 +52,9 @@ public class LockAspect {
             try {
                 return joinPoint.proceed();
             } finally {
-                rLock.unlock();
+                if (rLock.isHeldByCurrentThread()) {
+                    rLock.unlock();
+                }
             }
         }
         throw new BusinessException(lock.failCode());

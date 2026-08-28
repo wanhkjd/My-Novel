@@ -8,6 +8,7 @@ import org.apache.shardingsphere.infra.url.core.ShardingSphereURLLoadEngine;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
 
@@ -29,6 +30,7 @@ public class ShardingSphereConfiguration {
     private static final String URL = "classpath:shardingsphere-jdbc.yml";
 
     @Bean
+    @Primary
     @SneakyThrows
     public DataSource shardingSphereDataSource() {
         log.info(">>>>>>>>>>> shardingSphereDataSource init.");

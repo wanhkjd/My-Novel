@@ -1,6 +1,6 @@
 #=============================================================
 #                 Novel 开发环境配置 (application-dev.yml)
-# 采用苍穹外卖 (sky-take-out) 风格：集中配置 novel 下所有开发参数
+#集中配置 novel 下所有开发参数
 #=============================================================
 
 novel:
@@ -29,10 +29,10 @@ novel:
 
   # Elasticsearch 搜索引擎配置
   elasticsearch:
-    enabled: false
-    uris: https://my-deployment-ce7ca3.es.us-central1.gcp.cloud.es.io:9243
-    username: elastic
-    password: qTjgYVKSuExX6tWAsDuvuvwl
+    enabled: true
+    uris: http://192.168.100.129:9200
+    username:
+    password:
 
   # RabbitMQ 消息队列配置
   amqp:

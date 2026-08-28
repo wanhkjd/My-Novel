@@ -109,4 +109,36 @@ class BookServiceImplValidationTest {
         dto.setIsVip(0);
         return dto;
     }
+
+    @Test
+    void getLastChapterAboutHandlesShortContentWithoutOutOfBounds() {
+        when(bookInfoCacheManager.getBookInfo(1L)).thenReturn(
+            novel.dto.resp.BookInfoRespDto.builder().id(1L).lastChapterId(101L).build()
+        );
+        when(bookChapterCacheManager.getChapter(101L)).thenReturn(
+            novel.dto.resp.BookChapterRespDto.builder().id(101L).chapterName("短章节").build()
+        );
+        when(bookContentCacheManager.getBookContent(101L)).thenReturn("短短十几个字");
+        when(bookChapterMapper.selectCount(any())).thenReturn(1L);
+
+        var resp = bookService.getLastChapterAbout(1L);
+        assertThat(resp.isOk()).isTrue();
+        assertThat(resp.getData().getContentSummary()).isEqualTo("短短十几个字");
+    }
+
+    @Test
+    void getBookContentAboutRestrictsVipForUnauthenticatedUser() {
+        UserHolder.clear();
+        when(bookChapterCacheManager.getChapter(101L)).thenReturn(
+            novel.dto.resp.BookChapterRespDto.builder().id(101L).bookId(1L).isVip(1).build()
+        );
+        when(bookContentCacheManager.getBookContent(101L)).thenReturn("VIP独家VIP内容正文超级长超级长超级长超级长超级长超级长超级长超级长");
+        when(bookInfoCacheManager.getBookInfo(1L)).thenReturn(
+            novel.dto.resp.BookInfoRespDto.builder().id(1L).build()
+        );
+
+        var resp = bookService.getBookContentAbout(101L);
+        assertThat(resp.isOk()).isTrue();
+        assertThat(resp.getData().getBookContent()).contains("【该章节为 VIP 付费内容，请登录并购买后阅读完整内容】");
+    }
 }

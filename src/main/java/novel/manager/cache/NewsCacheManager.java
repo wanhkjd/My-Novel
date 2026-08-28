@@ -43,4 +43,10 @@ public class NewsCacheManager {
             .build()).toList();
     }
 
+    @org.springframework.cache.annotation.CacheEvict(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
+        value = CacheConsts.LATEST_NEWS_CACHE_NAME, allEntries = true)
+    public void evictNewsCache() {
+        // 清除最新新闻缓存
+    }
+
 }

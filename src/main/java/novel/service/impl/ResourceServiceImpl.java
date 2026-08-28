@@ -53,13 +53,16 @@ public class ResourceServiceImpl implements ResourceService {
         LocalDateTime now = LocalDateTime.now();
         String savePath =
             SystemConfigConsts.IMAGE_UPLOAD_DIRECTORY
-                + now.format(DateTimeFormatter.ofPattern("yyyy")) + File.separator
-                + now.format(DateTimeFormatter.ofPattern("MM")) + File.separator
+                + now.format(DateTimeFormatter.ofPattern("yyyy")) + "/"
+                + now.format(DateTimeFormatter.ofPattern("MM")) + "/"
                 + now.format(DateTimeFormatter.ofPattern("dd"));
         String oriName = file.getOriginalFilename();
-        assert oriName != null;
-        String saveFileName = IdWorker.get32UUID() + oriName.substring(oriName.lastIndexOf("."));
-        File saveFile = new File(fileUploadPath + savePath, saveFileName);
+        String ext = ".jpg";
+        if (oriName != null && oriName.contains(".")) {
+            ext = oriName.substring(oriName.lastIndexOf("."));
+        }
+        String saveFileName = IdWorker.get32UUID() + ext;
+        File saveFile = new File(fileUploadPath + savePath, saveFileName).getAbsoluteFile();
         if (!saveFile.getParentFile().exists()) {
             boolean isSuccess = saveFile.getParentFile().mkdirs();
             if (!isSuccess) {
@@ -72,7 +75,7 @@ public class ResourceServiceImpl implements ResourceService {
             Files.delete(saveFile.toPath());
             throw new BusinessException(ErrorCodeEnum.USER_UPLOAD_FILE_TYPE_NOT_MATCH);
         }
-        return RestResp.ok(savePath + File.separator + saveFileName);
+        return RestResp.ok(savePath + "/" + saveFileName);
     }
 
 }

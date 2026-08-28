@@ -119,7 +119,7 @@ public class BookServiceImpl implements BookService {
         return RestResp.ok(BookChapterAboutRespDto.builder()
             .chapterInfo(bookChapter)
             .chapterTotal(chapterTotal)
-            .contentSummary(content.substring(0, 30))
+            .contentSummary(content != null ? (content.length() <= 30 ? content : content.substring(0, 30)) : "")
             .build());
     }
 
@@ -605,12 +605,24 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public RestResp<BookContentAboutRespDto> getBookContentAbout(Long chapterId) {
-        log.debug("userId:{}", UserHolder.getUserId());
+        Long userId = UserHolder.getUserId();
+        log.debug("userId:{}", userId);
         // 查询章节信息
         BookChapterRespDto bookChapter = bookChapterCacheManager.getChapter(chapterId);
+        if (bookChapter == null) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
 
         // 查询章节内容
         String content = bookContentCacheManager.getBookContent(chapterId);
+
+        // VIP 章节鉴权：若为付费章节且未登录，限制仅可查看试读内容
+        if (Objects.equals(bookChapter.getIsVip(), 1) && Objects.isNull(userId)) {
+            if (content != null) {
+                int previewLen = Math.min(200, content.length());
+                content = content.substring(0, previewLen) + "\n\n【该章节为 VIP 付费内容，请登录并购买后阅读完整内容】";
+            }
+        }
 
         // 查询小说信息
         BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(bookChapter.getBookId());

@@ -40,4 +40,10 @@ public class FriendLinkCacheManager {
         }).toList();
     }
 
+    @org.springframework.cache.annotation.CacheEvict(cacheManager = CacheConsts.REDIS_CACHE_MANAGER,
+        value = CacheConsts.HOME_FRIEND_LINK_CACHE_NAME, allEntries = true)
+    public void evictFriendLinkCache() {
+        // 清除友情链接缓存
+    }
+
 }

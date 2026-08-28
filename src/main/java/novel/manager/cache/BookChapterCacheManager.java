@@ -25,9 +25,12 @@ public class BookChapterCacheManager {
      * 查询小说章节信息，并放入缓存中
      */
     @Cacheable(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
-        value = CacheConsts.BOOK_CHAPTER_CACHE_NAME)
+        value = CacheConsts.BOOK_CHAPTER_CACHE_NAME, unless = "#result == null")
     public BookChapterRespDto getChapter(Long chapterId) {
         BookChapter bookChapter = bookChapterMapper.selectById(chapterId);
+        if (bookChapter == null) {
+            return null;
+        }
         return BookChapterRespDto.builder()
             .id(chapterId)
             .bookId(bookChapter.getBookId())

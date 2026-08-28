@@ -41,6 +41,7 @@ import novel.dto.req.AdminLoginReqDto;
 import novel.dto.req.AdminNewsReqDto;
 import novel.dto.req.AdminStatusReqDto;
 import novel.dto.resp.AdminLoginRespDto;
+import novel.manager.cache.*;
 import novel.service.AdminService;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
@@ -87,7 +88,19 @@ public class AdminServiceImpl implements AdminService {
 
     private final JwtUtils jwtUtils;
 
-    private BCryptPasswordHelper bCryptPasswordHelper;
+    private final BCryptPasswordHelper bCryptPasswordHelper;
+
+    private final BookCategoryCacheManager bookCategoryCacheManager;
+
+    private final HomeBookCacheManager homeBookCacheManager;
+
+    private final NewsCacheManager newsCacheManager;
+
+    private final FriendLinkCacheManager friendLinkCacheManager;
+
+    private final AuthorInfoCacheManager authorInfoCacheManager;
+
+    private final BookInfoCacheManager bookInfoCacheManager;
 
     @Override
     public RestResp<AdminLoginRespDto> login(AdminLoginReqDto dto) {
@@ -236,6 +249,7 @@ public class AdminServiceImpl implements AdminService {
         bookInfo.setBookStatus(dto.getStatus());
         bookInfo.setUpdateTime(LocalDateTime.now());
         bookInfoMapper.updateById(bookInfo);
+        bookInfoCacheManager.evictBookInfoCache(id);
         return RestResp.ok();
     }
 
@@ -259,6 +273,7 @@ public class AdminServiceImpl implements AdminService {
         category.setCreateTime(LocalDateTime.now());
         category.setUpdateTime(LocalDateTime.now());
         bookCategoryMapper.insert(category);
+        bookCategoryCacheManager.evictCategoryCache();
         return RestResp.ok();
     }
 
@@ -269,12 +284,14 @@ public class AdminServiceImpl implements AdminService {
         fillCategory(category, dto);
         category.setUpdateTime(LocalDateTime.now());
         bookCategoryMapper.updateById(category);
+        bookCategoryCacheManager.evictCategoryCache();
         return RestResp.ok();
     }
 
     @Override
     public RestResp<Void> deleteCategory(Long id) {
         bookCategoryMapper.deleteById(id);
+        bookCategoryCacheManager.evictCategoryCache();
         return RestResp.ok();
     }
 
@@ -349,6 +366,7 @@ public class AdminServiceImpl implements AdminService {
         homeBook.setCreateTime(LocalDateTime.now());
         homeBook.setUpdateTime(LocalDateTime.now());
         homeBookMapper.insert(homeBook);
+        homeBookCacheManager.evictHomeBookCache();
         return RestResp.ok();
     }
 
@@ -359,12 +377,14 @@ public class AdminServiceImpl implements AdminService {
         fillHomeBook(homeBook, dto);
         homeBook.setUpdateTime(LocalDateTime.now());
         homeBookMapper.updateById(homeBook);
+        homeBookCacheManager.evictHomeBookCache();
         return RestResp.ok();
     }
 
     @Override
     public RestResp<Void> deleteHomeBook(Long id) {
         homeBookMapper.deleteById(id);
+        homeBookCacheManager.evictHomeBookCache();
         return RestResp.ok();
     }
 
@@ -401,6 +421,7 @@ public class AdminServiceImpl implements AdminService {
         author.setStatus(dto.getStatus());
         author.setUpdateTime(LocalDateTime.now());
         authorInfoMapper.updateById(author);
+        authorInfoCacheManager.evictAllAuthorCache();
         return RestResp.ok();
     }
 
@@ -431,6 +452,7 @@ public class AdminServiceImpl implements AdminService {
         content.setCreateTime(LocalDateTime.now());
         content.setUpdateTime(LocalDateTime.now());
         newsContentMapper.insert(content);
+        newsCacheManager.evictNewsCache();
         return RestResp.ok();
     }
 
@@ -459,6 +481,7 @@ public class AdminServiceImpl implements AdminService {
             update.setUpdateTime(LocalDateTime.now());
             newsContentMapper.updateById(update);
         }
+        newsCacheManager.evictNewsCache();
         return RestResp.ok();
     }
 
@@ -469,6 +492,7 @@ public class AdminServiceImpl implements AdminService {
         QueryWrapper<NewsContent> query = new QueryWrapper<>();
         query.eq("news_id", id);
         newsContentMapper.delete(query);
+        newsCacheManager.evictNewsCache();
         return RestResp.ok();
     }
 
@@ -492,6 +516,7 @@ public class AdminServiceImpl implements AdminService {
         link.setCreateTime(LocalDateTime.now());
         link.setUpdateTime(LocalDateTime.now());
         homeFriendLinkMapper.insert(link);
+        friendLinkCacheManager.evictFriendLinkCache();
         return RestResp.ok();
     }
 
@@ -502,12 +527,14 @@ public class AdminServiceImpl implements AdminService {
         fillFriendLink(link, dto);
         link.setUpdateTime(LocalDateTime.now());
         homeFriendLinkMapper.updateById(link);
+        friendLinkCacheManager.evictFriendLinkCache();
         return RestResp.ok();
     }
 
     @Override
     public RestResp<Void> deleteFriendLink(Long id) {
         homeFriendLinkMapper.deleteById(id);
+        friendLinkCacheManager.evictFriendLinkCache();
         return RestResp.ok();
     }
 

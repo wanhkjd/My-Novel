@@ -2,6 +2,7 @@ package novel.core.interceptor;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -29,10 +30,15 @@ public class FileInterceptor implements HandlerInterceptor {
         Object handler) throws Exception {
         // 获取请求的 URI
         String requestUri = request.getRequestURI();
+        File rootDir = new File(fileUploadPath).getCanonicalFile();
+        File targetFile = new File(rootDir, requestUri).getCanonicalFile();
+        if (!targetFile.getPath().startsWith(rootDir.getPath()) || !targetFile.exists() || !targetFile.isFile()) {
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            return false;
+        }
         // 缓存10天
         response.setDateHeader("expires", System.currentTimeMillis() + 60 * 60 * 24 * 10 * 1000);
-        try (OutputStream out = response.getOutputStream(); InputStream input = new FileInputStream(
-            fileUploadPath + requestUri)) {
+        try (OutputStream out = response.getOutputStream(); InputStream input = new FileInputStream(targetFile)) {
             byte[] b = new byte[4096];
             for (int n; (n = input.read(b)) != -1; ) {
                 out.write(b, 0, n);

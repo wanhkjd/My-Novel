@@ -38,4 +38,10 @@ public class BookCategoryCacheManager {
                 .build()).toList();
     }
 
+    @org.springframework.cache.annotation.CacheEvict(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
+        value = CacheConsts.BOOK_CATEGORY_LIST_CACHE_NAME, allEntries = true)
+    public void evictCategoryCache() {
+        // 清除小说分类列表缓存
+    }
+
 }

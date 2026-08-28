@@ -63,10 +63,12 @@ public class HomeBookCacheManager {
                     HomeBookRespDto bookRespDto = new HomeBookRespDto();
                     bookRespDto.setType(v.getType());
                     bookRespDto.setBookId(v.getBookId());
-                    bookRespDto.setBookName(bookInfo.getBookName());
-                    bookRespDto.setPicUrl(bookInfo.getPicUrl());
-                    bookRespDto.setAuthorName(bookInfo.getAuthorName());
-                    bookRespDto.setBookDesc(bookInfo.getBookDesc());
+                    if (bookInfo != null) {
+                        bookRespDto.setBookName(bookInfo.getBookName());
+                        bookRespDto.setPicUrl(bookInfo.getPicUrl());
+                        bookRespDto.setAuthorName(bookInfo.getAuthorName());
+                        bookRespDto.setBookDesc(bookInfo.getBookDesc());
+                    }
                     return bookRespDto;
                 }).toList();
 
@@ -75,6 +77,12 @@ public class HomeBookCacheManager {
         }
 
         return Collections.emptyList();
+    }
+
+    @org.springframework.cache.annotation.CacheEvict(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
+        value = CacheConsts.HOME_BOOK_CACHE_NAME, allEntries = true)
+    public void evictHomeBookCache() {
+        // 清除首页小说推荐缓存
     }
 
 }

@@ -41,7 +41,7 @@ public class SortOrderValidationAspect {
      * 如果有，则对参数中的 sort 和 order 字段进行安全校验和清理。
      */
     @SneakyThrows
-    @Around("execution(* novel.*.dao.mapper.*Mapper.*(..))")
+    @Around("execution(* novel.dao.mapper.*Mapper.*(..)) || execution(* novel..dao.mapper.*Mapper.*(..))")
     public Object processSortOrderFields(ProceedingJoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();

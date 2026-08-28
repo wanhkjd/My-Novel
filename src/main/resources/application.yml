@@ -54,8 +54,8 @@ spring:
     enabled: ${novel.elasticsearch.enabled:false}
     uris:
       - ${novel.elasticsearch.uris}
-    username: ${novel.elasticsearch.username}
-    password: ${novel.elasticsearch.password}
+    username: ${novel.elasticsearch.username:}
+    password: ${novel.elasticsearch.password:}
 
   amqp:
     enabled: ${novel.amqp.enabled:false}
