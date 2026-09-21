@@ -21,33 +21,43 @@
           </div>
         </div>
 
-        <div class="quick">
-          <span v-for="(q, i) in quicks" :key="i" class="quick-tag" @click="send(q)">{{ q }}</span>
-        </div>
-
-        <div class="msg-list" ref="listRef">
-          <div v-for="(m, i) in messages" :key="i" class="msg" :class="m.role">
-            <span class="m-avatar">{{ m.role === 'assistant' ? '🧙' : '👤' }}</span>
-            <div class="m-bubble" v-html="renderMd(m.content)"></div>
+        <!-- 书童全部接口(对话/历史/推荐)后端均需登录，未登录时引导登录 -->
+        <template v-if="userStore.isLoggedIn">
+          <div class="quick">
+            <span v-for="(q, i) in quicks" :key="i" class="quick-tag" @click="send(q)">{{ q }}</span>
           </div>
-          <div v-if="thinking" class="msg assistant">
-            <span class="m-avatar">🧙</span>
-            <div class="m-bubble typing">正在翻阅藏书……</div>
-          </div>
-        </div>
 
-        <div v-if="userStore.isLoggedIn && recs.length" class="recs">
-          <div class="recs-title">📖 为你推荐</div>
-          <div v-for="r in recs" :key="r.bookId" class="rec-item" @click="goBook(r.bookId)">
-            <span class="rec-name">{{ r.bookName }}</span>
-            <span class="rec-reason">{{ r.recommendReason }}</span>
+          <div class="msg-list" ref="listRef">
+            <div v-for="(m, i) in messages" :key="i" class="msg" :class="m.role">
+              <span class="m-avatar">{{ m.role === 'assistant' ? '🧙' : '👤' }}</span>
+              <div class="m-bubble" v-html="renderMd(m.content)"></div>
+            </div>
+            <div v-if="thinking" class="msg assistant">
+              <span class="m-avatar">🧙</span>
+              <div class="m-bubble typing">正在翻阅藏书……</div>
+            </div>
           </div>
-        </div>
 
-        <div class="chat-input">
-          <el-input v-model="input" type="textarea" :rows="2" resize="none"
-                    placeholder="输入你想找的书，回车发送" @keyup.enter.exact.prevent="send()" />
-          <el-button type="primary" :disabled="loading || !input.trim()" @click="send()">发送</el-button>
+          <div v-if="recs.length" class="recs">
+            <div class="recs-title">📖 为你推荐</div>
+            <div v-for="r in recs" :key="r.bookId" class="rec-item" @click="goBook(r.bookId)">
+              <span class="rec-name">{{ r.bookName }}</span>
+              <span class="rec-reason">{{ r.recommendReason }}</span>
+            </div>
+          </div>
+
+          <div class="chat-input">
+            <el-input v-model="input" type="textarea" :rows="2" resize="none"
+                      placeholder="输入你想找的书，回车发送" @keyup.enter.exact.prevent="send()" />
+            <el-button type="primary" :disabled="loading || !input.trim()" @click="send()">发送</el-button>
+          </div>
+        </template>
+
+        <div v-else class="ai-guest">
+          <p class="guest-emoji">🔒</p>
+          <p class="guest-tip">登录后即可召唤智能书童</p>
+          <p class="guest-sub">帮你找书、看榜单、按偏好推荐好书</p>
+          <el-button type="primary" @click="goLogin">去登录</el-button>
         </div>
       </div>
     </el-drawer>
@@ -84,8 +94,10 @@ async function scrollToBottom() {
   if (listRef.value) listRef.value.scrollTop = listRef.value.scrollHeight
 }
 function goBook(id) { visible.value = false; router.push(`/book/${id}`) }
+function goLogin() { visible.value = false; router.push('/login') }
 
 async function send(preset) {
+  if (!userStore.isLoggedIn) return
   const text = (preset ?? input.value).trim()
   if (!text || loading.value) return
   input.value = ''
@@ -115,6 +127,7 @@ async function startNew() {
 }
 
 async function loadHistory() {
+  if (!userStore.isLoggedIn) return
   try {
     const { data } = await getChatHistory(convId.value)
     if (Array.isArray(data)) messages.value = data.map(m => ({ role: m.role, content: m.content }))
@@ -127,7 +140,8 @@ async function loadRecs() {
 }
 
 const toggle = () => { visible.value = !visible.value }
-watch(visible, (v) => { if (v) { loadHistory(); loadRecs() } })
+// 书童所有接口后端均需登录：仅登录态才拉取历史与推荐
+watch(visible, (v) => { if (v && userStore.isLoggedIn) { loadHistory(); loadRecs() } })
 </script>
 
 <style scoped>
@@ -157,4 +171,8 @@ watch(visible, (v) => { if (v) { loadHistory(); loadRecs() } })
 .rec-name { font-size: 14px; font-weight: 600; }
 .rec-reason { font-size: 12px; color: var(--text-3); }
 .chat-input { display: flex; gap: 8px; padding-top: var(--sp-3); border-top: 1px solid var(--border); align-items: flex-end; }
+.ai-guest { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; color: var(--text-2); }
+.guest-emoji { font-size: 40px; }
+.guest-tip { font-size: 15px; font-weight: 600; color: var(--text-1); }
+.guest-sub { font-size: 13px; color: var(--text-3); margin-bottom: 8px; }
 </style>

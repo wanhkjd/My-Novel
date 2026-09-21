@@ -40,6 +40,14 @@ export async function streamChat(message, conversationId, { onChunk, onDone, onE
       if (resp.status === 401 || resp.status === 403) throw new Error('登录状态已失效，请重新登录')
       throw new Error(`请求失败 (${resp.status})`)
     }
+    // 后端鉴权失败时返回 HTTP 200 + JSON(RestResp)，而非 SSE；据 content-type 甄别
+    const ct = resp.headers.get('content-type') || ''
+    if (ct.includes('application/json')) {
+      let body = {}
+      try { body = await resp.json() } catch (e) {}
+      if (body.code === 'A0230') throw new Error('登录状态已失效，请重新登录')
+      throw new Error(body.message || '对话失败')
+    }
     const reader = resp.body.getReader()
     const decoder = new TextDecoder('utf-8')
     let buffer = ''
