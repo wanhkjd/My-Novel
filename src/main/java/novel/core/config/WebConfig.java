@@ -46,21 +46,31 @@ public class WebConfig implements WebMvcConfigurer {
         // 权限认证拦截
         registry.addInterceptor(authInterceptor)
             // 拦截会员中心相关请求接口
-            .addPathPatterns(ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/**",
+            .addPathPatterns(
+                ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/**",
+                // 拦截 AI 智能书童相关请求接口（仅登录用户可访问）
+                ApiRouterConsts.API_FRONT_AI_URL_PREFIX + "/**",
                 // 拦截作家后台相关请求接口
                 ApiRouterConsts.API_AUTHOR_URL_PREFIX + "/**",
                 // 拦截平台后台相关请求接口
-                ApiRouterConsts.API_ADMIN_URL_PREFIX + "/**")
-            // 放行登录注册相关请求接口
-            .excludePathPatterns(ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/register",
+                ApiRouterConsts.API_ADMIN_URL_PREFIX + "/**"
+            )
+            // 放行登录注册相关请求接口，以及向量全量同步接口
+            .excludePathPatterns(
+                ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/register",
                 ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/login",
-                ApiRouterConsts.API_ADMIN_URL_PREFIX + "/login")
+                ApiRouterConsts.API_ADMIN_URL_PREFIX + "/login",
+                ApiRouterConsts.API_FRONT_AI_URL_PREFIX + "/companion/sync-vectors"
+            )
             .order(2);
 
         // Token 解析拦截器
         registry.addInterceptor(tokenParseInterceptor)
-            // 拦截小说内容查询接口，需要解析 token 以判断该用户是否有权阅读该章节（付费章节是否已购买）
-            .addPathPatterns(ApiRouterConsts.API_FRONT_BOOK_URL_PREFIX + "/content/*")
+            // 拦截小说内容查询接口与 AI 接口，解析登录状态以支持智能书童与加书架操作
+            .addPathPatterns(
+                ApiRouterConsts.API_FRONT_BOOK_URL_PREFIX + "/content/*",
+                ApiRouterConsts.API_FRONT_AI_URL_PREFIX + "/**"
+            )
             .order(3);
 
     }

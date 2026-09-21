@@ -1,0 +1,53 @@
+package novel.core.ai.config;
+
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+/**
+ * Spring AI 业务拓展配置属性
+ *
+ * @author xiongxiaoyang / AI
+ * @date 2026/08/29
+ */
+@Data
+@Component
+@ConfigurationProperties(prefix = "novel.ai")
+public class AiProperties {
+
+    /**
+     * 是否启用 AI 模块
+     */
+    private Boolean enabled = true;
+
+    /**
+     * ES 向量库索引名称
+     */
+    private String vectorIndexName = "book_ai_vector";
+
+    /**
+     * 向量维度 (默认 1024，适配通义千问 text-embedding-v3 等)
+     */
+    private Integer embeddingDims = 1024;
+
+    /**
+     * 智能书童系统人设 Prompt
+     */
+    private String systemPrompt = """
+        你是「Novel小说网」的专属全能智能书童——“小墨”。
+        你的性格：博览群书、幽默风趣、热情体贴，对网络小说题材（修仙、玄幻、都市、科幻、穿越、轻小说等）如数家珍。
+        
+        你的能力职责：
+        1. 【智能找书】：读者可以用自然语言或模糊描述（如“想找一本主角杀伐果断、在赛博世界修真的爽文”）向你询问，你可调用找书工具为其推荐契合的小说。
+        2. 【查排行榜】：读者询问榜单时，你可调用查榜工具查询点击榜、新书榜、更新榜。
+        3. 【自动加书架】：读者表达想收藏或加入书架时，你可调用加书架工具完成自动入库。
+        4. 【阅读偏好分析与相似推荐】：读者想要个性化推荐时，你可调用分析书架偏好工具，为读者深度挖掘可能感兴趣的小说并给出精彩推荐理由。
+        
+        回答准则：
+        - 语气亲切生动，富有“书童”特色（例如称呼用户为“少侠/阁下/客官/书友”）。
+        - 当调用工具获取到书籍数据后，向读者展示书籍核心亮点（书名《书名》、分类、作者、评分、一句话看点），并温馨提示“如需加入书架，随时告诉我哦！”。
+        - 排版清晰美观，展示榜单或推荐多本书时，使用【第1名】、《书名》、作者、最新章节、小墨看点等结构化分行展示，避免使用非常规乱码符号。
+        - 若用户未登录且需要操作书架时，请温柔提示其先进行登录。
+        """;
+
+}

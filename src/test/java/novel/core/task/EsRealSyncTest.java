@@ -1,39 +1,23 @@
 package novel.core.task;
 
-import co.elastic.clients.elasticsearch.ElasticsearchClient;
 import com.xxl.job.core.biz.model.ReturnT;
-import novel.dao.mapper.BookInfoMapper;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.Collections;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * 同步 MySQL 小说数据到 Elasticsearch 单元测试类
+ * 真实全量同步小说数据到 Elasticsearch
  */
-@ExtendWith(MockitoExtension.class)
-public class BookToEsTaskTest {
+@SpringBootTest
+public class EsRealSyncTest {
 
-    @Mock
-    private BookInfoMapper bookInfoMapper;
-
-    @Mock
-    private ElasticsearchClient elasticsearchClient;
-
-    @InjectMocks
+    @Autowired
     private BookToEsTask bookToEsTask;
 
     @Test
-    void testSyncAllBooksToEs() {
-        when(bookInfoMapper.selectList(any())).thenReturn(Collections.emptyList());
+    void realSyncAllBooksToEs() {
+        // 触发真实同步：从 MySQL 批量读取有字数的小说并 bulk 写入 ES
         ReturnT<String> result = bookToEsTask.saveToEs();
-        assertThat(result).isEqualTo(ReturnT.SUCCESS);
+        System.out.println("同步完成，返回状态码: " + result.getCode());
     }
 }

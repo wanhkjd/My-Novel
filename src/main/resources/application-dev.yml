@@ -11,6 +11,8 @@ novel:
     database: novel
     username: root
     password: 123
+  shardingsphere:
+    enabled: true
 
   # Redis 缓存配置
   redis:
@@ -63,6 +65,23 @@ novel:
   # JWT 密钥
   jwt:
     secret: E66559580A1ADF48CDD928516062F12E
+
+  # AI 智能书童与大模型配置 (支持 OpenAI / DeepSeek / 通义千问 / Ollama 等兼容接口)
+  ai:
+    enabled: true
+    vector-index-name: book_ai_vector
+    embedding-dims: 1024
+    openai:
+      # 请通过环境变量 AI_API_KEY 注入大模型 API Key (如 DashScope / OpenAI API Key)，勿硬编码进仓库
+      api-key: ${AI_API_KEY:demo-api-key}
+      # 注意：Spring AI 会自动在 base-url 后拼接 /v1/chat/completions 和 /v1/embeddings，因此 URL 末尾不要带 /v1
+      # 示例1 (通义千问兼容接口 - 推荐): https://dashscope.aliyuncs.com/compatible-mode
+      # 示例2 (OpenAI 官方): https://api.openai.com
+      # 示例3 (DeepSeek - 仅对话模型): https://api.deepseek.com
+      base-url: ${AI_BASE_URL:https://dashscope.aliyuncs.com/compatible-mode}
+      chat-model: ${AI_CHAT_MODEL:qwen3.7-plus}
+      embedding-model: ${AI_EMBEDDING_MODEL:text-embedding-v3}
+      embedding-dims: 1024
 
 # 日志输出配置
 logging:

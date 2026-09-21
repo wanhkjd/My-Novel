@@ -95,4 +95,15 @@ public class ApiRouterConsts {
     public static final String API_FRONT_SEARCH_URL_PREFIX =
         API_FRONT_URL_PREFIX + SEARCH_URL_PREFIX;
 
+    /**
+     * AI 智能模块请求路径前缀
+     */
+    public static final String AI_URL_PREFIX = "/ai";
+
+    /**
+     * 前台门户 AI 智能模块请求路径前缀
+     */
+    public static final String API_FRONT_AI_URL_PREFIX =
+        API_FRONT_URL_PREFIX + AI_URL_PREFIX;
+
 }

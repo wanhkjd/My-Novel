@@ -8,6 +8,11 @@
 server:
   # 端口号
   port: 8888
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
 
 spring:
   application:
@@ -17,10 +22,7 @@ spring:
     active: dev
   main:
     keep-alive: true
-  jackson:
-    generator:
-      # JSON 序列化时将所有 Number 类型转为 String 返回，避免前端 JS 精度丢失
-      write-numbers-as-strings: true
+
   servlet:
     multipart:
       max-file-size: 5MB
@@ -56,6 +58,20 @@ spring:
       - ${novel.elasticsearch.uris}
     username: ${novel.elasticsearch.username:}
     password: ${novel.elasticsearch.password:}
+
+  #--------------------- Spring AI 配置 ---------------------
+  ai:
+    openai:
+      api-key: ${novel.ai.openai.api-key:demo-api-key}
+      base-url: ${novel.ai.openai.base-url:https://api.openai.com}
+      chat:
+        options:
+          model: ${novel.ai.openai.chat-model:gpt-4o-mini}
+          temperature: ${novel.ai.openai.temperature:0.7}
+      embedding:
+        options:
+          model: ${novel.ai.openai.embedding-model:text-embedding-v3}
+          dimensions: ${novel.ai.openai.embedding-dims:1024}
 
   amqp:
     enabled: ${novel.amqp.enabled:false}
@@ -171,7 +187,12 @@ novel:
   cors:
     allow-origins:
       - http://localhost:1024
+      - http://127.0.0.1:1024
       - http://localhost:8080
+      - http://127.0.0.1:8080
       - http://192.168.100.129:1024
       - http://192.168.100.1:1024
+      - http://192.168.*.*:1024
+      - http://10.*.*.*:1024
       - https://mywsy.cc.cd
+      - "*"

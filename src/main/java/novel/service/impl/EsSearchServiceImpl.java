@@ -114,14 +114,8 @@ public class EsSearchServiceImpl implements SearchService {
 
         BoolQuery boolQuery = BoolQuery.of(b -> {
 
-            // 只查有字数的小说
-            b.must(RangeQuery.of(m -> m
-                .field(EsConsts.BookIndex.FIELD_WORD_COUNT)
-                .gt(JsonData.of(0))
-            )._toQuery());
-
+            // 1. 只有全文检索关键词保留在 must 中计算相关度得分
             if (!StringUtils.isBlank(condition.getKeyword())) {
-                // 关键词匹配
                 b.must((q -> q.multiMatch(t -> t
                     .fields(EsConsts.BookIndex.FIELD_BOOK_NAME + "^2",
                         EsConsts.BookIndex.FIELD_AUTHOR_NAME + "^1.8",
@@ -131,38 +125,64 @@ public class EsSearchServiceImpl implements SearchService {
                 ));
             }
 
-            // 精确查询
+            // 2. 精确条件与范围条件全部移至 filter（不计算得分，且自动被 ES 节点缓存）
+            // 只查有字数的小说
+            b.filter(RangeQuery.of(m -> m
+                .field(EsConsts.BookIndex.FIELD_WORD_COUNT)
+                .gt(JsonData.of(0))
+            )._toQuery());
+
+            // 精确查询 - 频道
             if (Objects.nonNull(condition.getWorkDirection())) {
-                b.must(TermQuery.of(m -> m
+                b.filter(TermQuery.of(m -> m
                     .field(EsConsts.BookIndex.FIELD_WORK_DIRECTION)
                     .value(condition.getWorkDirection())
                 )._toQuery());
             }
 
+            // 精确查询 - 类别
             if (Objects.nonNull(condition.getCategoryId())) {
-                b.must(TermQuery.of(m -> m
+                b.filter(TermQuery.of(m -> m
                     .field(EsConsts.BookIndex.FIELD_CATEGORY_ID)
                     .value(condition.getCategoryId())
                 )._toQuery());
             }
 
-            // 范围查询
+            // 精确查询 - 书籍状态（连载/完结）
+            if (Objects.nonNull(condition.getBookStatus())) {
+                b.filter(TermQuery.of(m -> m
+                    .field(EsConsts.BookIndex.FIELD_BOOK_STATUS)
+                    .value(condition.getBookStatus())
+                )._toQuery());
+            }
+
+            // 精确查询 - 是否收费
+            if (Objects.nonNull(condition.getIsVip())) {
+                b.filter(TermQuery.of(m -> m
+                    .field(EsConsts.BookIndex.FIELD_IS_VIP)
+                    .value(condition.getIsVip())
+                )._toQuery());
+            }
+
+            // 范围查询 - 字数最小值
             if (Objects.nonNull(condition.getWordCountMin())) {
-                b.must(RangeQuery.of(m -> m
+                b.filter(RangeQuery.of(m -> m
                     .field(EsConsts.BookIndex.FIELD_WORD_COUNT)
                     .gte(JsonData.of(condition.getWordCountMin()))
                 )._toQuery());
             }
 
+            // 范围查询 - 字数最大值
             if (Objects.nonNull(condition.getWordCountMax())) {
-                b.must(RangeQuery.of(m -> m
+                b.filter(RangeQuery.of(m -> m
                     .field(EsConsts.BookIndex.FIELD_WORD_COUNT)
                     .lt(JsonData.of(condition.getWordCountMax()))
                 )._toQuery());
             }
 
+            // 范围查询 - 更新时间
             if (Objects.nonNull(condition.getUpdateTimeMin())) {
-                b.must(RangeQuery.of(m -> m
+                b.filter(RangeQuery.of(m -> m
                     .field(EsConsts.BookIndex.FIELD_LAST_CHAPTER_UPDATE_TIME)
                     .gte(JsonData.of(condition.getUpdateTimeMin().getTime()))
                 )._toQuery());
