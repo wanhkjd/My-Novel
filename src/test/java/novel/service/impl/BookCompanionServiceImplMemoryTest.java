@@ -47,15 +47,11 @@ class BookCompanionServiceImplMemoryTest {
     }
 
     @Test
-    void buildMemoryKey_namespacesByUserId() {
+    void buildMemoryKey_keysByUserIdOnly_ignoringClientConversationId() {
         UserHolder.setUserId(1001L);
-        assertThat(service.buildMemoryKey("conv1")).isEqualTo("aiChatMemory::1001::conv1");
-    }
-
-    @Test
-    void buildMemoryKey_fallsBackToDefault_whenBlank() {
-        UserHolder.setUserId(1001L);
-        assertThat(service.buildMemoryKey("  ")).isEqualTo("aiChatMemory::1001::default");
+        // 跨端共享：无论前端传什么 conversationId，都落到同一份按账号命名的 key
+        assertThat(service.buildMemoryKey("conv1")).isEqualTo("aiChatMemory::1001::default");
+        assertThat(service.buildMemoryKey("another-uuid")).isEqualTo("aiChatMemory::1001::default");
         assertThat(service.buildMemoryKey(null)).isEqualTo("aiChatMemory::1001::default");
     }
 
@@ -64,7 +60,7 @@ class BookCompanionServiceImplMemoryTest {
         UserHolder.setUserId(1001L);
         RestResp<Void> resp = service.clearMemory("conv1");
         assertThat(resp.getCode()).isEqualTo("00000");
-        verify(chatMemory).clear("aiChatMemory::1001::conv1");
+        verify(chatMemory).clear("aiChatMemory::1001::default");
     }
 
     @Test
@@ -77,7 +73,7 @@ class BookCompanionServiceImplMemoryTest {
     void getHistory_mapsMessagesToDto() {
         UserHolder.setUserId(1001L);
         List<Message> stored = List.of(new UserMessage("你好"), new AssistantMessage("少侠好"));
-        when(chatMemory.get("aiChatMemory::1001::conv1", 20)).thenReturn(stored);
+        when(chatMemory.get("aiChatMemory::1001::default", 20)).thenReturn(stored);
 
         RestResp<List<ChatHistoryMsgDto>> resp = service.getHistory("conv1");
 

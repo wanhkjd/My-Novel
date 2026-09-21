@@ -149,16 +149,17 @@ public class BookCompanionServiceImpl implements BookCompanionService {
     }
 
     /**
-     * 由登录用户 ID 与会话 ID 拼接记忆业务 key，userId 由后端强制注入以隔离用户。
-     * 即使前端伪造他人 conversationId，落点仍在本人 userId 命名空间内。
+     * 记忆业务 key：仅以登录用户 ID 作命名空间，忽略前端传入的 conversationId。
+     * 这样同一账号无论在哪个浏览器/设备登录，都命中同一份对话记忆（跨端共享单条会话），
+     * 且 userId 由后端强制注入，天然做到用户间隔离。
+     * conversationId 参数保留仅为兼容既有前端接口，不参与 key 计算。
      *
-     * @param conversationId 前端会话 ID（可空，为空回退 default）
-     * @return 形如 aiChatMemory::{userId}::{conversationId} 的业务 key
+     * @param conversationId 前端会话 ID（已忽略）
+     * @return 形如 aiChatMemory::{userId}::default 的业务 key
      */
     String buildMemoryKey(String conversationId) {
         Long userId = UserHolder.getUserId();
-        String convId = (conversationId == null || conversationId.isBlank()) ? "default" : conversationId;
-        return MEMORY_KEY_PREFIX + userId + "::" + convId;
+        return MEMORY_KEY_PREFIX + userId + "::default";
     }
 
     @Override
