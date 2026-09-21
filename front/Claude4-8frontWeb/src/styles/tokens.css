@@ -1,0 +1,25 @@
+:root {
+  --brand: #b5352b;
+  --brand-hover: #c8443a;
+  --brand-soft: #f6ece9;
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --text: #2b2b2b;
+  --text-2: #6b6b6b;
+  --text-3: #9a9a9a;
+  --border: #eae4db;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow-sm: 0 2px 8px rgba(60, 40, 30, 0.06);
+  --shadow-md: 0 8px 24px rgba(60, 40, 30, 0.10);
+  --font-serif: "Noto Serif SC", "Songti SC", serif;
+  --font-sans: "Noto Sans SC", system-ui, -apple-system, "Microsoft YaHei", sans-serif;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
+  /* Element Plus 主色对齐朱砂红 */
+  --el-color-primary: #b5352b;
+  --el-color-primary-light-3: #c8443a;
+  --el-color-primary-light-5: #d66a62;
+  --el-color-primary-light-7: #e59d98;
+  --el-color-primary-light-9: #f6ece9;
+  --el-color-primary-dark-2: #93291f;
+}

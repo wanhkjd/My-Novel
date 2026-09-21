@@ -1,0 +1,16 @@
+.reader-theme-day   { --reader-bg: #faf7f2; --reader-text: #2b2b2b; }
+.reader-theme-sepia { --reader-bg: #f3e9d2; --reader-text: #4b3f2f; }
+.reader-theme-night { --reader-bg: #1e1e1e; --reader-text: #b8b8b8; }
+.reader-page {
+  background: var(--reader-bg);
+  color: var(--reader-text);
+  min-height: 100vh;
+  transition: background .3s ease, color .3s ease;
+}
+.reader-body {
+  max-width: 720px; margin: 0 auto; padding: 40px 20px;
+  font-size: var(--reader-fs, 18px);
+  line-height: var(--reader-lh, 1.9);
+  font-family: var(--font-serif);
+}
+.reader-body p { margin: 0 0 1em; text-indent: 2em; }
