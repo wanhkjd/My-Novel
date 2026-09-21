@@ -4,9 +4,12 @@
       <component :is="Component" />
     </transition>
   </router-view>
+  <AiCompanion />
 </template>
 
-<script setup></script>
+<script setup>
+import AiCompanion from '@/components/ai/AiCompanion.vue'
+</script>
 
 <style>
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }
