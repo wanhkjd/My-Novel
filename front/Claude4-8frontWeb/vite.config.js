@@ -9,6 +9,7 @@ export default defineConfig({
   },
   server: {
     port: 2048,
+    strictPort: true,
     proxy: {
       '/api': { target: 'http://localhost:8888', changeOrigin: true, ws: true },
       '/image': { target: 'http://localhost:8888', changeOrigin: true }
