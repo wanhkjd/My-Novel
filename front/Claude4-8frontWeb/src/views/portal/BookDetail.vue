@@ -14,7 +14,7 @@
           <div><b>{{ words }}</b><span>字数</span></div>
           <div><b>{{ book.commentCount || 0 }}</b><span>评论</span></div>
         </div>
-        <p class="desc text-clamp-3">{{ book.bookDesc }}</p>
+        <p class="desc text-clamp-3">{{ toPlainText(book.bookDesc) }}</p>
         <div class="actions">
           <el-button type="primary" size="large" @click="startRead">开始阅读</el-button>
           <el-button size="large" @click="toCatalog">目录</el-button>
@@ -77,7 +77,7 @@ import {
   getBookshelfStatus, addBookshelf, removeBookshelf, comment as postComment
 } from '@/api/user'
 import { useUserStore } from '@/stores/user'
-import { formatWordCount, formatVisit, bookStatusText, formatTime } from '@/utils/format'
+import { formatWordCount, formatVisit, bookStatusText, formatTime, toPlainText } from '@/utils/format'
 import BookCard from '@/components/common/BookCard.vue'
 import EmptyBlock from '@/components/common/EmptyBlock.vue'
 

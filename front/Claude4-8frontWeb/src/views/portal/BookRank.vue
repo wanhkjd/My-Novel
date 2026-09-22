@@ -13,7 +13,7 @@
         <div class="meta">
           <h4>{{ b.bookName }}</h4>
           <p class="author">{{ b.authorName }}</p>
-          <p class="desc text-clamp-2">{{ b.bookDesc }}</p>
+          <p class="desc text-clamp-2">{{ toPlainText(b.bookDesc) }}</p>
           <p class="last">最新：{{ b.lastChapterName || '-' }}</p>
         </div>
       </div>
@@ -25,6 +25,7 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { listVisitRankBooks, listNewestRankBooks, listUpdateRankBooks } from '@/api/book'
+import { toPlainText } from '@/utils/format'
 const router = useRouter()
 const tab = ref('visit'), list = ref([]), loading = ref(false)
 const IMG = import.meta.env.VITE_BASE_IMG_URL || ''

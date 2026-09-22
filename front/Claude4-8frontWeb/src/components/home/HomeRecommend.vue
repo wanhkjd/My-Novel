@@ -8,7 +8,7 @@
             <div class="slide-info">
               <h3>{{ b.bookName }}</h3>
               <p>{{ b.authorName }}</p>
-              <p class="text-clamp-2">{{ b.bookDesc }}</p>
+              <p class="text-clamp-2">{{ toPlainText(b.bookDesc) }}</p>
             </div>
           </div>
         </el-carousel-item>
@@ -27,6 +27,7 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import BookCard from '@/components/common/BookCard.vue'
+import { toPlainText } from '@/utils/format'
 
 const props = defineProps({ books: { type: Array, default: () => [] } })
 const router = useRouter()

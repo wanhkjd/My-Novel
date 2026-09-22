@@ -4,9 +4,9 @@
       <img :src="coverUrl" :alt="book.bookName" @error="onImgError" />
     </div>
     <div class="info">
-      <h4 class="book-name text-ellipsis">{{ book.bookName }}</h4>
-      <p class="author text-ellipsis">{{ book.authorName }}</p>
-      <p v-if="horizontal" class="desc text-clamp-2">{{ book.bookDesc }}</p>
+      <h4 class="book-name text-ellipsis" v-html="renderHighlight(book.bookName)"></h4>
+      <p class="author text-ellipsis" v-html="renderHighlight(book.authorName)"></p>
+      <p v-if="horizontal" class="desc text-clamp-2">{{ toPlainText(book.bookDesc) }}</p>
       <div v-if="horizontal" class="meta">
         <span class="tag">{{ statusText }}</span>
         <span v-if="book.wordCount">{{ words }}</span>
@@ -18,7 +18,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { formatWordCount, bookStatusText } from '@/utils/format'
+import { formatWordCount, bookStatusText, toPlainText, renderHighlight } from '@/utils/format'
 
 const props = defineProps({
   book: { type: Object, required: true },
@@ -46,4 +46,6 @@ const onImgError = (e) => { e.target.src = FALLBACK }
 .desc { color: var(--text-2); font-size: 13px; margin: 8px 0; }
 .meta { display: flex; gap: 12px; font-size: 12px; color: var(--text-3); }
 .meta .tag { color: var(--brand); }
+/* v-html 内容不受 scoped 约束，用 :deep 命中高亮标签 */
+:deep(em.hl) { color: #c0392b; font-style: normal; font-weight: 600; }
 </style>
