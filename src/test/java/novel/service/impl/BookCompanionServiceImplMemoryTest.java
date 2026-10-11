@@ -22,7 +22,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.memory.ChatMemory;
+import novel.core.ai.memory.RedisChatMemory;
 import org.springframework.ai.chat.messages.AssistantMessage;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.UserMessage;
@@ -37,7 +37,7 @@ class BookCompanionServiceImplMemoryTest {
     @Mock private BookVectorSyncService bookVectorSyncService;
     @Mock private UserBookshelfMapper userBookshelfMapper;
     @Mock private BookInfoMapper bookInfoMapper;
-    @Mock private ChatMemory chatMemory;
+    @Mock private RedisChatMemory chatMemory;
 
     @InjectMocks private BookCompanionServiceImpl service;
 

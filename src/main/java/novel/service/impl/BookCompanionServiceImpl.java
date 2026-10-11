@@ -19,9 +19,7 @@ import novel.dao.mapper.BookInfoMapper;
 import novel.dao.mapper.UserBookshelfMapper;
 import novel.service.BookCompanionService;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor;
-import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
-import org.springframework.ai.chat.memory.ChatMemory;
+import novel.core.ai.memory.RedisChatMemory;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.MessageType;
 import org.springframework.stereotype.Service;
@@ -49,7 +47,7 @@ public class BookCompanionServiceImpl implements BookCompanionService {
     private final BookVectorSyncService bookVectorSyncService;
     private final UserBookshelfMapper userBookshelfMapper;
     private final BookInfoMapper bookInfoMapper;
-    private final ChatMemory chatMemory;
+    private final RedisChatMemory chatMemory;
 
     /** 记忆窗口条数 */
     static final int MEMORY_WINDOW = 20;
@@ -63,9 +61,8 @@ public class BookCompanionServiceImpl implements BookCompanionService {
         this.chatClient = chatClientBuilder
                 .defaultSystem(aiProperties.getSystemPrompt())
                 .defaultFunctions("searchBooksFunction", "getBookRankFunction", "addToBookshelfFunction", "recommendBooksFunction")
-                .defaultAdvisors(new MessageChatMemoryAdvisor(chatMemory))
                 .build();
-        log.info("[智能书童] 初始化完成，已加载默认人设 Prompt、4 大业务 Function Tools 与对话记忆 Advisor");
+        log.info("[智能书童] 初始化完成，已加载默认人设 Prompt、4 大业务 Function Tools 与代次隔离的对话记忆");
     }
 
     @Override
@@ -76,18 +73,17 @@ public class BookCompanionServiceImpl implements BookCompanionService {
         String memoryKey = buildMemoryKey(conversationId);
         return Flux.defer(() -> {
             try {
+                RedisChatMemory.Snapshot snapshot = chatMemory.begin(memoryKey);
                 String fullResponse = chatClient.prompt()
+                        .messages(snapshot.messages())
                         .user(message)
-                        .advisors(a -> a
-                                .param(AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY, memoryKey)
-                                .param(AbstractChatMemoryAdvisor.CHAT_MEMORY_RETRIEVE_SIZE_KEY, MEMORY_WINDOW))
                         .call()
                         .content();
                 if (fullResponse == null || fullResponse.isBlank()) {
                     return Flux.just("少侠，小墨未能找到相关内容，请换个问题试试吧。");
                 }
                 // 按 Unicode 码点（支持 Emoji 4 字节代理对）安全流式分块，彻底避免 Emoji 乱码 ??
-                return Flux.create(sink -> {
+                return Flux.<String>create(sink -> {
                     int[] codePoints = fullResponse.codePoints().toArray();
                     int len = codePoints.length;
                     int chunkSize = 2;
@@ -96,7 +92,10 @@ public class BookCompanionServiceImpl implements BookCompanionService {
                         sink.next(new String(codePoints, i, end - i));
                     }
                     sink.complete();
-                });
+                }).concatWith(Flux.defer(() -> {
+                    chatMemory.appendTurn(snapshot, message, fullResponse);
+                    return Flux.empty();
+                }));
             } catch (Exception e) {
                 String errorDetail = e.getMessage();
                 if (e instanceof org.springframework.web.reactive.function.client.WebClientResponseException we) {
@@ -113,13 +112,15 @@ public class BookCompanionServiceImpl implements BookCompanionService {
         if (message == null || message.isBlank()) {
             return RestResp.ok("少侠，您好！我是书童小墨，请问今天想看什么类型的小说？");
         }
+        RedisChatMemory.Snapshot snapshot = chatMemory.begin(buildMemoryKey(conversationId));
         String response = chatClient.prompt()
+                .messages(snapshot.messages())
                 .user(message)
-                .advisors(a -> a
-                        .param(AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY, buildMemoryKey(conversationId))
-                        .param(AbstractChatMemoryAdvisor.CHAT_MEMORY_RETRIEVE_SIZE_KEY, MEMORY_WINDOW))
                 .call()
                 .content();
+        if (response != null && !response.isBlank()) {
+            chatMemory.appendTurn(snapshot, message, response);
+        }
         return RestResp.ok(response);
     }
 
