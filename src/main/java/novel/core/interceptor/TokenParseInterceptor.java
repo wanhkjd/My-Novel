@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.AsyncHandlerInterceptor;
 
 /**
  * Token 解析拦截器
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
  */
 @Component
 @RequiredArgsConstructor
-public class TokenParseInterceptor implements HandlerInterceptor {
+public class TokenParseInterceptor implements AsyncHandlerInterceptor {
 
     private final JwtUtils jwtUtils;
 
@@ -26,13 +26,23 @@ public class TokenParseInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
         Object handler) throws Exception {
+        // 可选登录入口也必须覆盖空 Token，不能继承上一请求的读者或作家身份。
+        UserHolder.clear();
         // 获取登录 JWT
         String token = request.getHeader(SystemConfigConsts.HTTP_AUTH_HEADER_NAME);
         if (StringUtils.hasText(token)) {
             // 解析 token 并保存
             UserHolder.setUserId(jwtUtils.parseToken(token, SystemConfigConsts.NOVEL_FRONT_KEY));
         }
-        return HandlerInterceptor.super.preHandle(request, response, handler);
+        return AsyncHandlerInterceptor.super.preHandle(request, response, handler);
+    }
+
+    /**
+     * 异步移交时立即清理原请求线程，不等待另一线程上的完成回调。
+     */
+    @Override
+    public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        UserHolder.clear();
     }
 
     /**
@@ -44,7 +54,7 @@ public class TokenParseInterceptor implements HandlerInterceptor {
         throws Exception {
         // 清理当前线程保存的用户数据
         UserHolder.clear();
-        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
+        AsyncHandlerInterceptor.super.afterCompletion(request, response, handler, ex);
     }
 
 }
