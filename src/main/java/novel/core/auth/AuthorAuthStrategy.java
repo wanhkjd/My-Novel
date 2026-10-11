@@ -3,6 +3,7 @@ package novel.core.auth;
 import novel.core.common.constant.ErrorCodeEnum;
 import novel.core.common.exception.BusinessException;
 import novel.core.constant.ApiRouterConsts;
+import novel.core.constant.DatabaseConsts;
 import novel.core.util.JwtUtils;
 import novel.dto.AuthorInfoDto;
 import novel.manager.cache.AuthorInfoCacheManager;
@@ -45,9 +46,17 @@ public class AuthorAuthStrategy implements AuthStrategy {
             return;
         }
         // 作家权限认证
-        AuthorInfoDto authorInfo = authorInfoCacheManager.getAuthor(userId);
+        AuthorInfoDto authorInfo = authorInfoCacheManager.getAuthorForAuth(userId);
         if (Objects.isNull(authorInfo)) {
             // 作家账号不存在，无权访问作家专区
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
+
+        if (Objects.equals(authorInfo.getStatus(), DatabaseConsts.AuthorInfoTable.STATUS_BANNED)) {
+            throw new BusinessException(ErrorCodeEnum.AUTHOR_ACCOUNT_BANNED);
+        }
+        if (!Objects.equals(authorInfo.getStatus(), DatabaseConsts.AuthorInfoTable.STATUS_NORMAL)) {
+            // 只有明确正常的作家可获得写作权限，空值或未知状态不放行。
             throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
         }
 

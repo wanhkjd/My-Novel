@@ -62,7 +62,7 @@ class UserBanAuthTest {
     @Test
     void normalAuthorStillReceivesAuthorIdentity() {
         stubReader(0);
-        when(authors.getAuthor(10L)).thenReturn(AuthorInfoDto.builder().id(20L).build());
+        when(authors.getAuthorForAuth(10L)).thenReturn(AuthorInfoDto.builder().id(20L).status(0).build());
         author.auth("existing-token", "/api/author/book/list");
         assertThat(UserHolder.getUserId()).isEqualTo(10L);
         assertThat(UserHolder.getAuthorId()).isEqualTo(20L);

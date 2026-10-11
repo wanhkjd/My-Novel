@@ -30,6 +30,13 @@ public class AuthorInfoCacheManager {
     @Cacheable(cacheManager = CacheConsts.REDIS_CACHE_MANAGER,
         value = CacheConsts.AUTHOR_INFO_CACHE_NAME, unless = "#result == null")
     public AuthorInfoDto getAuthor(Long userId) {
+        return getAuthorForAuth(userId);
+    }
+
+    /**
+     * 鉴权与状态查询直接读取数据库，避免封禁/解封后被并发回填的旧缓存影响。
+     */
+    public AuthorInfoDto getAuthorForAuth(Long userId) {
         QueryWrapper<AuthorInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper
             .eq(DatabaseConsts.AuthorInfoTable.COLUMN_USER_ID, userId)

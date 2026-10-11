@@ -85,6 +85,11 @@ public enum ErrorCodeEnum {
     USER_UN_AUTH("A0301", "访问未授权"),
 
     /**
+     * 作家账号已被封禁（不影响未封禁的普通读者账号）
+     */
+    AUTHOR_ACCOUNT_BANNED("A0302", "作家账号已被封禁"),
+
+    /**
      * 用户请求服务异常
      */
     USER_REQ_EXCEPTION("A0500", "用户请求服务异常"),

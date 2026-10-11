@@ -58,7 +58,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public RestResp<Integer> getStatus(Long userId) {
-        AuthorInfoDto author = authorInfoCacheManager.getAuthor(userId);
+        AuthorInfoDto author = authorInfoCacheManager.getAuthorForAuth(userId);
         return Objects.isNull(author) ? RestResp.ok(null) : RestResp.ok(author.getStatus());
     }
 

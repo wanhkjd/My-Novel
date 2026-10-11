@@ -67,6 +67,11 @@ public class DatabaseConsts {
 
         public static final String COLUMN_USER_ID = "user_id";
 
+        // 作家状态独立于普通用户状态：0-正常，1-封禁。
+        public static final int STATUS_NORMAL = 0;
+
+        public static final int STATUS_BANNED = 1;
+
     }
 
     /**
