@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import novel.dto.req.BookSearchReqDto;
 import novel.dto.resp.BookInfoRespDto;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -19,6 +21,11 @@ import java.util.List;
  * @date 2022/05/11
  */
 public interface BookInfoMapper extends BaseMapper<BookInfo> {
+
+    /** 章节写入的统一锁；必须在事务中调用，锁持有到提交或回滚。 */
+    @Select("SELECT * FROM book_info WHERE id = #{id} FOR UPDATE")
+    @Options(useCache = false, flushCache = Options.FlushCachePolicy.TRUE)
+    BookInfo selectByIdForUpdate(@Param("id") Long id);
 
     /**
      * 增加小说点击量

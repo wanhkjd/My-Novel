@@ -10,14 +10,17 @@ import novel.dao.mapper.BookInfoMapper;
 import novel.dto.resp.BookInfoRespDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
- * 小说信息 缓存管理类
+ * 小说信息读取入口，保留原类名及缓存淘汰方法以兼容已有调用。
+ *
+ * <p>可变详情直接查询数据库，不读写详情缓存，避免事务提交前淘汰、旧请求回填及
+ * 多实例本地缓存残留导致的长期不一致。以增加数据库查询负载为代价，不再持久化
+ * 过期详情；单次读取仍遵循数据库事务可见性。最新更新ID列表继续使用缓存。</p>
  *
  * @author xiongxiaoyang
  * @date 2022/5/12
@@ -31,10 +34,11 @@ public class BookInfoCacheManager {
     private final BookChapterMapper bookChapterMapper;
 
     /**
-     * 从缓存中查询小说信息（先判断缓存中是否已存在，存在则直接从缓存中取，否则执行方法体中的逻辑后缓存结果）
+     * 每次从数据库查询小说信息，忽略已有详情缓存且不回填查询结果。
+     *
+     * @param id 小说ID
+     * @return 小说详情，不存在时返回 null
      */
-    @Cacheable(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
-        value = CacheConsts.BOOK_INFO_CACHE_NAME, unless = "#result == null")
     public BookInfoRespDto getBookInfo(Long id) {
         // 查询基础信息
         BookInfo bookInfo = bookInfoMapper.selectById(id);
@@ -67,6 +71,11 @@ public class BookInfoCacheManager {
             .build();
     }
 
+    /**
+     * 保留旧详情缓存淘汰入口以兼容已有调用；详情读取的正确性不依赖此方法。
+     *
+     * @param bookId 小说ID
+     */
     @CacheEvict(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
         value = CacheConsts.BOOK_INFO_CACHE_NAME)
     public void evictBookInfoCache(Long bookId) {

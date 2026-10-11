@@ -1,6 +1,7 @@
 package novel.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import novel.core.annotation.Key;
@@ -378,22 +379,16 @@ public class BookServiceImpl implements BookService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public RestResp<Void> saveBookChapter(ChapterAddReqDto dto) {
-        // 校验该作品是否属于当前作家
-        BookInfo bookInfo = bookInfoMapper.selectById(dto.getBookId());
-        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
-            return RestResp.fail(ErrorCodeEnum.USER_UN_AUTH);
-        }
+        // 所有章节写入先锁定同一本书，持锁到事务提交/回滚。
+        BookInfo bookInfo = lockBookForChapterWrite(dto.getBookId());
         // 1) 保存章节相关信息到小说章节表
         //  a) 查询最新章节号
         int chapterNum = 0;
-        QueryWrapper<BookChapter> chapterQueryWrapper = new QueryWrapper<>();
-        chapterQueryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, dto.getBookId())
-            .orderByDesc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM)
-            .last(DatabaseConsts.SqlEnum.LIMIT_1.getSql());
-        BookChapter bookChapter = bookChapterMapper.selectOne(chapterQueryWrapper);
+        BookChapter bookChapter = bookChapterMapper.selectLastByBookIdForUpdate(dto.getBookId());
         if (Objects.nonNull(bookChapter)) {
             chapterNum = bookChapter.getChapterNum() + 1;
         }
+        LocalDateTime now = LocalDateTime.now();
         //  b) 设置章节相关信息并保存
         BookChapter newBookChapter = new BookChapter();
         newBookChapter.setBookId(dto.getBookId());
@@ -401,16 +396,16 @@ public class BookServiceImpl implements BookService {
         newBookChapter.setChapterNum(chapterNum);
         newBookChapter.setWordCount(dto.getChapterContent().length());
         newBookChapter.setIsVip(dto.getIsVip());
-        newBookChapter.setCreateTime(LocalDateTime.now());
-        newBookChapter.setUpdateTime(LocalDateTime.now());
+        newBookChapter.setCreateTime(now);
+        newBookChapter.setUpdateTime(now);
         bookChapterMapper.insert(newBookChapter);
 
         // 2) 保存章节内容到小说内容表
         BookContent bookContent = new BookContent();
         bookContent.setContent(dto.getChapterContent());
         bookContent.setChapterId(newBookChapter.getId());
-        bookContent.setCreateTime(LocalDateTime.now());
-        bookContent.setUpdateTime(LocalDateTime.now());
+        bookContent.setCreateTime(now);
+        bookContent.setUpdateTime(now);
         bookContentMapper.insert(bookContent);
 
         // 3) 更新小说表最新章节信息和小说总字数信息
@@ -419,13 +414,11 @@ public class BookServiceImpl implements BookService {
         newBookInfo.setId(dto.getBookId());
         newBookInfo.setLastChapterId(newBookChapter.getId());
         newBookInfo.setLastChapterName(newBookChapter.getChapterName());
-        newBookInfo.setLastChapterUpdateTime(LocalDateTime.now());
+        newBookInfo.setLastChapterUpdateTime(now);
         newBookInfo.setWordCount(bookInfo.getWordCount() + newBookChapter.getWordCount());
-        newBookChapter.setUpdateTime(LocalDateTime.now());
+        newBookInfo.setUpdateTime(now);
         bookInfoMapper.updateById(newBookInfo);
-        //  b) 清除小说信息缓存
-        bookInfoCacheManager.evictBookInfoCache(dto.getBookId());
-        //  c) 发送小说信息更新的 MQ 消息
+        // 详情直接读取数据库；MQ 管理器在事务成功提交后发送通知。
         amqpMsgManager.sendBookChangeMsg(dto.getBookId());
         return RestResp.ok();
     }
@@ -513,60 +506,43 @@ public class BookServiceImpl implements BookService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public RestResp<Void> deleteBookChapter(Long chapterId) {
-        // 1.查询章节信息
-        BookChapterRespDto chapter = bookChapterCacheManager.getChapter(chapterId);
-        // 2.查询小说信息
-        BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(chapter.getBookId());
-        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
-            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
-        }
-        // 3.删除章节信息
+        ChapterWriteState state = lockChapterForWrite(chapterId);
+        BookChapter chapter = state.chapter();
+        BookInfo bookInfo = state.book();
         bookChapterMapper.deleteById(chapterId);
-        // 4.删除章节内容
-        QueryWrapper<BookContent> bookContentQueryWrapper = new QueryWrapper<>();
-        bookContentQueryWrapper.eq(DatabaseConsts.BookContentTable.COLUMN_CHAPTER_ID, chapterId);
-        bookContentMapper.delete(bookContentQueryWrapper);
-        // 5.更新小说信息
-        BookInfo newBookInfo = new BookInfo();
-        newBookInfo.setId(chapter.getBookId());
-        newBookInfo.setUpdateTime(LocalDateTime.now());
-        newBookInfo.setWordCount(bookInfo.getWordCount() - chapter.getChapterWordCount());
+        QueryWrapper<BookContent> contentQuery = new QueryWrapper<>();
+        contentQuery.eq(DatabaseConsts.BookContentTable.COLUMN_CHAPTER_ID, chapterId);
+        bookContentMapper.delete(contentQuery);
+
+        // Wrapper 显式 SET NULL，避免 updateById 默认跳过空值而保留旧的末章时间。
+        LambdaUpdateWrapper<BookInfo> update = new LambdaUpdateWrapper<BookInfo>()
+            .eq(BookInfo::getId, bookInfo.getId())
+            .set(BookInfo::getWordCount, bookInfo.getWordCount() - chapter.getWordCount())
+            .set(BookInfo::getUpdateTime, LocalDateTime.now());
         if (Objects.equals(bookInfo.getLastChapterId(), chapterId)) {
-            // 设置最新章节信息
-            QueryWrapper<BookChapter> bookChapterQueryWrapper = new QueryWrapper<>();
-            bookChapterQueryWrapper.eq(DatabaseConsts.BookChapterTable.COLUMN_BOOK_ID, chapter.getBookId())
-                .orderByDesc(DatabaseConsts.BookChapterTable.COLUMN_CHAPTER_NUM)
-                .last(DatabaseConsts.SqlEnum.LIMIT_1.getSql());
-            BookChapter bookChapter = bookChapterMapper.selectOne(bookChapterQueryWrapper);
-            Long lastChapterId = 0L;
-            String lastChapterName = "";
-            LocalDateTime lastChapterUpdateTime = null;
-            if (Objects.nonNull(bookChapter)) {
-                lastChapterId = bookChapter.getId();
-                lastChapterName = bookChapter.getChapterName();
-                lastChapterUpdateTime = bookChapter.getUpdateTime();
-            }
-            newBookInfo.setLastChapterId(lastChapterId);
-            newBookInfo.setLastChapterName(lastChapterName);
-            newBookInfo.setLastChapterUpdateTime(lastChapterUpdateTime);
+            BookChapter lastChapter = bookChapterMapper.selectLastByBookIdForUpdate(bookInfo.getId());
+            update.set(BookInfo::getLastChapterId, lastChapter == null ? 0L : lastChapter.getId())
+                .set(BookInfo::getLastChapterName, lastChapter == null ? "" : lastChapter.getChapterName())
+                .set(BookInfo::getLastChapterUpdateTime,
+                    lastChapter == null ? null : lastChapter.getUpdateTime());
         }
-        bookInfoMapper.updateById(newBookInfo);
-        // 6.清理章节信息缓存
-        bookChapterCacheManager.evictBookChapterCache(chapterId);
-        // 7.清理章节内容缓存
-        bookContentCacheManager.evictBookContentCache(chapterId);
-        // 8.清理小说信息缓存
-        bookInfoCacheManager.evictBookInfoCache(chapter.getBookId());
-        // 9.发送小说信息更新的 MQ 消息
-        amqpMsgManager.sendBookChangeMsg(chapter.getBookId());
+        bookInfoMapper.update(null, update);
+        amqpMsgManager.sendBookChangeMsg(bookInfo.getId());
         return RestResp.ok();
     }
 
     @Override
     public RestResp<ChapterContentRespDto> getBookChapter(Long chapterId) {
         BookChapterRespDto chapter = bookChapterCacheManager.getChapter(chapterId);
+        if (chapter == null) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
         BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(chapter.getBookId());
-        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
+        if (bookInfo == null) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
+        if (UserHolder.getAuthorId() == null
+            || !Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
             throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
         }
         String bookContent = bookContentCacheManager.getBookContent(chapterId);
@@ -578,52 +554,78 @@ public class BookServiceImpl implements BookService {
                 .build());
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public RestResp<Void> updateBookChapter(Long chapterId, ChapterUpdateReqDto dto) {
-        // 1.查询章节信息
-        BookChapterRespDto chapter = bookChapterCacheManager.getChapter(chapterId);
-        // 2.查询小说信息
-        BookInfoRespDto bookInfo = bookInfoCacheManager.getBookInfo(chapter.getBookId());
-        if (!Objects.equals(bookInfo.getAuthorId(), UserHolder.getAuthorId())) {
-            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
-        }
-        // 3.更新章节信息
+        ChapterWriteState state = lockChapterForWrite(chapterId);
+        BookChapter chapter = state.chapter();
+        BookInfo bookInfo = state.book();
+        LocalDateTime now = LocalDateTime.now();
         BookChapter newChapter = new BookChapter();
         newChapter.setId(chapterId);
         newChapter.setChapterName(dto.getChapterName());
         newChapter.setWordCount(dto.getChapterContent().length());
         newChapter.setIsVip(dto.getIsVip());
-        newChapter.setUpdateTime(LocalDateTime.now());
+        newChapter.setUpdateTime(now);
         bookChapterMapper.updateById(newChapter);
-        // 4.更新章节内容
+
         BookContent newContent = new BookContent();
         newContent.setContent(dto.getChapterContent());
-        newContent.setUpdateTime(LocalDateTime.now());
-        QueryWrapper<BookContent> bookContentQueryWrapper = new QueryWrapper<>();
-        bookContentQueryWrapper.eq(DatabaseConsts.BookContentTable.COLUMN_CHAPTER_ID, chapterId);
-        bookContentMapper.update(newContent, bookContentQueryWrapper);
-        // 5.更新小说信息
+        newContent.setUpdateTime(now);
+        QueryWrapper<BookContent> contentQuery = new QueryWrapper<>();
+        contentQuery.eq(DatabaseConsts.BookContentTable.COLUMN_CHAPTER_ID, chapterId);
+        if (bookContentMapper.update(newContent, contentQuery) != 1) {
+            // 正文缺失时回滚刚才的章节更新，不留下字数与正文不一致的半次修改。
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
+
         BookInfo newBookInfo = new BookInfo();
-        newBookInfo.setId(chapter.getBookId());
-        newBookInfo.setUpdateTime(LocalDateTime.now());
+        newBookInfo.setId(bookInfo.getId());
+        newBookInfo.setUpdateTime(now);
         newBookInfo.setWordCount(
-            bookInfo.getWordCount() - chapter.getChapterWordCount() + dto.getChapterContent().length());
+            bookInfo.getWordCount() - chapter.getWordCount() + dto.getChapterContent().length());
         if (Objects.equals(bookInfo.getLastChapterId(), chapterId)) {
-            // 更新最新章节信息
             newBookInfo.setLastChapterName(dto.getChapterName());
-            newBookInfo.setLastChapterUpdateTime(LocalDateTime.now());
+            newBookInfo.setLastChapterUpdateTime(now);
         }
         bookInfoMapper.updateById(newBookInfo);
-        // 6.清理章节信息缓存
-        bookChapterCacheManager.evictBookChapterCache(chapterId);
-        // 7.清理章节内容缓存
-        bookContentCacheManager.evictBookContentCache(chapterId);
-        // 8.清理小说信息缓存
-        bookInfoCacheManager.evictBookInfoCache(chapter.getBookId());
-        // 9.发送小说信息更新的 MQ 消息
-        amqpMsgManager.sendBookChangeMsg(chapter.getBookId());
+        amqpMsgManager.sendBookChangeMsg(bookInfo.getId());
         return RestResp.ok();
+    }
+
+    /**
+     * 以书籍行为跨实例的写入互斥点。禁止用缓存或普通快照读计算章节派生字段。
+     */
+    private BookInfo lockBookForChapterWrite(Long bookId) {
+        if (UserHolder.getAuthorId() == null) {
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
+        BookInfo book = bookInfoMapper.selectByIdForUpdate(bookId);
+        if (book == null) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
+        if (!Objects.equals(book.getAuthorId(), UserHolder.getAuthorId())) {
+            throw new BusinessException(ErrorCodeEnum.USER_UN_AUTH);
+        }
+        return book;
+    }
+
+    private ChapterWriteState lockChapterForWrite(Long chapterId) {
+        // 第一次普通读仅定位不变的 bookId，不以此快照计算字数，也不先锁章节。
+        BookChapter locator = bookChapterMapper.selectById(chapterId);
+        if (locator == null) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
+        BookInfo book = lockBookForChapterWrite(locator.getBookId());
+        // 等待书锁期间章节可能已被修改/删除；FOR UPDATE 在 MySQL RR 下仍是当前读。
+        BookChapter chapter = bookChapterMapper.selectByIdForUpdate(chapterId);
+        if (chapter == null || !Objects.equals(chapter.getBookId(), book.getId())) {
+            throw new BusinessException(ErrorCodeEnum.BOOK_NOT_FOUND);
+        }
+        return new ChapterWriteState(book, chapter);
+    }
+
+    private record ChapterWriteState(BookInfo book, BookChapter chapter) {
     }
 
     @Override

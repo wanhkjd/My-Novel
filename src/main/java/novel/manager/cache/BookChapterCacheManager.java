@@ -6,11 +6,14 @@ import novel.dao.mapper.BookChapterMapper;
 import novel.dto.resp.BookChapterRespDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 /**
- * 小说章节 缓存管理类
+ * 小说章节读取入口，保留原类名及缓存淘汰方法以兼容已有调用。
+ *
+ * <p>可变详情直接查询数据库，不读写详情缓存，避免事务提交前淘汰、旧请求回填及
+ * 多实例本地缓存残留导致的长期不一致。以增加数据库查询负载为代价，不再持久化
+ * 过期详情；单次读取仍遵循数据库事务可见性。</p>
  *
  * @author xiongxiaoyang
  * @date 2022/5/12
@@ -22,10 +25,11 @@ public class BookChapterCacheManager {
     private final BookChapterMapper bookChapterMapper;
 
     /**
-     * 查询小说章节信息，并放入缓存中
+     * 每次从数据库查询小说章节，忽略已有详情缓存且不回填查询结果。
+     *
+     * @param chapterId 章节ID
+     * @return 章节详情，不存在时返回 null
      */
-    @Cacheable(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
-        value = CacheConsts.BOOK_CHAPTER_CACHE_NAME, unless = "#result == null")
     public BookChapterRespDto getChapter(Long chapterId) {
         BookChapter bookChapter = bookChapterMapper.selectById(chapterId);
         if (bookChapter == null) {
@@ -42,6 +46,11 @@ public class BookChapterCacheManager {
             .build();
     }
 
+    /**
+     * 保留旧详情缓存淘汰入口以兼容已有调用；详情读取的正确性不依赖此方法。
+     *
+     * @param chapterId 章节ID
+     */
     @CacheEvict(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER,
         value = CacheConsts.BOOK_CHAPTER_CACHE_NAME)
     public void evictBookChapterCache(Long chapterId) {

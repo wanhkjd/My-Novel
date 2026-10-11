@@ -3,9 +3,12 @@ package novel.service.impl;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 
 import novel.dao.entity.BookInfo;
+import novel.dao.entity.BookChapter;
 import novel.dao.mapper.BookChapterMapper;
 import novel.dao.mapper.BookCommentMapper;
 import novel.dao.mapper.BookContentMapper;
@@ -88,22 +91,30 @@ class BookServiceImplOwnershipTest {
 
     @Test
     void deleteRejectsChapterOwnedByAnotherAuthor() {
-        prepareOwnedBook();
+        prepareOwnedBookForWrite();
 
         assertThatThrownBy(() -> bookService.deleteBookChapter(30L))
             .isInstanceOfSatisfying(BusinessException.class, ex ->
                 assertThat(ex.getErrorCodeEnum().getCode()).isEqualTo("A0301"));
-        verifyNoInteractions(bookChapterMapper, bookContentMapper, amqpMsgManager);
+        verify(bookChapterMapper).selectById(30L);
+        verifyNoMoreInteractions(bookChapterMapper);
+        verify(bookInfoMapper).selectByIdForUpdate(20L);
+        verifyNoMoreInteractions(bookInfoMapper);
+        verifyNoInteractions(bookContentMapper, amqpMsgManager);
     }
 
     @Test
     void updateRejectsChapterOwnedByAnotherAuthor() {
-        prepareOwnedBook();
+        prepareOwnedBookForWrite();
 
         assertThatThrownBy(() -> bookService.updateBookChapter(30L, new ChapterUpdateReqDto()))
             .isInstanceOfSatisfying(BusinessException.class, ex ->
                 assertThat(ex.getErrorCodeEnum().getCode()).isEqualTo("A0301"));
-        verifyNoInteractions(bookChapterMapper, bookContentMapper, amqpMsgManager);
+        verify(bookChapterMapper).selectById(30L);
+        verifyNoMoreInteractions(bookChapterMapper);
+        verify(bookInfoMapper).selectByIdForUpdate(20L);
+        verifyNoMoreInteractions(bookInfoMapper);
+        verifyNoInteractions(bookContentMapper, amqpMsgManager);
     }
 
     @Test
@@ -129,6 +140,16 @@ class BookServiceImplOwnershipTest {
             .isInstanceOfSatisfying(BusinessException.class, ex ->
                 assertThat(ex.getErrorCodeEnum().getCode()).isEqualTo("A0301"));
         verifyNoInteractions(bookChapterMapper);
+    }
+
+    private void prepareOwnedBookForWrite() {
+        BookChapter chapter = new BookChapter();
+        chapter.setBookId(20L);
+        when(bookChapterMapper.selectById(30L)).thenReturn(chapter);
+        BookInfo book = new BookInfo();
+        book.setId(20L);
+        book.setAuthorId(OWNER_AUTHOR_ID);
+        when(bookInfoMapper.selectByIdForUpdate(20L)).thenReturn(book);
     }
 
     private void prepareOwnedBook() {
