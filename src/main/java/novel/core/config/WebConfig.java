@@ -48,6 +48,8 @@ public class WebConfig implements WebMvcConfigurer {
             // 拦截会员中心相关请求接口
             .addPathPatterns(
                 ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/**",
+                // 资源写操作要求登录；仅验证码读取允许匿名访问
+                ApiRouterConsts.API_FRONT_RESOURCE_URL_PREFIX + "/**",
                 // 拦截 AI 智能书童相关请求接口（仅登录用户可访问）
                 ApiRouterConsts.API_FRONT_AI_URL_PREFIX + "/**",
                 // 拦截作家后台相关请求接口
@@ -55,12 +57,12 @@ public class WebConfig implements WebMvcConfigurer {
                 // 拦截平台后台相关请求接口
                 ApiRouterConsts.API_ADMIN_URL_PREFIX + "/**"
             )
-            // 放行登录注册相关请求接口，以及向量全量同步接口
+            // 放行登录、注册与验证码读取；维护操作只能走管理员路径
             .excludePathPatterns(
                 ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/register",
                 ApiRouterConsts.API_FRONT_USER_URL_PREFIX + "/login",
                 ApiRouterConsts.API_ADMIN_URL_PREFIX + "/login",
-                ApiRouterConsts.API_FRONT_AI_URL_PREFIX + "/companion/sync-vectors"
+                ApiRouterConsts.API_FRONT_RESOURCE_URL_PREFIX + "/img_verify_code"
             )
             .order(2);
 

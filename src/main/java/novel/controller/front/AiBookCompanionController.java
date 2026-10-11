@@ -89,13 +89,4 @@ public class AiBookCompanionController {
         return bookCompanionService.recommendSimilarBooks(count);
     }
 
-    /**
-     * 手动触发全量书籍向量同步至 Elasticsearch 8 向量库
-     */
-    @Operation(summary = "触发全量书籍数据向量化同步 (存量约1000本)")
-    @PostMapping("/sync-vectors")
-    public RestResp<Integer> syncAllBookVectors() {
-        return bookCompanionService.syncAllBookVectors();
-    }
-
 }
