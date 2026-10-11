@@ -10,6 +10,7 @@ import novel.core.auth.UserHolder;
 import novel.core.common.constant.CommonConsts;
 import novel.core.common.constant.ErrorCodeEnum;
 import novel.core.common.exception.BusinessException;
+import novel.core.common.validation.CommentContentRules;
 import novel.core.common.req.PageReqDto;
 import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
@@ -237,6 +238,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public RestResp<Void> saveComment(
         @Key(expr = "#{userId + '::' + bookId}") UserCommentReqDto dto) {
+        CommentContentRules.requireValid(dto == null ? null : dto.getCommentContent());
         // 校验书籍是否存在
         BookInfo bookInfo = bookInfoMapper.selectById(dto.getBookId());
         if (bookInfo == null) {
@@ -330,6 +332,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public RestResp<Void> updateComment(Long userId, Long id, String content) {
+        CommentContentRules.requireValid(content);
         QueryWrapper<BookComment> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(DatabaseConsts.CommonColumnEnum.ID.getName(), id)
             .eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID, userId);

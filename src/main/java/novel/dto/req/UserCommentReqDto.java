@@ -1,10 +1,9 @@
 package novel.dto.req;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.NotBlank;
+import novel.core.annotation.ValidCommentContent;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
 
 /**
  * 用户发表评论 请求DTO
@@ -21,8 +20,7 @@ public class UserCommentReqDto {
     private Long bookId;
 
     @Schema(description = "评论内容", required = true)
-    @NotBlank(message="评论不能为空！")
-    @Length(min = 10,max = 512)
+    @ValidCommentContent
     private String commentContent;
 
 }

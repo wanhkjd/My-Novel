@@ -7,6 +7,7 @@ import novel.core.common.resp.RestResp;
 import novel.core.constant.ApiRouterConsts;
 import novel.core.constant.SystemConfigConsts;
 import novel.dto.req.UserCommentReqDto;
+import novel.dto.req.UserCommentUpdateReqDto;
 import novel.dto.req.UserInfoUptReqDto;
 import novel.dto.req.UserLoginReqDto;
 import novel.dto.req.UserRegisterReqDto;
@@ -128,8 +129,8 @@ public class UserController {
     @Operation(summary = "修改评论接口")
     @PutMapping("comment/{id}")
     public RestResp<Void> updateComment(@Parameter(description = "评论ID") @PathVariable Long id,
-        String content) {
-        return bookService.updateComment(UserHolder.getUserId(), id, content);
+        @Valid @ModelAttribute UserCommentUpdateReqDto dto) {
+        return bookService.updateComment(UserHolder.getUserId(), id, dto.getContent());
     }
 
     /**
