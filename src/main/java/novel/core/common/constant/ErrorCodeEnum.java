@@ -60,6 +60,11 @@ public enum ErrorCodeEnum {
     USER_ACCOUNT_NOT_EXIST("A0201", "用户账号不存在"),
 
     /**
+     * 用户账号已被封禁
+     */
+    USER_ACCOUNT_BANNED("A0202", "用户账号已被封禁"),
+
+    /**
      * 用户密码错误
      */
     USER_PASSWORD_ERROR("A0210", "用户密码错误"),

@@ -21,6 +21,11 @@ public class DatabaseConsts {
 
         public static final String COLUMN_USERNAME = "username";
 
+        // 普通用户：0-正常，1-封禁；与 sys_user 的状态含义不同。
+        public static final int STATUS_NORMAL = 0;
+
+        public static final int STATUS_BANNED = 1;
+
     }
 
     /**

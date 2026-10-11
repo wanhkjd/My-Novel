@@ -138,6 +138,10 @@ public class UserServiceImpl implements UserService {
         }
 
 
+        if (Objects.equals(userInfo.getStatus(), DatabaseConsts.UserInfoTable.STATUS_BANNED)) {
+            throw new BusinessException(ErrorCodeEnum.USER_ACCOUNT_BANNED);
+        }
+
         // 登录成功，生成JWT并返回
         return RestResp.ok(UserLoginRespDto.builder()
             .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY))

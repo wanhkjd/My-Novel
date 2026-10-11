@@ -8,6 +8,7 @@ import novel.core.common.exception.BusinessException;
 import novel.core.common.req.PageReqDto;
 import novel.core.common.resp.PageRespDto;
 import novel.core.common.resp.RestResp;
+import novel.core.constant.DatabaseConsts;
 import novel.core.constant.SystemConfigConsts;
 import novel.core.util.BCryptPasswordHelper;
 import novel.core.util.JwtUtils;
@@ -69,6 +70,8 @@ public class AdminServiceImpl implements AdminService {
     private final SysMenuMapper sysMenuMapper;
 
     private final UserInfoMapper userInfoMapper;
+
+    private final UserInfoCacheManager userInfoCacheManager;
 
     private final BookInfoMapper bookInfoMapper;
 
@@ -217,12 +220,20 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public RestResp<Void> updateUserStatus(Long id, AdminStatusReqDto dto) {
+        if (!Objects.equals(dto.getStatus(), DatabaseConsts.UserInfoTable.STATUS_NORMAL)
+            && !Objects.equals(dto.getStatus(), DatabaseConsts.UserInfoTable.STATUS_BANNED)) {
+            throw new BusinessException(ErrorCodeEnum.USER_REQUEST_PARAM_ERROR);
+        }
         UserInfo userInfo = new UserInfo();
         userInfo.setId(id);
         userInfo.setStatus(dto.getStatus());
         userInfo.setUpdateTime(LocalDateTime.now());
-        userInfoMapper.updateById(userInfo);
+        if (userInfoMapper.updateById(userInfo) == 0) {
+            throw new BusinessException(ErrorCodeEnum.USER_ACCOUNT_NOT_EXIST);
+        }
+        userInfoCacheManager.evictUserInfoCache(id);
         return RestResp.ok();
     }
 

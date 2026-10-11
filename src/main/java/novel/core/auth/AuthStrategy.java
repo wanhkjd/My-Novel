@@ -2,6 +2,7 @@ package novel.core.auth;
 
 import novel.core.common.constant.ErrorCodeEnum;
 import novel.core.common.exception.BusinessException;
+import novel.core.constant.DatabaseConsts;
 import novel.core.constant.SystemConfigConsts;
 import novel.core.util.JwtUtils;
 import novel.dto.UserInfoDto;
@@ -45,10 +46,13 @@ public interface AuthStrategy {
             // token 解析失败
             throw new BusinessException(ErrorCodeEnum.USER_LOGIN_EXPIRED);
         }
-        UserInfoDto userInfo = userInfoCacheManager.getUser(userId);
+        UserInfoDto userInfo = userInfoCacheManager.getUserForAuth(userId);
         if (Objects.isNull(userInfo)) {
             // 用户不存在
             throw new BusinessException(ErrorCodeEnum.USER_ACCOUNT_NOT_EXIST);
+        }
+        if (Objects.equals(userInfo.getStatus(), DatabaseConsts.UserInfoTable.STATUS_BANNED)) {
+            throw new BusinessException(ErrorCodeEnum.USER_ACCOUNT_BANNED);
         }
         // 设置 userId 到当前线程
         UserHolder.setUserId(userId);
