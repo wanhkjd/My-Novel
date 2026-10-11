@@ -1,8 +1,6 @@
 package novel.dto.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import novel.core.json.serializer.UsernameSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
@@ -35,8 +33,7 @@ public class BookCommentRespDto {
         @Schema(description = "评论内容")
         private String commentContent;
 
-        @Schema(description = "评论用户")
-        @JsonSerialize(using = UsernameSerializer.class)
+        @Schema(description = "评论用户的公开昵称，不包含登录账号")
         private String commentUser;
 
         @Schema(description = "评论用户ID")

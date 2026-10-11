@@ -33,12 +33,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -77,6 +79,8 @@ public class BookServiceImpl implements BookService {
     private final AmqpMsgManager amqpMsgManager;
 
     private static final Integer REC_BOOK_COUNT = 4;
+
+    private static final Pattern COMMENT_PHONE_PATTERN = Pattern.compile("1[3-9][0-9]{9}");
 
     @Override
     public RestResp<List<BookRankRespDto>> listVisitRankBooks() {
@@ -275,24 +279,43 @@ public class BookServiceImpl implements BookService {
                 .last(DatabaseConsts.SqlEnum.LIMIT_5.getSql());
             List<BookComment> bookComments = bookCommentMapper.selectList(commentQueryWrapper);
 
-            // 查询评论用户信息，并设置需要返回的评论用户名
+            // 组装安全的公开身份，不把登录账号交给响应 DTO。
             List<Long> userIds = bookComments.stream().map(BookComment::getUserId).toList();
             List<UserInfo> userInfos = userDaoManager.listUsers(userIds);
             Map<Long, UserInfo> userInfoMap = userInfos.stream()
                 .collect(Collectors.toMap(UserInfo::getId, Function.identity()));
             List<BookCommentRespDto.CommentInfo> commentInfos = bookComments.stream()
-                .map(v -> BookCommentRespDto.CommentInfo.builder()
-                    .id(v.getId())
-                    .commentUserId(v.getUserId())
-                    .commentUser(userInfoMap.get(v.getUserId()).getUsername())
-                    .commentUserPhoto(userInfoMap.get(v.getUserId()).getUserPhoto())
-                    .commentContent(v.getCommentContent())
-                    .commentTime(v.getCreateTime()).build()).toList();
+                .map(v -> {
+                    UserInfo user = userInfoMap.get(v.getUserId());
+                    return BookCommentRespDto.CommentInfo.builder()
+                        .id(v.getId())
+                        .commentUserId(v.getUserId())
+                        .commentUser(getPublicCommentName(user))
+                        .commentUserPhoto(Objects.isNull(user) ? null : user.getUserPhoto())
+                        .commentContent(v.getCommentContent())
+                        .commentTime(v.getCreateTime()).build();
+                }).toList();
             bookCommentRespDto.setComments(commentInfos);
         } else {
             bookCommentRespDto.setComments(Collections.emptyList());
         }
         return RestResp.ok(bookCommentRespDto);
+    }
+
+    /**
+     * 评论只展示昵称；注册时默认复制的账号及历史手机号昵称使用非敏感占位值。
+     */
+    private String getPublicCommentName(UserInfo user) {
+        if (Objects.isNull(user) || !StringUtils.hasText(user.getNickName())) {
+            return "书友";
+        }
+        String nickname = user.getNickName().strip();
+        String username = user.getUsername();
+        if ((StringUtils.hasText(username) && nickname.contains(username.strip()))
+            || COMMENT_PHONE_PATTERN.matcher(nickname).find()) {
+            return "书友";
+        }
+        return nickname;
     }
 
     @Override
